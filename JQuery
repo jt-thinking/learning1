@@ -21,7 +21,7 @@ V3.X普通版和与V2普通版差不多，更新相应API,加了相应性能优�
 我们可以选择1.12.4
 兼容性更好。国内使用IE6-IE8还是很多的
 
-使用CDN（引用网络中的jquery） 比如360 bootcdn 微软CDN 
+使用CDN（引用网络中的jquery） 比如360 bootcdn 微软CDN
 Content Delivery Network 内容分发网络
 使用节点服务器起到加速的作用
 不浪费自己服务器带宽的性能，加快下载速度
@@ -132,3 +132,13 @@ $(".class:has(selector)")查找class类中包含selector元素的元素
 
 #jQuery选择器之:parent
 #("p:parent")查找所有含有子元素或者文本的元素
+
+#jQuery选择器之visible选择器
+
+#$(":visible")  选择所有显示的元素  使用时候一般配合id选择器或者class选择器，比如写成$(".div:visible")  如果不加选择器，可能会把隐藏的js代码等都显示出来哦
+#$(":hidden") 选额所有隐藏的元素  和visible刚好相反
+
+#$("div[name='p1']") 筛选出div元素中属性值name为p1的元素
+#$("div[name|='p']")筛选出div元素中属性值name为p或者p-abc(以p-开头的字符串)
+#$("div[p2]") 筛选出div元素中有p2属性的元素
+#$("div[name~='a']")筛选出div元素中name属性值为a或者以空格连字符连接a的字符串(a b)或者(b a)都可以

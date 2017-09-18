@@ -1,0 +1,4 @@
+pwd 显示当前目录
+git add -A 所有修改添加到暂存区
+git commit -m "xxx" 提交到工作区
+git status
