@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>history对象--后退</title>
+</head>
+<body>
+	<p>这是history对象</p>
+	<p><input type="button" value="前进" id="btn"></p>
+	<script>
+	var btn=document.getElementById('btn');
+	btn.onclick=function(){
+		history.forward();
+
+		// 相当于history.go(1);
+	}
+	</script>
+</body>
+</html>

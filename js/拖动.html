@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>拖动</title>
+	<style>
+		.box{width:200px;height: 200px;background: #f00;overflow: scroll;}
+	</style>
+
+</head>
+<body>
+	<div class="box" id="box">
+	<p>拖动</p>
+	<p>拖动</p>
+	<p>拖动</p>
+	<p>拖动</p>
+	<p>拖动</p>
+	<p>拖动</p>
+	<p>拖动</p>
+	<p>拖动</p>
+	<p>拖动</p>
+	<p>拖动</p>
+	</div>
+	<script>
+		var box=document.getElementById("box");
+		// box.onmousedown=function(){
+		// 	console.log("a");
+		// }
+		// box.onmousemove=function(){
+		// 	console.log("b");
+		// }
+		// box.onmouseup=function(){
+		// 	console.log("c");
+		// }
+		// box.onclick=function(){
+		// 	console.log("d");
+		// }
+		// window.onresize=function(){
+		// 	console.log("a");
+		   box.onscroll=function(){
+		   	console.log("a");
+		   }
+		
+
+
+	</script>
+
+
+
+</body>
+</html>

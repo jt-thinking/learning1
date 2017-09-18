@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.current{background: #ccc;color: #f00;}
+		.on{border-bottom: 1px solid #0f0;}
+	</style>
+
+		
+
+	
+
+
+</head>
+<body>
+
+     <ul id="list">
+		<li><i>前端开发</i></li>
+		<li  class="current" ><b>服务端开发</b></li>
+  		<li class="on">UI设计</li>	
+  		<li>UI设计</li>	
+  		<li>UI设计</li>	
+     </ul> 		
+
+
+	<script>
+		var lis=document.getElementById("list").getElementsByTagName("li");
+		for(var i=0,len=lis.length;i<len;i++){
+			// console.log(lis[i].className);
+			
+		}
+			console.log(lis[1].getAttribute());
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,1334 @@
+#js的发展历史
+输入验证器————强大的语言
+本质、历史、局限性，简单又复杂
+
+#javascript 的组成
+完整的JS是由ECMAScript（语法）、browser Objects(DOM、BOM)（特性）组成
+
+<script> </script>
+
+#javascript的注释和分号
+// 单行注释
+/**/多行注释
+语句结束使用分号，养成习惯
+
+#javascript是区分大小写的
+
+
+#javascript的定义
+javascript 是一种基于对象和事件驱动的客户端脚本语言，最初的设计是为了检验HTML表单输入的正确性，起源于Netscape 公司的LiveScript语言
+
+
+#javascript的标识符
+什么是标识符？
+变量、函数、属性的名字，或者函数的参数
+
+#标识符的命名规则
+1、由字母、数字、下划线、或者$
+2、不能以数字开头
+3、不能使用关键字、保留字等作为标识符
+
+#什么是变量
+ecmascript的变量是松散类型
+松散类型：可以用来保存任何类型的数据
+换句话说，每个变量仅仅是一个用于保存值的占位符而已
+
+#变量的声明和赋值
+1、变量声明：变量的声明要使用var操作符
+语法：var变量名
+2、变量赋值：
+声明的同时赋值：var变量名=值
+先声明后赋值：变量名=值
+
+一次声明多个变量，用逗号隔开，如:var id,sex,age,name="marry";
+说明：
+1、省略var声明的变量是全局变量
+2、不推荐用上述方式定义全局变量
+
+#基本数据类型
+Undefined
+Null
+Boolean
+Number
+String
+复杂数据类型
+Object
+
+#typeof操作符
+功能  检测变量类型
+语法  typeof 变量 typeof(变量)
+返回值  string 类型，有可能是：
+string 、number、boolean、object、undefined、function
+
+#console.log(name_01)
+在控制台中打印
+
+#console.log(typeof name_01)
+检测name_01的变量类型
+04:16
+
+#Undefined类型
+该类型只有一个值，即特殊的undefined  
+说明：
+	一般而言，不存在需要显式地把一个变量设置为undefined值的情况
+
+#null  类型，
+ 1、值表示一个空对象指针 2、如果定义的变量准备在将来用于保存对象，那么最好将改变量初始化为null而不是其他值
+说明：undefined值是派生自null值的，所以undefined==null的返回结果是true
+
+
+#Number类型
+表示整数和浮点数
+naN:not a number 是一个特殊的数值
+说明：1、任何涉及NaN的操作（例如naN-12）都会返回NaN
+2、NaN与任何值都不相等，包括NaN本身
+
+
+#方法 isNaN() 
+语法:isNaN(n)
+功能：检测n是否“非数值”
+返回值：boolean
+参数：参数n可以是任何类型
+说明；isNaN()对接收的数值，先尝试转换为数值，再检测是否为非数值
+举例：id="14"按理说加了引号类型即为String
+但是isNaN(id)的打印结果是false
+
+#数值转换
+有3个函数可以把非数值转换为数值：
+Number()
+parseInt()
+parseFloat()
+说明：
+1、Number()可以用于任何数据类型
+2、parseInt和parseFloat()则专门用于把字符串转换成数值(提取字符串中的数字)
+转成功为数值，不能转则为NaN
+尽量使用第二种
+
+#parseInt
+1、只能提取数字开头的字符串
+2、会忽略字符串前面的空格，直至找到第一个非空格字符
+3、parseInt():转换空字符串返回NaN.
+4、parseInt()这个函数提供第二个参数：转换成16进制
+
+#parseFloat()
+从第一个字符开始解析每个字符，直至遇见一个无效的浮点数字符或者非数字为止St
+返回的值可以是浮点数，也可以是整数
+说明：除了第一个小数点有效外，parseFloat()与parseInt()的第二个却别在于它始终都会忽略前导的0
+
+#String
+String类型用于表示由0或多个16位Unicode字符组成字符序列，即字符串。字符串可以由双引号或者单引号表示
+
+#toString()
+语法：str.toString()
+功能：将str转换为字符串
+返回值：str的一个副本
+参数：str是要转换的内容，可以是数值、布尔值、对象和字符串
+说明：在不知道要转换的值是不是null或undefined的情况下，还可以使用String()函数，它能够将任何类型的值转换为字符串。
+
+#String()
+在不知道要转换的值是不是null或undefined的情况下,它能够将任何类型的值转换为字符串，有点类似Number()
+
+#length
+语法:string.length
+功能:获取string字符串的长度
+返回值:number
+
+注意:Number.length 也是可以的
+
+#Boolean
+用于表示真假的函数，只有两个值true和false
+
+#Boolean()
+1、除0之外的所有数字，转换为布尔型都为true
+2、除""之外的所有字符，转换为布尔型都为true
+3、null和undefined转换为布尔型为false
+
+#什么是表达式
+将同类型的数据（如常量、变量、函数等），用运算符号按照一定的规则连接起来的、有意义的式子称为表达式
+
+#操作符的分类
+1、算数操作符
+2、逻辑操作符
+3、赋值操作符
+4、比较操作符
+5、三元操作符
+
+#算数操作符
++ - * /  %（取余）、++a或a++（递增）、a--或--a(递减)
+注意：
+1、在运算之前，会尝试转化成Number类型(隐式类型转换)
+2、++a和a++还是有区别的，a++先返回原值，再返回递增以后的值(可参考第五章:js算数操作符 08:00) 
+
+#赋值操作符
+简单赋值 : =
+复合赋值:+= -=  *=  、/=  %=
++ 可以对数值操作，也可以对String 类型操作。对String类型起到连接作用
+
+
+#比较操作符
+> <  >=   <=  ==  ===   !=   !==
+==:相等，只比较值是否相等
+===:相等，比较值的同时比较数据类型是否相等
+!= ：不相等，比较值是否不相等
+!== : 不相等，比较值的同时比较数据类型是否不相等
+返回值:boolean 型
+
+#三元操作符
+语法
+  条件?执行代码1:执行代码2
+
+说明:
+	可代替简单的IF语句
+	如果条件成立，执行代码1，否则执行代码2
+	举例:result=(score>=60)?"及格":"不及格"
+
+
+#逻辑操作符
+&& (与) ||(或) !(非)
+
+
+# &&  可以操作任意类型的数据
+在有一个操作数不是布尔值的情况下，逻辑与操作就不一定返回布尔值
+1、如果第一个操作数隐式类型转换后为true ，则返回第二个操作数
+2、如果第一个操作数隐式类型转化后为false，则返回第一个操作数
+3、如果有一个操作数是null 则返回null .
+   如果有一个操作数是NaN，则返回NaN.
+   如果有一个操作数Undefined，则返回Undefined
+   10:08
+
+#|| 逻辑或
+说明：在有一个操作数不是布尔值的情况，逻辑与操作就不一定返回值，遵循以下规则
+1、如果第一个操作数隐式类型转换后为true，则返回第一个操作数
+2、如果第一个操作数隐式类型转换后为false，则返回第二个操作数
+3、如果两个操作数都是null，则返回null
+4、如果两个操作数NaN,则返回NaN
+5、如果两个操作数都是undefined，则返回undefined
+
+
+! 逻辑非
+说明:
+1、无论操作数是什么数据类型，逻辑非都会返回一个布尔值
+2、!!同时使用两个逻辑非操作符时:
+   	1、第一个逻辑非操作会基于无论什么操作数返回一个布尔值
+   	2、第二个逻辑非则对该布尔值求反
+
+
+第二章  javascript条件语句
+
+#分支语句
+语法一:
+if(condition){
+	statement1;
+}
+注意:if语句的statement1不超过1句可以不加大括号
+
+语法二:
+if(condition){
+	statement1;
+}else{
+	statement2;
+}
+
+语法三:
+if (condition){
+	statement1;
+}else if(condition){
+	statement2;
+}else{
+	statement3;
+}
+
+#alert() 
+语法:alert()
+功能:弹出警告对话框
+
+#prompt()
+语法:prompt()
+功能:弹出输入框
+返回值:
+1、点击确定,返回输入内容
+2、点击取消,返回null
+
+
+#获取星期
+语法:new Date().getDay()
+功能:获取星期
+返回值:number(0-6)
+
+#switch语句
+语法:
+switch(expression){
+	case value:statement
+	break;
+	case value:statement
+	break;
+	……
+	default:statement
+}
+
+
+#for语句
+语法:
+for(语句1;语句2;语句3){
+	被执行的代码块;
+}
+语句1：在循坏(代码块)开始前执行
+语句2:定义运行循坏(代码块)的条件
+语句3:在循坏(代码块)已被执行之后执行
+举例:
+for(var i=2;i<=100;i++){
+	
+}
+
+
+#循环嵌套
+1、外层为假时内层不执行
+2、先执行外层再执行内层，直到内层的条件为假时再返回外层去执行
+for(){
+	for(){
+
+	}
+}
+
+
+#while语句
+语法:
+	while(条件){
+		需要执行的代码:
+	}
+
+#do-while
+语法:
+
+do{
+	需要执行的代码；
+}while(条件)
+说明:这种语法至少执行一次
+
+总结:
+1、for适合已知循环次数的循环体
+   while适合未知循环次数的循环体
+
+
+#continue：
+结束本次循环，继续开始下一次
+for(var i=1;i<10;i++){
+	if(i%5==0){
+		continue/break;
+	}
+	console.log(i);
+}
+
+
+
+#函数的作用
+通过函数可以封装任意多条语句，而且可以在任何地方、任何时候调用执行
+
+#函数的定义
+函数使用function声明，后跟一组参数以及函数体，语法如下:
+	function functionName([arg0.arg1,……argn]){
+		statements
+	}
+
+举例:
+  	function myFun(){
+  		alert("我是一个函数");
+  	}
+  	function add(num1,num2) {
+  		var sum=num1+num2;
+  		alert(num1+'和'+num2+'的和是'+sum);
+
+  	}
+说明:
+1、functionName 是要定义的函数名，属于标识符
+2、[]中的arg0.arg1,……argn为函数的参数
+3、[]的意思是可有可无，不是必须的，它不是语法
+
+
+#函数声明之后还需要调用
+举例:
+	myFun();
+	add(3,5);
+
+
+#函数的返回值
+任何函数通过retuirn语句，后面跟着返回的值来实现返回值
+说明:
+1、函数会在执行完return语句之后停止并立即退出
+2、return语句也可以不带有任何返回值，用于提前停止函数执行又不需要返回值的情况
+
+#JS中的参数
+1、arguments
+
+ECMAScript中的参数在内部用一个数组来表示,
+在函数体内通过arguments对象来访问这个数组参数
+说明:
+1、arguments对象只是和数组类似，并不是Array的实例
+2、[]语法访问它的每一个元素
+3、length属性确定传递参数的个数
+
+
+举例:
+	function inner(){
+		// arguments
+		console.log(arguments.length);  
+		console.log(arguments[0]); //索引是从0开始的正整数
+
+	}
+	inner(10,5);
+
+	打印结果是  2
+				10
+
+#js有一种严格模式，不能通过arguments[]方式修改
+
+在JavaScript 中，一些对象提供了常用的属性和方法，这些对象我们称之为内置对象。接下来我们进入JavaScript 中常用的数组、字符串、Date、Math内置对象的学习。
+
+
+#JavaScript中的内置对象
+字符串、函数、数组都是对象
+
+1、Array
+2、String
+3、Math
+4、Date
+
+ECMAScript中的Array数组
+数组是用来存储一组数据的
+
+创建数组的基本方式有两种:
+1、使用Array构造函数
+语法:new Array()
+小括号()说明:
+	1、预先知道数组要保存的项目数量
+	2、向Array构造函数中传递数组应包含的项
+2、使用数组字面量表示法
+由
+
+举例:
+	<script>
+	//创建一个保存颜色的数组
+	var colors=new Array(3);
+	var nums=new Aarry(1,3,6,9);
+	console.log(nums);
+	var colos=["red","green","yellow"];//数组字面量表示法
+	console.log(colos);
+	var infos=[6,"marry",true,{email:"marry@sohu,com"}];//这是和其他语言不同的地方，对数组中的类型没有统一的要求
+	console.log(infos);
+
+	</script>
+
+数组元素的读写
+读取和设置值时，使用方括号[]并提供相应的索引
+console.log(cols[1]);
+
+数组长度
+语法:array.length
+功能:获取数组array的长度
+返回:number
+说明:
+1、通过设置length可以从数组的末尾移除项或向数组中添加新项
+2、把一个值放在超出当前数组大小的位置上时，会重新计算数组长度值，长度值等于最后一项索引加1.
+
+#数组的遍历
+for(var i=0;i<arr.length;i++){
+	console.log(arr[i]);
+}
+
+#数组的栈方法
+1、push
+2、unshift()
+3、pop()
+4、shift()
+
+push()
+语法:
+arrayObject.push(newele1,newele2,……,neweX)
+功能：
+把它的参数顺序添加到arrayObject 的尾部
+返回值:
+把指定的值添加到数组后的新长度
+	var colors=new Array("red","green"):
+	colors.push("blue");
+	console.log(colors);
+
+
+#unshirft()
+语法:
+arrayObject.unshift(newele1,newele2,……,neweX)
+功能:
+把它的参数顺序添加到arrayObject的开头
+返回值:
+把指定的值添加到数组后的新长度
+
+#pop()
+语法:
+arrayObject.pop()
+功能:
+删除arrayObject 的最后一个元素
+返回值:
+被删除的那个元素
+
+#shift()
+语法:
+arrayObject.shift()
+功能:
+删除arrayObject中的第一个元素
+返回值
+被删除的那个元素
+
+
+#join()
+语法:
+arrayObject.join(separator) //separator为分隔符，不加参数默认为","
+功能:
+用于把数组中的所有元素放入一个字符串
+返回值
+字符串
+注意:经常使用的方法
+
+reverse()
+语法:
+stringObject.reverse()
+功能:
+用于颠倒数组中元素的顺序
+返回值:
+数组。
+
+sort()
+语法:arrayObject.sort(sortby)
+功能:
+用于对数组的元素进行排序
+返回值:数组。
+说明：
+1、即使数组中的每一项都是数值，sort()方法比较的也是字符串。(按照首字母的大小)
+2、sort()方法可以接收一个比较函数作为参数
+
+arr.sort(function(a,b){return a<b})  //降序
+arr.sort(function(a,b){return a>b})  //降序
+
+
+#concat()
+语法:
+arrayObject.concat(arrayX,arrayX,……,arrayX)
+功能:
+用于连接两个或多个数组
+返回值
+数组
+
+  举例:
+  var arr1=["a"."b","c"],
+  	  arr2=["d","e",1,3],
+  	  arr3;
+
+  	  arr3=arr1.concat(arr2,["m",99,8]);
+  	  console.log(arr3);
+
+
+ slice()
+ 语法:
+ arrayObject.slice(start,end)
+ 功能:
+ 从已有的数组中返回选定的元素
+ 参数:
+ start(必须)规定从何处开始选取，如是负数，从数组尾部开始算起
+ end(可选)规定从何处结束选取，是数组片段结束处的数组下标
+
+ 返回值:数组
+
+	举例:
+	var colors=["red","green","blue","yellow","orange"];
+	var newColors=colors.slice(1,3);
+	console.log(newColors);   //结果是["green","blue"]
+
+	var newColors3=colors.slice(-1,5); // -1+length=4  即(4,5)
+
+
+#案例
+	完成一下代码段，实现b数组对a数组的拷贝
+	var a=[1,"yes",3],
+		b;
+
+	//1、数组的遍历，push
+
+	//2、concat()
+
+	//3、slice()
+
+
+删除
+语法:
+arrayObject.splice(index,count)
+功能:
+删除从index处开始的零个或多个元素
+返回值:
+含有被删除的元素的数组
+说明:
+count是要删除的项目数量，如果设置为0，则不会删除项目。
+如果不设置，则设置从index开始的所有值
+
+插入
+语法:
+arrayObject.splice(index,0,item1,……,itemX)
+功能:
+在指定未知插入值
+参数:
+index：起始位置
+0:要删除的项数
+item1……itemX :要插入的项
+返回值
+空
+
+替换
+语法:
+arrayObject.splice(index,count,item1,……,itemX)
+删除+插入
+返回值
+被删除的值
+
+
+indexOf()
+语法:
+arrayObject.indexOf(searchvalue,startIndex)
+功能:
+从数组的开头(位置0)开始向后查找
+参数:
+searchvalue:必须，要查找的项；
+startIndex:可选，起点未知的索引。
+返回值：
+number,查找的项在数组中的位置，没有找到的情况下返回-1
+
+lastIndexOf()
+arrayObject.lastIndexOf(searchvalue,startIndex)
+功能:
+从数组的末尾开始向后查找
+参数:
+searchvalue:必须，要查找的项；
+startIndex:可选，起点未知的索引。
+返回值：
+number,查找的项在数组中的位置，没有找到的情况下返回-1
+
+说明
+1、在比较第一个参数与数组中的每一项时，会使用全等操作符，即要求查找的项必须严格相等
+2、数组的位置方法是ECMAScript5为数组实例新增的，所以支持的浏览器只有：
+IE9+ 、 Firefox2+ 、 Safari3+  、  Opera9.5 和Chrome
+
+
+封装一个方式实现indexOf的功能
+
+function ArrayIndexOf(arr,value){
+	for (var i=0;i<arr.length;i++){
+		if(arr[i]===value){
+			return i;
+		}	
+	}
+}
+
+JavaScript中的String
+1、掌握字符串对象的方法:
+charAt()
+charCodeAt()
+indexOf()
+lastIndexOf()
+
+
+charAt() 与charCodeAt()
+charCodeAt()语法:
+stringObject.charCodeAt(index)
+功能：
+返回stringObject中index位置字符的字符编码
+
+
+charAt()语法
+stringObject.charAt(index)
+功能：
+返回stringObject中index位置的字符
+说明:
+ECMAScript5中可使用"方括号加字符索引"来访问字符串中特定的字符，但是IE7及更早的浏览器会返回undefined
+
+	举例:(IE7及更早的浏览器会返回undefined)
+	    var str="hello world";
+	    console.log(str[1]);
+	但是最好使用
+		console.log(str.charAt(2));
+
+
+indexOf()
+语法
+stringObject.indexOf("o")
+功能:
+从一个字符串中搜索给定的字符串，返回子字符串的位置
+返回值:数值
+说明:如果没有找到该子字符串，则返回-1
+	举例：
+	 var email="marry@163.com"
+	    console.log(email.indexOf("@"));
+	    <!-- 返回值是5 -->
+
+#lastIndexOf()
+语法
+stringObject.lastIndexOf("o")
+功能:
+从一个字符串中搜索给定的字符串，返回子字符串的位置
+返回值:数值
+说明:如果没有找到该子字符串，则返回-1
+
+
+#掌握字符串对象的截取方法
+slice()
+substring()
+substr()
+
+
+slice()
+语法
+stringObject.slice(start,end)
+功能
+截取子字符串
+参数说明
+1、start 必需，指定子字符串的开始位置
+2、end 可选，表示子字符串到哪里结束，end本身不在截取范围之内，省略时截取至字符串的末尾
+	举例
+	var email="marry@163.com"
+	console.log(email.slice(1,8));
+	<!-- 返回值是arry@16 -->
+3、当参数为负数时，会将传入的负值与字符串的长度相加
+	举例:(-7,-2)就相当于(6,11)
+4、不包含最后参数本身
+
+
+substring()
+说明
+语法及功能同slice()完全一样
+区别在于
+1、参数遇到负数直接转为0
+2、substring()会将较小的数作为开始位置，将较大的数作为结束位置
+   举例如果遇到(2,-5)会自动转换成(0,2)
+
+
+substr()
+语法
+stringObject.substr(start,len)
+功能
+截取子字符串
+参数说明
+1、start 必需，指定子字符串的开始位置
+2、len 可选，表示截取的字符总数，省略时截取至字符串的末尾
+3、当start为负数时，会将传入的负值与字符串的长度相加
+4、当len为负数时，返回空字符串
+
+
+综合应用
+掌握字符串方法的综合应用:
+编写JS函数，用于获得输入参数的后缀名，如输入abc.txt,返回.txt
+		 function getSuffix(str){
+	     	var num1=str.indexOf(".");
+	    	return str.slice(num1);
+	    
+	    }
+	    var str="abcdef.exe";
+	    var strSuffix=getSuffix(str);
+	    console.log(strSuffix);
+
+
+#写一个方法的思路
+1、先写好框架
+var str=abc.txt;
+function getSuffix(url){
+	
+}
+var formatName=getSuffix(str);
+2、用注释写出实现该方法的步骤
+	举例  
+	// 1、获取.在url中出现的位置
+	// 2、截取.到末尾的片段
+
+
+#掌握字符串对象的方法
+split()
+replace()
+
+split()
+语法
+stringObject.split(separator)
+功能
+把一个字符串分割成字符串数组
+返回值:Array
+说明：
+separator:必须，分隔符
+注意:该方法和join方法刚好相反
+
+
+replace()
+语法
+stringObject.replace(regexp/substr,replacement)
+功能
+在字符串中用一些字符替换另一些字符，或替换一个与正则表达式匹配到的子串
+返回值：String
+参数:
+regexp/substr:必需，规定子字符串或要替换的模式的RegExp对象
+replacement 必需。一个字符串值
+
+	举例:
+	var tel='010-62971268,400-100-9098,010-86789889';
+	var newTel=tel.replace(','," ");
+	console.log(newTel);
+
+掌握字符串方法的其他方法:
+1、toUpperCase()
+2、toLowerCase()
+3、将字符串border-left-color转换成borderLeftColor
+
+
+toUpperCase()
+语法
+stringObject.toUpperCase()
+功能：把字符串转换为大写
+
+toLowerCase()
+语法
+stringObject.toLowerCase()
+功能:把字符串转换为小写
+
+  案例:
+  	写一个方法，实现
+   "border-left-color"转化成"border-Left-Color"
+   	function changeUpper(str){
+		//第一步。拆分成数组
+		var newArray=new Array();
+		var strArray=str.split("-");
+		//第二步，遍历
+		// 第三步，把除了第一个值的每一个值的第一个字符转化成大写
+		newArray[0]=strArray[0];
+		for(var i=1;i<strArray.length;i++){
+			newArray[i]=(strArray[i].replace(strArray[i].substr(0,1),strArray[i].substr(0,1).toUpperCase()));
+		}
+		return newArray.join("-");
+		// 数组重新组合成字符串
+	}
+	console.log(changeUpper("border-left-color-abc"));
+
+
+
+JavaScript中的Math
+1、掌握Math对象的方法
+min()
+max()
+ceil()
+floor()
+round()
+abs()
+
+
+
+Math.min()
+语法
+Math.min(num1,num2,……,numN)
+功能：
+求一组数中的最小值
+返回值:Number
+
+Math.max()
+语法
+Math.max(num1,num2,……,numN)
+功能：
+求一组数中的最大值
+返回:Number
+注意:这组数据中如果出现一个非数字，返回NaN
+
+
+Math.ceil()
+语法
+Math.ceil(num)
+功能：
+向上取整，即返回大于等于num的最小整数
+返回值：Number
+
+Math.floor()
+语法
+Math.floor(num)
+功能：
+向下取整，返回num的整数部分
+返回值:Number
+
+Math.round()
+语法 
+Math.round(num)
+功能：
+将数值四舍五入为最接近的整数
+返回值：Number
+
+
+Math.abs()
+语法 
+Math.abs(num)
+功能：
+返回num的绝对值
+返回值:Number
+注意:比如移动端是有负数的坐标，负数无法计算距离，可以用这个转换
+
+Math.random()
+语法 
+Math.random()
+功能：
+返回大于等于0小于1的一个随机数
+返回值：Number
+说明：
+求n到m之间的随机整数的公式
+random=Math.floor(Math.random()*(m-n+1)+n);可以取到m但是取不到n
+
+random=Math.floor(Math.random()*(m-n)+n); 可以取到n但是取不到m
+
+
+JavaScript中的date对象
+秒杀、倒计时都会用到
+1、掌握创建日期对象的方法
+2、掌握date对象中获取日期时间的方法
+3、掌握date对象中设置日期时间的方法
+
+
+如何创建一个日期对象
+语法:new Date();
+功能：创建一个日期时间对象
+返回值：不传参的情况下，返回当前的日期时间对象
+说明：
+不过想根据特定的日期和时间创建日期对象，必须传入表示该日期的毫秒数或者一组用逗号隔开的表示年月日时分秒的参数
+
+
+获取年月日时分秒及星期的方法
+1、getFullYear():返回4位数的年份
+2、getMonth():返回日期中的月份，返回值为0-11
+3、getDate()：返回月份中的天数
+4、getDay():返回星期，返回值为0-6
+5、getHours():返回小时
+6、getMinutes():返回分
+7、getSeconds():返回秒
+8、getTime():返回表示日期的毫秒数  从1970年1月1号 00:00:00开始到现在时间的毫秒数
+  举例:
+  //创建一个日期时间对象
+		var weeks=["日","一","二","三","四","五","六"],
+		today=new Date(),
+		year=today.getFullYear(),
+		month=today.getMonth()+1,
+		date=today.getDate(),
+		week=today.getDay(),
+		hours=today.getHours(),
+		minutes=today.getMinutes(),
+		seconds=today.getSeconds();
+		time=year+'年'+month+'月'+date+'日'+hours+'时'+minutes+'分'+seconds+'秒 星期'+weeks[week];
+		console.log("现在是："+time);
+
+
+
+设置年月日时分秒及星期的方法
+1、setFullYear(year):设置4位数的年份
+2、setMonth(mon):设置日期中的月份，从0开始，0表示1月
+3、setDate():设置日期
+4、setDay():设置星期，从0开始，0表示星期日
+5、setHours() 设置小时
+6、setMinutes() 设置分
+7、setSeconds() 设置秒
+8、setTime()   已毫秒数设置日期，会改变整个日期
+
+
+注意:如果setMonth(13) 月份显示1，实际是2月，年份会+1
+
+
+
+javascript DOM 基础
+本课程的主要内容
+如何获得一个元素
+如何访问一个元素的样式
+如何设置和删除属性
+
+学习目标
+1、掌握基本的DOM查找方法
+document.getElementById()
+document.getElementsByTagName()
+
+2、掌握如何设置DOM元素的样式
+获取之后可以动态的设置一些样式和元素
+
+#DOM查找方法
+语法：document.getElementById("id")
+功能：返回对拥有指定ID 的第一个对象的引用
+返回值：DOM对象
+说明：id为DOM元素上id属性的值
+
+注意：
+如果出现同样的id,返回第一个
+
+
+DOM查找方法
+语法：document.getElementsByTagName("tag")
+功能：返回一个对所有tag标签引用的集合
+返回值：数组
+说明：tag为要获取的标签名称
+
+ps:另外还有通过name,通过class选取元素的方法，见本章教辅。
+
+
+通过JS给元素设置样式
+语法:ele.style.styleName=styleValue
+功能：设置ele元素的CSS样式
+说明：
+1、ele为要设置样式的 DOM 对象
+2、styleName为要设置的样式名称  注意:不能使用"-"形式font-size,使用驼峰命名形式fontSize
+3、styleValue为设置的样式值
+
+#学习目标
+1、掌握innerHTML属性的应用
+2、掌握className属性的应用
+3、掌握如何在DOM元素上添加\删除\获取属性
+
+
+#innerHTML
+语法
+ele.innerHTML
+功能:获取和设置标签之间的文本和html内容
+语法:ele.innerHTML="html"
+功能：设置ele元素开始和结束标签之间的HTML内容为html
+
+
+#className
+语法:ele.className
+功能：为ele元素添加class属性(如果原先该元素有class,则表现为动态添加class替换元素本身的class)
+注意：如果元素有2个以上的class属性值，那么获取这个元素的className属性时，会将它的class属性值都打印出来
+语法：ele.className="cls"
+功能：设置ele元素的class属性为cls
+
+
+
+获取属性
+语法：ele.getAttribute("attribute")
+功能：获取ele元素的attribute属性
+说明：
+1、ele是要操作的dom对象
+2、attribute是要获取的html属性
+  举例；
+    标签本身自带的属性不需要用，而自定义的属性一定需要用getAttribute.
+	<p id="text" align="current" data-type="title">文本</p>
+	<script>
+	  var shuxing=document.getElementById("text");
+	  console.log(shuxing.align);
+	</script>
+
+设置属性
+语法:ele.setAttribute("attribute",value)
+功能：在ele元素上设置属性
+说明：
+1、ele是要操作的dom对象
+2、attribute为要设置的属性名称
+3、value为设置的attribute属性的值
+
+
+删除属性
+语法:ele.removeAttribute("attribute")
+功能：删除ele上的attribute属性
+说明：
+1、ele是要操作的dom对象
+2、attribute是要删除的属性名称
+
+
+学习目标
+1、掌握什么是事件
+2、掌握HTML事件
+3、掌握DOM 0级事件
+4、掌握常用的鼠标与键盘事件
+5、掌握this的指向
+
+什么是事件？
+所有交互，都是通过事件来实现的。比如点按钮，加入购物车
+定义：事件就是文档或浏览器窗口中发生的一些特定的交互瞬间
+
+本课程讲解两种事件
+HTML事件和DOM 0级事件
+
+HTML事件
+直接在HTML元素标签内添加事件，执行脚本
+语法：<tag 事件="执行脚本"></tag>
+功能:HTML元素上绑定事件
+说明：执行脚本可以是一个函数的调用
+
+鼠标事件
+onload 页面加载时触发  用这个可以实现JS脚本写在Head里面
+unload 页面卸载时触发
+onclick 鼠标点击时触发
+onmouseover 鼠标滑过时触发
+onmouseout 鼠标离开时触发
+onfocus 获得焦点时触发   
+onblur 失去焦点时触发
+onchange 域的内容改变时触发
+onsubmit  表单中的确认按钮被点击时发生
+onmousedown 鼠标按钮在元素上按下时触发
+onmousemove  在鼠标指针移动时发生
+onmouseup 在元素上松开鼠标按钮时触发
+onresize   当调整浏览器窗口的大小时触发
+onscroll    拖动滚动条滚动时触发
+
+
+
+注意；
+1、onfocus事件用于:input标签type为text、password
+2、onchange 一般作用于select 或者是checkbox或者是radio
+3、onsubmit 是绑定在form 标签上而非按钮上
+
+关于this指向
+shis是对元素本身的引用
+
+
+DOM 0级事件
+1、通过DOM获取HTML元素
+2、(获取的HTML元素).事件=执行脚本
+
+语法：ele.事件=执行脚本
+功能：在dom对象上绑定事件
+说明：执行脚本可以是一个匿名函数，也可以是一个函数的调用(注意不要加括号)
+
+PS：
+不建议使用HTML事件原因
+1、多元素绑定相同事件时，效率低
+2、不建议在HTML元素中写JS代码
+
+ele.value
+可以用于获取表单元素的值
+
+获取下拉菜单被选中的值
+方法一；var bgcolor=this.value;
+方法二：var bgcolor=menu.options[menu.selectedIndex].value;
+
+body的背景色设置
+document.body.style.background="red":
+
+
+
+键盘事件与keyCode属性
+onkeydown 在用户按下一个键盘按键时发生
+onkeypress 在键盘按键被按下并释放一个键时发生
+onkeyup    在键盘按键被松开时发生
+keyCode    返回onkeypress 、onkeydown 或onkeyup事件触发的键的值的字符代码，或键的代码
+
+
+function(event){
+}event代表事件的状态，如触发event对象的元素、鼠标的位置及状态等
+在事件触发的function里，用一个参数接受事件对象
+
+获取文本框的长度
+text.value.length
+
+
+js中的BOM
+学习目的
+掌握什么是BOM
+BOM的核心--window对象
+掌握window对象的控制、弹出窗口的方法
+
+
+什么是bom
+BOM （brower object model）浏览器对象模型
+       浏览器  对象  模型
+
+
+bom对象有
+window   navigator   screen  history  location document   event
+
+window
+window 是浏览器的一个实例，在浏览器中，window 对象有双重角色，它即是通过js访问浏览器窗口的一个接口，又是ECMAScript规定的Global对象。
+
+
+Global对象   全局对象
+全局变量---脚本的任何一个地方都能调用的变量
+全局方法---脚本的任何一个地方都能调用的方法
+
+window.string 即是全局对象
+var string=window.string
+
+所有的全局变量和全局方法都被归在window 上
+
+
+window对象的方法
+语法:window.alert("content")
+功能：显示带有一段消息和一个确认按钮的警告框
+
+
+语法:window.confirm("message")
+功能：显示一个带有指定消息和OK及取消按钮的对话框
+返回值：如果用户点击确定按钮，则confirm() 返回 true
+(布尔值)  如果用户点击取消按钮，则confirm() 返回false
+
+tips：隐藏一个dom元素ele,可以使用box.style.display="none";
+tips:如果confirm("message")中message需要换行,不是用</br>而是用\n
+
+语法：window.prompt("text,defaultText")
+参数说明:
+text:要在对话框中显示的纯文本(而不是HTML格式的文本)
+defaultText:默认的输入文本
+返回值：如果用户单击提示框的取消按钮，则返回null
+		如果用户单击确认按钮，则返回输入字段当前显示的文本
+
+
+语法:window.open(pageURL,name,parameters)
+功能:打开一个新的浏览器窗口或查找一个已命名的窗口
+参数说明:
+pageURL : 子窗口路径
+name：自窗口句柄(name 声明了新窗口的名称，方便后期通过name对子窗口进行引用)
+parameters:窗口参数(各参数用逗号分隔)
+tips:窗口参数有哪些？
+	width:窗口宽度
+	height:窗口高度
+	left:窗口X轴坐标
+	top:窗口Y轴坐标
+	toolbar:是否显示浏览器的工具栏
+	menubar:是否显示菜单栏
+	scrollbars:是否显示滚动条
+	location:是否显示地址字段
+	status:是否添加状态栏
+
+
+语法：window.close()
+功能：关闭浏览器窗口
+
+
+学习目标
+1、掌握超时调用
+2、掌握间歇调用
+JavaScript是单线程语言，单线程就是所执行的代码必须按照顺序
+
+
+超时调用
+语法：setTimeout(code,millisec)
+功能：在指定的毫秒数后调用函数或计算表达式
+
+参数说明：
+1、code:要调用的函数或要执行的JavaScript代码串
+2、millisec:在执行代码前需等待的毫秒数
+
+setTimeout方法返回一个ID值，是唯一的标示，通过它可以取消超时调用
+tips:1、code代码串记得加上引号
+  2、code最好不要直接放入代码串，可以用自定义函数或者匿名函数
+   3、setTimeout()只执行code一次，如果要多次调用，可以让code自身再次调用setTimeout()
+	相当于通过超时调用实现了间歇调用的功能
+清除超时调用
+语法：clearTimeout(id_of_settimeout)
+功能：取消由setTimeout()方法设置的timeout
+参数说明：
+1、id_of_settimeout:由setTimeout()返回的ID值，该值标识要取消的延迟执行代码块
+
+
+间歇调用
+语法：setInterval(code,millisec)
+功能：每隔指定的时间执行一次代码
+参数说明：
+1、code:要调用的函数或要执行的JavaScript代码串
+2、millisec:周期性执行或调用code之间的时间间隔，以毫秒计
+tips:特别要注意的是，不是等间歇调用执行完了才往下执行，而是先把下面的执行完了之后再执行间歇调用
+
+清除间歇调用
+语法：clearInterval(id_of_setinterval)
+功能：取消由setInterval()方法设置的interval
+参数说明:
+1、id_of_setinterval:由setInterval()返回的ID值
+tips:
+	1、var timer=null;初始化时释放内存
+	2、在间歇调用和超时调用中使用循环语句好像会遇到问题，这和循环有类似的地方，又不同
+
+BOM中最有用的对象--location
+学习目标
+1、掌握location对象
+2、掌握location对象的常用属性
+location对象提供了与当前窗口中加载的文档有关的信息，还提供了一些导航的功能，它即是window对象的属性，也是document对象的属性。
+
+语法：location.href
+功能：返回当前加载页面的完整URL
+说明：location.href与window.location.href 等价
+
+
+语法：location.hash
+功能：返回URL中的hash(#号后跟零或多个字符)，如果不包含则返回空字符串
+用location.hash="#"实现锚链接的功能
+
+
+location对象的常用属性
+语法：location.host
+功能：返回服务器名称和端口号（如果有）
+语法：location.hostname
+功能：返回不带端口号的服务器名称
+语法：location.pathname
+功能：返回URL中的目录和（或）文件名
+语法：location.port
+功能：返回URL中指定的端口号，如果没有，返回空字符串
+语法：location.protocol
+功能：返回页面使用的协议
+语法：location.search
+功能：返回URL的查询字符串，这个字符串以问号开头
+
+location对象之位置操作
+学习目标
+1、掌握位置操作
+2、掌握Location.reaplace()
+3、掌握location.reload()
+
+
+改变浏览器位置的方法：
+location.href属性
+location对象其他属性也可以改变URL
+location.hash
+location.search
+
+location.href="date.html";
+	//等价于 window.location="date.html";
+	//等价于 location="date.html";
+	// 等价于document.location="date.html";
+
+
+location.replace()
+语法：location.replace(url)
+功能：重新定向URL
+说明：使用location.replace不会在历史记录中生成新纪录
+
+
+location.reload()
+功能：重新加载当前显示的页面
+说明：
+location.reload()有可能从缓存中加载
+location.reload(true)从服务器重新加载
+
+
+学习目标
+掌握BOM中的history对象
+
+history对象保存了用户在浏览器中访问页面的历史记录
+语法：history.back()
+功能：回到历史记录的上一步
+说明：相当于使用了history.go(-1) 
+		如果history.go(-2)就是后退两步
+
+
+语法：location.forward()
+功能：回到历史记录的下一步
+说明：相当使用了history.go(1)
+
+
+学习目标
+Screen   
+screen 对象包含有关客户端显示屏幕的信息
+
+
+语法：screen.availWidth
+功能：返回可用的屏幕宽度
+语法：screen.availHeight
+功能:返回可用的屏幕高度
+ps:获取窗口文档县市区的高度和宽度，可以使用innerHeight和innerWidth
+
+Navigator
+学习目标
+1、掌握Navigator对象的userAgent属性
+2、掌握如何判断浏览器的类型
+3、掌握如何判断设备的终端是移动还是PC
+ps：appCodeName\appName 浏览器名称等此节不做介绍
+
+Navigator.UserAgent：用来识别浏览器名称、版本、引擎以及操作系统等信息的内容
+
+
+轮播案例
+第三章38:21

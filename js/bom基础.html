@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="box">
+		<span>iphone6s</span>
+		<input type="button" value="删除" id="btn">
+	</div>
+	<script>
+
+		var button=document.getElementById("btn");
+		button.onclick=function(){
+			var result=window.confirm("如需关闭\n点击确定");
+			console.log(result);
+			var box=document.getElementById("box");
+			if(result){
+				box.style.display="none";
+			}
+		}
+		var message=window.prompt("请输入您的星座","天蝎座");
+		console.log(message);
+			
+	
+		
+	</script>
+	
+</body>
+</html>

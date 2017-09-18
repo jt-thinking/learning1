@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+
+		.text span{font-weight: bold;color: #f00;}
+		em{font-style: normal;}
+	</style>
+</head>
+<body>
+	<div>
+		<p class="text" >您还可以输入<span><em id="count">30</em>/30</span></p>
+		<div class="input">
+		
+			<textarea name="" id="text" cols="70" rows="4"></textarea>
+
+		</div>
+
+	</div>
+
+	<script>
+		// 获取文本框
+		
+		var text=document.getElementById("text");
+	 	//获取文本框长度
+	 	document.onkeyup=function(){
+	 		var len=text.value.length;
+	 		console.log(30-len);
+	 	//获取count
+	 	var count=document.getElementById("count");
+	 	count.innerHTML=30-len;
+	 	//改变元素的HTML代码为30-len
+	 	
+	 	
+
+	 	
+
+
+	 	}
+
+	</script>
+	
+</body>
+</html>

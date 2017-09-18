@@ -1,0 +1,2 @@
+#sql语句搜索文本
+content like '%姓名%'

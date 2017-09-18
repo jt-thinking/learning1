@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>String</title>
+</head>
+<body>
+	<script>
+		// var str="hello world";
+	    // console.log(str[0]);
+	    // console.log(str.charAt(22));
+	    // var email="marry@163.com"
+	    // console.log(email.slice(-2));
+	    // function getSuffix(str){
+	    // 	var num1=str.indexOf(".");
+	    // 	returnstr.slice(num1);
+	    
+	    // }
+	    // var str="abcdef.exe";
+	    // var strSuffix=getSuffix(str);
+	    // console.log(strSuffix);
+	    // var str='welcome-to-beijing';
+     //        console.log(str.split("-"));
+ //    var tel='010-62971268,400-100-9098,010-86789889';
+	// var newTel=tel.replace(","," ");
+	// console.log(newTel);
+	// function conversionHump(){
+	// 	//第一步。拆分成数组
+		
+	// 	var str="border-left-color";
+	// 	var newArray=new Array();
+	// 	var strArray=str.split("-");
+	// 	console.log(strArray);
+		
+	// // 	//第二步，遍历
+	// 	for(var i=0;i<strArray.length;i++){
+	// 		// console.log(strArray[i].toUpperCase());
+
+	// 		newArray[i]=(strArray[i].replace(strArray[i].substr(0,1),strArray[i].substr(0,1).toUpperCase()));
+
+	// 		// console.log(strArray[i].substr(0,1).toUpperCase());
+			
+	// 	}
+	// 	console.log(newArray);
+	// 	// 第三步，把除了第一个值的每一个值的第一个字符转化成大写
+
+	// 	// 数组重新组合成字符串
+	// 	var newstr=newArray.join("-");
+	// 	console.log(newstr);
+	// // }
+	// // var newStr=conversionHump("border-left-color");
+
+
+
+		function changeUpper(str){
+				//第一步。拆分成数组
+				var newArray=new Array();
+				var strArray=str.split("-");
+				//第二步，遍历
+				// 第三步，把除了第一个值的每一个值的第一个字符转化成大写
+				newArray[0]=strArray[0];
+				for(var i=1;i<strArray.length;i++){
+					newArray[i]=(strArray[i].replace(strArray[i].substr(0,1),strArray[i].substr(0,1).toUpperCase()));
+				}
+				return newArray.join("-");
+				// 数组重新组合成字符串
+		}
+		console.log(changeUpper("border-left-color-abc"));
+
+
+
+
+
+	</script>
+</body>
+</html>

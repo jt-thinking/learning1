@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>间歇调用</title>
+</head>
+<body>
+	
+	<script>
+	//间歇调用
+	 // 	function JXdiaoyong(){
+	 // 		console.log("hello");
+	 // 	}
+	 	
+		// var id_JXdiaoyong=setInterval(JXdiaoyong,1000);
+		// //超时调用
+		// function QCJXdiaoyong(){
+	 // 		clearTimeout(id_JXdiaoyong);
+	 // 	}
+		// setTimeout(QCJXdiaoyong,9999);
+		// 	//清楚间歇调用
+		var num=1,
+			max=10,
+			id_CSdiaoyong;
+
+			id_CSdiaoyong=setTimeout(diZeng,1000);
+			function diZeng(){
+			console.log(id_CSdiaoyong);
+			console.log(num);
+			num++;
+			if(num>max){
+
+				clearTimeout(id_CSdiaoyong);
+			}else{
+			setTimeout(diZeng,1000);
+		  	}
+			
+			
+		}
+		
+
+
+
+
+
+		//要求一秒钟递增1，到10就停止
+		//间歇调用
+		// id_JXdiaoyong=setInterval(JXdiaoyong,1000);
+		// 	function JXdiaoyong(){
+		// 		num++;
+		// 		console.log(num);
+		// 		if(num>max){
+		// 			clearInterval(id_JXdiaoyong);
+		// 		}
+		// 	}
+		// 	console.log(num);
+		// 	
+		// 	
+
+		//
+			
+			
+		//超时调用
+			// if(num>max){
+			// 	console.log("2");
+			// }
+		
+			
+		//清楚间歇调用		
+
+
+	</script>
+</body>
+</html>

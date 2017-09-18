@@ -1,0 +1,1369 @@
+﻿11第三章  文本样式  25:00;
+
+#HTML标签属性
+<标签名 属性名1="属性值" 属性名2="属性值"...> ...</标签名>
+
+#如果网页有中文需要进行编码设置，否则会出现乱码
+<meta http-equiv...>
+我们国内主要使用utf-8 和 gb2312
+
+#水平线的属性<hr />
+width 设置水平线的宽度，可以是像素或者百分比
+color 设置水平线颜色
+align 设置水平线对齐方式
+noshade 设置水平线无阴影
+
+#文字和段落标签
+文字斜体<i> </i>  、<em>  </em>
+加粗：<b> </b>  <strong> </strong>
+下标：<sub>
+上标：<sup>
+下划线<ins>
+删除线：<del>
+
+
+#特殊符号
+
+&lt   <
+&gt   >
+&reg  已注册符号
+&copy 版权符号
+&trade 商标
+&nbsp 不断行的空白
+
+
+#w无序列表type属性值
+<ul type:属性值>
+disc 圆点
+square 正方形
+cicle 空心圆
+
+#w有序列表type属性值
+<ol type:属性值>
+1   数字1、2、3
+a   小写字母
+A   大写字母
+i    小写罗马数字
+I    大写罗马数字
+
+
+#定义列表
+<dl>
+  <dt></dt>
+  <dd>   </dd>
+  <dd>   </dd>
+</dl>
+定义标签内可以有多个<dt>,且每个<dt> 可以有多个<dd>描述，<dt>和<dd>是同级标签
+且三个标签要组合使用，不能单独使用
+
+#开发中，ui和ol的编号去掉，使用图片代替
+
+#图像标签
+<img src="" />
+属性有：
+src(必写) url       显示图像的url
+alt      文字         图像替代文本
+height   数值和百分比   图像的高
+width    数值和百分比 图像的宽
+
+
+#HTML的路径
+分为相对路径和绝对路径
+绝对路径  从盘符开始写起，比如"D:\备份\html\第五章HTML基础总结.mp4"
+相对路径
+如果图片和html文件在同一个额文件夹内，那么只需要写<img src ="1.jpg" />
+如果在其上一级<img src=" ../1.jpg"  />，如果在其下一级<img src="picture/aaa.png"/>
+
+#超链接标签
+语法：
+<a href="">内容 </a>
+href 链接地址，可以是内部链接或者外部链接
+内部链接一般采用相对路径
+当href=# 表示空链接
+属性：
+target   链接的目标窗口_self、_blank 、_top 、_parent
+title    链接提示文字
+name      链接命名
+
+#同一个页面定义锚
+<a href="#锚名1">目录1 </a>
+<a href="" name="锚名1"> </a>
+
+总结：
+1、定义锚的位置和锚名
+2、设置寻找锚的链接
+
+#在不同页面定义锚
+网页1:<a href="网页名称#锚名">  </a>
+网页2：<a name="锚名">  </a>
+
+
+#文件下载也是有<a> 标签实现的，只需要将链接的内容改成下载内容即可
+
+ #根标签
+ <html></html>
+
+ #头部标签
+ <head></head>
+
+ #头部元素
+ <title>……</title>   用于告诉用户和搜索引擎这个网页的主要内容是什么;搜索引擎可以通过网页标题，迅速的判断出网页的主题。
+ <script> </script>
+ <style> </style>
+ <link>
+ <meta>
+
+ #内容标签
+ <body></body>
+
+ #内容元素
+ <h1> </h1>  ……<h6></h6>
+ <p>  </p>段落
+ <a>
+ <img>
+ <strong> </strong> 需要强调的文本 （粗体）
+ <em>  </em>  需要强调的文本 (斜体)
+ <span> </span> 没有语义，只为单独设置样式所用
+ <q> </q> 短文本的引用，会自动加上双引号，但是不只是加双引号这么简单，它的语义是引用。
+ <blockquote> </blockquote> 长文本的引用，缩进样式，语义也是引用。
+
+#<h1>标签属性
+<h1 align="center"> </h1>
+<h1> 对于搜索引擎来说，这是一个很重要的标签
+ #注释的格式
+ <!---->
+
+
+ #语义化的作用
+ 如果正确的使用标签，选择了适当语义的标签，则更容易被搜索引擎所收录
+
+#换行
+ <br />
+
+ #空格
+ &nbsp;
+
+ #水平横线
+ <hr />
+
+ #水平横线的属性
+ color  颜色
+
+ #address
+ <address> </address> 语义是地址（包括电子邮件地址）、签名、文档的作者身份。默认样式是斜体
+
+ #在网页中添加一行代码
+ <code> </code>
+
+
+ #在网页中添加一段代码
+ <pre> </pre>   pre是预格式的文本，通常会保留空格和换行符
+
+
+ #没有先后顺序的列表项，默认用小圆点表示
+ <ul>
+ 	<li>  </li>
+ 	<li>  </li>
+ 	<li>  </li>
+ </ul>
+
+#有先后顺序的列表项，默认用数字表示序号
+ <ol>
+ 	<li>  </li>
+ 	<li>  </li>
+ 	<li>  </li>
+ </ol>
+
+ #<div> </div>
+ 独立的逻辑部分，是页面上相互关联的一组元素，相当于容器。
+
+ #给div命名，使逻辑更加清晰
+ <div  id="版块名称">…</div>
+
+
+#<section> </section>
+<section> 标签定义文档中的节（section、区段）。比如章节、页眉、页脚或文档中的其他部分。<section> 标签是 HTML 5 中的新标签。
+section：与 div 的无语义相对，简单地说 section 就是带有语义的 div 了，但是千万不要觉得真得这么简单。section 表示一段专题性的内容，一般会带有标题。section 应用的典型场景有文章的章节、标签对话框中的标签页、或者论文中有编号的部分。一个网站的主页可以分成简介、新闻和联系信息等几部分。section 不仅仅是一个普通的容器标签。当一个标签只是为了样式化或者方便脚本使用时，应该使用 div 。一般来说，当元素内容明确地出现在文档大纲中时，section 就是适用的。
+
+ #表格
+ <table> </table>
+
+#table 属性之边框
+<table border="1"> 边框为1个像素宽度
+
+#table 属性之单元格长度
+<table width="500px">
+
+#table的其他属性
+属性         值                        描述
+align        left、center、right       表格相对周围元素的对齐方式
+border       pixels                    规定表格边框的宽度
+Bgcolor      rgb   #xxxxxx             表格的背景颜色
+Cellpadding  pixels、%                 单元边沿与其内容之间的空白
+cellspacing  pixels、%                 单元格之间的空白
+frame        属性值                    规定外侧边框的哪个部分是可见的
+rules        属性值                    规定内侧边框的哪个部分是可见的
+
+           值             描述
+           void          不显示外侧边框
+           above         显示上部的外侧边框
+           below         显示下部的外侧边框
+frame      hsides        显示上部和下部的外侧边框
+           vsides        显示左边和右边的外侧边框
+           lhs           显示左边的外侧边框
+           rhs           显示右边的外侧边框
+           box           在所有四个边上显示外侧边框
+           border        在所有四个边上显示外侧边框
+
+
+           none          没有线条
+           group         位于行组和列组之间的线条
+rules      rows          位于行之间的线条
+           cols          位于列之间的线条
+           all           位于行和列之间的线条
+
+
+#<tr> 标签属性
+属性                 值                              描述
+align    left、center、right、justinfy、char        行内容的水平对齐
+Valign   top、middle、bottom、baseline              行内容的垂直对齐
+Bgcolor  rgb(x,x,x)   #xxxxxx     .colorname        行的颜色背景
+
+
+#单元格标签<td> 和<th> 标签属性
+属性                 值                              描述
+align       left、center、right、justify、char    单元格内容的水平对齐
+valign    tip、middle、bottom、baseline           单元格内容的垂直对齐
+bgcolor   rgb(x,x,x)   #xxxxxx     .colorname        行的颜色背景
+width     %、pixels                                  单元格的宽度
+height    %、pixels                                  单元格的高度
+
+#<thead>、<tbody>和<tfoot>标签属性
+属性                 值                              描述
+align       left、center、right、justify、char    单元格内容的水平对齐
+valign    tip、middle、bottom、baseline           单元格内容的垂直对齐
+
+#跨列属性colspan
+<td colspan="2"> 跨几列数字就为几
+
+#跨行属性rowspan
+<td rowspan="2"> 跨几行数字就为几
+
+#<caption> 表格标题文本 </caption>
+
+ #表格结构
+ 表格划分为三部分：表头、主体、脚注
+ <thead> </thead> 表格的头（放标题之类的内容）
+ <tbody> </tbody> 表格的主体（放数据主体）
+ <tfoot></tfoot>  表格的脚（放表格的脚注）
+ 建议三个标签同时使用
+
+#使用带结构的表格的好处
+ 在表格结构当中，可将表格按结构一块一块优先显示，而不必等到全部下载完才显示
+
+#表格嵌套
+说明：1、完整表格结构   2、放到<td>标签中
+
+#在用表格进行网页布局的注意点
+1、尽量少的使用表格嵌套   2、尽量少的使用表格跨行跨列
+二者都会增加代码的整体维护成本
+
+
+#<form>标签属性
+属性              值                        描述
+action  		URL                    提交表单时向何处发送表单数据
+method          get、post              设置表单以何种方式发送到指定页面
+name            form_name              表单的名称
+target      _blank、_self、            在何处打开action URL
+            _parent、_top
+enctype     application/x-www-form-
+			urlencodedmultipart/form-   在发送表单数据之前如何对其进行编码
+			datatext/plain
+
+#method  默认用get
+1、get 保密性较差，一般用于查询相关内容
+2、使用URL传递参数，对所发送信息的数量也有限制，一般用于信息获取
+
+#POST
+表单数据作为HTTP请求体的一部分
+对所发送信息的数量无限制
+一般用于修改服务器上的资源
+
+
+#表单元素
+标签                        描述
+<input>               表单输入标签
+<select>              菜单和列表标签
+<option>              菜单和列表项目标签
+<textarea>            文字域标签
+<optgroup>            菜单和列表项目分组标签
+
+#<input> 标签
+语法：
+<input type="类型属性"  name="名称" />
+type属性值                描述
+text                     文字域
+password                 密码域
+file                     文件域
+checkbox                 复选域
+radio                    单选域
+Button                   按钮
+Submit                   提交按钮
+Reset                    重置按钮
+Hidden                   隐藏域
+image                    图像域
+
+#单行文本域<input type="text">
+属性              描述
+Name            文本域的名称
+Maxlength       指用户输入的最大字符长度
+size            指定文本框的宽度，以字符个数为单位；
+                文本框的缺省宽度是20个字符
+value           指定文本框的默认值
+placeholder     规定用户填写输入字段的提示
+
+#多行文本域<textarea>
+<textarea name="jj" ></textarea>
+属性              描述
+name             设置文本区的名称
+placeholder      设置描述文本区域预期值的简短提示
+rows             设置文本区内的可见行数
+cols             设置文本区内的可见宽度
+
+
+#button 用value 值显示按钮文字
+<type="button" value="来点我">
+
+#图像域
+可以理解为 “图像提交按钮” 比提交按钮要美观，功能一样
+语法：<input type="image" name="" src="">
+
+#隐藏域
+不像让用户看到，但是需要传递给服务器
+<input type="hidden" name="" value="" />
+
+
+#<select>标签
+主要是下拉菜单和列表标签
+语法：
+<select>
+ 	<option value="">选项</option>
+ 	<option value="">选项</option>
+</select>
+
+#<select>标签属性
+属性               描述
+name            设置下拉菜单和列表的名称
+multiple        设置可选择多个选项
+size            设置列表中可见选项的数目
+
+用size、multiple即为列表
+
+#<option>标签属性
+属性               描述
+selected         设置选项初始选中状态
+value            定义送往服务器的选项值
+
+#<optgroup>下拉菜单和列表项目分组标签
+<optgroup label="华东"></optgroup>
+
+
+
+#<th > </th>
+表格的头部的一个单元格 默认加粗
+
+#<tr> </tr>
+表格中的一行
+
+#<td> </td>
+表格的一个单元格，一行中包含几对<td>...</td>，说明一行中就有几列。
+
+#一个表格至少包含1行1列
+<table>
+	<tr><td>
+	</td></tr>
+</table>
+
+
+#为表格添加边框
+table tr td,th{border:1px solid #000;} 这是1个像素的黑色边框
+
+#设置边框的属性，包括粗细、样式、颜色
+div{
+	border-width:2px;        粗细
+	border-style:soild;       样式
+	border-color:red;         颜色
+}
+
+也可以写成：
+div{
+	border:2px soid red;
+}
+
+
+#border-style(边框样式）常见样式有：
+dashed(虚线)|dotted(点线)|soild(实线)
+
+#border-width(边框宽度)中的宽度样式有：
+thin|medium|thick(但是不常用),最常用的还是像素(px)
+
+#也可只为一个方向的边框设置样式
+div{border-bottom:1px solid red;}  下
+border-top:1px solid red;         上
+border-right:1px solid red;       右
+border-left:1px solid red;         左
+
+#盒模型可以参考模型图
+模型的宽度=width+padding+border+margin
+
+#盒模型--填充
+div{padding:20px 10px 15px 30px;}或者
+div{
+   padding-top:20px;
+   padding-right:10px;
+   padding-bottom:15px;
+   padding-left:30px;
+}
+如果上、右、下、左的填充都为10px;可以这么写
+div{padding:10px;}
+如果上下填充一样为10px，左右一样为20px，可以这么写：
+div{padding:10px 20px;}
+
+#盒模型--边界
+div{margin:20px 10px 15px 30px;}
+也可以分开写成：
+div{
+   margin-top:20px;
+   margin-right:10px;
+   margin-bottom:15px;
+   margin-left:30px;
+}
+总结一下：padding和margin的区别，padding在边框里，margin在边框外。
+
+
+#为表格简介内容摘要
+<table sumary="表格简介文本">
+
+#<a>标签
+<a href="目前网址" title="鼠标滑过的文本">链接显示的文本 </a>
+
+#在新建浏览器窗口中打开链接
+<a href="目标网址" target="_blank">click here!</a>
+
+#链接E-mail地址
+<a href="mailto:jiangtao@anfast.com?subject=观了不起的盖茨比有感&body=你好，对此评论有些想法">
+点击链接会打开电子邮件应用，并自动填写收件人等设置好的信息
+
+
+#为网页插入图片
+<img src="图片地址" alt="下载失败时的替换文本" title="提示文本">
+src：标识图像的位置；
+alt：指定图像的描述性文本，当图像不可见时（下载不成功时），可看到该属性指定的文本；
+title：提供在图像可见时对图像的描述(鼠标滑过图片时显示的文本)；
+图像可以是GIF，PNG，JPEG格式的图像文件。
+
+#使用表单标签，与用户交互
+语法<form method="传送方式" action="服务器文件">...  </form>
+action ：浏览者输入的数据被传送到的地方,比如一个PHP页面(save.php)。
+method ： 数据传送的方式（get/post）。
+
+所有表单控件（文本框、文本域、按钮、单选框、复选框等）都必须放在 <form></form>
+标签之间（否则用户输入的信息可提交不到服务器上哦！）。
+
+method : post/get 的区别这一部分内容属于后端程序员考虑的问题
+
+#文本输入框、密码输入框
+<input type="text/password" name="名称" value="文本" />
+1、type：
+   当type="text"时，输入框为文本输入框;
+   当type="password"时, 输入框为密码输入框。
+2、name：为文本框命名，以备后台程序ASP 、PHP使用。
+3、value：为文本输入框设置默认值。(一般起到提示作用)
+
+
+#文本域，支持多行文本输入
+<textarea rows="行数" cols="列数">默认值 </textarea>
+注意这两个属性可用css样式的width和height来代替：col用width、row用height来代替。（这两个css样式在以后的章节会讲解）
+<textarea height="行数" width="列数">默认值 </textarea>
+
+#使用单选框、复选框，让用户选择
+<input   type="radio/checkbox"   value="值"    name="名称"   checked="checked"/>
+1、type:
+   当 type="radio" 时，控件为单选框
+   当 type="checkbox" 时，控件为复选框
+2、value：提交数据到服务器的值（后台程序PHP使用）
+3、name：为控件命名，以备后台程序 ASP、PHP 使用
+4、checked：当设置 checked="checked" 时，该选项被默认选中
+
+
+注意:同一组的单选按钮，name 取值一定要一致，比如上面例子为同一个名称“radioLove”，这样同一组的单选按钮才可以起到单选的作用。
+
+#使用下拉列表框，节省空间
+<select>
+	<option value="提交值"">显示值</option>
+	提交值是指向服务器提交的值
+	显示值是指显示的值
+	<option value="" selected="selected"> 文本</option>
+	selected="selected"属性表示改选项默认被选中
+</select>
+
+#使用下拉列表框进行多选
+<select multiple="multiple">
+      <option value="看书">看书</option>
+      <option value="旅游">旅游</option>
+      <option value="运动">运动</option>
+      <option value="购物">购物</option>
+    </select>
+    多选需要按住Ctrl同时单击
+
+
+#使用提交按钮，提交数据
+<input type="submit" value="提交" />
+value是指按钮上显示的文字
+
+#使用重置按钮，重置表单信息
+<input type="reset" value="重置">
+
+#form表单中的label标签
+label标签不会向用户呈现任何特殊效果，它的作用是为鼠标用户改进了可用性。如果你在 label 标签内点击文本，就会触发此控件。就是说，当用户单击选中该label标签时，浏览器就会自动将焦点转到和标签相关的表单控件上（就自动选中和该label标签相关连的表单控件上）。
+
+<label for="male"> 男</label>
+<input type="radio" name="gender" id="male" />
+for 后面的值要和id 的值一样才会起作用
+
+
+#认识CSS样式
+CSS全称是“层叠样式表” ，它主要是用于定义HTML内容在浏览器内的显示样式，如文字大小、颜色、字体加粗等。
+
+
+#CSS样式格式
+<style type="text/css">…</style>
+
+
+#CSS样式规则
+由两部分构成：选择器，声明
+h1 {color:red;font-size:14px;}
+
+#文字排版--字体
+font-family:"宋体";
+font-family:"Microsoft Yahei"; 这种方式兼容性更好
+
+#文字的大小（字号）
+ font-size:12px;
+
+ #颜色
+ color:#930;
+ color:red;
+
+ #文字对齐方式
+ text-align:center;
+
+ #设置字体加粗
+  font-weight:bold
+
+#文字排版--斜体
+ font-style:italic
+
+ #文字排版--下划线
+text-decoration:underline;
+
+#文字排版--删除线
+text-decoration:line-through;
+
+ #行间距（行高）
+ line-height:1.6em；或
+ line-height:16px
+
+#段落排版--中文字间距、字母间距
+如果想在网页排版中设置文字间隔或者字母间隔就可以使用    letter-spacing 来实现，如下面代码：
+h1{
+    letter-spacing:50px;
+}
+...
+<h1>了不起的盖茨比</h1>
+如果我想设置英文单词之间的间距呢？可以使用 word-spacing 来实现
+
+#段落排版--缩进
+p{text-indent:2em;}
+注意：2em的意思就是文字的2倍大小。
+
+#段落排版--对齐
+text-align:center
+ text-align:left
+ text-align:right;
+
+#CSS注释和Html注释不同
+css/**/
+
+#CSS样式-----内联式(行内样式)
+<p style="color:red;font-size:12px">这里文字是红色。</p>
+不便维护，不建议大量使用
+
+#CSS样式-----嵌入式（内部样式）
+<style type="text/css">
+
+#可以通过html注释标签括住css样式提高低版本浏览器的兼容性
+<style type="text/css">
+  <!--
+    p{font-size: 30px;color:blue;}
+    h1{color:red;font-size: 30px;}
+  -->
+
+</style>
+
+
+#CSS样式-----外部式
+<link href="base.css" rel="stylesheet" type="text/css" />
+注意：
+1、css样式文件名称以有意义的英文字母命名，如 main.css。
+2、rel="stylesheet" type="text/css" 是固定写法不可修改。
+3、<link>标签位置一般写在<head>标签之内。
+样式分离，便于修改。
+
+#CSS导入式
+  <style type="text/css">
+    @import url(wl.css);
+  </style>
+缺点是：1、可能不被浏览器兼容 2、网速慢的时候导致无样式的HTML
+
+#使用链入外部样式的好处
+1、Css和html分离
+2、多个文件可以使用同一个样式文件
+3、多文件引用同一个Css文件，css只需下载一次
+
+#css使用方法优先级
+1、就近原则
+
+
+
+#标签选择器  以HTML标签作为选择器
+p{font-size:12px;line-height:1.6em;}
+
+#类选择器（class选择器）  为HTML标签添加class属性
+<h1 class="red"> </h1>
+通过类选择器为具有此class属性的元素设置CSS样式:
+.类选器名称{css样式代码;}
+举例:.red(color:red;)
+可对不同类型元素的同一个名称的类选择器设置不同的样式规则
+p.red{font-size:50px;}
+h1.red{font-size:20px;}
+#可以存在同一个标签有多个类选择器,用空格隔开
+<p class="red green"></p>
+
+
+#ID选择器
+#setGreen{color:green;}
+注意:id是唯一的;同一个HTML文件下每一个ID要做到唯一，也不要为一个标签添加多个ID选择器
+
+#群组选择器
+集体统一设置样式:
+p,h1,h2,h3,h4{font-size: 30px;}
+
+#虽然说HTML语言不区分大小写，但是ID选择器和CLASS选择器的名称却是区分大小写的
+
+
+#子选择器
+.food>li{border:1px solid red;}
+还有一个比较有用的选择器子选择器，即大于符号(>),用于选择指定标签元素的第一代子元素
+
+
+#包含(后代)选择器
+.first  span{color:red;}
+p a em{}
+#p1 em{}
+p.red a em{}
+包含选择器，即加入空格,用于选择指定标签元素下的后辈元素。如右侧代码编辑器中的代码：
+总结：>作用于元素的第一代后代，空格作用于元素的所有后代。
+注意:注意后代选择器的权重较高，可能和别的样式冲突,要注意权重的配置;
+
+#通用选择器(也叫作全局选择器、通配符选择器)
+* {color:red;}对所有的标签设置样式
+全局选择器常用于初始化去掉边距等样式
+
+#伪类选择符
+伪类选择器定义特殊状态下的样式
+无法用标签、id、class及其他属性实现
+a:hover{color:red;}
+关于伪选择符：
+    关于伪类选择符，到目前为止，可以兼容所有浏鉴器的“伪类选择符”就是 a 标签上使用 :hover 了（其实伪类选择符还有很多，尤其是 css3 中，但是因为不能兼容所有浏览器，本教程只是讲了这一种最常用的）。其实 :hover 可以放在任意的标签上，比如说 p:hover，但是它们的兼容性也是很不好的，所以现在比较常用的还是 a:hover 的组合。
+
+#链接伪类
+链接中的四种状态:激活状态，已访问状态,未访问状态，鼠标悬停状态
+伪类       说明
+:link       未访问的链接
+:visited     已访问的链接
+:hover       鼠标悬停状态
+:active      激活的链接
+IE6以后的浏览器不支持除了<a>以外其他元素使用:hover和:active
+注意:
+链接伪类的顺序:link>visited>hover>active
+1、a:hover 必须置于a:link 和a:visited 之后才有效
+2、a:active 必须置于a:hover 之后才有效
+3、伪类名对大小写不敏感
+
+#伪类:hover 和:active
+1、:hover用于访问的鼠标经过某个元素时
+2、:active 用于一个元素被激活时(即按下鼠标之后放开鼠标之前的时间)
+#分组选择符
+h1,span{color:red;}
+当你想为html中多个标签元素设置同一个样式时，可以使用分组选择符（，），如下代码为右侧代码编辑器中的h1、span标签同时设置字体颜色为红色：
+
+#继承
+CSS的某些样式是具有继承性的，那么什么是继承呢？继承是一种规则，它允许样式不仅应用于某个特定html标签元素，而且应用于其后代。比如下面代码：如某种颜色应用于p标签，这个颜色设置不仅应用p标签，还应用于p标签中的所有子元素文本，这里子元素为span标签。
+<p>三年级时，我还是一个<span>胆小如鼠</span>的小女孩。</p>
+但注意有一些css样式是不具有继承性的。如border:1px solid red;
+#继承的好处
+1、父元素设置样式，子元素可以继承部分属性
+2、减少CSS代码
+
+#m默认样式
+一些标签有一些自带的样式比如<h1>
+浏览器也有自己的默认字体大小比如Chrome默认字体大小为16px
+
+#CSS使用方法优先级
+行内样式>内部样式>外部样式
+注意:link链入外部样式和style内部样式优先级，取决于先后顺序
+
+
+#权值
+标签选择器的权值为1
+类选择器和伪类的权值为10
+ID选择器的权值为100。
+通配符选择器权值为0
+行内样式：权值为1000
+例如下面的代码：
+p{color:red;} /*权值为1*/
+p span{color:green;} /*权值为1+1=2*/
+.warning{color:white;} /*权值为10*/
+p span.warning{color:purple;} /*权值为1+1+10=12*/
+#footer .note p{color:yellow;} /*权值为100+10+1=111*/
+
+#权值规则
+统计不同选择器的个数
+每类选择器的个数乘以相应权值
+把所有的值相加得出选择器的权值
+
+
+#层叠
+层叠就是在html文件中对于同一个元素可以有多个css样式存在，当有相同权重的样式存在时，会根据这些css样式的前后顺序来决定，处于最后面的css样式会被应用。
+
+
+#重要性
+p{color:red!important;} !important代表了最高权值
+这里注意当网页制作者不设置css样式时，浏览器会按照自己的一套样式来显示网页。并且用户也可以在浏览器中设置自己习惯的样式，比如有的用户习惯把字号设置为大一些，使其查看网页的文本更加清楚。这时注意样式优先级为：浏览器默认的样式 < 网页制作者样式 < 用户自己设置的样式，但记住!important优先级样式是个例外，权值高于用户自己设置的样式。
+
+#CSS样式命名规范
+采用英文字母、数字以及"-"、"_"
+以小写字母开头，不能以数字和"-" "_" 开头
+命名形式:单字,连字符,下划线和驼峰
+使用有意义命名
+
+1）页面结构
+页头:header
+页面主体:main
+页尾:footer
+内容:content/container
+容器:container
+导航:nav
+侧栏:sidebar
+栏目:column
+页面外围控制:wrapper
+左右中:left right center
+
+2)导航
+导航:nav
+主导航:mainnav
+自导航:subnav
+顶导航:topnav
+边导航:sidebar
+左导航:leftsidebar
+右导航:rightsidebar
+菜单:menu
+子菜单:submenu
+标题:title
+摘要:summary
+
+3)功能
+标志:logo
+广告:banner
+登录:login
+登录条：loginbar
+注册:register
+搜索:search
+功能区:shop
+标题:title
+
+id和class的使用
+id不要滥用，谨慎使用
+适当使用class
+
+#CSS字体和文本样式
+文字
+颜色、字体大小、字体、加粗等
+文本
+行高、对齐方式、文本装饰
+
+#文字样式属性
+字体:font-family
+文字大小:font-size
+文字颜色:font-color
+文字粗细:font-weight
+文字样式:font-style
+
+#<font face="">
+现在已经逐渐不使用了，被CSS样式取代
+
+#font-family字体属性
+定义元素内文字以什么字体来显示
+语法:
+font-family:[字体1][字体2]……
+字体1 没有找到使用字体2 ，字体2没有找到使用字体3，都没有找到使用浏览器默认字体
+说明:
+含空格字体名和中文，用英文引号(")括起
+多个字体，用英文","隔开
+引号嵌套，外层使用双引号，内层使用单引号
+
+#font-family属性值:具体字体名，字体集
+字体集:
+Serif   有衬线
+Sans-serif  无-衬线
+Monospace
+Cursive
+Fantasy
+注意:对于Chrome浏览器来说，字体集应该是浏览器自带的
+
+#font-size 定义元素内文字大小
+语法:
+font-size:绝对单位|相对单位
+#绝对单位  使用绝对单位因浏览器差异会导致字体大小不一致
+属性值     说明
+in         英寸
+cm	       厘米
+mm		   毫米
+pt         磅
+pc         Pica
+xx-small   9
+s-small
+small
+medium
+large
+x-large
+xx-large
+
+1、当不设置字体大小时，默认为浏览器默认值，一般情况下是16px
+
+
+#相对单位
+px 像素
+em/ % /larger/smaller 都是针对父元素进行字体大小设置
+larger 相对父元素的文字大小变大
+smaller 相对父元素的文字大小变小
+
+绝对大小，不能随浏览器分辨率或父元素大小的改变而改变
+
+#color 文字颜色
+定义元素内文字颜色
+语法:
+color:颜色名|十六进制|RGB
+rgb(a,a,a) 数字:0-255   百分比:0-100%
+十六进制 #开头，六位 0-F
+
+#web安全色
+
+#font-weight 文字粗细
+为元素内文字设置粗细
+语法:
+font-weight:normal |bold|bolder|lighter |100-900
+说明:
+默认值：normal
+400=normal  700=bold
+
+#font-style文字样式
+为元素内文字设置样式
+属性值   描述
+normal    正常
+italic    斜体
+oblique    倾斜
+
+#font-variant 字体变形
+设置元素中文本为小型大写字母
+
+#CSS文本样式
+设置元素内文本的水平对齐方式
+语法:
+text-align： left|right|center|justify(文本两端对齐)
+注意:1、该属性只对块级元素设置有效;
+     2、但是在IE中，子元素(外层再嵌套一个块级元素)的文字也会继承text-align的居中方式。
+
+vertical-align属性
+设置元素内容的垂直方式
+语法:
+vertical-align:baseline | sub |super |top |text-top |middle |bottom|text-bottom
+长度|百分比
+注意:
+1、只对行内元素生效，对块级元素是不生效的,也可以用于单元格元素
+2、行内元素是不能放置块级元素的
+#垂直居中应用
+???单行文字垂直居中
+1、设置元素和行高一致
+
+>>>多行文字垂直居中
+1、父元素转化成dispaly:table;表格元素
+2、子元素转化成dispaly:table-cell;单元格元素
+然后可以用vertical-align: middle;设置垂直居中了
+
+
+#行高的设置
+light-height
+
+#设置间距
+word-spacing            设置元素内单词之间间距
+letter-spacing          设置元素内字母之间间距
+text-transform          设置元素内文本的大小写
+						capitalize|uppercase|lowercase|none
+						首字母大写|字母全大写|字母全小写
+text-decoration        设置元素内文本的装饰
+						underline|overline|line-through|blink|none
+						下划线|上划线|删除线|闪烁效果(有兼容性问题)|无
+<a text-decoration:none>为超链接取消下划线
+
+
+1、行高要大于字体大小，否则行与行会出现重叠的现象，或者使用em单位或者%而非px，这样即便字体大小发生变化，也不会发生重叠。实际开发中常用的是em单位
+2、浏览器是有默认行高的，不同浏览器默认行高不一样
+3、行高是可以继承的
+
+
+
+#CSS文本样式应用
+经验技巧:
+1、网页制作从整体到局部
+2、使用合适的样式属性(借助手册和网络)
+
+
+
+#元素分类
+在CSS中，html中的标签元素大体被分为三种不同的类型：块状元素、内联元素(又叫行内元素)和内联块状元素。
+关于行内元素和块状元素的说明
+
+根据CSS规范的规定，每一个网页元素都有一个display属性，用于确定该元素的类型，每一个元素都有默认的display属性值，比如div元素，它的默认display属性值为“block”，成为“块级”元素(block-level)；而span元素的默认display属性值为“inline”，称为“行内”元素。div这样的块级元素，就会自动占据一定矩形空间，可以通过设置高度、宽度、内外边距等属性，来调整的这个矩形的样子；与之相反，像“span”“a”这样的行内元素，则没有自己的独立空间，它是依附于其他块级元素存在的，因此，对行内元素设置高度、宽度、内外边距等属性，都是无效的。
+行内元素的定义
+
+常用的块级元素有：
+<div>、<p>、<h1>...<h6>、<ol>、<ul>、<dl>、<table>、<address>、<blockquote> 、<form>
+常用的行内元素有：
+<a>、<span>、<br>、<i>、<em>、<strong>、<label>、<q>、<var>、<cite>、<code>
+常用的内联块状元素有：
+<img>、<input>
+
+ #将内联元素转化为块状元素
+ a{display:block;}
+ 块级元素特点：
+1、每个块级元素都从新的一行开始，并且其后的元素也另起一行。（真霸道，一个块级元素独占一行）
+2、元素的高度、宽度、行高以及顶和底边距都可设置。
+3、元素宽度在不设置的情况下，是它本身父容器的100%（和父元素的宽度一致），除非设定一个宽度。
+
+#将块状元素转化为内联元素
+div{
+     display:inline;
+ }
+
+......
+
+<div>我要变成内联元素</div>
+
+内联元素特点：
+1、和其他元素都在一行上；
+2、元素的高度、宽度及顶部和底部边距不可设置；
+3、元素的宽度就是它包含的文字或图片的宽度，不可改变。
+小伙伴们你们观查一下右侧代码段，有没有发现一个问题，内联元素之间有一个间距问题，这个问题在本小节的 wiki 中有介绍，感兴趣的小伙伴可以去查看。
+
+#将元素转化成内联块状元素
+内联块状元素（inline-block）就是同时具备内联元素、块状元素的特点，代码display:inline-block就是将元素设置为内联块状元素。(css2.1新增)，<img>、<input>标签就是这种内联块状标签。
+inline-block 元素特点：
+1、和其他元素都在一行上；
+2、元素的高度、宽度、行高以及顶和底边距都可设置。
+
+#CSS布局模型
+在网页中，元素有三种布局模型：
+1、流动模型（Flow）
+2、浮动模型 (Float)
+3、层模型（Layer）
+
+#流动模型
+流动布局模型具有2个比较典型的特征：
+第一点，块状元素都会在所处的包含元素内自上而下按顺序垂直延伸分布，因为在默认状态下，块状元素的宽度都为100%。实际上，块状元素都会以行的形式占据位置。如右侧代码编辑器中三个块状元素标签(div，h1，p)宽度显示为100%。
+第二点，在流动模型下，内联元素都会在所处的包含元素内从左到右水平分布显示。（内联元素可不像块状元素这么霸道独占一行）
+
+#浮动模型
+块状元素这么霸道都是独占一行，如果现在我们想让两个块状元素并排显示，怎么办呢？不要着急，设置元素浮动就可以实现这一愿望。
+任何元素在默认情况下是不能浮动的，但可以用 CSS 定义为浮动，如 div、p、table、img 等元素都可以被定义为浮动。如下代码可以实现两个 div 元素一行显示。
+div{
+    width:200px;
+    height:200px;
+    border:2px red solid;
+    float:left;
+}
+<div id="div1"></div>
+<div id="div2"></div>
+
+
+#层模型
+什么是层布局模型？层布局模型就像是图像软件PhotoShop中非常流行的图层编辑功能一样，每个图层能够精确定位操作，但在网页设计领域，由于网页大小的活动性，层布局没能受到热捧。但是在网页上局部使用层布局还是有其方便之处的。下面我们来学习一下html中的层布局。
+如何让html元素在网页中精确定位，就像图像软件PhotoShop中的图层一样可以对每个图层能够精确定位操作。CSS定义了一组定位（positioning）属性来支持层布局模型。
+层模型有三种形式：
+1、绝对定位(position: absolute)
+2、相对定位(position: relative)
+3、固定定位(position: fixed)
+
+#层模型--绝对定位
+如果想为元素设置层模型中的绝对定位，需要设置position:absolute(表示绝对定位)，这条语句的作用将元素从文档流中拖出来，然后使用left、right、top、bottom属性相对于其最接近的一个具有定位属性的父包含块进行绝对定位。如果不存在这样的包含块，则相对于body元素，即相对于浏览器窗口。
+如下面代码可以实现div元素相对于浏览器窗口向右移动100px，向下移动50px。
+div{
+    width:200px;
+    height:200px;
+    border:2px red solid;
+    position:absolute;
+    left:100px;
+    top:50px;
+}
+<div id="div1"></div>
+
+
+#层模型--相对定位
+如果想为元素设置层模型中的相对定位，需要设置position:relative（表示相对定位），它通过left、right、top、bottom属性确定元素在正常文档流中的偏移位置。相对定位完成的过程是首先按static(float)方式生成一个元素(并且元素像层一样浮动了起来)，然后相对于以前的位置移动，移动的方向和幅度由left、right、top、bottom属性确定，偏移前的位置保留不动。
+如下代码实现相对于以前位置向下移动50px，向右移动100px;
+#div1{
+    width:200px;
+    height:200px;
+    border:2px red solid;
+    position:relative;
+    left:100px;
+    top:50px;
+}
+
+<div id="div1"></div>
+
+#什么叫做“偏移前的位置保留不动”呢？
+看上去已经移出来了，但实际上还是占着原来的位置
+
+
+#层模型--固定定位
+fixed：表示固定定位，与absolute定位类型类似，但它的相对移动的坐标是视图（屏幕内的网页窗口）本身。由于视图本身是固定的，它不会随浏览器窗口的滚动条滚动而变化，除非你在屏幕中移动浏览器窗口的屏幕位置，或改变浏览器窗口的显示大小，因此固定定位的元素会始终位于浏览器窗口内视图的某个位置，不会受文档流动影响，这与background-attachment:fixed;属性功能相同。以下代码可以实现相对于浏览器视图向右移动100px，向下移动50px。并且拖动滚动条时位置固定不变。
+#div1{
+    width:200px;
+    height:200px;
+    border:2px red solid;
+    position:fixed;
+    left:100px;
+    top:50px;
+}
+<p>文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本。</p>
+....
+这个其实就是右下角关不掉的小广告，已经导航条也应该是
+
+#Relative与Absolute组合使用
+小伙伴们学习了12-6小节的绝对定位的方法：使用position:absolute可以实现被设置元素相对于浏览器（body）设置定位以后，大家有没有想过可不可以相对于其它元素进行定位呢？答案是肯定的，当然可以。使用position:relative来帮忙，但是必须遵守下面规范：
+1、参照定位的元素必须是相对定位元素的前辈元素：
+<div id="box1"><!--参照定位的元素-->
+    <div id="box2">相对参照元素进行定位</div><!--相对定位元素-->
+</div>
+从上面代码可以看出box1是box2的父元素（父元素当然也是前辈元素了）。
+2、参照定位的元素必须加入position:relative;
+#box1{
+    width:200px;
+    height:200px;
+    position:relative;
+}
+3、定位元素加入position:absolute，便可以使用top、bottom、left、right来进行偏移定位了。
+#box2{
+    position:absolute;
+    top:20px;
+    left:30px;
+}
+这样box2就可以相对于父元素box1定位了（这里注意参照物就可以不是浏览器了，而可以自由设置了）。
+
+
+Position属性值
+
+Position的属性值共有四个static、relative、absolute、fixed。
+
+Static
+
+所有元素在默认的情况下position属性均为static，而我们在布局上经常会用到的相对定位和绝对定位常用的属性top、bottom、left、right在position为static的情况下无效。其用法为：在改变了元素的position属性后可以将元素重置为static让其回归到页面默认的普通流中。
+
+#颜色值缩写
+关于颜色的css样式也是可以缩写的，当你设置的颜色是16进制的色彩值时，如果每两位的值相同，可以缩写一半。
+例子1：
+p{color:#000000;}
+可以缩写为：
+p{color: #000;}
+例子2：
+p{color: #336699;}
+可以缩写为：
+p{color: #369;}
+
+
+#字体缩写
+网页中的字体css样式代码也有他自己的缩写方式，下面是给网页设置字体的代码：
+body{
+    font-style:italic;
+    font-variant:small-caps;
+    font-weight:bold;
+    font-size:12px;
+    line-height:1.5em;
+    font-family:"宋体",sans-serif;
+}
+这么多行的代码其实可以缩写为一句：
+body{
+    font:italic  small-caps  bold  12px/1.5em  "宋体",sans-serif;
+}
+注意：
+1、使用这一简写方式你至少要指定 font-size 和 font-family 属性，其他的属性(如 font-weight、font-style、font-variant、line-height)如未指定将自动使用默认值。
+2、在缩写时 font-size 与 line-height 中间要加入“/”斜扛。
+一般情况下因为对于中文网站，英文还是比较少的，所以下面缩写代码比较常用：
+body{
+    font:12px/1.5em  "宋体",sans-serif;
+}
+只是有字号、行间距、中文字体、英文字体设置。
+
+
+#颜色值
+在网页中的颜色设置是非常重要，有字体颜色（color）、背景颜色（background-color）、边框颜色（border）等，设置颜色的方法也有很多种：
+1、英文命令颜色
+前面几个小节中经常用到的就是这种设置方法：
+p{color:red;}
+2、RGB颜色
+这个与 photoshop 中的 RGB 颜色是一致的，由 R(red)、G(green)、B(blue) 三种颜色的比例来配色。
+p{color:rgb(133,45,200);}
+每一项的值可以是 0~255 之间的整数，也可以是 0%~100% 的百分数。如：
+p{color:rgb(20%,33%,25%);}
+3、十六进制颜色
+这种颜色设置方法是现在比较普遍使用的方法，其原理其实也是 RGB 设置，但是其每一项的值由 0-255 变成了十六进制 00-ff。
+p{color:#00ffff;}
+
+
+#长度值
+长度单位总结一下，目前比较常用到px（像素）、em、% 百分比，要注意其实这三种单位都是相对单位。
+1、像素
+像素为什么是相对单位呢？因为像素指的是显示器上的小点（CSS规范中假设“90像素=1英寸”）。实际情况是浏览器会使用显示器的实际像素值有关，在目前大多数的设计者都倾向于使用像素（px）作为单位。
+2、em
+就是本元素给定字体的 font-size 值，如果元素的 font-size 为 14px ，那么 1em = 14px；如果 font-size 为 18px，那么 1em = 18px。如下代码：
+p{font-size:12px;text-indent:2em;}
+上面代码就是可以实现段落首行缩进 24px（也就是两个字体大小的距离）。
+下面注意一个特殊情况：
+但当给 font-size 设置单位为 em 时，此时计算的标准以 p 的父元素的 font-size 为基础。如下代码：
+html:
+<p>以这个<span>例子</span>为例。</p>
+css:
+p{font-size:14px}
+span{font-size:0.8em;}
+结果 span 中的字体“例子”字体大小就为 11.2px（14 * 0.8 = 11.2px）。
+3、百分比
+p{font-size:12px;line-height:130%}
+设置行高（行间距）为字体的130%（12 * 1.3 = 15.6px）。
+
+
+#水平居中设置-行内元素
+text-align:center
+
+#水平居中设置-定宽块状元素
+满足定宽和块状两个条件的元素是可以通过设置“左右margin”值为“auto”来实现居中的。
+
+
+#水平居中总结-不定宽块状元素方法（一）
+在实际工作中我们会遇到需要为“不定宽度的块状元素”设置居中，比如网页上的分页导航，因为分页的数量是不确定的，所以我们不能通过设置宽度来限制它的弹性。(不定宽块状元素：块状元素的宽度width不固定。)
+
+不定宽度的块状元素有三种方法居中（这三种方法目前使用的都很多）：
+
+加入 table 标签
+设置 display: inline 方法：与第一种类似，显示类型设为 行内元素，进行不定宽元素的属性设置
+设置 position:relative 和 left:50%：利用 相对定位 的方式，将元素向左偏移 50% ，即达到居中的目的
+
+
+#table标签设置不定宽度块状元素居中
+css代码：
+<style>
+table{
+    border:1px solid;
+    margin:0 auto;
+}
+</style>
+
+html代码：
+<div>
+ <table>
+  <tbody>
+    <tr><td>
+    <ul>
+        <li>我是第一行文本</li>
+        <li>我是第二行文本</li>
+        <li>我是第三行文本</li>
+    </ul>
+    </td></tr>
+  </tbody>
+ </table>
+</div>
+
+
+#水平居中总结-不定宽块状元素方法（二）
+除了上一节讲到的插入table标签，可以使不定宽块状元素水平居中之外，本节介绍第2种实现这种效果的方法，改变元素的display类型为行内元素，利用其属性直接设置。
+
+第二种方法：改变块级元素的 display 为 inline 类型（设置为 行内元素 显示），然后使用 text-align:center 来实现居中效果
+
+#水平居中总结-不定宽块状元素方法
+（三）除了前两节讲到的插入table标签，以及改变元素的display类型，可以使不定宽块状元素水平居中之外，本节介绍第3种实现这种效果的方法，设置浮动和相对定位来实现。
+
+方法三：通过给父元素设置 float，然后给父元素设置 position:relative 和 left:50%，子元素设置 position:relative 和 left: -50% 来实现水平居中。
+<html>
+<head>
+<meta charset="utf-8">
+<title>不定宽块状元素水平居中</title>
+<style>
+
+
+/*下面是代码任务区*/
+.wrap{
+
+    float:left;
+    position:relative;
+    left:50%;
+    background:Red;
+    }
+.wrap-center{
+    background:red;
+    position:relative;
+    left:-50%;
+
+
+
+}
+</style>
+</head>
+
+<body>
+
+
+<div class="wrap">
+    <div class="wrap-center">我们来学习一下这种方法。</div>
+</div>
+</body>
+</html>
+
+
+#垂直居中-父元素高度确定的多行文本（方法一）
+父元素高度确定的多行文本、图片等的竖直居中的方法有两种：
+
+方法一：使用插入 table  (包括tbody、tr、td)标签，同时设置 vertical-align：middle。
+
+css 中有一个用于竖直居中的属性 vertical-align，在父元素设置此样式时，会对inline-block类型的子元素都有用。下面看一下例子：
+
+html代码：
+
+<body>
+<table><tbody><tr><td class="wrap">
+<div>
+    <p>看我是否可以居中。</p>
+</div>
+</td></tr></tbody></table>
+</body>
+css代码：
+table td{height:500px;background:#ccc}
+因为 td 标签默认情况下就默认设置了 vertical-align 为 middle，所以我们不需要显式地设置了。
+
+
+#垂直居中-父元素高度确定的多行文本（方法二）
+除了上一节讲到的插入table标签，可以使父元素高度确定的多行文本垂直居中之外，本节介绍另外一种实现这种效果的方法。但这种方法兼容性比较差，只是提供大家学习参考。
+
+在 chrome、firefox 及 IE8 以上的浏览器下可以设置块级元素的 display 为 table-cell（设置为表格单元显示），激活 vertical-align 属性，但注意 IE6、7 并不支持这个样式, 兼容性比较差。
+
+html代码：
+<div class="container">
+    <div>
+        <p>看我是否可以居中。</p>
+        <p>看我是否可以居中。</p>
+        <p>看我是否可以居中。</p>
+    </div>
+</div>
+css代码：
+<style>
+.container{
+    height:300px;
+    background:#ccc;
+    display:table-cell;/*IE8以上及Chrome、Firefox*/
+    vertical-align:middle;/*IE8以上及Chrome、Firefox*/
+}
+</style>
+这种方法的好处是不用添加多余的无意义的标签，但缺点也很明显，它的兼容性不是很好，不兼容 IE6、7而且这样修改display的block变成了table-cell，破坏了原有的块状元素的性质。
+
+
+#隐性改变display类型
+有一个有趣的现象就是当为元素（不论之前是什么类型元素，display:none 除外）设置以下 2 个句之一：
+
+ 1. position : absolute
+ 2. float : left 或 float:right
+简单来说，只要html代码中出现以上两句之一，元素的display显示类型就会自动变为以 display:inline-block（内联块状元素）的方式显示，当然就可以设置元素的 width 和 height 了，且默认宽度不占满父元素。
+display: none;隐藏该元素
+
+sublime 使用技巧
+1、 ！+tab 补全
+2、 tab 补全标签
+
+
+定义和用法
+overflow 属性规定当内容溢出元素框时发生的事情。
+说明
+这个属性定义溢出元素内容区的内容会如何处理。如果值为 scroll，不论是否需要，用户代理都会提供一种滚动机制。因此，有可能即使元素框中可以放下所有内容也会出现滚动条。
+
+可能的值
+值       描述
+visible 默认值。内容不会被修剪，会呈现在元素框之外。
+hidden  内容会被修剪，并且其余内容是不可见的。
+scroll  内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。
+auto  如果内容被修剪，则浏览器会显示滚动条以便查看其余的内容。
+inherit 规定应该从父元素继承 overflow 属性的值。
+
+
+list-style
+list-style 简写属性在一个声明中设置所有的列表属性。
+
+
+
+ps:
+1、javascript:void(0) 中最关键的是 void 关键字， void 是 JavaScript 中非常重要的关键字，该操作符指定要计算一个表达式但是不返回值。
+
+2、
+旋转 div 元素：
+div
+{
+transform:rotate(7deg);
+-ms-transform:rotate(7deg);   /* IE 9 */
+-moz-transform:rotate(7deg);  /* Firefox */
+-webkit-transform:rotate(7deg); /* Safari 和 Chrome */
+-o-transform:rotate(7deg);  /* Opera */
+}
+
+3、div 的background 属性
+background-color
+background-position
+background-size
+background-repeat
+background-origin
+background-clip
+background-attachment
+background-image
+
+4、
+设置 div 元素的不透明级别：
+div
+{
+opacity:0.5;
+}
+
+5、绘制一个导航小圆点
+.dots span{
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fff;
+}

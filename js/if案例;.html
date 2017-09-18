@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>if案例</title>
+</head>
+<body>
+	<script>
+	var mima; 
+	mima=prompt("请输入密码");
+	
+	// if (mima.length==6){
+	// 	// 判断密码是否都是数字
+	// 	if(isNaN(mima)){
+	// 		alert("请输入纯数字");
+	// 	}else {
+	// 		// 设置成功提示
+	// 		alert("设置成功");
+	// 	}
+	// }else {
+	// 	// 判断密码的长度，如果不是6位，提示用户输入6位密码
+	// 
+	// }
+
+	if (mima.length!=6){
+		alert("请输入6位密码");
+	}else if(isNaN(mima)) {
+		alert("请输入纯数字");
+	}else{
+			alert("设置成功");
+	}
+
+	
+
+	
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+		<style>
+		.box{
+			padding:50px;
+		}
+		.left,.tip{
+			float: left;
+		}
+		.left{margin-right: 10px;}
+		.tip{display: none;font-size: 14px;}
+		</style>
+		<script>
+		window.onload=function(){
+		var phone=document.getElementById("phone");
+		var tip=document.getElementById("tip");
+		phone.onclick=function(){
+			tip.style.display="block";
+		}
+		phone.onblur=function(){
+			tip.style.display="none";
+			var value=phone.value;
+			if(value.length==11&& isNaN(value)==false ){
+				tip.style.display="block";
+				tip.innerHTML="<img src='img/right.png'>";
+			}else if (value.length!=0 ){
+				tip.style.display="block";
+				tip.innerHTML='<img src="img/error.png">';
+			}else{
+				tip.style.display="block";
+				tip.innerHTML='请输入11位是手机号码';
+			}
+		}
+		}
+		// var box=document.getElementById("box");
+		// box.onblur=function(){
+		// 	alert("谢谢配合");
+		// }
+
+	</script>
+
+
+</head>
+<body>
+	<div class="box">
+		<div class="left">
+			<input type="text" id="phone" placeholder="请输入手机号码">
+			
+
+		</div>
+		<div class="tip" id="tip">
+			请输入11位是手机号码;
+
+		</div>
+	</div>
+
+
+	<!-- 第一步，对话框激活的时候，旁边出现一句话，请输入11位是手机号码 方法：onclick 鼠标点击时触发-->
+
+	<!-- 第二步，用户输入完成之后，鼠标离开文本框，失去焦点的时候， 他告诉我这个手机号码对了还是错了，对了就出现对的图标，错了就出现错误的图标-->
+
+</body>
+</html>
