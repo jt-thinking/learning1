@@ -142,3 +142,15 @@ $(".class:has(selector)")查找class类中包含selector元素的元素
 #$("div[name|='p']")筛选出div元素中属性值name为p或者p-abc(以p-开头的字符串)
 #$("div[p2]") 筛选出div元素中有p2属性的元素
 #$("div[name~='a']")筛选出div元素中name属性值为a或者以空格连字符连接a的字符串(a b)或者(b a)都可以
+#$("div[name^='imooc']")筛选出div元素中name属性值为imooc或者以imooc开头的字符串的元素
+#$("div[name$='imooc']")筛选出div元素中name属性值为imooc或者以imooc结尾的字符串的元素
+#$("div[name*='imooc']")筛选出div元素中name属性值为imooc或者包含imooc字符串的元素
+#$("div[name！='imooc']")筛选出div元素中name属性值不包含imooc的元素
+
+
+#jQuery选择器之子元素筛选选择器
+$("p:first-child") 筛选出所有p元素，如果p元素是其父元素的第一个子元素，则该p元素被选中
+$("p:last-child") 筛选出所有p元素，如果p元素是其父元素的最后一个子元素，则该p元素被选中
+$("p:only-child") 筛选出所有p元素，如果p元素是其父元素唯一的一个子元素，则该p元素被选中
+$("p:nth-child(2)") 筛选出所有p元素，如果p元素是其父元素的第n个子元素，则该p被选中
+$("p:nth-last-child(3)")筛选出所有p元素，如果p元素是其父元素的倒数第n个子元素，则该p被选中
