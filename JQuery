@@ -116,11 +116,16 @@ $("element")
 #jQuery选择器之全选择器
 $("*")
 #jQuery选择器之层级选择器
-$("div p") 子选择器，选择div元素下的第一代p元素
+$("div>p") 子选择器，选择div元素下的第一代p元素
 $("div p") 后代选择器，可以选择div元素下的子代、孙代(比如div 的子代是 span ,span 的子代是p ，p也可以被选择)
 $(".prev+next")相邻兄弟选择器 prev为类选择器名称，不可改变的。next为标签名称，比如span,div。prev所在元素和next元素应该为兄弟元素，需要有同一个父元素。这个选择器只能选择.prev所在元素之后的的相邻兄弟元素
 $(".prev~next")一般兄弟选择器 和$(".prev+next")的唯一区别就是，前者可以筛选出.prev元素之后的的所有兄弟元素
 
+#jQuery选择器之基本筛选选择器
+$(".jt:first") 筛选出第一个以jt类选择器 标记的元素
+$(".jt:last") 筛选出最后一个以jt类选择标记的元素
+$(".jt:even") 筛选出所有以jt类选择器标记的元素中索引值为偶数的元素
+$(".jt:odd") 筛选出所有以jt类选择器标记的元素中索引值为奇数的元素
 #jQuery选择器之内容选择器
 $(".class:contains(text)")查找class类中包含text的元素
 
@@ -172,4 +177,8 @@ $(":file") 匹配所有input 元素中的file元素
 $(":enabled") 选取可用的表单元素
 $(":disabled")选取不可用的表单元素
 $(":checked")选取被选中的<input>元素
-$(":selected")
+$(":selected") 选取被选中 的<option>元素
+
+
+#jQuery选择器之特殊选择器this
+$(this)代替jQuery对象

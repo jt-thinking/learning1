@@ -39,3 +39,22 @@ body {
   color: #fff;
   letter-spacing: 2px;
 }
+
+.jobNumber, .password ,.authCode{
+  position: absolute;
+  left: 10%;
+  top: 10%;
+  height: 30px;
+  width: 220px;
+  border: 1px solid #bfcbd9;
+  border-radius: 5px;
+}
+
+.password {
+  top: 30%;
+}
+
+.authCode{
+  top:50%;
+  width: 110px;
+}
