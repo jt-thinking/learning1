@@ -198,3 +198,16 @@ attr(属性名，属性值)设置属性的值
 attr(属性名，属性值)设置属性的函数值
 attr(attributes)：给指定元素设置多个属性值，即：{属性名一: “属性值一” , 属性名二: “属性值二” , … … }
 removeAttr()删除方法 $(".jt").removeAttr("value")删除jt元素的value属性
+
+#jQuery方法之html()和test()
+$("p:first").html()  获取该元素的文本(包含结构)
+$("p:first").html(111) 把$("p:first")选择出来的元素的html文本改成111
+$("p").html(function(oldhtml,m){
+		return m
+}) 文档中所有p元素的文本内容依次增加 0, 1, 2, 3……
+
+$("p:first").text() 获取该元素的文本(不包含结构)
+$("p:first").text(111) 把$("p:first")选择出来的元素的html文本改成111
+$("p").text(function(index,text){
+
+})把所有p元素的文本内容依次增加 0, 1, 2, 3……
