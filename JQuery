@@ -125,8 +125,8 @@ $(".prev~next")一般兄弟选择器 和$(".prev+next")的唯一区别就是，�
 #jQuery选择器之基本筛选选择器
 $(".jt:first") 筛选出第一个以jt类选择器 标记的元素
 $(".jt:last") 筛选出最后一个以jt类选择标记的元素
-$(".jt:even") 筛选出所有以jt类选择器标记的元素中索引值为偶数的元素
-$(".jt:odd") 筛选出所有以jt类选择器标记的元素中索引值为奇数的元素
+$(".jt:even") 筛选出所有以jt类选择器标记的元素中索引值为奇数的元素
+$(".jt:odd") 筛选出所有以jt类选择器标记的元素中索引值为偶数的元素
 $(".jt:eq(0)") 筛选出所有以jt类选择器标记的元素中索引值为0的元素
 $(".jt:gt(2)") 筛选出所有以jt类选择器标记的元素中索引值大于2的元素
 $(".jt:lt(7)") 筛选出所有以jt类选择器标记的元素中索引值小于7的元素，和gt刚好相反
@@ -231,6 +231,17 @@ jQuery方法之.addClass()
 .addClass(classNAme)
 1/.addClass( className ) : 为每个匹配元素所要增加的一个或多个样式名
 2/.addClass( function(index, currentClass) ) : 这个函数返回一个或更多用空格隔开的要增加的样式名
+
+#jQuery的属性与样式之删除样式.removeClass()
+1、 removeClass([className])  每个匹配元素移除的一个或多个用空格隔开的样式名
+2、.removeClass( function(index, className) ) ： 一个函数，返回一个或多个将要被移除的样式名
+
+jQuery的属性与样式之切换样式.toggleClass()
+在做某些效果的时候，可能会针对同一节点的某一个样式不断的切换，也就是addClass与removeClass的互斥切换，比如隔行换色效果
+1、.toggleClass(className) 本存在该样式就删除，本来不存在就加上
+2、 .toggleClass(className,switch) switch为布尔值，ture则加上className,false则删除
+3、 .toggleClass(function(index,class,switch)[,switch]):用来返回在匹配的元素集合中的每个元素上用来切换的样式类名的一个函数，接收元素的索引位置和元素旧的样式类作为参数
+
 
 jQuery基础(五)
 使用load()方法异步请求数据

@@ -12,13 +12,28 @@
 <body>
   <button>向页面发送 HTTP POST 请求，并获得返回的结果</button>
   <script type="text/javascript">
-  $(document).ready(function(){
-  $("button").click(function(){
-    $.post("http://192.168.1.203:9180/login/signIn?jobNumber=9200&password=202CB962AC59075B964B07152D234B70",function(data){
-      alert("数据：" + data + "\n状态：" + status);
+    $(document).ready(function() {
+      $("button").click(function() {
+        $.ajaxSetup({
+
+          async: false
+
+        });
+        $.ajax({
+
+          crossDomain: true,
+          url: "http://192.168.1.203:9180/login/signIn?jobNumber=9200&password=202CB962AC59075B964B07152D234B70",
+          dataType: "json",
+          method: "POST",
+          // contentType:"application/json",
+
+          success: function(data) {
+              alert("data");
+          }
+        })
+      });
     });
-  });
-});
+
     // $.ajax({
     //   url:
     //   data:
