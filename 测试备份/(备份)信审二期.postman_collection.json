@@ -1,0 +1,3836 @@
+{
+	"id": "6409f23a-2644-ac7a-e64d-1ec301195bf3",
+	"name": "信审系统所有接口",
+	"description": "",
+	"order": [],
+	"folders": [
+		{
+			"owner": "2576109",
+			"lastUpdatedBy": "2576109",
+			"lastRevision": 2142623153,
+			"folder": null,
+			"id": "4f4a4422-cbac-033c-fc53-8cf71fe460e2",
+			"name": "个人授信-担保接口",
+			"description": "",
+			"order": [
+				"f99e7777-e66e-985f-4cc1-1b92cb6c3d6d",
+				"c7d45689-ca80-aa56-b34e-dc3fa1f5c189",
+				"b18acbb1-8937-c065-2b31-102c627b1522",
+				"068ed7e0-6aa7-9d4a-6fe2-549983c04e60",
+				"78772ee6-465b-0c15-44aa-63d04332f903"
+			],
+			"folders_order": []
+		},
+		{
+			"owner": "2576109",
+			"lastUpdatedBy": "2576109",
+			"lastRevision": 2142391351,
+			"folder": null,
+			"id": "0d9d393b-2e08-9a05-0c64-029be99183a1",
+			"name": "个人授信相关",
+			"description": "",
+			"order": [
+				"bf6bbcfd-c0fb-bc4d-1813-8e782dfd0009",
+				"d5a0fe9d-18c4-4b62-d1d3-71c9702df820",
+				"52c2a675-8f4c-0b37-cdb9-c239fe2f4add",
+				"3b3022f6-06d4-1554-60c2-413007168b81",
+				"d54090e1-3f1e-e17f-d1c7-b0551fb4110b",
+				"241401a1-7cab-77dd-cea1-d289d361762b",
+				"f695fbd5-34f7-a58f-26ad-d99aee42166f",
+				"96194849-8ba8-56da-f9d2-498505ea0bb6",
+				"d156866e-31b0-4730-2bf5-ccf44f13009c",
+				"3ef39f6d-822a-7845-932a-6e0b80a40a3a",
+				"851df6b8-69f1-1685-507e-7fe8397ea569",
+				"8649bea9-e6b5-cf3f-08c5-b1a3d13f6d26",
+				"7e8e4546-c04e-85d0-e70f-e7e46374bade",
+				"372cc94d-72f8-69ca-39dc-dd632eec0a25",
+				"d5138400-1142-7574-5c90-3ec85d6692b6",
+				"03269991-04d9-0487-afed-43eaa0028135"
+			],
+			"folders_order": []
+		},
+		{
+			"owner": "2576109",
+			"lastUpdatedBy": "2576109",
+			"lastRevision": 2184643092,
+			"folder": null,
+			"id": "ee2f73a1-695f-8c7c-2ef9-5347e6d69a03",
+			"name": "个人授信经营情况接口相关",
+			"description": "",
+			"order": [
+				"1e808038-4164-870b-874d-91e561372a2e",
+				"64611d9f-6549-c328-b3da-10705cf76f07",
+				"a923066b-a0c3-a37c-cfa7-7d85a7fadeb0"
+			],
+			"folders_order": []
+		},
+		{
+			"owner": "2576109",
+			"lastUpdatedBy": "2576109",
+			"lastRevision": 2193178050,
+			"folder": null,
+			"id": "956f8498-9d88-a181-56a5-8dcc9af628dd",
+			"name": "个人授信资产负债接口相关",
+			"description": "",
+			"order": [
+				"a3edf263-43ee-7fb6-eb09-204e5aefc4e8",
+				"e622bf08-1ec5-b162-3e86-711df86c8219",
+				"c8ff8d2a-28fc-d9b4-52f2-226d00780bdb",
+				"9f773392-e3c5-4f96-5f15-2d700312d4a6"
+			],
+			"folders_order": []
+		},
+		{
+			"owner": "2576109",
+			"lastUpdatedBy": "2576109",
+			"lastRevision": 2142353302,
+			"folder": null,
+			"id": "2ff7607b-859c-792f-a357-225767aa58b4",
+			"name": "借款产品相关",
+			"description": "",
+			"order": [
+				"32cba4da-f4b6-daa4-03e5-c3ad04029691",
+				"7b2304d8-1d1a-c964-9f9f-380b378a0fbd",
+				"94c9384c-03af-6999-40a2-7a4bbc4b22b8",
+				"01da77f5-9c03-43e8-deb2-94f32b9be53c",
+				"c89b6538-651b-60f0-9bdd-f1fbdb978a42",
+				"1095ae3e-7967-8645-3e5e-bdc2782b2022",
+				"6e709af6-ce31-e4f0-4d99-2cfc478090e7",
+				"5ff42144-e1f2-bf43-0bd5-6ea0ff742b15",
+				"3a12fdc2-1428-43dd-0537-cb7ddaed068b",
+				"0bd597c1-3ad6-b73e-fb48-b1660ee96e11",
+				"43942b7e-576a-7865-0ae1-c3dadc6017f4",
+				"61fd6987-e45e-5662-2a0c-be47afefb065",
+				"79e0e4a6-74f9-c56d-1544-eecb88c1f052"
+			],
+			"folders_order": []
+		},
+		{
+			"owner": "2576109",
+			"lastUpdatedBy": "2576109",
+			"lastRevision": 2143995473,
+			"folder": null,
+			"id": "96f844fe-e018-f89c-4f8e-ea729b58382f",
+			"name": "客户管理相关",
+			"description": "",
+			"order": [
+				"4d84bdde-93a1-218e-dd24-093d1287bca1",
+				"50a4de90-7187-02b6-7a32-613209310fd5",
+				"d50bf7f4-0e34-5c97-5a1e-1cc3b6621197"
+			],
+			"folders_order": []
+		},
+		{
+			"owner": "2576109",
+			"lastUpdatedBy": "2576109",
+			"lastRevision": 2229649981,
+			"folder": null,
+			"id": "3b98f06a-e2e9-6b50-3a13-f00b23d892ed",
+			"name": "客户详情接口",
+			"description": "",
+			"order": [
+				"c627adfa-a5e3-ec05-3997-7055e9be3b31",
+				"04ce6289-4029-d998-401a-2e93eaf0d0ea",
+				"8f1f44f1-8b32-db3f-3c27-ec830c500f72",
+				"34e72d1c-e6cc-95d8-52a0-f6a9443692f2",
+				"c67555c0-ad6b-31b5-4bd7-c3bfc1a28ae7",
+				"89c79a9c-3b6b-954a-1544-48b2374af2a4",
+				"a72f0a14-e06a-0e5a-7331-7dda41755c34",
+				"b1883731-7e4a-7139-cfdf-47d04a25ba84"
+			],
+			"folders_order": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"owner": "2576109",
+			"lastUpdatedBy": "2576109",
+			"lastRevision": 2142304934,
+			"folder": null,
+			"id": "15c16b95-f976-9862-c160-e076ce08f70d",
+			"name": "流程信息查看",
+			"description": "",
+			"order": [
+				"7d9ea030-1204-0b8a-8417-ac2b66c1a4f7",
+				"d63c5584-a23d-80ee-e5fc-5a746309b79f",
+				"03310607-f9c5-54de-0324-6b342f1f9dab",
+				"73285993-84a7-5395-5447-2467b0e22e0b",
+				"192c0f95-db51-40a6-4a5f-2dacc98c9f64"
+			],
+			"folders_order": []
+		},
+		{
+			"owner": "2576109",
+			"lastUpdatedBy": "2576109",
+			"lastRevision": 2142353185,
+			"folder": null,
+			"id": "fc8560c8-f463-d06d-8bed-c1bd94057f6f",
+			"name": "登录接口",
+			"description": "",
+			"order": [
+				"6b49cc1a-6c1e-1804-90e6-91e55c5e0739",
+				"aa3769c8-f373-2a95-6e36-6bf1386a0a72",
+				"25945134-cb12-ce6d-0e0b-2e465fe6677c"
+			],
+			"folders_order": []
+		},
+		{
+			"owner": "2576109",
+			"lastUpdatedBy": "2576109",
+			"lastRevision": 2229669448,
+			"folder": null,
+			"id": "fbfd902f-1599-fb75-2177-d11e4de2dbc6",
+			"name": "资料清单相关",
+			"description": "",
+			"order": [
+				"2c45f565-41de-c62e-289a-621f2adb8f0c",
+				"cd479830-b865-221e-9c01-d59263e64c0e",
+				"a7631690-b8be-3935-08d0-7d4f33aeaf97",
+				"0fcb9bc1-50a3-a6d7-8797-e9d909d378d0",
+				"6ca201b2-68ab-5114-e7ee-2f30e651a70c",
+				"fc15ea2c-9ff8-e6d5-5d51-4b8386224527",
+				"86c357cc-0a88-b6c3-61ec-1bbd8fce0d62",
+				"433ddecf-1973-9e03-5285-69762a83c265",
+				"93c8687b-7eed-70c6-3ae3-94ce49690ce3",
+				"f4d79d4c-9b6f-cb89-557e-bb9450881650",
+				"b4185fa6-115e-267e-89af-acb9ef5fb6f6",
+				"c9420dfa-1422-d4e9-812a-b3ae6be9f280"
+			],
+			"folders_order": []
+		}
+	],
+	"folders_order": [
+		"fc8560c8-f463-d06d-8bed-c1bd94057f6f",
+		"96f844fe-e018-f89c-4f8e-ea729b58382f",
+		"2ff7607b-859c-792f-a357-225767aa58b4",
+		"0d9d393b-2e08-9a05-0c64-029be99183a1",
+		"ee2f73a1-695f-8c7c-2ef9-5347e6d69a03",
+		"956f8498-9d88-a181-56a5-8dcc9af628dd",
+		"4f4a4422-cbac-033c-fc53-8cf71fe460e2",
+		"15c16b95-f976-9862-c160-e076ce08f70d",
+		"fbfd902f-1599-fb75-2177-d11e4de2dbc6",
+		"3b98f06a-e2e9-6b50-3a13-f00b23d892ed"
+	],
+	"timestamp": 0,
+	"owner": "2576109",
+	"public": false,
+	"requests": [
+		{
+			"folder": "2ff7607b-859c-792f-a357-225767aa58b4",
+			"id": "01da77f5-9c03-43e8-deb2-94f32b9be53c",
+			"name": "借款产品管理-获取指定产品",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": "",
+			"headers": "authorization: {{token}}\ndevice: 1\n",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "{{URL}}/business/loanProduct/fetch?id={{prdId}}",
+			"preRequestScript": null,
+			"tests": "tests[\"Body matches string\"] = responseBody.has(\"成功\");",
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "{{prdId}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "device",
+					"value": "1",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"id": "03269991-04d9-0487-afed-43eaa0028135",
+			"headers": "authorization: {{token}}\n",
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/business/credit/marketProductChange?id=SX3597930154905600&productId=3497628183252992",
+			"folder": "0d9d393b-2e08-9a05-0c64-029be99183a1",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "SX3597930154905600",
+					"equals": true,
+					"description": "授信编号",
+					"enabled": true
+				},
+				{
+					"key": "productId",
+					"value": "3497628183252992",
+					"equals": true,
+					"description": "产品属性编号",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1506302196843,
+			"name": "授信营销产品变更",
+			"description": "",
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3",
+			"responses": []
+		},
+		{
+			"folder": "15c16b95-f976-9862-c160-e076ce08f70d",
+			"id": "03310607-f9c5-54de-0324-6b342f1f9dab",
+			"name": "审批指定流程",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": null,
+			"description": "",
+			"headers": "authorization: {{token}}\n",
+			"method": "PUT",
+			"pathVariables": {},
+			"url": "{{URL}}workflow/audit?taskId=157516&message=OK&operate=1",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "taskId",
+					"value": "157516",
+					"equals": true,
+					"description": "任务ID",
+					"enabled": true
+				},
+				{
+					"key": "message",
+					"value": "OK",
+					"equals": true,
+					"description": "审批意见",
+					"enabled": true
+				},
+				{
+					"key": "operate",
+					"value": "1",
+					"equals": true,
+					"description": "操作类型\n",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"folder": "3b98f06a-e2e9-6b50-3a13-f00b23d892ed",
+			"id": "04ce6289-4029-d998-401a-2e93eaf0d0ea",
+			"name": "投资记录（进行中）",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": "",
+			"headers": "authorization: {{token}}\n",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "{{URL}}/cust/details/listFundIng?custId=100000102",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"queryParams": [
+				{
+					"key": "custId",
+					"value": "100000102",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"folder": "4f4a4422-cbac-033c-fc53-8cf71fe460e2",
+			"id": "068ed7e0-6aa7-9d4a-6fe2-549983c04e60",
+			"name": "查询：一笔授信合同下所有的担保信息",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": "",
+			"headers": "authorization: {{token}}\ndevice: 1\n",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "{{URL}}/business/guarantee/list?pageNum=1&pageSize=20&creditId={{creditId}}",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "pageNum",
+					"value": "1",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "pageSize",
+					"value": "20",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "creditId",
+					"value": "{{creditId}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "device",
+					"value": "1",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"folder": "2ff7607b-859c-792f-a357-225767aa58b4",
+			"id": "0bd597c1-3ad6-b73e-fb48-b1660ee96e11",
+			"name": "借款产品管理-产品属性-获取属性详情",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": null,
+			"description": "",
+			"headers": "authorization: {{token}}\ndevice: 1\n",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "{{URL}}business/loanProductAttribute/fetch?id={{data}}",
+			"preRequestScript": null,
+			"tests": "var data=JSON.parse(responseBody);\n\nif (data.data.minCostRate==16){\n    tests[\"test\"]=true;\n   \n\n}\nelse{\n    tests[\"test\"]=false;\n}",
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "{{data}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "device",
+					"value": "1",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"id": "0fcb9bc1-50a3-a6d7-8797-e9d909d378d0",
+			"headers": "authorization: {{token}}\ndevice: 1\n",
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "device",
+					"value": "1",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}business/material/other/file/download?id=36&reportId=3597942065418240",
+			"folder": "fbfd902f-1599-fb75-2177-d11e4de2dbc6",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "36",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "reportId",
+					"value": "3597942065418240",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1506046144975,
+			"name": "其他附件单个文件下载",
+			"description": "",
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3",
+			"responses": []
+		},
+		{
+			"folder": "2ff7607b-859c-792f-a357-225767aa58b4",
+			"id": "1095ae3e-7967-8645-3e5e-bdc2782b2022",
+			"name": "借款产品管理-产品属性-选择属性",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": null,
+			"description": "",
+			"headers": "authorization: {{token}}\ndevice: 1\n",
+			"method": "PUT",
+			"pathVariables": {},
+			"url": "{{URL}}/business/loanProductAttribute/choose?id={{data}}",
+			"preRequestScript": null,
+			"tests": "tests[\"Body matches string\"] = responseBody.has(\"成功\");",
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "{{data}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "device",
+					"value": "1",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"folder": "15c16b95-f976-9862-c160-e076ce08f70d",
+			"id": "192c0f95-db51-40a6-4a5f-2dacc98c9f64",
+			"name": "获取同一笔业务中已处理的工作流程任务信息",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": "",
+			"headers": "authorization: {{token}}\n",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "{{URL}}workflow/history?taskType=product&businessKey=3463215393296384",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "taskType",
+					"value": "product",
+					"equals": true,
+					"description": "审批类型",
+					"enabled": true
+				},
+				{
+					"key": "businessKey",
+					"value": "3463215393296384",
+					"equals": true,
+					"description": "业务主键值",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"folder": "ee2f73a1-695f-8c7c-2ef9-5347e6d69a03",
+			"id": "1e808038-4164-870b-874d-91e561372a2e",
+			"name": "授信申请-客户经营情况-获取详情接口",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": "",
+			"headers": "authorization: {{token}}\n",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "{{URL}}business/creditOperation/fetch?id={{creditId}}",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "{{creditId}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"folder": "0d9d393b-2e08-9a05-0c64-029be99183a1",
+			"id": "241401a1-7cab-77dd-cea1-d289d361762b",
+			"name": "授信申请-创建授信接口",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": null,
+			"description": "正常客户是否创建成功",
+			"headers": "authorization: {{token}}\ndevice: 1\n",
+			"method": "POST",
+			"pathVariables": {},
+			"url": "{{URL}}business/credit/add?id=100005902",
+			"preRequestScript": null,
+			"tests": "tests[\"Body matches string\"] = responseBody.has(\"成功\");\nvar data=JSON.parse(responseBody);\nif(data.data){\n    tests[\"Body has creditId\"]=true;\n    postman.setEnvironmentVariable(\"creditId\",data.data);\n\n}else{\n    tests[\"Body has creditId\"]=false;\n}",
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "100005902",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "device",
+					"value": "1",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"folder": "fc8560c8-f463-d06d-8bed-c1bd94057f6f",
+			"id": "25945134-cb12-ce6d-0e0b-2e465fe6677c",
+			"name": "登出接口",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": "",
+			"headers": "authorization: {{token}}\n",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "{{URL}}login/signOut",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"folder": "fbfd902f-1599-fb75-2177-d11e4de2dbc6",
+			"id": "2c45f565-41de-c62e-289a-621f2adb8f0c",
+			"name": "征信及法院五查询报告获取",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": null,
+			"description": "",
+			"headers": "authorization: {{token}}\n",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "{{URL}}/business/material/fetch?id={{creditId}}",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "{{creditId}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"folder": "2ff7607b-859c-792f-a357-225767aa58b4",
+			"id": "32cba4da-f4b6-daa4-03e5-c3ad04029691",
+			"name": "借款产品管理-新增产品",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": null,
+			"description": "",
+			"headers": "authorization: {{token}}\ndevice: 1\n",
+			"method": "POST",
+			"pathVariables": {},
+			"url": "{{URL}}business/loanProduct/add?name=富农卡y",
+			"preRequestScript": null,
+			"tests": "tests[\"Body matches string\"] = responseBody.has(\"成功\");\nvar data=JSON.parse(responseBody);\nif(data.data.prdId){\n    tests[\"Body has prdId\"]=true;\n    postman.setEnvironmentVariable(\"prdId\",data.data.prdId);\n\n}else{\n    tests[\"Body has prdId\"]=false;\n}\n\n",
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "name",
+					"value": "富农卡y",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "device",
+					"value": "1",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"folder": "3b98f06a-e2e9-6b50-3a13-f00b23d892ed",
+			"id": "34e72d1c-e6cc-95d8-52a0-f6a9443692f2",
+			"name": "回款计划表",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": "",
+			"headers": "authorization: {{token}}\n",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "{{URL}}cust/details/listFundPlan?custId=100000102&prdId=008PN0000000306",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"queryParams": [
+				{
+					"key": "custId",
+					"value": "100000102",
+					"equals": true,
+					"description": "客户编号",
+					"enabled": true
+				},
+				{
+					"key": "prdId",
+					"value": "008PN0000000306",
+					"equals": true,
+					"description": "产品编号",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"id": "372cc94d-72f8-69ca-39dc-dd632eec0a25",
+			"headers": "authorization: {{token}}\n",
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/business/credit/basicProductChange?id=SX3597930154905600&productId=3497628183252992",
+			"folder": "0d9d393b-2e08-9a05-0c64-029be99183a1",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "SX3597930154905600",
+					"equals": true,
+					"description": "授信编号",
+					"enabled": true
+				},
+				{
+					"key": "productId",
+					"value": "3497628183252992",
+					"equals": true,
+					"description": "产品属性编号",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1506302052542,
+			"name": "授信基本产品变更",
+			"description": "",
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3",
+			"responses": []
+		},
+		{
+			"folder": "2ff7607b-859c-792f-a357-225767aa58b4",
+			"id": "3a12fdc2-1428-43dd-0537-cb7ddaed068b",
+			"name": "借款产品管理-产品属性-禁用接口-038",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": null,
+			"description": "",
+			"headers": "authorization: {{token}}\ndevice: 1\n",
+			"method": "PUT",
+			"pathVariables": {},
+			"url": "{{URL}}business/loanProductAttribute/forbid?id={{data}}",
+			"preRequestScript": null,
+			"tests": "tests[\"Body matches string\"] = responseBody.has(\"只能禁用审核通过和否决的属性\");",
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "{{data}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "device",
+					"value": "1",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"folder": "0d9d393b-2e08-9a05-0c64-029be99183a1",
+			"id": "3b3022f6-06d4-1554-60c2-413007168b81",
+			"name": "授信申请-删除授信申请",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": null,
+			"description": "",
+			"headers": "authorization: {{token}}\ndevice: 1\n",
+			"method": "DELETE",
+			"pathVariables": {},
+			"url": "{{URL}}business/credit/delete?id={{creditId}}",
+			"preRequestScript": null,
+			"tests": "tests[\"Body matches string\"] = responseBody.has(\"成功\");",
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "{{creditId}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "device",
+					"value": "1",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"folder": "0d9d393b-2e08-9a05-0c64-029be99183a1",
+			"id": "3ef39f6d-822a-7845-932a-6e0b80a40a3a",
+			"name": "待处理授信申请总数",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": null,
+			"description": "",
+			"headers": "authorization: {{token}}\ndevice: 1\n",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "{{URL}}business/credit/count",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "device",
+					"value": "1",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"id": "433ddecf-1973-9e03-5285-69762a83c265",
+			"headers": "authorization: {{token}}\n",
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}business/material/other/add",
+			"folder": "fbfd902f-1599-fb75-2177-d11e4de2dbc6",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "id",
+					"value": "{{creditId}}",
+					"type": "text",
+					"enabled": true,
+					"description": ""
+				},
+				{
+					"key": "name",
+					"value": "善良的我",
+					"type": "text",
+					"enabled": true,
+					"description": ""
+				},
+				{
+					"key": "remark",
+					"value": "123",
+					"type": "text",
+					"enabled": true,
+					"description": ""
+				}
+			],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1506046028166,
+			"name": "其他附件上传",
+			"description": "",
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3",
+			"responses": []
+		},
+		{
+			"folder": "2ff7607b-859c-792f-a357-225767aa58b4",
+			"id": "43942b7e-576a-7865-0ae1-c3dadc6017f4",
+			"name": "借款产品管理-产品属性-列出产品非禁用属性",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": null,
+			"description": "",
+			"headers": "authorization: {{token}}\ndevice: 1\n",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "{{URL}}business/loanProductAttribute/list?id={{prdId}}",
+			"preRequestScript": null,
+			"tests": "tests[\"Body matches string\"] = responseBody.has(\"成功\");",
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "{{prdId}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "device",
+					"value": "1",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"folder": "96f844fe-e018-f89c-4f8e-ea729b58382f",
+			"id": "4d84bdde-93a1-218e-dd24-093d1287bca1",
+			"name": "对私客户列表",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": "",
+			"headers": "authorization: {{token}}\ndevice: 1\n",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "{{URL}}/customer/person/search?pageNum=1&pageSize=20",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "pageNum",
+					"value": "1",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "pageSize",
+					"value": "20",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "device",
+					"value": "1",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"id": "50a4de90-7187-02b6-7a32-613209310fd5",
+			"headers": "authorization: {{token}}\n",
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}customer/person/quicklyAdd?custName=测试24&certNo=24",
+			"folder": "96f844fe-e018-f89c-4f8e-ea729b58382f",
+			"queryParams": [
+				{
+					"key": "custName",
+					"value": "测试24",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "certNo",
+					"value": "24",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1506322802289,
+			"name": "对私客户快速新增",
+			"description": "",
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3",
+			"responses": []
+		},
+		{
+			"folder": "0d9d393b-2e08-9a05-0c64-029be99183a1",
+			"id": "52c2a675-8f4c-0b37-cdb9-c239fe2f4add",
+			"name": "黑名单查询接口",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": "",
+			"headers": "authorization: {{token}}\ndevice: 1\n",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "{{URL}}blacklist/blacklist/search?pageNum  =1&pageSize=20",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "pageNum  ",
+					"value": "1",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "pageSize",
+					"value": "20",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"enabled": true,
+					"description": ""
+				},
+				{
+					"key": "device",
+					"value": "1",
+					"enabled": true,
+					"description": ""
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"folder": "2ff7607b-859c-792f-a357-225767aa58b4",
+			"id": "5ff42144-e1f2-bf43-0bd5-6ea0ff742b15",
+			"name": "借款产品管理-产品属性-禁用接口",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": null,
+			"description": "",
+			"headers": "authorization: {{token}}\ndevice: 1\n",
+			"method": "PUT",
+			"pathVariables": {},
+			"url": "{{URL}}business/loanProductAttribute/forbid?id={{data}}",
+			"preRequestScript": null,
+			"tests": "tests[\"Body matches string\"] = responseBody.has(\"成功\");",
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "{{data}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "device",
+					"value": "1",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"folder": "2ff7607b-859c-792f-a357-225767aa58b4",
+			"id": "61fd6987-e45e-5662-2a0c-be47afefb065",
+			"name": "借款产品管理-产品上线记录-搜索上线历史",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": null,
+			"description": "",
+			"headers": "authorization: {{token}}\n",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "{{URL}}business/loanProductRelease/search?pageNum=1&pageSize=20&name=富农卡O",
+			"preRequestScript": null,
+			"tests": "tests[\"Body matches string\"] = responseBody.has(\"成功\");",
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "pageNum",
+					"value": "1",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "pageSize",
+					"value": "20",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "name",
+					"value": "富农卡O",
+					"equals": true,
+					"description": "产品名称\n",
+					"enabled": true
+				},
+				{
+					"key": "loanRate",
+					"value": "6",
+					"equals": true,
+					"description": "借款利率",
+					"enabled": false
+				},
+				{
+					"key": "costRate",
+					"value": "11",
+					"equals": true,
+					"description": "综合成本",
+					"enabled": false
+				},
+				{
+					"key": "releaseStartDatetime",
+					"value": "1503362440000",
+					"equals": true,
+					"description": "上线起始时间",
+					"enabled": false
+				},
+				{
+					"key": "releaseEndDatetime",
+					"value": "1503362440000",
+					"equals": true,
+					"description": "上线截止时间",
+					"enabled": false
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"folder": "ee2f73a1-695f-8c7c-2ef9-5347e6d69a03",
+			"id": "64611d9f-6549-c328-b3da-10705cf76f07",
+			"name": "授信申请-客户经营情况-保存详情接口",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": null,
+			"description": "",
+			"headers": "authorization: {{token}}\ndevice: 1\n",
+			"method": "PUT",
+			"pathVariables": {},
+			"url": "{{URL}}business/creditOperation/save?id={{creditId}}&industry=1&industryDuration=1&isOtherIndustry=1&otherIndustry=1&mainProduct=1&stable=1&employers=1&salesVolume=1&profit=1&profitRate=1&lastSalesVolume=1&lastProfit=1&lastProfitRate=1&salesTarget=1&isSeasonal=1&busySeason=1&lowSeason=1&estimate=fffff",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "{{creditId}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "industry",
+					"value": "1",
+					"equals": true,
+					"description": "从事行业",
+					"enabled": true
+				},
+				{
+					"key": "industryDuration",
+					"value": "1",
+					"equals": true,
+					"description": "从事年限",
+					"enabled": true
+				},
+				{
+					"key": "isOtherIndustry",
+					"value": "1",
+					"equals": true,
+					"description": "是否从事其他行业：1是，0否\n",
+					"enabled": true
+				},
+				{
+					"key": "otherIndustry",
+					"value": "1",
+					"equals": true,
+					"description": "从事的其他行业",
+					"enabled": true
+				},
+				{
+					"key": "mainProduct",
+					"value": "1",
+					"equals": true,
+					"description": "主营产品",
+					"enabled": true
+				},
+				{
+					"key": "stable",
+					"value": "1",
+					"equals": true,
+					"description": "稳定程度",
+					"enabled": true
+				},
+				{
+					"key": "employers",
+					"value": "1",
+					"equals": true,
+					"description": "雇佣人数",
+					"enabled": true
+				},
+				{
+					"key": "salesVolume",
+					"value": "1",
+					"equals": true,
+					"description": "今年销售额",
+					"enabled": true
+				},
+				{
+					"key": "profit",
+					"value": "1",
+					"equals": true,
+					"description": "今年利润",
+					"enabled": true
+				},
+				{
+					"key": "profitRate",
+					"value": "1",
+					"equals": true,
+					"description": "今年利润率",
+					"enabled": true
+				},
+				{
+					"key": "lastSalesVolume",
+					"value": "1",
+					"equals": true,
+					"description": "去年销售额",
+					"enabled": true
+				},
+				{
+					"key": "lastProfit",
+					"value": "1",
+					"equals": true,
+					"description": "去年利润",
+					"enabled": true
+				},
+				{
+					"key": "lastProfitRate",
+					"value": "1",
+					"equals": true,
+					"description": "去年利润率",
+					"enabled": true
+				},
+				{
+					"key": "salesTarget",
+					"value": "1",
+					"equals": true,
+					"description": "主要销往",
+					"enabled": true
+				},
+				{
+					"key": "isSeasonal",
+					"value": "1",
+					"equals": true,
+					"description": "季节性是否明显：1是，0否",
+					"enabled": true
+				},
+				{
+					"key": "busySeason",
+					"value": "1",
+					"equals": true,
+					"description": "旺季",
+					"enabled": true
+				},
+				{
+					"key": "lowSeason",
+					"value": "1",
+					"equals": true,
+					"description": "淡季",
+					"enabled": true
+				},
+				{
+					"key": "estimate",
+					"value": "fffff",
+					"equals": true,
+					"description": "总体评价",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "device",
+					"value": "1",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"folder": "fc8560c8-f463-d06d-8bed-c1bd94057f6f",
+			"id": "6b49cc1a-6c1e-1804-90e6-91e55c5e0739",
+			"name": "登录接口9200",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": null,
+			"description": "",
+			"headers": "device: 1\n",
+			"method": "POST",
+			"pathVariables": {},
+			"url": "{{URL}}login/signIn?jobNumber=9200&password=202CB962AC59075B964B07152D234B70",
+			"preRequestScript": null,
+			"tests": "var data=JSON.parse(responseBody);\n\nif (data.data.token){\n    tests[\"Body has token\"]=true;\n    postman.setEnvironmentVariable(\"token\",data.data.token);\n\n}\nelse{\n    tests[\"Body has token\"]=false;\n}",
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "jobNumber",
+					"value": "9200",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "202CB962AC59075B964B07152D234B70",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "device",
+					"value": "1",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"id": "6ca201b2-68ab-5114-e7ee-2f30e651a70c",
+			"headers": "authorization: {{token}}\n",
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/business/material/other/file/list?id=3597942065418240",
+			"folder": "fbfd902f-1599-fb75-2177-d11e4de2dbc6",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "3597942065418240",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1506046133855,
+			"name": "其他附件文件列表获取",
+			"description": "",
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3",
+			"responses": []
+		},
+		{
+			"folder": "2ff7607b-859c-792f-a357-225767aa58b4",
+			"id": "6e709af6-ce31-e4f0-4d99-2cfc478090e7",
+			"name": "借款产品管理-产品属性-修改接口",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": null,
+			"description": "",
+			"headers": "authorization: {{token}}\ndevice: 1\n",
+			"method": "PUT",
+			"pathVariables": {},
+			"url": "{{URL}}business/loanProductAttribute/update?id={{data}}&minPrincipal=10000&maxPrincipal=200000&minDuration=90&maxDuration=270&repayType=1&loanRate=8&minCostRate=15&maxCostRate=17&penaltyRate=20",
+			"preRequestScript": null,
+			"tests": "tests[\"Body matches string\"] = responseBody.has(\"只能修改撤回和退回的属性\");",
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "{{data}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "minPrincipal",
+					"value": "10000",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "maxPrincipal",
+					"value": "200000",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "minDuration",
+					"value": "90",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "maxDuration",
+					"value": "270",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "repayType",
+					"value": "1",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "loanRate",
+					"value": "8",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "minCostRate",
+					"value": "15",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "maxCostRate",
+					"value": "17",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "penaltyRate",
+					"value": "20",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "device",
+					"value": "1",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"folder": "15c16b95-f976-9862-c160-e076ce08f70d",
+			"id": "73285993-84a7-5395-5447-2467b0e22e0b",
+			"name": "获取审批流程业务信息",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": "",
+			"headers": "authorization: {{token}}\n",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "{{URL}}workflow/info?taskType=product&businessKey=3463215393296384",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "taskType",
+					"value": "product",
+					"equals": true,
+					"description": "审批类型",
+					"enabled": true
+				},
+				{
+					"key": "businessKey",
+					"value": "3463215393296384",
+					"equals": true,
+					"description": "业务主键值",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"folder": "4f4a4422-cbac-033c-fc53-8cf71fe460e2",
+			"id": "78772ee6-465b-0c15-44aa-63d04332f903",
+			"name": "查询：符合某笔授信条件的所有可以引入担保",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": "",
+			"headers": "authorization: {{token}}\ndevice: 1\n",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "{{URL}}/business/guarantee/listIntroduce?pageNum=1&pageSize=20&creditId={{creditId}}",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "pageNum",
+					"value": "1",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "pageSize",
+					"value": "20",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "creditId",
+					"value": "{{creditId}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "device",
+					"value": "1",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"folder": "2ff7607b-859c-792f-a357-225767aa58b4",
+			"id": "79e0e4a6-74f9-c56d-1544-eecb88c1f052",
+			"name": "借款产品管理-搜索接口",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": null,
+			"description": "",
+			"headers": "authorization: {{token}}\ndevice: 1\n",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "{{URL}}business/loanProduct/search?pageNum=1&pageSize=20",
+			"preRequestScript": null,
+			"tests": "tests[\"Body matches string\"] = responseBody.has(\"成功\");",
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "pageNum",
+					"value": "1",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "pageSize",
+					"value": "20",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "device",
+					"value": "1",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"folder": "2ff7607b-859c-792f-a357-225767aa58b4",
+			"id": "7b2304d8-1d1a-c964-9f9f-380b378a0fbd",
+			"name": "借款产品管理-修改产品名",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": null,
+			"description": "",
+			"headers": "authorization: {{token}}\ndevice: 1\n",
+			"method": "PUT",
+			"pathVariables": {},
+			"url": "{{URL}}business/loanProduct/update?id={{prdId}}&name=富农卡A",
+			"preRequestScript": null,
+			"tests": "tests[\"Body matches string\"] = responseBody.has(\"请检查名称是否重复\");",
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "{{prdId}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "name",
+					"value": "富农卡A",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "device",
+					"value": "1",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"folder": "15c16b95-f976-9862-c160-e076ce08f70d",
+			"id": "7d9ea030-1204-0b8a-8417-ac2b66c1a4f7",
+			"name": "获取当前用户待处理的审批任务",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": null,
+			"description": "",
+			"headers": "authorization: {{token}}\n",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "{{URL}}workflow/getTaskInHand",
+			"preRequestScript": null,
+			"tests": "tests[\"Body matches string\"] = responseBody.has(\"成功\");",
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"id": "7e8e4546-c04e-85d0-e70f-e7e46374bade",
+			"headers": "authorization: {{token}}\n",
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/business/credit/amountChange?id=SX3597930154905600&amount=20000",
+			"folder": "0d9d393b-2e08-9a05-0c64-029be99183a1",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "SX3597930154905600",
+					"equals": true,
+					"description": "授信编号",
+					"enabled": true
+				},
+				{
+					"key": "amount",
+					"value": "20000",
+					"equals": true,
+					"description": "授信金额",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1506301199628,
+			"name": "授信金额变更",
+			"description": "",
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3",
+			"responses": []
+		},
+		{
+			"folder": "0d9d393b-2e08-9a05-0c64-029be99183a1",
+			"id": "851df6b8-69f1-1685-507e-7fe8397ea569",
+			"name": "搜索授信申请信息",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": "",
+			"headers": "authorization: {{token}}\n",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "{{URL}}business/credit/search?pageNum=1&pageSize=20&status=1&applyEndDate=1504577930000",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "pageNum",
+					"value": "1",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "pageSize",
+					"value": "20",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "status",
+					"value": "1",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "name",
+					"value": "测试7",
+					"equals": true,
+					"description": "",
+					"enabled": false
+				},
+				{
+					"key": "certificate",
+					"value": "1",
+					"equals": true,
+					"description": "证件编号",
+					"enabled": false
+				},
+				{
+					"key": "applyStartDate",
+					"value": "1504576850000",
+					"equals": true,
+					"description": "申请开始日期",
+					"enabled": false
+				},
+				{
+					"key": "applyEndDate",
+					"value": "1504577930000",
+					"equals": true,
+					"description": "申请结束日期",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"id": "8649bea9-e6b5-cf3f-08c5-b1a3d13f6d26",
+			"headers": "authorization: {{token}}\n",
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}business/credit/fetchCredit?id=SX0106201709220002",
+			"folder": "0d9d393b-2e08-9a05-0c64-029be99183a1",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "SX0106201709220002",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1506300100581,
+			"name": "根据合同号获取授信信息",
+			"description": "",
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3",
+			"responses": []
+		},
+		{
+			"folder": "fbfd902f-1599-fb75-2177-d11e4de2dbc6",
+			"id": "86c357cc-0a88-b6c3-61ec-1bbd8fce0d62",
+			"name": "其他附件列表获取",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": null,
+			"description": "",
+			"headers": "authorization: {{token}}\n",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "{{URL}}/business/material/other/list?id={{creditId}}",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "{{creditId}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"folder": "3b98f06a-e2e9-6b50-3a13-f00b23d892ed",
+			"id": "89c79a9c-3b6b-954a-1544-48b2374af2a4",
+			"name": "个人关联的所有贷款记录",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": "",
+			"headers": "authorization: {{token}}\n",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "{{URL}}/cust/details/listLoan?creditId={{creditId}}",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"queryParams": [
+				{
+					"key": "creditId",
+					"value": "{{creditId}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"folder": "3b98f06a-e2e9-6b50-3a13-f00b23d892ed",
+			"id": "8f1f44f1-8b32-db3f-3c27-ec830c500f72",
+			"name": "投资记录（已完结）",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": "",
+			"headers": "authorization: {{token}}\n",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "{{URL}}/cust/details/listFundEnd?custId=100000102",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"queryParams": [
+				{
+					"key": "custId",
+					"value": "100000102",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"id": "93c8687b-7eed-70c6-3ae3-94ce49690ce3",
+			"folder": "fbfd902f-1599-fb75-2177-d11e4de2dbc6",
+			"name": "征信及法院五查询报告上传",
+			"dataMode": "params",
+			"data": [
+				{
+					"key": "file",
+					"value": "",
+					"description": "",
+					"type": "file",
+					"enabled": true
+				}
+			],
+			"rawModeData": null,
+			"descriptionFormat": null,
+			"description": "",
+			"headers": "authorization: {{token}}\n",
+			"method": "POST",
+			"pathVariables": {},
+			"url": "{{URL}}/business/material/upload?id={{creditId}}&type=credit_report&date=1505092755237&remark=123",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "{{creditId}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "type",
+					"value": "credit_report",
+					"equals": true,
+					"description": "报告类型:征信报告:credit_report;诉讼案件信息:litigation;开庭公告:notice;裁判文书:sentence;执行案件:execute;法院执行:court_execute;",
+					"enabled": true
+				},
+				{
+					"key": "date",
+					"value": "1505092755237",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "remark",
+					"value": "123",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"enabled": true,
+					"description": ""
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3",
+			"timestamp": null
+		},
+		{
+			"folder": "2ff7607b-859c-792f-a357-225767aa58b4",
+			"id": "94c9384c-03af-6999-40a2-7a4bbc4b22b8",
+			"name": "借款产品管理-禁用/启用产品",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": "",
+			"headers": "authorization: {{token}}\ndevice: 1\n",
+			"method": "PUT",
+			"pathVariables": {},
+			"url": "{{URL}}business/loanProduct/enable?id={{prdId}}",
+			"preRequestScript": null,
+			"tests": "tests[\"Body matches string\"] = responseBody.has(\"成功\");",
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "{{prdId}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "device",
+					"value": "1",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"folder": "0d9d393b-2e08-9a05-0c64-029be99183a1",
+			"id": "96194849-8ba8-56da-f9d2-498505ea0bb6",
+			"name": "授信申请-提交授信申请",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": "",
+			"headers": "authorization: {{token}}\n",
+			"method": "PUT",
+			"pathVariables": {},
+			"url": "{{URL}}business/credit/audit?id={{creditId}}",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "{{creditId}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"folder": "956f8498-9d88-a181-56a5-8dcc9af628dd",
+			"id": "9f773392-e3c5-4f96-5f15-2d700312d4a6",
+			"name": "获取授信经营情况列表",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": "",
+			"headers": "authorization: {{token}}\n",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "{{URL}}/business/creditOperation/list?id=100000036",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "100000036",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"folder": "956f8498-9d88-a181-56a5-8dcc9af628dd",
+			"id": "a3edf263-43ee-7fb6-eb09-204e5aefc4e8",
+			"name": "删除指定银行贷款",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": null,
+			"description": "",
+			"headers": "authorization: {{token}}\n",
+			"method": "DELETE",
+			"pathVariables": {},
+			"url": "{{URL}}business/balanceSheet/deleteLoan?creditId={{creditId}}&id=32",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "creditId",
+					"value": "{{creditId}}",
+					"equals": true,
+					"description": "授信编号",
+					"enabled": true
+				},
+				{
+					"key": "id",
+					"value": "32",
+					"equals": true,
+					"description": "银行贷款ID",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"folder": "3b98f06a-e2e9-6b50-3a13-f00b23d892ed",
+			"id": "a72f0a14-e06a-0e5a-7331-7dda41755c34",
+			"name": "授信关联的贷款记录",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": "",
+			"headers": "authorization: {{token}}\n",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "{{URL}}/cust/details/listLoan4Credit?creditId={{creditId}}",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"queryParams": [
+				{
+					"key": "creditId",
+					"value": "{{creditId}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"id": "a7631690-b8be-3935-08d0-7d4f33aeaf97",
+			"headers": "authorization: {{token}}\n",
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/business/material/other/file/delete?id=41&reportId=3597942065418240&creditId={{creditId}}",
+			"folder": "fbfd902f-1599-fb75-2177-d11e4de2dbc6",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "41",
+					"equals": true,
+					"description": "文件编号",
+					"enabled": true
+				},
+				{
+					"key": "reportId",
+					"value": "3597942065418240",
+					"equals": true,
+					"description": "目录编号",
+					"enabled": true
+				},
+				{
+					"key": "creditId",
+					"value": "{{creditId}}",
+					"equals": true,
+					"description": "授信编号",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1506046388828,
+			"name": "其他附件单个文件删除",
+			"description": "",
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3",
+			"responses": []
+		},
+		{
+			"folder": "ee2f73a1-695f-8c7c-2ef9-5347e6d69a03",
+			"id": "a923066b-a0c3-a37c-cfa7-7d85a7fadeb0",
+			"name": "授信申请-客户经营情况-获取授信经营情况列表",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": "",
+			"headers": "authorization: {{token}}\n",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "{{URL}}/business/creditOperation/list?id=100000036",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "100000036",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"id": "aa3769c8-f373-2a95-6e36-6bf1386a0a72",
+			"headers": "device: 1\n",
+			"headerData": [
+				{
+					"key": "device",
+					"value": "1",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}login/signIn?jobNumber=9101&password=202CB962AC59075B964B07152D234B70",
+			"folder": "fc8560c8-f463-d06d-8bed-c1bd94057f6f",
+			"queryParams": [
+				{
+					"key": "jobNumber",
+					"value": "9101",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "202CB962AC59075B964B07152D234B70",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": null,
+			"dataMode": "params",
+			"tests": "var data=JSON.parse(responseBody);\n\nif (data.data.token){\n    tests[\"Body has token\"]=true;\n    postman.setEnvironmentVariable(\"token\",data.data.token);\n\n}\nelse{\n    tests[\"Body has token\"]=false;\n}",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1506299707687,
+			"name": "登录接口9101",
+			"description": "",
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3",
+			"responses": []
+		},
+		{
+			"id": "b1883731-7e4a-7139-cfdf-47d04a25ba84",
+			"headers": "authorization: {{token}}\n",
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/cust/details/listLoanPlan?custId=100005651&prdId=008PN0000001810",
+			"folder": "3b98f06a-e2e9-6b50-3a13-f00b23d892ed",
+			"queryParams": [
+				{
+					"key": "custId",
+					"value": "100005651",
+					"equals": true,
+					"description": "客户编号",
+					"enabled": true
+				},
+				{
+					"key": "prdId",
+					"value": "008PN0000001810",
+					"equals": true,
+					"description": "产品编号",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1505871482808,
+			"name": "还款计划表",
+			"description": "",
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3",
+			"responses": []
+		},
+		{
+			"folder": "4f4a4422-cbac-033c-fc53-8cf71fe460e2",
+			"id": "b18acbb1-8937-c065-2b31-102c627b1522",
+			"name": "删除：担保合同",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": "",
+			"headers": "authorization: {{token}}\n//device: 1\n",
+			"method": "DELETE",
+			"pathVariables": {},
+			"url": "{{URL}}/business/guarantee/delete?guaranteeId=DB3541226246590464&creditId=SX3541198544719872",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "guaranteeId",
+					"value": "DB3541226246590464",
+					"equals": true,
+					"description": "担保编号",
+					"enabled": true
+				},
+				{
+					"key": "creditId",
+					"value": "SX3541198544719872",
+					"equals": true,
+					"description": "授信编号",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "device",
+					"value": "1",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"folder": "fbfd902f-1599-fb75-2177-d11e4de2dbc6",
+			"id": "b4185fa6-115e-267e-89af-acb9ef5fb6f6",
+			"name": "征信及五查询列表",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": null,
+			"description": "",
+			"headers": "authorization: {{token}}\n",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "{{URL}}/business/material/list?id=100000036",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "100000036",
+					"equals": true,
+					"description": "客户编号",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"id": "bf6bbcfd-c0fb-bc4d-1813-8e782dfd0009",
+			"headers": "authorization: {{token}}\n",
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}business/credit/fetchUser?certNumber=23",
+			"folder": "0d9d393b-2e08-9a05-0c64-029be99183a1",
+			"queryParams": [
+				{
+					"key": "certNumber",
+					"value": "23",
+					"equals": true,
+					"description": "身份证号码",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1506045833705,
+			"name": "授信申请-获取用户信息",
+			"description": "",
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3",
+			"responses": []
+		},
+		{
+			"folder": "3b98f06a-e2e9-6b50-3a13-f00b23d892ed",
+			"id": "c627adfa-a5e3-ec05-3997-7055e9be3b31",
+			"name": "授信记录",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": "",
+			"headers": "authorization: {{token}}\n",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "{{URL}}/cust/details/listCredit?custId=100005912",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"queryParams": [
+				{
+					"key": "custId",
+					"value": "100005912",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"folder": "3b98f06a-e2e9-6b50-3a13-f00b23d892ed",
+			"id": "c67555c0-ad6b-31b5-4bd7-c3bfc1a28ae7",
+			"name": "授信关联的担保记录",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": "",
+			"headers": "authorization: {{token}}\n",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "{{URL}}/cust/details/listGuarantee4Credit?creditId={{creditId}}",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"queryParams": [
+				{
+					"key": "creditId",
+					"value": "{{creditId}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"folder": "4f4a4422-cbac-033c-fc53-8cf71fe460e2",
+			"id": "c7d45689-ca80-aa56-b34e-dc3fa1f5c189",
+			"name": "新增：引入的担保合同",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": "",
+			"headers": "authorization: {{token}}\ndevice: 1\n",
+			"method": "POST",
+			"pathVariables": {},
+			"url": "{{URL}}/business/guarantee/addIntroduce?guaranteeId=BZ01SX010620170905000402&creditId={{creditId}}",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "guaranteeId",
+					"value": "BZ01SX010620170905000402",
+					"equals": true,
+					"description": "担保编号",
+					"enabled": true
+				},
+				{
+					"key": "creditId",
+					"value": "{{creditId}}",
+					"equals": true,
+					"description": "授信编号",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "device",
+					"value": "1",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"folder": "2ff7607b-859c-792f-a357-225767aa58b4",
+			"id": "c89b6538-651b-60f0-9bdd-f1fbdb978a42",
+			"name": "借款产品管理-产品属性-新增属性",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": "",
+			"headers": "authorization: {{token}}\ndevice: 1\n",
+			"method": "POST",
+			"pathVariables": {},
+			"url": "{{URL}}business/loanProductAttribute/add?id={{prdId}}&minPrincipal=10000&maxPrincipal=200000&minDuration=90&maxDuration=270&repayType=4&loanRate=8&minCostRate=15&maxCostRate=17&penaltyRate=10",
+			"preRequestScript": null,
+			"tests": "\nvar data=JSON.parse(responseBody);\n\ntests[\"Body matches string\"] = responseBody.has(\"成功\");\n    if (data.code==\"200\"){\n        tests[\"catch data\"]=true;\n        postman.setEnvironmentVariable(\"data\",data.data);\n    }\n    else{\n         tests[\"catch data\"]=false;\n    }",
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "{{prdId}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "minPrincipal",
+					"value": "10000",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "maxPrincipal",
+					"value": "200000",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "minDuration",
+					"value": "90",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "maxDuration",
+					"value": "270",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "repayType",
+					"value": "4",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "loanRate",
+					"value": "8",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "minCostRate",
+					"value": "15",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "maxCostRate",
+					"value": "17",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "penaltyRate",
+					"value": "10",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "device",
+					"value": "1",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"folder": "956f8498-9d88-a181-56a5-8dcc9af628dd",
+			"id": "c8ff8d2a-28fc-d9b4-52f2-226d00780bdb",
+			"name": "保存授信经营情况",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n        \"custId\": 100000036,\n        \"creditId\": \"SX3541198544719872\",\n        \"asset\": [\n            {\n                \"id\": 0,\n                \"typeId\": 39,\n                \"typeName\": \"现金及银行存款\",\n                \"remark\": \"2222\",\n                \"balance\": 0\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 40,\n                \"typeName\": \"应收账款\",\n                \"remark\": \"\",\n                \"balance\": 0\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 41,\n                \"typeName\": \"预付账款\",\n                \"remark\": \"2222\",\n                \"balance\": 0\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 42,\n                \"typeName\": \"存货价值\",\n                \"remark\": \"\",\n                \"balance\": 0\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 43,\n                \"typeName\": \"房产\",\n                \"remark\": \"\",\n                \"balance\": 0\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 44,\n                \"typeName\": \"车辆\",\n                \"remark\": \"\",\n                \"balance\": 0\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 45,\n                \"typeName\": \"厂房（办公楼）价值\",\n                \"remark\": \"\",\n                \"balance\": 0\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 46,\n                \"typeName\": \"设备价值\",\n                \"remark\": \"\",\n                \"balance\": 0\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 47,\n                \"typeName\": \"其他投资及资产\",\n                \"remark\": \"\",\n                \"balance\": 0\n            }\n        ],\n        \"assetsTotal\": 0,\n        \"loan\": [\n        {\"bankName\":\"天堂钱庄\",\"expirationDate\":1505750400000,\"id\":0,\"loanTimes\":\"1\",\"name\":\"钻石王者\",\"principal\":\"1\",\"startDate\":1504713600000}\n        \n        \n        ],\n        \"liabilities\": [\n            {\n                \"id\": 0,\n                \"typeId\": 49,\n                \"typeName\": \"非传统银行贷款\",\n                \"remark\": \"\",\n                \"balance\": 0\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 50,\n                \"typeName\": \"信用卡透支\",\n                \"remark\": \"\",\n                \"balance\": 0\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 51,\n                \"typeName\": \"预收账款\",\n                \"remark\": \"\",\n                \"balance\": 0\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 52,\n                \"typeName\": \"应付账款\",\n                \"remark\": \"\",\n                \"balance\": 0\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 53,\n                \"typeName\": \"其他负债\",\n                \"remark\": \"\",\n                \"balance\": 0\n            }\n        ],\n        \"liabilitiesTotal\": 0,\n        \"netAssets\": 0,\n        \"assetLiabilityRatio\": 0,\n        \"externalSecurity\": [\n            {\n                \"id\": 0,\n                \"typeId\": 48,\n                \"typeName\": \"对外担保\",\n                \"remark\": \"\",\n                \"balance\": 0\n            }\n        ]\n    }",
+			"descriptionFormat": null,
+			"description": "保存授信经营情况",
+			"headers": "authorization: {{token}}\nContent-Type: application/json\n",
+			"method": "PUT",
+			"pathVariables": {},
+			"url": "{{URL}}business/balanceSheet/save",
+			"preRequestScript": null,
+			"tests": "{\"asset\":[{\"id\":68,\"typeId\":39,\"typeName\":\"现金及银行存款\",\"remark\":\"3333\",\"balance\":1},{\"id\":69,\"typeId\":40,\"typeName\":\"应收账款\",\"remark\":\"\",\"balance\":0},{\"id\":70,\"typeId\":41,\"typeName\":\"预付账款\",\"remark\":\"\",\"balance\":0},{\"id\":71,\"typeId\":42,\"typeName\":\"存货价值\",\"remark\":\"\",\"balance\":0},{\"id\":72,\"typeId\":43,\"typeName\":\"房产\",\"remark\":\"\",\"balance\":0},{\"id\":73,\"typeId\":44,\"typeName\":\"车辆\",\"remark\":\"\",\"balance\":0},{\"id\":74,\"typeId\":45,\"typeName\":\"厂房（办公楼）价值\",\"remark\":\"\",\"balance\":0},{\"id\":75,\"typeId\":46,\"typeName\":\"设备价值\",\"remark\":\"\",\"balance\":0},{\"id\":76,\"typeId\":47,\"typeName\":\"其他投资及资产\",\"remark\":\"\",\"balance\":0}],\"loan\":[{\"bankName\":\"大唐财团\",\"expirationDate\":1505750400000,\"id\":0,\"loanTimes\":\"1\",\"name\":\"李白\",\"principal\":\"1\",\"startDate\":1504713600000}],\"custId\":100000015,\"creditId\":\"SX3503347281448960\",\"assetsTotal\":0,\"liabilities\":[{\"id\":77,\"typeId\":49,\"typeName\":\"非传统银行贷款\",\"remark\":\"\",\"balance\":0},{\"id\":78,\"typeId\":50,\"typeName\":\"信用卡透支\",\"remark\":\"\",\"balance\":0},{\"id\":79,\"typeId\":51,\"typeName\":\"预收账款\",\"remark\":\"\",\"balance\":0},{\"id\":80,\"typeId\":52,\"typeName\":\"应付账款\",\"remark\":\"\",\"balance\":0},{\"id\":81,\"typeId\":53,\"typeName\":\"其他负债\",\"remark\":\"\",\"balance\":0}],\"liabilitiesTotal\":0,\"netAssets\":0,\"assetLiabilityRatio\":0,\"externalSecurity\":[{\"id\":82,\"typeId\":48,\"typeName\":\"对外担保\",\"remark\":\"\",\"balance\":0}]}",
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"folder": "fbfd902f-1599-fb75-2177-d11e4de2dbc6",
+			"id": "c9420dfa-1422-d4e9-812a-b3ae6be9f280",
+			"name": "根据客户编号获取其他附件列表",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": null,
+			"description": "",
+			"headers": "authorization: {{token}}\n",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "{{URL}}/business/material/other/listCustomer?id=100000036",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "100000036",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"id": "cd479830-b865-221e-9c01-d59263e64c0e",
+			"headers": "authorization: {{token}}\n",
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/business/material/other/delete?id=3597955598143488&creditId={{creditId}}",
+			"folder": "fbfd902f-1599-fb75-2177-d11e4de2dbc6",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "3597955598143488",
+					"equals": true,
+					"description": "目录编号",
+					"enabled": true
+				},
+				{
+					"key": "creditId",
+					"value": "{{creditId}}",
+					"equals": true,
+					"description": "授信编号",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1506299713708,
+			"name": "其他附件目录删除",
+			"description": "",
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3",
+			"responses": []
+		},
+		{
+			"folder": "0d9d393b-2e08-9a05-0c64-029be99183a1",
+			"id": "d156866e-31b0-4730-2bf5-ccf44f13009c",
+			"name": "撤回授信申请信息",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": null,
+			"description": "",
+			"headers": "authorization: {{token}}\ndevice: 1\n",
+			"method": "PUT",
+			"pathVariables": {},
+			"url": "{{URL}}business/credit/revoke?id=SX3463504135344128",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "SX3463504135344128",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "device",
+					"value": "1",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"folder": "96f844fe-e018-f89c-4f8e-ea729b58382f",
+			"id": "d50bf7f4-0e34-5c97-5a1e-1cc3b6621197",
+			"name": "对私客户详情",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": "",
+			"headers": "authorization: {{token}}\n",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "{{URL}}/customer/person/details?custId=100000031",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "custId",
+					"value": "100000031",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"id": "d5138400-1142-7574-5c90-3ec85d6692b6",
+			"headers": "authorization: {{token}}\n",
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/business/credit/subsidiaryProductChange?id=SX3597930154905600&productId=3497628183252992",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "SX3597930154905600",
+					"equals": true,
+					"description": "授信编号",
+					"enabled": true
+				},
+				{
+					"key": "productId",
+					"value": "3497628183252992",
+					"equals": true,
+					"description": "产品属性编号",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "PUT",
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3",
+			"data": null,
+			"dataMode": "params",
+			"name": "授信附属产品变更",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1506302154191,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "0d9d393b-2e08-9a05-0c64-029be99183a1"
+		},
+		{
+			"folder": "0d9d393b-2e08-9a05-0c64-029be99183a1",
+			"id": "d54090e1-3f1e-e17f-d1c7-b0551fb4110b",
+			"name": "授信申请-获取授信申请信息",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": null,
+			"description": "",
+			"headers": "authorization: {{token}}\n",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "{{URL}}business/credit/fetch?id={{creditId}}",
+			"preRequestScript": null,
+			"tests": "tests[\"Body matches string\"] = responseBody.has(\"成功\");\nvar data=JSON.parse(responseBody);\nif(data.data.deleteFlag==1){\n    tests[\"删除测试\"]=true;\n  \n}else{\n    tests[\"删除测试\"]=false;\n}",
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "{{creditId}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"id": "d5a0fe9d-18c4-4b62-d1d3-71c9702df820",
+			"headers": "authorization: {{token}}\ndevice: 1\n",
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "device",
+					"value": "1",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}business/credit/add?id=100005916",
+			"folder": "0d9d393b-2e08-9a05-0c64-029be99183a1",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "100005916",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": null,
+			"dataMode": "params",
+			"tests": "tests[\"Body matches string\"] = responseBody.has(\"成功\");\nvar data=JSON.parse(responseBody);\nif(data.data){\n    tests[\"Body has creditId\"]=true;\n    postman.setEnvironmentVariable(\"creditId\",data.data);\n\n}else{\n    tests[\"Body has creditId\"]=false;\n}",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1506045841033,
+			"name": "授信申请-创建授信接口",
+			"description": "正常客户是否创建成功",
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3",
+			"responses": []
+		},
+		{
+			"folder": "15c16b95-f976-9862-c160-e076ce08f70d",
+			"id": "d63c5584-a23d-80ee-e5fc-5a746309b79f",
+			"name": "获取当前用户提交的申请、处于审批中的任务",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": null,
+			"description": "",
+			"headers": "authorization: {{token}}\n",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "{{URL}}workflow/getTaskInHandOfApplicant",
+			"preRequestScript": null,
+			"tests": "tests[\"Body matches string\"] = responseBody.has(\"成功\");",
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"folder": "956f8498-9d88-a181-56a5-8dcc9af628dd",
+			"id": "e622bf08-1ec5-b162-3e86-711df86c8219",
+			"name": "获取资产负债情况",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": "",
+			"headers": "authorization: {{token}}\n",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "{{URL}}business/balanceSheet/fetch?id={{creditId}}",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "{{creditId}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"folder": "fbfd902f-1599-fb75-2177-d11e4de2dbc6",
+			"id": "f4d79d4c-9b6f-cb89-557e-bb9450881650",
+			"name": "征信及法院五查询报告下载",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": null,
+			"description": "",
+			"headers": "authorization: {{token}}\n",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "{{URL}}business/material/download?id={{creditId}}&type=credit_report",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "{{creditId}}",
+					"equals": true,
+					"description": "授信编号",
+					"enabled": true
+				},
+				{
+					"key": "type",
+					"value": "credit_report",
+					"equals": true,
+					"description": "报告类型:征信报告:credit_report;诉讼案件信息:litigation;开庭公告:notice;裁判文书:sentence;执行案件:execute;法院执行:court_execute;",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"folder": "0d9d393b-2e08-9a05-0c64-029be99183a1",
+			"id": "f695fbd5-34f7-a58f-26ad-d99aee42166f",
+			"name": "授信申请-申请信息-保存申请信息",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": null,
+			"description": "",
+			"headers": "authorization: {{token}}\n",
+			"method": "PUT",
+			"pathVariables": {},
+			"url": "{{URL}}/business/credit/update?id={{creditId}}&creditAmt=50000&applyDate=1503036840000&expirationDate=1534572840000&duration=1&guaranteeType=1&basePrdId=1&baseStartDate=1503036840000&baseEndDate=1534572840000&baseCostRate=1&subsidiaryPrdId=99&subsidiaryStartDate=1503036840000&subsidiaryEndDate=1534572840000&subsidiaryCostRate=1&marketPrdId=1&marketStartDate=1503036840000&marketEndDate=1534572840000&marketCostRate=4&isSpecialService=1&purpose=购买原材料",
+			"preRequestScript": null,
+			"tests": "tests[\"Body matches string\"] = responseBody.has(\"成功\");",
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "{{creditId}}",
+					"equals": true,
+					"description": "授信编号",
+					"enabled": true
+				},
+				{
+					"key": "creditAmt",
+					"value": "50000",
+					"equals": true,
+					"description": "授信金额",
+					"enabled": true
+				},
+				{
+					"key": "applyDate",
+					"value": "1503036840000",
+					"equals": true,
+					"description": "申请日期",
+					"enabled": true
+				},
+				{
+					"key": "expirationDate",
+					"value": "1534572840000",
+					"equals": true,
+					"description": "到期日期",
+					"enabled": true
+				},
+				{
+					"key": "duration",
+					"value": "1",
+					"equals": true,
+					"description": "期限",
+					"enabled": true
+				},
+				{
+					"key": "guaranteeType",
+					"value": "1",
+					"equals": true,
+					"description": "担保方式",
+					"enabled": true
+				},
+				{
+					"key": "basePrdId",
+					"value": "1",
+					"equals": true,
+					"description": "基础产品编号",
+					"enabled": true
+				},
+				{
+					"key": "baseStartDate",
+					"value": "1503036840000",
+					"equals": true,
+					"description": "基础产品有效期开始时间",
+					"enabled": true
+				},
+				{
+					"key": "baseEndDate",
+					"value": "1534572840000",
+					"equals": true,
+					"description": "基础产品有效期结束时间",
+					"enabled": true
+				},
+				{
+					"key": "baseCostRate",
+					"value": "1",
+					"equals": true,
+					"description": "基础产品借款综合成本利率",
+					"enabled": true
+				},
+				{
+					"key": "subsidiaryPrdId",
+					"value": "99",
+					"equals": true,
+					"description": "附属产品编号",
+					"enabled": true
+				},
+				{
+					"key": "subsidiaryStartDate",
+					"value": "1503036840000",
+					"equals": true,
+					"description": "附属产品有效期开始时间",
+					"enabled": true
+				},
+				{
+					"key": "subsidiaryEndDate",
+					"value": "1534572840000",
+					"equals": true,
+					"description": "附属产品有效期结束时间",
+					"enabled": true
+				},
+				{
+					"key": "subsidiaryCostRate",
+					"value": "1",
+					"equals": true,
+					"description": "附属产品借款综合成本利率",
+					"enabled": true
+				},
+				{
+					"key": "marketPrdId",
+					"value": "1",
+					"equals": true,
+					"description": "营销产品编号",
+					"enabled": true
+				},
+				{
+					"key": "marketStartDate",
+					"value": "1503036840000",
+					"equals": true,
+					"description": "营销产品有效期开始时间",
+					"enabled": true
+				},
+				{
+					"key": "marketEndDate",
+					"value": "1534572840000",
+					"equals": true,
+					"description": "营销产品有效期结束时间",
+					"enabled": true
+				},
+				{
+					"key": "marketCostRate",
+					"value": "4",
+					"equals": true,
+					"description": "营销产品借款综合成本利率",
+					"enabled": true
+				},
+				{
+					"key": "isSpecialService",
+					"value": "1",
+					"equals": true,
+					"description": "特殊业务标志",
+					"enabled": true
+				},
+				{
+					"key": "purpose",
+					"value": "购买原材料",
+					"equals": true,
+					"description": "授信用途",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"folder": "4f4a4422-cbac-033c-fc53-8cf71fe460e2",
+			"id": "f99e7777-e66e-985f-4cc1-1b92cb6c3d6d",
+			"name": "新增：担保合同",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": "",
+			"headers": "authorization: {{token}}\ndevice: 1\n",
+			"method": "POST",
+			"pathVariables": {},
+			"url": "{{URL}}business/guarantee/add?creditId={{creditId}}&guaranteeType=1&custId=100005914&guaranteerId=100005912&startDateTime=1504577930000&expirationDateTime=1000258917000&guaranteeAmt=100000",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "creditId",
+					"value": "{{creditId}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "guaranteeType",
+					"value": "1",
+					"equals": true,
+					"description": "担保类型 1 最高额担保",
+					"enabled": true
+				},
+				{
+					"key": "custId",
+					"value": "100005914",
+					"equals": true,
+					"description": "客户编号",
+					"enabled": true
+				},
+				{
+					"key": "guaranteerId",
+					"value": "100005912",
+					"equals": true,
+					"description": "担保人编号",
+					"enabled": true
+				},
+				{
+					"key": "startDateTime",
+					"value": "1504577930000",
+					"equals": true,
+					"description": "开始时间",
+					"enabled": true
+				},
+				{
+					"key": "expirationDateTime",
+					"value": "1000258917000",
+					"equals": true,
+					"description": "到期时间",
+					"enabled": true
+				},
+				{
+					"key": "guaranteeAmt",
+					"value": "100000",
+					"equals": true,
+					"description": "担保金额",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "device",
+					"value": "1",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3"
+		},
+		{
+			"id": "fc15ea2c-9ff8-e6d5-5d51-4b8386224527",
+			"headers": "authorization: {{token}}\n",
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"enabled": true,
+					"description": ""
+				}
+			],
+			"url": "{{URL}}/business/material/other/file/upload?id=3597942065418240&creditId={{creditId}}",
+			"folder": "fbfd902f-1599-fb75-2177-d11e4de2dbc6",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "3597942065418240",
+					"equals": true,
+					"description": "目录编号",
+					"enabled": true
+				},
+				{
+					"key": "creditId",
+					"value": "{{creditId}}",
+					"equals": true,
+					"description": "授信编号",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "file",
+					"value": "",
+					"description": "",
+					"type": "file",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"time": 1506046097498,
+			"name": "其他附件单个文件上传",
+			"description": "",
+			"collectionId": "6409f23a-2644-ac7a-e64d-1ec301195bf3",
+			"responses": [],
+			"timestamp": null
+		}
+	]
+}

@@ -1,0 +1,559 @@
+{
+	"id": "cb5b5e05-838b-6ff3-cb91-9a612a9b772d",
+	"name": "临时",
+	"description": "",
+	"order": [],
+	"folders": [
+		{
+			"owner": "2823523",
+			"lastUpdatedBy": "2576109",
+			"lastRevision": 2147483647,
+			"folder": null,
+			"id": "5c6ab572-d6c4-eee8-a746-ca5ee0295152",
+			"name": "个人授信-签约放款接口",
+			"description": "",
+			"order": [
+				"1751a434-9b49-3780-d776-31adbb3761f6",
+				"354a30f9-39db-59bf-45c9-4c1330018d95",
+				"c0f64cf5-1517-fb98-e11b-a48969a01321",
+				"0d03ba36-8c4e-80eb-196f-e70200d297da"
+			],
+			"folders_order": [],
+			"collectionId": "cb5b5e05-838b-6ff3-cb91-9a612a9b772d"
+		},
+		{
+			"owner": "2823523",
+			"lastUpdatedBy": "2576109",
+			"lastRevision": 2143810712,
+			"folder": null,
+			"id": "299850cd-f330-ec2c-d0b1-61d11d37b2b4",
+			"name": "客户关联人",
+			"description": "",
+			"order": [
+				"aba415f6-a1ab-9bc6-b386-b77593bb4b05",
+				"2dcfa76a-d6f6-874e-84cb-e87cc15a827d",
+				"f5ccb48f-7f2e-bd03-61be-d0971bb265ed",
+				"9122915d-0d3c-96c5-783a-7ae6dd3e5ad0",
+				"af79a008-8923-949e-a36a-92daf41c71ad",
+				"72b27bf1-aea7-df99-2f06-726917f40999"
+			],
+			"folders_order": [],
+			"collectionId": "cb5b5e05-838b-6ff3-cb91-9a612a9b772d"
+		}
+	],
+	"folders_order": [
+		"299850cd-f330-ec2c-d0b1-61d11d37b2b4",
+		"5c6ab572-d6c4-eee8-a746-ca5ee0295152"
+	],
+	"timestamp": 0,
+	"owner": "2823523",
+	"public": false,
+	"requests": [
+		{
+			"folder": "5c6ab572-d6c4-eee8-a746-ca5ee0295152",
+			"id": "0d03ba36-8c4e-80eb-196f-e70200d297da",
+			"name": "发放确认",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": "",
+			"headers": "authorization: {{token}}\n",
+			"method": "POST",
+			"pathVariables": {},
+			"url": "{{URL}}/business/lend/reviewed?creditId=SX3497774631112704",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "creditId",
+					"value": "SX3497774631112704",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "cb5b5e05-838b-6ff3-cb91-9a612a9b772d",
+			"collection_id": "cb5b5e05-838b-6ff3-cb91-9a612a9b772d"
+		},
+		{
+			"folder": "5c6ab572-d6c4-eee8-a746-ca5ee0295152",
+			"id": "1751a434-9b49-3780-d776-31adbb3761f6",
+			"name": "查询：所有待发放的授信申请信息",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": "",
+			"headers": "authorization: {{token}}\n",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "{{URL}}/business/lend/credits?pageNum=1&pageSize=20",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "pageNum",
+					"value": "1",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "pageSize",
+					"value": "20",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "custName",
+					"value": "白名单1",
+					"equals": true,
+					"description": "",
+					"enabled": false
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "cb5b5e05-838b-6ff3-cb91-9a612a9b772d",
+			"collection_id": "cb5b5e05-838b-6ff3-cb91-9a612a9b772d"
+		},
+		{
+			"folder": "299850cd-f330-ec2c-d0b1-61d11d37b2b4",
+			"id": "2dcfa76a-d6f6-874e-84cb-e87cc15a827d",
+			"name": "根据CacheId、custId获取关联人信息",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": "",
+			"headers": "authorization: {{token}}\n",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "{{URL}}/customer/relation/getRelationship?cacheId=45&custId=100000030",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "cacheId",
+					"value": "45",
+					"equals": true,
+					"description": "缓存ID",
+					"enabled": true
+				},
+				{
+					"key": "custId",
+					"value": "100000030",
+					"equals": true,
+					"description": "客户ID",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "cb5b5e05-838b-6ff3-cb91-9a612a9b772d",
+			"collection_id": "cb5b5e05-838b-6ff3-cb91-9a612a9b772d"
+		},
+		{
+			"folder": "5c6ab572-d6c4-eee8-a746-ca5ee0295152",
+			"id": "354a30f9-39db-59bf-45c9-4c1330018d95",
+			"name": "发放",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": "",
+			"headers": "authorization: {{token}}\n",
+			"method": "POST",
+			"pathVariables": {},
+			"url": "{{URL}}/business/lend/lended?creditIds=SX3497774631112704,SX3501581458558976",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "creditIds",
+					"value": "SX3497774631112704,SX3501581458558976",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "cb5b5e05-838b-6ff3-cb91-9a612a9b772d",
+			"collection_id": "cb5b5e05-838b-6ff3-cb91-9a612a9b772d"
+		},
+		{
+			"id": "72b27bf1-aea7-df99-2f06-726917f40999",
+			"headers": "authorization: {{token}}\n",
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/customer/relation/updateCache?cacheId=34&custId=100005949&relateCustId=100005950&relateType=1&remark=随便来吧",
+			"folder": "299850cd-f330-ec2c-d0b1-61d11d37b2b4",
+			"queryParams": [
+				{
+					"key": "cacheId",
+					"value": "34",
+					"equals": true,
+					"description": "缓存ID",
+					"enabled": true
+				},
+				{
+					"key": "custId",
+					"value": "100005949",
+					"equals": true,
+					"description": "客户ID",
+					"enabled": true
+				},
+				{
+					"key": "relateCustId",
+					"value": "100005950",
+					"equals": true,
+					"description": "关联客户ID",
+					"enabled": true
+				},
+				{
+					"key": "relateType",
+					"value": "1",
+					"equals": true,
+					"description": "关联人类型",
+					"enabled": true
+				},
+				{
+					"key": "remark",
+					"value": "随便来吧",
+					"equals": true,
+					"description": "备注",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1506654575064,
+			"name": "更新客户关联人",
+			"description": "",
+			"collectionId": "cb5b5e05-838b-6ff3-cb91-9a612a9b772d",
+			"responses": []
+		},
+		{
+			"id": "9122915d-0d3c-96c5-783a-7ae6dd3e5ad0",
+			"headers": "authorization: {{token}}\n",
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/customer/relation/removeCache?cacheId=36",
+			"folder": "299850cd-f330-ec2c-d0b1-61d11d37b2b4",
+			"queryParams": [
+				{
+					"key": "cacheId",
+					"value": "36",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1506654802720,
+			"name": "删除客户关联人",
+			"description": "",
+			"collectionId": "cb5b5e05-838b-6ff3-cb91-9a612a9b772d",
+			"responses": []
+		},
+		{
+			"id": "aba415f6-a1ab-9bc6-b386-b77593bb4b05",
+			"headers": "authorization: {{token}}\n",
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}customer/relation/addCache?custId=100005949&relateType=1&relateCustName=测试54&relateCustType=1&relateCertType=1&relateCertNo=47",
+			"folder": "299850cd-f330-ec2c-d0b1-61d11d37b2b4",
+			"queryParams": [
+				{
+					"key": "custId",
+					"value": "100005949",
+					"equals": true,
+					"description": "客户ID",
+					"enabled": true
+				},
+				{
+					"key": "relateType",
+					"value": "1",
+					"equals": true,
+					"description": "关联类型 关联类型：1-夫妻",
+					"enabled": true
+				},
+				{
+					"key": "relateCustName",
+					"value": "测试54",
+					"equals": true,
+					"description": "关联人名称",
+					"enabled": true
+				},
+				{
+					"key": "relateCustType",
+					"value": "1",
+					"equals": true,
+					"description": "关联人客户类型 1-个人、2-公司",
+					"enabled": true
+				},
+				{
+					"key": "relateCertType",
+					"value": "1",
+					"equals": true,
+					"description": "关联人证件类型：1-身份证",
+					"enabled": true
+				},
+				{
+					"key": "relateCertNo",
+					"value": "47",
+					"equals": true,
+					"description": "关联人证件编号",
+					"enabled": true
+				},
+				{
+					"key": "telephone",
+					"value": "",
+					"equals": false,
+					"description": "关联人联系电话",
+					"enabled": false
+				},
+				{
+					"key": "occupation",
+					"value": "",
+					"equals": false,
+					"description": "关联人职业类型",
+					"enabled": false
+				},
+				{
+					"key": "remark",
+					"value": "",
+					"equals": false,
+					"description": "备注",
+					"enabled": false
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1506654572224,
+			"name": "新增客户关联人",
+			"description": "",
+			"collectionId": "cb5b5e05-838b-6ff3-cb91-9a612a9b772d",
+			"responses": []
+		},
+		{
+			"id": "af79a008-8923-949e-a36a-92daf41c71ad",
+			"headers": "authorization: {{token}}\n",
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/customer/relation/searchByCustId?custId=100005949",
+			"folder": "299850cd-f330-ec2c-d0b1-61d11d37b2b4",
+			"queryParams": [
+				{
+					"key": "custId",
+					"value": "100005949",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1506650546634,
+			"name": "获取关联人客户列表",
+			"description": "",
+			"collectionId": "cb5b5e05-838b-6ff3-cb91-9a612a9b772d",
+			"responses": []
+		},
+		{
+			"folder": "5c6ab572-d6c4-eee8-a746-ca5ee0295152",
+			"id": "c0f64cf5-1517-fb98-e11b-a48969a01321",
+			"name": "查询：所有已发放待确认的授信申请信息",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": "",
+			"headers": "authorization: {{token}}\n",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "{{URL}}/business/lend/review/credits?pageNum=1&pageSize=20",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [
+				{
+					"key": "pageNum",
+					"value": "1",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "pageSize",
+					"value": "20",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "custName",
+					"value": "白名单1",
+					"equals": true,
+					"description": "",
+					"enabled": false
+				}
+			],
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "cb5b5e05-838b-6ff3-cb91-9a612a9b772d",
+			"collection_id": "cb5b5e05-838b-6ff3-cb91-9a612a9b772d"
+		},
+		{
+			"id": "f5ccb48f-7f2e-bd03-61be-d0971bb265ed",
+			"headers": "authorization: {{token}}\n",
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/customer/relation/getRelationshipByCertNo?certType=1&certNo=54",
+			"folder": "299850cd-f330-ec2c-d0b1-61d11d37b2b4",
+			"queryParams": [
+				{
+					"key": "certType",
+					"value": "1",
+					"equals": true,
+					"description": "证件类型，1-个人，2-公司",
+					"enabled": true
+				},
+				{
+					"key": "certNo",
+					"value": "54",
+					"equals": true,
+					"description": "证件编号",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1506651228919,
+			"name": "根据证件编号获取客户信息",
+			"description": "",
+			"collectionId": "cb5b5e05-838b-6ff3-cb91-9a612a9b772d",
+			"responses": []
+		}
+	]
+}
