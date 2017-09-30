@@ -1,4 +1,4 @@
-jQuery基础(一)
+﻿jQuery基础(一)
 jQuery选择的艺术
 十年历程
 简单的说是一款JavaScript库
@@ -252,8 +252,20 @@ jQuery的属性与样式之切换样式.toggleClass()
 .css( properties )：可以传一个对象，同时设置多个样式
 
 注意事项:.css 支持驼峰写法与大小写混搭的写法，比如.css("background-color" , "red")
- .css("backgroundColor" , "red")  .css("backGroundColor" , "red")
+ .css("backgroundColor" , "red") 
 
+.css("font-size","15px") 和 .css("fontSize","15px")是一样的效果
+.css("width",function(index,value){
+	value=*****;
+	return (value);
+
+})
+
+.css({
+            'font-size'        :"15px",
+            "background-color" :"#40E0D0",
+            "border"           :"1px solid red"
+        })
 
 jQuery基础(五)
 使用load()方法异步请求数据
