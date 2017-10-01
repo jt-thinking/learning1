@@ -267,6 +267,18 @@ jQuery的属性与样式之切换样式.toggleClass()
             "border"           :"1px solid red"
         })
 
+
+#  $("p").append("im end");
+
+#jQuery节点创建与属性的处理
+var div=$("<div class=""></div>"); //创建之后是存放在内存中的
+$body.append(div);
+
+#DOM内部插入append()与appendTo(),两者正好是相反的方法
+$body.append(("<div class=""></div>"));
+$("<div class="">11111</div>").appendTo($(.div))
+
+
 jQuery基础(五)
 使用load()方法异步请求数据
 
