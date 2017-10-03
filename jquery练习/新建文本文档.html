@@ -6,34 +6,47 @@
     <title></title>
     <script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
     <style>
-    .aaron{
+    .aaron1{
         border: 1px solid red;
+    }
+    .aaron1 p {
+        color: red;
+    }
+    .aaron2{
+        border: 1px solid blue;
+    }
+    .aaron2 p {
+        color: blue;
     }
     </style>
 </head>
 
 <body>
-    <h2>通过before与after添加元素</h2>
-    <button id="bt1">点击通过jQuery的before添加元素</button>
-    <button id="bt2">点击通过jQuery的after添加元素</button>
-    <div class="aaron">
-        <p class="test1">测试before</p>
+    <h2>通过prepend与prependTo添加元素</h2>
+    <button id="bt1">点击通过jQuery的prepend添加元素</button>
+    <button id="bt2">点击通过jQuery的prependTo添加元素</button>
+    <div class="aaron1">
+        <p>测试prepend</p>
     </div>
-    <div class="aaron">
-        <p class="test2">测试after</p>
+    <div class="aaron2">
+        <p>测试prependTo</p>
     </div>
     <script type="text/javascript">
     $("#bt1").on('click', function() {
-        //在匹配test1元素集合中的每个元素前面插入p元素
-        $(".test1").before('<p style="color:red">before,在匹配元素之前增加</p>', '<p style="color:red">多参数</p>')
+        //找到class="aaron1"的div节点
+        //然后通过prepend在内部的首位置添加一个新的p节点
+        $('.aaron1')
+            .prepend('<p>prepend增加的p元素</p>')
     })
     </script>
     <script type="text/javascript">
     $("#bt2").on('click', function() {
-        //在匹配test1元素集合中的每个元素后面插入p元素
-        $(".test2").after('<p style="color:blue">after,在匹配元素之后增加</p>', '<p style="color:blue">多参数</p>')
-
+        //找到class="aaron2"的div节点
+        //然后通过prependTo内部的首位置添加一个新的p节点
+        $('<p>prependTo增加的p元素</p>')
+            .prependTo($('.aaron2'))
     })
     </script>
 </body>
 
+</html>

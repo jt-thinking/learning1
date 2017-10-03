@@ -279,6 +279,14 @@ $body.append(("<div class=""></div>"));
 $("<div class="">11111</div>").appendTo($(.div))
 
 
+#DOM外部插入after()和before()
+.after(content)在匹配元素集合中的每个元素后面插入参数所指定的内容，作为其兄弟节点
+.before(content)据参数设定，在匹配元素的前面插入内容
+
+#DOM内部插入prepend()与prependTo()
+和append与appendTo不同，prepend()与prependTo()是在元素开始而非末尾插入
+
+
 jQuery基础(五)
 使用load()方法异步请求数据
 
