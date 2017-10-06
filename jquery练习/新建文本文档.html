@@ -6,45 +6,38 @@
     <title></title>
     <script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
     <style>
-    .aaron1{
-        border: 1px solid red;
+    .test1 {
+        background: #bbffaa;
     }
-    .aaron1 p {
-        color: red;
-    }
-    .aaron2{
-        border: 1px solid blue;
-    }
-    .aaron2 p {
-        color: blue;
+    
+    .test2 {
+        background: yellow;
     }
     </style>
 </head>
 
 <body>
-    <h2>通过prepend与prependTo添加元素</h2>
-    <button id="bt1">点击通过jQuery的prepend添加元素</button>
-    <button id="bt2">点击通过jQuery的prependTo添加元素</button>
-    <div class="aaron1">
-        <p>测试prepend</p>
+    <h2>通过jQuery remove方法移除元素</h2>
+    <div class="test1">
+        <p>p元素1</p>
+        <p>p元素2</p>
     </div>
-    <div class="aaron2">
-        <p>测试prependTo</p>
+    <div class="test2">
+        <p>p元素3</p>
+        <p>p元素4</p>
     </div>
+    <button>通过点击jQuery的empty移除元素</button>
+    <button>通过点击jQuery的empty移除指定元素</button>
     <script type="text/javascript">
-    $("#bt1").on('click', function() {
-        //找到class="aaron1"的div节点
-        //然后通过prepend在内部的首位置添加一个新的p节点
-        $('.aaron1')
-            .prepend('<p>prepend增加的p元素</p>')
+    $("button:first").on('click', function() {
+        //删除整个 class=test1的div节点
+        $(".test1").remove()
     })
-    </script>
-    <script type="text/javascript">
-    $("#bt2").on('click', function() {
-        //找到class="aaron2"的div节点
-        //然后通过prependTo内部的首位置添加一个新的p节点
-        $('<p>prependTo增加的p元素</p>')
-            .prependTo($('.aaron2'))
+
+    $("button:last").on('click', function() {
+        //找到所有p元素中，包含了3的元素
+        //这个也是一个过滤器的处理
+        $("p").remove(":contains('3')")
     })
     </script>
 </body>
