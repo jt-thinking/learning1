@@ -1,6 +1,14 @@
+创建用户名和邮箱
+git init 创建版本库
+在C盘用户目录下git bash,通过ssh-keygen命令创建.ssh。然后添加到github
+
 pwd 显示当前目录
+
 git add -A 所有修改添加到暂存区
+
 git commit -m "xxx" 提交到工作区
+
 git status
 git push -u origin master
 git gull #
+$ git clone git@github.com:jt-thinking/learning1.git 从远程库克隆
