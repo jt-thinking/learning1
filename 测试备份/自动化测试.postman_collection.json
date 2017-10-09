@@ -93,13 +93,13 @@
 			"owner": "2823523"
 		},
 		{
-			"owner": "2823523",
-			"lastUpdatedBy": "2823523",
-			"lastRevision": 2306142507,
-			"folder": "3b7ff856-5301-6f66-6ae4-22271cf73159",
-			"id": "27615f3f-8e26-7d33-68d9-a71c9d9e6864",
-			"name": "A【特殊业务】授信基本产品变更--审批通过",
 			"description": "",
+			"folder": "3b7ff856-5301-6f66-6ae4-22271cf73159",
+			"folders_order": [],
+			"id": "27615f3f-8e26-7d33-68d9-a71c9d9e6864",
+			"lastRevision": 2306142507,
+			"lastUpdatedBy": "2823523",
+			"name": "A【特殊业务】授信基本产品变更--审批通过",
 			"order": [
 				"852b84b1-e168-5afc-8eb1-b4fbbbb85e2a",
 				"e62bbe6e-9dd5-4d58-5499-6a221257e8b8",
@@ -108,7 +108,7 @@
 				"532e6d59-ba30-6133-d31d-a7bf1899cbb7",
 				"a55025e2-7351-053c-e7c1-601de7773672"
 			],
-			"folders_order": []
+			"owner": "2823523"
 		},
 		{
 			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
@@ -127,13 +127,13 @@
 			"owner": "2823523"
 		},
 		{
-			"owner": "2823523",
-			"lastUpdatedBy": "2823523",
-			"lastRevision": 2306142594,
-			"folder": "3b7ff856-5301-6f66-6ae4-22271cf73159",
-			"id": "5a6fa973-4940-600e-085d-004ecb300427",
-			"name": "A【特殊业务】授信恢复-审批否决",
 			"description": "",
+			"folder": "3b7ff856-5301-6f66-6ae4-22271cf73159",
+			"folders_order": [],
+			"id": "5a6fa973-4940-600e-085d-004ecb300427",
+			"lastRevision": 2306142594,
+			"lastUpdatedBy": "2823523",
+			"name": "A【特殊业务】授信恢复-审批否决",
 			"order": [
 				"b9413520-4043-7e64-fdef-8fb784c7100a",
 				"604c54d8-1156-faec-d010-94c07eca13f0",
@@ -141,7 +141,7 @@
 				"ed59504e-b349-7b02-b73e-90ae53378907",
 				"0c9f1b3c-e8ed-738c-dcf2-015b2280b964"
 			],
-			"folders_order": []
+			"owner": "2823523"
 		},
 		{
 			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
@@ -192,13 +192,13 @@
 			"owner": "2823523"
 		},
 		{
-			"owner": "2823523",
-			"lastUpdatedBy": "2823523",
-			"lastRevision": 2306142652,
-			"folder": "3b7ff856-5301-6f66-6ae4-22271cf73159",
-			"id": "438194b6-430a-2732-eb5c-07197a79fe54",
-			"name": "A【特殊业务】授信恢复-审批通过",
 			"description": "",
+			"folder": "3b7ff856-5301-6f66-6ae4-22271cf73159",
+			"folders_order": [],
+			"id": "438194b6-430a-2732-eb5c-07197a79fe54",
+			"lastRevision": 2306142652,
+			"lastUpdatedBy": "2823523",
+			"name": "A【特殊业务】授信恢复-审批通过",
 			"order": [
 				"95048f69-8f74-388b-389e-9e16e96ec0af",
 				"43810f31-2681-e86e-5ac2-a29d88534fb1",
@@ -206,7 +206,7 @@
 				"d05fd610-1357-07e6-c7e5-ac51a2b38375",
 				"98a0a392-bc0c-a33f-7e39-73cd69d180dd"
 			],
-			"folders_order": []
+			"owner": "2823523"
 		},
 		{
 			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
@@ -455,13 +455,13 @@
 			"owner": "2823523"
 		},
 		{
-			"owner": "2823523",
-			"lastUpdatedBy": "2823523",
-			"lastRevision": 2306142702,
-			"folder": "3b7ff856-5301-6f66-6ae4-22271cf73159",
-			"id": "c9331cc1-b758-298c-6597-ec9dd503f41e",
-			"name": "A【特殊业务】止付-审批回退",
 			"description": "",
+			"folder": "3b7ff856-5301-6f66-6ae4-22271cf73159",
+			"folders_order": [],
+			"id": "c9331cc1-b758-298c-6597-ec9dd503f41e",
+			"lastRevision": 2306142702,
+			"lastUpdatedBy": "2823523",
+			"name": "A【特殊业务】止付-审批回退",
 			"order": [
 				"3f47b360-0335-a738-e7c6-bec5c42d72da",
 				"25b6fb2b-9cad-3d3e-4710-04e90b62454f",
@@ -469,7 +469,7 @@
 				"07ced359-058a-b8fc-33a5-4901c665db99",
 				"2616e512-6c51-e319-a43b-fd8a499f51b5"
 			],
-			"folders_order": []
+			"owner": "2823523"
 		},
 		{
 			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
@@ -617,13 +617,13 @@
 			"owner": "2823523"
 		},
 		{
-			"owner": "2823523",
-			"lastUpdatedBy": "2823523",
-			"lastRevision": 2306134253,
-			"folder": "1d4c9027-0a0a-c83c-2720-027c5fb6d7b8",
-			"id": "e0d89c4c-a509-d88f-5a25-147419b08e68",
-			"name": "A撤销黑名单",
 			"description": "",
+			"folder": "1d4c9027-0a0a-c83c-2720-027c5fb6d7b8",
+			"folders_order": [],
+			"id": "e0d89c4c-a509-d88f-5a25-147419b08e68",
+			"lastRevision": 2306134253,
+			"lastUpdatedBy": "2823523",
+			"name": "A撤销黑名单",
 			"order": [
 				"0ace3dca-0c0a-4d33-d6e2-85f53fa61214",
 				"4550e31c-dc32-1eaf-b246-d5c866363a65",
@@ -632,7 +632,7 @@
 				"be35c29c-c8eb-f5c9-99bd-140b1713027d",
 				"34dcd197-7f2b-2861-7b2f-b7ca4ec85f41"
 			],
-			"folders_order": []
+			"owner": "2823523"
 		},
 		{
 			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
@@ -805,6 +805,74 @@
 				"34fe2cc9-b66a-3bad-33a5-a67f743f3a95",
 				"82e3ffc3-32ae-6b4e-9b65-a08207f9318f",
 				"e24520a7-ed32-831e-f83b-9bf06627e4cf"
+			],
+			"owner": "2823523"
+		},
+		{
+			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
+			"description": "",
+			"folder": null,
+			"folders_order": [
+				"78360b80-50b5-7ddb-8165-1b03635243d7"
+			],
+			"id": "773ba89d-eb8d-6156-ef54-93d88dec307a",
+			"lastRevision": 2193178050,
+			"lastUpdatedBy": "2576109",
+			"name": "S个人授信资产负债接口相关",
+			"order": [
+				"8057fad7-104e-e0a0-ca4b-44ef99251af6",
+				"e8d8001b-0491-22a2-ed95-da17a0d53230",
+				"f7714d0c-2de8-5969-fd7e-09381b8715fd"
+			],
+			"owner": "2823523"
+		},
+		{
+			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
+			"description": "",
+			"folder": "b274e954-344f-2388-565c-e15489e1381a",
+			"folders_order": [
+				"b9efe5b3-ba97-035c-f2cb-c826b34147a1"
+			],
+			"id": "696a522f-a90e-cdcb-533a-72bb149cfd15",
+			"lastRevision": 2193178050,
+			"lastUpdatedBy": "2576109",
+			"name": "S个人授信资产负债接口相关",
+			"order": [
+				"18b240d1-1575-26a0-628d-0ccc515280dd",
+				"a71a7f79-91d6-b52c-ec6a-f8eb3fbf9041",
+				"958b2a0d-b9ea-f5de-0d23-05307922f51e"
+			],
+			"owner": "2823523"
+		},
+		{
+			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
+			"description": "",
+			"folder": "773ba89d-eb8d-6156-ef54-93d88dec307a",
+			"folders_order": [],
+			"id": "78360b80-50b5-7ddb-8165-1b03635243d7",
+			"name": "S保存授信经营情况",
+			"order": [
+				"90b5c240-f2b5-9bee-014a-1d599e6e4c37",
+				"a7c07b5b-5822-fea3-67ef-2f112b866f5f",
+				"8f5e0a5b-b974-289f-62e9-537c583b0628",
+				"7a92bb85-bd34-1a40-fbf3-ccc7303de8e8",
+				"966eb5f1-19aa-e9ca-504f-0bb0fca91ee9"
+			],
+			"owner": "2823523"
+		},
+		{
+			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
+			"description": "",
+			"folder": "696a522f-a90e-cdcb-533a-72bb149cfd15",
+			"folders_order": [],
+			"id": "b9efe5b3-ba97-035c-f2cb-c826b34147a1",
+			"name": "S保存授信经营情况",
+			"order": [
+				"e043f25a-7be0-0d4e-f9dc-2914c8981a66",
+				"2be00b6b-a208-29f1-7aba-c051b68e3502",
+				"437f4e41-8690-1a51-29ef-35963117f3ee",
+				"b4e31eef-3b5a-48bb-d5e6-b8784df209ee",
+				"922840c4-b622-ee1a-56a8-e7f64710fefc"
 			],
 			"owner": "2823523"
 		},
@@ -1225,7 +1293,8 @@
 				"a459b6c3-e4d6-4280-a6b6-be7142868489",
 				"52d3c756-0aa9-bbce-fb37-8196fe862da4",
 				"7ebfdbbc-bb12-cae3-3002-8b3df14ea3cf",
-				"dc2dabba-fdd5-29b9-00db-b4d626e9236c"
+				"dc2dabba-fdd5-29b9-00db-b4d626e9236c",
+				"696a522f-a90e-cdcb-533a-72bb149cfd15"
 			],
 			"id": "b274e954-344f-2388-565c-e15489e1381a",
 			"name": "半自动化",
@@ -1233,15 +1302,15 @@
 			"owner": "2823523"
 		},
 		{
-			"owner": "2823523",
-			"lastUpdatedBy": "2823523",
-			"lastRevision": 2306179371,
-			"folder": "3b7ff856-5301-6f66-6ae4-22271cf73159",
-			"id": "6b8d221e-34fd-fc7d-397a-6dc9e0e108ec",
-			"name": "半自动化 copy",
 			"description": "",
+			"folder": "3b7ff856-5301-6f66-6ae4-22271cf73159",
+			"folders_order": [],
+			"id": "6b8d221e-34fd-fc7d-397a-6dc9e0e108ec",
+			"lastRevision": 2306179371,
+			"lastUpdatedBy": "2823523",
+			"name": "半自动化 copy",
 			"order": [],
-			"folders_order": []
+			"owner": "2823523"
 		},
 		{
 			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
@@ -1308,12 +1377,14 @@
 			"id": "b1380b08-6d3a-5f81-21d2-86a5ba52a5f5",
 			"name": "黑名单相关",
 			"order": [
-				"161195a2-1696-1b3f-679d-a6cec5bff676"
+				"161195a2-1696-1b3f-679d-a6cec5bff676",
+				"74e05198-2fa1-14be-2bd6-27b95546f4ee"
 			],
 			"owner": "2823523"
 		}
 	],
 	"folders_order": [
+		"773ba89d-eb8d-6156-ef54-93d88dec307a",
 		"bc966f45-61b7-9fd8-5fd8-43c9195723eb",
 		"3b7ff856-5301-6f66-6ae4-22271cf73159",
 		"77ff029b-236b-225c-a812-2cf1d2bdb211",
@@ -4264,6 +4335,45 @@
 			"responses": []
 		},
 		{
+			"id": "18b240d1-1575-26a0-628d-0ccc515280dd",
+			"headers": "authorization: {{token}}\n",
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}business/balanceSheet/fetch?id={{creditId}}",
+			"folder": "696a522f-a90e-cdcb-533a-72bb149cfd15",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "{{creditId}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": "pm.test(\"获取资产负债情况\", function () {\n    pm.expect(pm.response.text()).to.include(\"成功\");\n});\nvar data=JSON.parse(responseBody);\n\nif (data.data.loan[0].id){\n    tests[\"获取银行借款编号\"]=true;\n     postman.setEnvironmentVariable(\"loanId\",data.data.loan[0].id);\n \n\n}\nelse{\n    tests[\"获取银行借款编号\"]=false;\n  \n}",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1507516654895,
+			"name": "获取资产负债情况",
+			"description": "",
+			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
+			"responses": [],
+			"isFromCollection": true,
+			"collectionRequestId": "8057fad7-104e-e0a0-ca4b-44ef99251af6"
+		},
+		{
 			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
 			"collection_id": "1958e83b-66e2-0874-933d-f75ce445af42",
 			"currentHelper": "normal",
@@ -4619,12 +4729,12 @@
 					"enabled": true
 				}
 			],
-			"url": "{{URL}}customer/person/quicklyAdd?custName=测试56&certNo={{certNo}}",
+			"url": "{{URL}}customer/person/quicklyAdd?custName=测试61&certNo={{certNo}}",
 			"folder": "e164e1b6-107e-e006-daef-8b16592615ed",
 			"queryParams": [
 				{
 					"key": "custName",
-					"value": "测试56",
+					"value": "测试61",
 					"equals": true,
 					"description": "",
 					"enabled": true
@@ -4646,7 +4756,7 @@
 			"tests": "tests[\"Body matches string\"] = responseBody.has(\"成功\");",
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1506669549366,
+			"time": 1507513868436,
 			"name": "对私客户快速新增",
 			"description": "",
 			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
@@ -6173,6 +6283,51 @@
 			"responses": [],
 			"tests": "tests[\"Body matches string\"] = responseBody.has(\"缺少参数 repayType，类型 Integer\");",
 			"url": "{{URL}}business/loanProductAttribute/update?id={{data}}&minPrincipal=10000&maxPrincipal=200000&minDuration=90&maxDuration=270&loanRate=8&minCostRate=15&maxCostRate=17&penaltyRate=20"
+		},
+		{
+			"id": "2be00b6b-a208-29f1-7aba-c051b68e3502",
+			"headers": "authorization: {{token}}\n",
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}customer/person/quicklyAdd?custName=测试63&certNo={{certNo}}",
+			"folder": "b9efe5b3-ba97-035c-f2cb-c826b34147a1",
+			"queryParams": [
+				{
+					"key": "custName",
+					"value": "测试63",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "certNo",
+					"value": "{{certNo}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": "tests[\"Body matches string\"] = responseBody.has(\"成功\");",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1507517832704,
+			"name": "对私客户快速新增",
+			"description": "",
+			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
+			"responses": []
 		},
 		{
 			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
@@ -8606,6 +8761,47 @@
 			"description": "",
 			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
 			"responses": []
+		},
+		{
+			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
+			"collectionRequestId": "8f5e0a5b-b974-289f-62e9-537c583b0628",
+			"currentHelper": "normal",
+			"data": null,
+			"dataMode": "params",
+			"description": "",
+			"descriptionFormat": "html",
+			"folder": "b9efe5b3-ba97-035c-f2cb-c826b34147a1",
+			"headerData": [
+				{
+					"description": "",
+					"enabled": true,
+					"key": "authorization",
+					"value": "{{token}}"
+				}
+			],
+			"headers": "authorization: {{token}}\n",
+			"helperAttributes": {},
+			"id": "437f4e41-8690-1a51-29ef-35963117f3ee",
+			"isFromCollection": true,
+			"method": "GET",
+			"name": "授信申请-获取用户信息",
+			"pathVariableData": [],
+			"pathVariables": {},
+			"preRequestScript": null,
+			"queryParams": [
+				{
+					"description": "身份证号码",
+					"enabled": true,
+					"equals": true,
+					"key": "certNumber",
+					"value": "{{certNo}}"
+				}
+			],
+			"responses": [],
+			"tests": "tests[\"Body matches string\"] = responseBody.has(\"成功\");\nvar data=JSON.parse(responseBody);\n\nif (data.data.custId){\n    tests[\"test\"]=true;\n    postman.setEnvironmentVariable(\"custId\",data.data.custId);\n\n}\nelse{\n    tests[\"test\"]=false;\n}",
+			"time": 1507515678695,
+			"url": "{{URL}}business/credit/fetchUser?certNumber={{certNo}}",
+			"version": 2
 		},
 		{
 			"folder": "438194b6-430a-2732-eb5c-07197a79fe54",
@@ -11950,7 +12146,7 @@
 					"enabled": true
 				}
 			],
-			"url": "{{URL}}business/guarantee/add?creditId={{creditId}}&guaranteeType=1&custId=100005914&guaranteerId=100005912&startDateTime=1504577930000&expirationDateTime=1000258917000&guaranteeAmt=1000",
+			"url": "{{URL}}business/guarantee/add?creditId={{creditId}}&guaranteeType=1&custId=100005914&guaranteerId=100005912&startDateTime=1504577930000&expirationDateTime=1000258917000&guaranteeAmt=200000",
 			"folder": "e164e1b6-107e-e006-daef-8b16592615ed",
 			"queryParams": [
 				{
@@ -11997,7 +12193,7 @@
 				},
 				{
 					"key": "guaranteeAmt",
-					"value": "1000",
+					"value": "200000",
 					"equals": true,
 					"description": "担保金额",
 					"enabled": true
@@ -12012,7 +12208,7 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1506569615742,
+			"time": 1507514342596,
 			"name": "新增：担保合同",
 			"description": "",
 			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
@@ -13342,6 +13538,66 @@
 		},
 		{
 			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
+			"collectionRequestId": "74e05198-2fa1-14be-2bd6-27b95546f4ee",
+			"currentHelper": "normal",
+			"data": null,
+			"dataMode": "params",
+			"description": "",
+			"folder": "b1380b08-6d3a-5f81-21d2-86a5ba52a5f5",
+			"headerData": [
+				{
+					"description": "",
+					"enabled": true,
+					"key": "authorization",
+					"value": "{{token}}"
+				}
+			],
+			"headers": "authorization: {{token}}\n",
+			"helperAttributes": {},
+			"id": "74e05198-2fa1-14be-2bd6-27b95546f4ee",
+			"isFromCollection": true,
+			"method": "GET",
+			"name": "查询黑名单列表",
+			"pathVariableData": [],
+			"pathVariables": {},
+			"preRequestScript": null,
+			"queryParams": [
+				{
+					"description": "社区经理ID",
+					"enabled": true,
+					"equals": true,
+					"key": "accountManager",
+					"value": "9101"
+				},
+				{
+					"description": "",
+					"enabled": true,
+					"equals": true,
+					"key": "pageNum",
+					"value": "1"
+				},
+				{
+					"description": "",
+					"enabled": true,
+					"equals": true,
+					"key": "pageSize",
+					"value": "20"
+				},
+				{
+					"description": "",
+					"enabled": false,
+					"equals": true,
+					"key": "name",
+					"value": "测试47"
+				}
+			],
+			"responses": [],
+			"tests": "\nvar data=JSON.parse(responseBody);\nvar list=data.data.list;\nvar custId=postman.getEnvironmentVariable(\"custId\");\nif (list[0].custId==custId){\n    tests[\"加入黑名单\"]=true;\n  \n\n}\nelse{\n    tests[\"加入黑名单\"]=false;\n}\n\n",
+			"time": 1506755795337,
+			"url": "{{URL}}blacklist/blacklist/search?accountManager=9101&pageNum=1&pageSize=20"
+		},
+		{
+			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
 			"currentHelper": "normal",
 			"data": null,
 			"dataMode": "params",
@@ -13847,6 +14103,53 @@
 		},
 		{
 			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
+			"currentHelper": "normal",
+			"data": null,
+			"dataMode": "params",
+			"description": "",
+			"descriptionFormat": "html",
+			"folder": "78360b80-50b5-7ddb-8165-1b03635243d7",
+			"headerData": [
+				{
+					"description": "",
+					"enabled": true,
+					"key": "authorization",
+					"value": "{{token}}"
+				},
+				{
+					"description": "",
+					"enabled": true,
+					"key": "device",
+					"value": "1"
+				}
+			],
+			"headers": "authorization: {{token}}\ndevice: 1\n",
+			"helperAttributes": {},
+			"id": "7a92bb85-bd34-1a40-fbf3-ccc7303de8e8",
+			"method": "POST",
+			"name": "授信申请-创建授信接口",
+			"pathVariableData": [],
+			"pathVariables": {},
+			"preRequestScript": null,
+			"queryParams": [
+				{
+					"description": "",
+					"enabled": true,
+					"equals": true,
+					"key": "id",
+					"value": "{{custId}}"
+				}
+			],
+			"responses": [],
+			"tests": "tests[\"Body matches string\"] = responseBody.has(\"成功\");\nvar data=JSON.parse(responseBody);\nif(data.data){\n    tests[\"Body has creditId\"]=true;\n    postman.setEnvironmentVariable(\"creditId\",data.data);\n\n}else{\n    tests[\"Body has creditId\"]=false;\n}",
+			"time": 1507515708058,
+			"url": "{{URL}}business/credit/add?id={{custId}}",
+			"version": 2,
+			"isFromCollection": true,
+			"collectionRequestId": "7a92bb85-bd34-1a40-fbf3-ccc7303de8e8"
+		},
+		{
+			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
 			"collection_id": "1958e83b-66e2-0874-933d-f75ce445af42",
 			"currentHelper": "normal",
 			"data": null,
@@ -14081,7 +14384,7 @@
 			"currentHelper": "normal",
 			"helperAttributes": {},
 			"time": 1506751837710,
-			"name": "A登录接口9200 copy",
+			"name": "A登录接口9200",
 			"description": "",
 			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
 			"responses": [],
@@ -14342,6 +14645,43 @@
 			"helperAttributes": {},
 			"time": 1506416649990,
 			"name": "加入黑名单",
+			"description": "",
+			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
+			"responses": []
+		},
+		{
+			"id": "8057fad7-104e-e0a0-ca4b-44ef99251af6",
+			"headers": "authorization: {{token}}\n",
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}business/balanceSheet/fetch?id={{creditId}}",
+			"folder": "773ba89d-eb8d-6156-ef54-93d88dec307a",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "{{creditId}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": "pm.test(\"获取资产负债情况\", function () {\n    pm.expect(pm.response.text()).to.include(\"成功\");\n});\nvar data=JSON.parse(responseBody);\n\nif (data.data.loan[0].id){\n    tests[\"获取银行借款编号\"]=true;\n     postman.setEnvironmentVariable(\"loanId\",data.data.loan[0].id);\n \n\n}\nelse{\n    tests[\"获取银行借款编号\"]=false;\n  \n}",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1507516654895,
+			"name": "获取资产负债情况",
 			"description": "",
 			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
 			"responses": []
@@ -14773,14 +15113,14 @@
 					"enabled": true,
 					"key": "file",
 					"type": "file",
-					"value": ""
+					"value": "1.png"
 				}
 			],
 			"dataMode": "params",
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": "{}",
-			"time": 1506564057266,
+			"time": 1507514344652,
 			"name": "N征信及法院五查询报告上传",
 			"description": "",
 			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
@@ -14863,7 +15203,7 @@
 			"currentHelper": "normal",
 			"helperAttributes": {},
 			"time": 1506751889872,
-			"name": "A登出接口 copy",
+			"name": "A登出接口",
 			"description": "",
 			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
 			"responses": [],
@@ -15763,6 +16103,47 @@
 			"dataMode": "params",
 			"description": "",
 			"descriptionFormat": "html",
+			"folder": "78360b80-50b5-7ddb-8165-1b03635243d7",
+			"headerData": [
+				{
+					"description": "",
+					"enabled": true,
+					"key": "authorization",
+					"value": "{{token}}"
+				}
+			],
+			"headers": "authorization: {{token}}\n",
+			"helperAttributes": {},
+			"id": "8f5e0a5b-b974-289f-62e9-537c583b0628",
+			"method": "GET",
+			"name": "授信申请-获取用户信息",
+			"pathVariableData": [],
+			"pathVariables": {},
+			"preRequestScript": null,
+			"queryParams": [
+				{
+					"description": "身份证号码",
+					"enabled": true,
+					"equals": true,
+					"key": "certNumber",
+					"value": "{{certNo}}"
+				}
+			],
+			"responses": [],
+			"tests": "tests[\"Body matches string\"] = responseBody.has(\"成功\");\nvar data=JSON.parse(responseBody);\n\nif (data.data.custId){\n    tests[\"test\"]=true;\n    postman.setEnvironmentVariable(\"custId\",data.data.custId);\n\n}\nelse{\n    tests[\"test\"]=false;\n}",
+			"time": 1507515678695,
+			"url": "{{URL}}business/credit/fetchUser?certNumber={{certNo}}",
+			"version": 2,
+			"isFromCollection": true,
+			"collectionRequestId": "8f5e0a5b-b974-289f-62e9-537c583b0628"
+		},
+		{
+			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
+			"currentHelper": "normal",
+			"data": null,
+			"dataMode": "params",
+			"description": "",
+			"descriptionFormat": "html",
 			"folder": "a1e99077-db3a-2013-7f51-1eee23dae0fa",
 			"headerData": [
 				{
@@ -15832,6 +16213,92 @@
 			"time": 1506415214831,
 			"url": "{{URL}}business/credit/add?id={{custId}}",
 			"version": 2
+		},
+		{
+			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
+			"currentHelper": "normal",
+			"data": null,
+			"dataMode": "params",
+			"description": "",
+			"descriptionFormat": "html",
+			"folder": "78360b80-50b5-7ddb-8165-1b03635243d7",
+			"headerData": [
+				{
+					"description": "",
+					"enabled": true,
+					"key": "device",
+					"value": "1"
+				}
+			],
+			"headers": "device: 1\n",
+			"helperAttributes": {},
+			"id": "90b5c240-f2b5-9bee-014a-1d599e6e4c37",
+			"method": "POST",
+			"name": "登录接口9200",
+			"pathVariableData": [],
+			"pathVariables": {},
+			"preRequestScript": null,
+			"queryParams": [
+				{
+					"description": "",
+					"enabled": true,
+					"equals": true,
+					"key": "jobNumber",
+					"value": "9200"
+				},
+				{
+					"description": "",
+					"enabled": true,
+					"equals": true,
+					"key": "password",
+					"value": "202CB962AC59075B964B07152D234B70"
+				}
+			],
+			"responses": [],
+			"tests": "var data=JSON.parse(responseBody);\n\nif (data.data.token){\n    tests[\"Body has token\"]=true;\n    postman.setEnvironmentVariable(\"token\",data.data.token);\n\n}\nelse{\n    tests[\"Body has token\"]=false;\n}",
+			"time": 1507515653334,
+			"url": "{{URL}}login/signIn?jobNumber=9200&password=202CB962AC59075B964B07152D234B70",
+			"version": 2,
+			"isFromCollection": true,
+			"collectionRequestId": "90b5c240-f2b5-9bee-014a-1d599e6e4c37"
+		},
+		{
+			"id": "922840c4-b622-ee1a-56a8-e7f64710fefc",
+			"headers": "authorization: {{token}}\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}business/balanceSheet/save",
+			"folder": "b9efe5b3-ba97-035c-f2cb-c826b34147a1",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "pm.test(\"保存授信经营情况\", function () {\n    pm.expect(pm.response.text()).to.include(\"成功\");\n});",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1507515848838,
+			"name": "保存资产负债情况",
+			"description": "保存授信经营情况",
+			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
+			"responses": [],
+			"isFromCollection": true,
+			"collectionRequestId": "966eb5f1-19aa-e9ca-504f-0bb0fca91ee9",
+			"rawModeData": "{\n        \"custId\": \"{{custId}}\",\n        \"creditId\": \"{{creditId}}\",\n        \"asset\": [\n            {\n                \"id\": 0,\n                \"typeId\": 39,\n                \"typeName\": \"现金及银行存款\",\n                \"remark\": \"2\",\n                \"balance\": 1\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 40,\n                \"typeName\": \"应收账款\",\n                \"remark\": \"2\",\n                \"balance\": 1\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 41,\n                \"typeName\": \"预付账款\",\n                \"remark\": \"2\",\n                \"balance\": 1\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 42,\n                \"typeName\": \"存货价值\",\n                \"remark\": \"2\",\n                \"balance\": 1\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 43,\n                \"typeName\": \"房产\",\n                \"remark\": \"2\",\n                \"balance\": 1\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 44,\n                \"typeName\": \"车辆\",\n                \"remark\": \"2\",\n                \"balance\": 1\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 45,\n                \"typeName\": \"厂房（办公楼）价值\",\n                \"remark\": \"2\",\n                \"balance\": 1\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 46,\n                \"typeName\": \"设备价值\",\n                \"remark\": \"2\",\n                \"balance\": 1\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 47,\n                \"typeName\": \"其他投资及资产\",\n                \"remark\": \"2\",\n                \"balance\": 1\n            }\n        ],\n        \"assetsTotal\": 0,\n        \"loan\": [\n        {\"bankName\":\"天堂钱庄\",\"expirationDate\":1505750400000,\"id\":0,\"loanTimes\":\"1\",\"name\":\"钻石王者\",\"principal\":\"1\",\"startDate\":1504713600000}\n        \n        \n        ],\n        \"liabilities\": [\n            {\n                \"id\": 0,\n                \"typeId\": 49,\n                \"typeName\": \"非传统银行贷款\",\n                \"remark\": \"2\",\n                \"balance\": 1\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 50,\n                \"typeName\": \"信用卡透支\",\n                \"remark\": \"2\",\n                \"balance\": 1\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 51,\n                \"typeName\": \"预收账款\",\n                \"remark\": \"2\",\n                \"balance\": 1\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 52,\n                \"typeName\": \"应付账款\",\n                \"remark\": \"2\",\n                \"balance\": 1\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 53,\n                \"typeName\": \"其他负债\",\n                \"remark\": \"2\",\n                \"balance\": 1\n            }\n        ],\n        \"liabilitiesTotal\": 0,\n        \"netAssets\": 0,\n        \"assetLiabilityRatio\": 0,\n        \"externalSecurity\": [\n            {\n                \"id\": 0,\n                \"typeId\": 48,\n                \"typeName\": \"对外担保\",\n                \"remark\": \"\",\n                \"balance\": 0\n            }\n        ]\n    }"
 		},
 		{
 			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
@@ -16176,6 +16643,52 @@
 			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42"
 		},
 		{
+			"id": "958b2a0d-b9ea-f5de-0d23-05307922f51e",
+			"headers": "authorization: {{token}}\n",
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}business/balanceSheet/deleteLoan?creditId={{creditId}}&id={{loanId}}",
+			"folder": "696a522f-a90e-cdcb-533a-72bb149cfd15",
+			"queryParams": [
+				{
+					"key": "creditId",
+					"value": "{{creditId}}",
+					"equals": true,
+					"description": "授信编号",
+					"enabled": true
+				},
+				{
+					"key": "id",
+					"value": "{{loanId}}",
+					"equals": true,
+					"description": "银行贷款ID",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": null,
+			"dataMode": "params",
+			"tests": "pm.test(\"删除指定银行贷款\", function () {\n    pm.expect(pm.response.text()).to.include(\"成功\");\n});",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1507516529572,
+			"name": "删除指定银行贷款",
+			"description": "",
+			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
+			"responses": [],
+			"isFromCollection": true,
+			"collectionRequestId": "f7714d0c-2de8-5969-fd7e-09381b8715fd"
+		},
+		{
 			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
 			"collection_id": "1958e83b-66e2-0874-933d-f75ce445af42",
 			"currentHelper": "normal",
@@ -16299,6 +16812,42 @@
 			"description": "",
 			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
 			"responses": []
+		},
+		{
+			"id": "966eb5f1-19aa-e9ca-504f-0bb0fca91ee9",
+			"headers": "authorization: {{token}}\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}business/balanceSheet/save",
+			"folder": "78360b80-50b5-7ddb-8165-1b03635243d7",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "pm.test(\"保存授信经营情况\", function () {\n    pm.expect(pm.response.text()).to.include(\"成功\");\n});",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1507515848838,
+			"name": "保存授信经营情况",
+			"description": "保存授信经营情况",
+			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
+			"responses": [],
+			"rawModeData": "{\n        \"custId\": \"{{custId}}\",\n        \"creditId\": \"{{creditId}}\",\n        \"asset\": [\n            {\n                \"id\": 0,\n                \"typeId\": 39,\n                \"typeName\": \"现金及银行存款\",\n                \"remark\": \"2\",\n                \"balance\": 1\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 40,\n                \"typeName\": \"应收账款\",\n                \"remark\": \"2\",\n                \"balance\": 1\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 41,\n                \"typeName\": \"预付账款\",\n                \"remark\": \"2\",\n                \"balance\": 1\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 42,\n                \"typeName\": \"存货价值\",\n                \"remark\": \"2\",\n                \"balance\": 1\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 43,\n                \"typeName\": \"房产\",\n                \"remark\": \"2\",\n                \"balance\": 1\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 44,\n                \"typeName\": \"车辆\",\n                \"remark\": \"2\",\n                \"balance\": 1\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 45,\n                \"typeName\": \"厂房（办公楼）价值\",\n                \"remark\": \"2\",\n                \"balance\": 1\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 46,\n                \"typeName\": \"设备价值\",\n                \"remark\": \"2\",\n                \"balance\": 1\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 47,\n                \"typeName\": \"其他投资及资产\",\n                \"remark\": \"2\",\n                \"balance\": 1\n            }\n        ],\n        \"assetsTotal\": 0,\n        \"loan\": [\n        {\"bankName\":\"天堂钱庄\",\"expirationDate\":1505750400000,\"id\":0,\"loanTimes\":\"1\",\"name\":\"钻石王者\",\"principal\":\"1\",\"startDate\":1504713600000}\n        \n        \n        ],\n        \"liabilities\": [\n            {\n                \"id\": 0,\n                \"typeId\": 49,\n                \"typeName\": \"非传统银行贷款\",\n                \"remark\": \"2\",\n                \"balance\": 1\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 50,\n                \"typeName\": \"信用卡透支\",\n                \"remark\": \"2\",\n                \"balance\": 1\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 51,\n                \"typeName\": \"预收账款\",\n                \"remark\": \"2\",\n                \"balance\": 1\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 52,\n                \"typeName\": \"应付账款\",\n                \"remark\": \"2\",\n                \"balance\": 1\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 53,\n                \"typeName\": \"其他负债\",\n                \"remark\": \"2\",\n                \"balance\": 1\n            }\n        ],\n        \"liabilitiesTotal\": 0,\n        \"netAssets\": 0,\n        \"assetLiabilityRatio\": 0,\n        \"externalSecurity\": [\n            {\n                \"id\": 0,\n                \"typeId\": 48,\n                \"typeName\": \"对外担保\",\n                \"remark\": \"\",\n                \"balance\": 0\n            }\n        ]\n    }"
 		},
 		{
 			"id": "96901fa4-dbf5-e6e2-4c20-7aa1761e596f",
@@ -18425,6 +18974,88 @@
 			"responses": []
 		},
 		{
+			"id": "a71a7f79-91d6-b52c-ec6a-f8eb3fbf9041",
+			"headers": "authorization: {{token}}\n",
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/business/balanceSheet/list?id=100005963",
+			"folder": "696a522f-a90e-cdcb-533a-72bb149cfd15",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "100005963",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": "pm.test(\"获取资产负债列表\", function () {\n    pm.expect(pm.response.text()).to.include(\"成功\");\n});",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1507518533084,
+			"name": "获取授信经营情况列表",
+			"description": "",
+			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
+			"responses": []
+		},
+		{
+			"id": "a7c07b5b-5822-fea3-67ef-2f112b866f5f",
+			"headers": "authorization: {{token}}\n",
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}customer/person/quicklyAdd?custName=测试62&certNo={{certNo}}",
+			"folder": "78360b80-50b5-7ddb-8165-1b03635243d7",
+			"queryParams": [
+				{
+					"key": "custName",
+					"value": "测试62",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "certNo",
+					"value": "{{certNo}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": "tests[\"Body matches string\"] = responseBody.has(\"成功\");",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1507516759135,
+			"name": "对私客户快速新增",
+			"description": "",
+			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
+			"responses": []
+		},
+		{
 			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
 			"collection_id": "1958e83b-66e2-0874-933d-f75ce445af42",
 			"currentHelper": "normal",
@@ -19396,6 +20027,53 @@
 			"description": "",
 			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
 			"responses": []
+		},
+		{
+			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
+			"collectionRequestId": "7a92bb85-bd34-1a40-fbf3-ccc7303de8e8",
+			"currentHelper": "normal",
+			"data": null,
+			"dataMode": "params",
+			"description": "",
+			"descriptionFormat": "html",
+			"folder": "b9efe5b3-ba97-035c-f2cb-c826b34147a1",
+			"headerData": [
+				{
+					"description": "",
+					"enabled": true,
+					"key": "authorization",
+					"value": "{{token}}"
+				},
+				{
+					"description": "",
+					"enabled": true,
+					"key": "device",
+					"value": "1"
+				}
+			],
+			"headers": "authorization: {{token}}\ndevice: 1\n",
+			"helperAttributes": {},
+			"id": "b4e31eef-3b5a-48bb-d5e6-b8784df209ee",
+			"isFromCollection": true,
+			"method": "POST",
+			"name": "授信申请-创建授信接口",
+			"pathVariableData": [],
+			"pathVariables": {},
+			"preRequestScript": null,
+			"queryParams": [
+				{
+					"description": "",
+					"enabled": true,
+					"equals": true,
+					"key": "id",
+					"value": "{{custId}}"
+				}
+			],
+			"responses": [],
+			"tests": "tests[\"Body matches string\"] = responseBody.has(\"成功\");\nvar data=JSON.parse(responseBody);\nif(data.data){\n    tests[\"Body has creditId\"]=true;\n    postman.setEnvironmentVariable(\"creditId\",data.data);\n\n}else{\n    tests[\"Body has creditId\"]=false;\n}",
+			"time": 1507515708058,
+			"url": "{{URL}}business/credit/add?id={{custId}}",
+			"version": 2
 		},
 		{
 			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
@@ -24003,6 +24681,54 @@
 			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42"
 		},
 		{
+			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
+			"collectionRequestId": "90b5c240-f2b5-9bee-014a-1d599e6e4c37",
+			"currentHelper": "normal",
+			"data": null,
+			"dataMode": "params",
+			"description": "",
+			"descriptionFormat": "html",
+			"folder": "b9efe5b3-ba97-035c-f2cb-c826b34147a1",
+			"headerData": [
+				{
+					"description": "",
+					"enabled": true,
+					"key": "device",
+					"value": "1"
+				}
+			],
+			"headers": "device: 1\n",
+			"helperAttributes": {},
+			"id": "e043f25a-7be0-0d4e-f9dc-2914c8981a66",
+			"isFromCollection": true,
+			"method": "POST",
+			"name": "登录接口9200",
+			"pathVariableData": [],
+			"pathVariables": {},
+			"preRequestScript": null,
+			"queryParams": [
+				{
+					"description": "",
+					"enabled": true,
+					"equals": true,
+					"key": "jobNumber",
+					"value": "9200"
+				},
+				{
+					"description": "",
+					"enabled": true,
+					"equals": true,
+					"key": "password",
+					"value": "202CB962AC59075B964B07152D234B70"
+				}
+			],
+			"responses": [],
+			"tests": "var data=JSON.parse(responseBody);\n\nif (data.data.token){\n    tests[\"Body has token\"]=true;\n    postman.setEnvironmentVariable(\"token\",data.data.token);\n\n}\nelse{\n    tests[\"Body has token\"]=false;\n}",
+			"time": 1507515653334,
+			"url": "{{URL}}login/signIn?jobNumber=9200&password=202CB962AC59075B964B07152D234B70",
+			"version": 2
+		},
+		{
 			"id": "e0b0596b-918d-94d3-845a-2501d9a57529",
 			"headers": "authorization: {{token}}\n",
 			"headerData": [
@@ -24880,6 +25606,43 @@
 			"time": 1506322771090,
 			"url": "{{URL}}login/signIn?jobNumber=9200&password=202CB962AC59075B964B07152D234B70",
 			"version": 2
+		},
+		{
+			"id": "e8d8001b-0491-22a2-ed95-da17a0d53230",
+			"headers": "authorization: {{token}}\n",
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}/business/creditOperation/list?id={{custId}}",
+			"folder": "773ba89d-eb8d-6156-ef54-93d88dec307a",
+			"queryParams": [
+				{
+					"key": "id",
+					"value": "{{custId}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": "pm.test(\"获取授信经营情况列表\", function () {\n    pm.expect(pm.response.text()).to.include(\"成功\");\n});",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1507515971708,
+			"name": "获取授信经营情况列表",
+			"description": "",
+			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
+			"responses": []
 		},
 		{
 			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
@@ -25798,49 +26561,51 @@
 			"responses": []
 		},
 		{
-			"id": "f3bc87d1-7158-97f4-9958-c78681b12620",
-			"headers": "authorization: {{token}}\n",
-			"headerData": [
-				{
-					"key": "authorization",
-					"value": "{{token}}",
-					"description": "",
-					"enabled": true
-				}
-			],
-			"url": "{{URL}}/blacklist/blacklist/join?custId={{custId}}&reason=111",
-			"folder": "3a9ba924-f7e6-30f2-0bd8-a979a793bba5",
-			"queryParams": [
-				{
-					"key": "custId",
-					"value": "{{custId}}",
-					"equals": true,
-					"description": "客户编号",
-					"enabled": true
-				},
-				{
-					"key": "reason",
-					"value": "111",
-					"equals": true,
-					"description": "理由",
-					"enabled": true
-				}
-			],
-			"preRequestScript": null,
-			"pathVariables": {},
-			"pathVariableData": [],
-			"method": "POST",
+			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
+			"currentHelper": "normal",
 			"data": null,
 			"dataMode": "params",
-			"version": 2,
-			"tests": "\n\npm.test(\"Body matches string\", function () {\n    pm.expect(pm.response.text()).to.include(\"成功\");\n});",
-			"currentHelper": "normal",
-			"helperAttributes": {},
-			"time": 1506755836668,
-			"name": "加入黑名单",
 			"description": "",
-			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
-			"responses": []
+			"folder": "3a9ba924-f7e6-30f2-0bd8-a979a793bba5",
+			"headerData": [
+				{
+					"description": "",
+					"enabled": true,
+					"key": "authorization",
+					"value": "{{token}}"
+				}
+			],
+			"headers": "authorization: {{token}}\n",
+			"helperAttributes": {},
+			"id": "f3bc87d1-7158-97f4-9958-c78681b12620",
+			"method": "POST",
+			"name": "加入黑名单",
+			"pathVariableData": [],
+			"pathVariables": {},
+			"preRequestScript": null,
+			"queryParams": [
+				{
+					"description": "客户编号",
+					"enabled": true,
+					"equals": true,
+					"key": "custId",
+					"value": "{{custId}}"
+				},
+				{
+					"description": "理由",
+					"enabled": true,
+					"equals": true,
+					"key": "reason",
+					"value": "111"
+				}
+			],
+			"responses": [],
+			"tests": "\n\npm.test(\"Body matches string\", function () {\n    pm.expect(pm.response.text()).to.include(\"成功\");\n});",
+			"time": 1506755836668,
+			"url": "{{URL}}/blacklist/blacklist/join?custId={{custId}}&reason=111",
+			"version": 2,
+			"isFromCollection": true,
+			"collectionRequestId": "f3bc87d1-7158-97f4-9958-c78681b12620"
 		},
 		{
 			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
@@ -26173,6 +26938,50 @@
 			"helperAttributes": {},
 			"time": 1506756395799,
 			"name": "授信申请-创建授信接口",
+			"description": "",
+			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
+			"responses": []
+		},
+		{
+			"id": "f7714d0c-2de8-5969-fd7e-09381b8715fd",
+			"headers": "authorization: {{token}}\n",
+			"headerData": [
+				{
+					"key": "authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{URL}}business/balanceSheet/deleteLoan?creditId={{creditId}}&id={{loanId}}",
+			"folder": "773ba89d-eb8d-6156-ef54-93d88dec307a",
+			"queryParams": [
+				{
+					"key": "creditId",
+					"value": "{{creditId}}",
+					"equals": true,
+					"description": "授信编号",
+					"enabled": true
+				},
+				{
+					"key": "id",
+					"value": "{{loanId}}",
+					"equals": true,
+					"description": "银行贷款ID",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": null,
+			"dataMode": "params",
+			"tests": "pm.test(\"删除指定银行贷款\", function () {\n    pm.expect(pm.response.text()).to.include(\"成功\");\n});",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1507516529572,
+			"name": "删除指定银行贷款",
 			"description": "",
 			"collectionId": "1958e83b-66e2-0874-933d-f75ce445af42",
 			"responses": []

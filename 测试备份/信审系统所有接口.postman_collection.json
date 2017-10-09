@@ -342,38 +342,8 @@
 			"responses": []
 		},
 		{
-			"folder": "66c3e9ca-dd84-c175-2c1f-1dd6fb21fa23",
 			"id": "0a4a5ad8-a44d-f558-992c-8b491ee1fae0",
-			"name": "对私客户列表",
-			"dataMode": "params",
-			"data": null,
-			"rawModeData": null,
-			"descriptionFormat": "html",
-			"description": "",
 			"headers": "authorization: {{token}}\ndevice: 1\n",
-			"method": "GET",
-			"pathVariables": {},
-			"url": "{{URL}}/customer/person/search?pageNum=1&pageSize=20",
-			"preRequestScript": null,
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": "{}",
-			"queryParams": [
-				{
-					"key": "pageNum",
-					"value": "1",
-					"equals": true,
-					"description": "",
-					"enabled": true
-				},
-				{
-					"key": "pageSize",
-					"value": "20",
-					"equals": true,
-					"description": "",
-					"enabled": true
-				}
-			],
 			"headerData": [
 				{
 					"key": "authorization",
@@ -388,10 +358,38 @@
 					"enabled": true
 				}
 			],
+			"url": "{{URL}}/customer/person/search?pageNum=1&pageSize=15",
+			"folder": "66c3e9ca-dd84-c175-2c1f-1dd6fb21fa23",
+			"queryParams": [
+				{
+					"key": "pageNum",
+					"value": "1",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "pageSize",
+					"value": "15",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
 			"pathVariableData": [],
-			"responses": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1506758036465,
+			"name": "对私客户列表",
+			"description": "",
 			"collectionId": "a6036adf-152c-1737-2646-74402d55e058",
-			"collection_id": "a6036adf-152c-1737-2646-74402d55e058"
+			"responses": []
 		},
 		{
 			"id": "0a7f3e09-d252-ffc4-01e7-59246c19f021",
@@ -4035,23 +4033,8 @@
 			"collection_id": "a6036adf-152c-1737-2646-74402d55e058"
 		},
 		{
-			"folder": "362d4662-a8b4-e87d-f84a-557bad3ccf52",
 			"id": "d6eb6760-2bc7-c792-e1c0-b03c5d51b23a",
-			"name": "保存授信经营情况",
-			"dataMode": "raw",
-			"data": [],
-			"rawModeData": "{\n        \"custId\": 100000036,\n        \"creditId\": \"SX3541198544719872\",\n        \"asset\": [\n            {\n                \"id\": 0,\n                \"typeId\": 39,\n                \"typeName\": \"现金及银行存款\",\n                \"remark\": \"2222\",\n                \"balance\": 0\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 40,\n                \"typeName\": \"应收账款\",\n                \"remark\": \"\",\n                \"balance\": 0\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 41,\n                \"typeName\": \"预付账款\",\n                \"remark\": \"2222\",\n                \"balance\": 0\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 42,\n                \"typeName\": \"存货价值\",\n                \"remark\": \"\",\n                \"balance\": 0\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 43,\n                \"typeName\": \"房产\",\n                \"remark\": \"\",\n                \"balance\": 0\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 44,\n                \"typeName\": \"车辆\",\n                \"remark\": \"\",\n                \"balance\": 0\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 45,\n                \"typeName\": \"厂房（办公楼）价值\",\n                \"remark\": \"\",\n                \"balance\": 0\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 46,\n                \"typeName\": \"设备价值\",\n                \"remark\": \"\",\n                \"balance\": 0\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 47,\n                \"typeName\": \"其他投资及资产\",\n                \"remark\": \"\",\n                \"balance\": 0\n            }\n        ],\n        \"assetsTotal\": 0,\n        \"loan\": [\n        {\"bankName\":\"天堂钱庄\",\"expirationDate\":1505750400000,\"id\":0,\"loanTimes\":\"1\",\"name\":\"钻石王者\",\"principal\":\"1\",\"startDate\":1504713600000}\n        \n        \n        ],\n        \"liabilities\": [\n            {\n                \"id\": 0,\n                \"typeId\": 49,\n                \"typeName\": \"非传统银行贷款\",\n                \"remark\": \"\",\n                \"balance\": 0\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 50,\n                \"typeName\": \"信用卡透支\",\n                \"remark\": \"\",\n                \"balance\": 0\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 51,\n                \"typeName\": \"预收账款\",\n                \"remark\": \"\",\n                \"balance\": 0\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 52,\n                \"typeName\": \"应付账款\",\n                \"remark\": \"\",\n                \"balance\": 0\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 53,\n                \"typeName\": \"其他负债\",\n                \"remark\": \"\",\n                \"balance\": 0\n            }\n        ],\n        \"liabilitiesTotal\": 0,\n        \"netAssets\": 0,\n        \"assetLiabilityRatio\": 0,\n        \"externalSecurity\": [\n            {\n                \"id\": 0,\n                \"typeId\": 48,\n                \"typeName\": \"对外担保\",\n                \"remark\": \"\",\n                \"balance\": 0\n            }\n        ]\n    }",
-			"descriptionFormat": null,
-			"description": "保存授信经营情况",
 			"headers": "authorization: {{token}}\nContent-Type: application/json\n",
-			"method": "PUT",
-			"pathVariables": {},
-			"url": "{{URL}}business/balanceSheet/save",
-			"preRequestScript": null,
-			"tests": "{\"asset\":[{\"id\":68,\"typeId\":39,\"typeName\":\"现金及银行存款\",\"remark\":\"3333\",\"balance\":1},{\"id\":69,\"typeId\":40,\"typeName\":\"应收账款\",\"remark\":\"\",\"balance\":0},{\"id\":70,\"typeId\":41,\"typeName\":\"预付账款\",\"remark\":\"\",\"balance\":0},{\"id\":71,\"typeId\":42,\"typeName\":\"存货价值\",\"remark\":\"\",\"balance\":0},{\"id\":72,\"typeId\":43,\"typeName\":\"房产\",\"remark\":\"\",\"balance\":0},{\"id\":73,\"typeId\":44,\"typeName\":\"车辆\",\"remark\":\"\",\"balance\":0},{\"id\":74,\"typeId\":45,\"typeName\":\"厂房（办公楼）价值\",\"remark\":\"\",\"balance\":0},{\"id\":75,\"typeId\":46,\"typeName\":\"设备价值\",\"remark\":\"\",\"balance\":0},{\"id\":76,\"typeId\":47,\"typeName\":\"其他投资及资产\",\"remark\":\"\",\"balance\":0}],\"loan\":[{\"bankName\":\"大唐财团\",\"expirationDate\":1505750400000,\"id\":0,\"loanTimes\":\"1\",\"name\":\"李白\",\"principal\":\"1\",\"startDate\":1504713600000}],\"custId\":100000015,\"creditId\":\"SX3503347281448960\",\"assetsTotal\":0,\"liabilities\":[{\"id\":77,\"typeId\":49,\"typeName\":\"非传统银行贷款\",\"remark\":\"\",\"balance\":0},{\"id\":78,\"typeId\":50,\"typeName\":\"信用卡透支\",\"remark\":\"\",\"balance\":0},{\"id\":79,\"typeId\":51,\"typeName\":\"预收账款\",\"remark\":\"\",\"balance\":0},{\"id\":80,\"typeId\":52,\"typeName\":\"应付账款\",\"remark\":\"\",\"balance\":0},{\"id\":81,\"typeId\":53,\"typeName\":\"其他负债\",\"remark\":\"\",\"balance\":0}],\"liabilitiesTotal\":0,\"netAssets\":0,\"assetLiabilityRatio\":0,\"externalSecurity\":[{\"id\":82,\"typeId\":48,\"typeName\":\"对外担保\",\"remark\":\"\",\"balance\":0}]}",
-			"currentHelper": "normal",
-			"helperAttributes": "{}",
-			"queryParams": [],
 			"headerData": [
 				{
 					"key": "authorization",
@@ -4066,10 +4049,24 @@
 					"enabled": true
 				}
 			],
+			"url": "{{URL}}business/balanceSheet/save",
+			"folder": "362d4662-a8b4-e87d-f84a-557bad3ccf52",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
 			"pathVariableData": [],
-			"responses": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1507515393104,
+			"name": "保存授信经营情况",
+			"description": "保存授信经营情况",
 			"collectionId": "a6036adf-152c-1737-2646-74402d55e058",
-			"collection_id": "a6036adf-152c-1737-2646-74402d55e058"
+			"responses": [],
+			"rawModeData": "{\n        \"custId\": \"{{custId}}\",\n        \"creditId\": \"{{creditId}}\",\n        \"asset\": [\n            {\n                \"id\": 0,\n                \"typeId\": 39,\n                \"typeName\": \"现金及银行存款\",\n                \"remark\": \"2\",\n                \"balance\": 1\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 40,\n                \"typeName\": \"应收账款\",\n                \"remark\": \"2\",\n                \"balance\": 1\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 41,\n                \"typeName\": \"预付账款\",\n                \"remark\": \"2\",\n                \"balance\": 1\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 42,\n                \"typeName\": \"存货价值\",\n                \"remark\": \"2\",\n                \"balance\": 1\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 43,\n                \"typeName\": \"房产\",\n                \"remark\": \"2\",\n                \"balance\": 1\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 44,\n                \"typeName\": \"车辆\",\n                \"remark\": \"2\",\n                \"balance\": 1\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 45,\n                \"typeName\": \"厂房（办公楼）价值\",\n                \"remark\": \"2\",\n                \"balance\": 1\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 46,\n                \"typeName\": \"设备价值\",\n                \"remark\": \"2\",\n                \"balance\": 1\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 47,\n                \"typeName\": \"其他投资及资产\",\n                \"remark\": \"2\",\n                \"balance\": 1\n            }\n        ],\n        \"assetsTotal\": 0,\n        \"loan\": [\n        {\"bankName\":\"天堂钱庄\",\"expirationDate\":1505750400000,\"id\":0,\"loanTimes\":\"1\",\"name\":\"钻石王者\",\"principal\":\"1\",\"startDate\":1504713600000}\n        \n        \n        ],\n        \"liabilities\": [\n            {\n                \"id\": 0,\n                \"typeId\": 49,\n                \"typeName\": \"非传统银行贷款\",\n                \"remark\": \"2\",\n                \"balance\": 1\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 50,\n                \"typeName\": \"信用卡透支\",\n                \"remark\": \"2\",\n                \"balance\": 1\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 51,\n                \"typeName\": \"预收账款\",\n                \"remark\": \"2\",\n                \"balance\": 1\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 52,\n                \"typeName\": \"应付账款\",\n                \"remark\": \"2\",\n                \"balance\": 1\n            },\n            {\n                \"id\": 0,\n                \"typeId\": 53,\n                \"typeName\": \"其他负债\",\n                \"remark\": \"2\",\n                \"balance\": 1\n            }\n        ],\n        \"liabilitiesTotal\": 0,\n        \"netAssets\": 0,\n        \"assetLiabilityRatio\": 0,\n        \"externalSecurity\": [\n            {\n                \"id\": 0,\n                \"typeId\": 48,\n                \"typeName\": \"对外担保\",\n                \"remark\": \"\",\n                \"balance\": 0\n            }\n        ]\n    }"
 		},
 		{
 			"id": "eecfe74c-85fe-5d0c-c04c-4abf8dd1cc09",
@@ -4260,6 +4257,7 @@
 				}
 			],
 			"url": "{{URL}}/business/loanProduct/list",
+			"folder": "30e4839d-9f79-8048-0082-57b1c65997b0",
 			"queryParams": [],
 			"preRequestScript": null,
 			"pathVariables": {},
