@@ -12,3 +12,8 @@ git status
 git push -u origin master
 git gull #
 $ git clone git@github.com:jt-thinking/learning1.git 从远程库克隆
+
+git branch  查看分支
+git checkout master/dev 切换到master/dev 分支
+git push origin dev 提交该分支到远程仓库
+git pull origin dev 从远程分支获取dev
