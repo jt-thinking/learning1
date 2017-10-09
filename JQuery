@@ -267,6 +267,22 @@ jQuery的属性与样式之切换样式.toggleClass()
             "border"           :"1px solid red"
         })
 
+
+#jQuery的属性与样式之元素的数据存储
+使用jQuery初学者一般不是很关心data方式，这个方法是jquery内部预用的，可以用来做性能优化，比如sizzle选择中可以用来缓存部分结果集等等。当然这个也是非常重要的一个API了，常常用于我们存放临时的一些数据，因为它是直接跟DOM元素对象绑定在一起的
+
+
+同样的也提供2个对应的删除接口，使用上与data方法其实是一致的，只不过是一个是增加一个是删除罢了
+jQuery.removeData( element [, name ] )
+.removeData( [name ] )
+
+jQuery提供的存储接口
+
+jQuery.data( element, key, value )   //静态接口,存数据
+jQuery.data( element, key )  //静态接口,取数据   
+.data( key, value ) //实例接口,存数据
+.data( key ) //实例接口,存数据
+
 jQuery基础(五)
 使用load()方法异步请求数据
 
