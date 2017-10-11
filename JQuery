@@ -416,6 +416,66 @@ jQuery当中同样提供了这样的事件来监听用户的移入移出操作�
 #jQuery鼠标事件之focusout事件
 失去焦点的时候触发
 
+#jQuery表单事件之blur与focus事件
+focus和focusin  blur 和focusout 的区别在于是否支持冒泡处理
+focus()在元素本身产生，focusin()在元素包含的元素中产生
+
+#jQuery表单事件之change事件
+<input>元素，<textarea>和<select>元素的值都是可以发生改变的，开发者可以通过change事件去监听这些改变的动作
+
+input元素
+监听value值的变化，当有改变时，失去焦点后触发change事件。对于单选按钮和复选框，当用户用鼠标做出选择时，该事件立即触发。
+
+select元素
+对于下拉选择框，当用户用鼠标作出选择时，该事件立即触发
+
+textarea元素
+多行文本输入框，当有改变时，失去焦点后触发change事件
+
+change事件很简单，无非就是注意下触发的先后行为，可以看看右边代码参考
+
+#jQuery表单事件之select事件
+select事件只能用于<input>元素与<textarea>元素  当文本框中的文字被选中的时候，触发事件
+方法一：.select()
+方法二：$ele.select( handler(eventObject) )
+方法三：$ele.select( [eventData ], handler(eventObject) )
+
+#jQuery表单事件之submit事件
+提交表单是一个最常见的业务需求，比如用户注册，一些信息的输入都是需要表单的提交。同样的有时候开发者需要在表单提交的时候过滤一些的数据、做一些必要的操作（例如：验证表单输入的正确性，如果错误就阻止提交，从新输入）此时可以通过submit事件，监听下提交表单的这个动作
+
+form元素是有默认提交表单的行为，如果通过submit处理的话，需要禁止浏览器的这个默认行为
+传统的方式是调用事件对象  e.preventDefault() 来处理， jQuery中可以直接在函数中最后结尾return false即可
+
+#jQuery键盘事件之keydown()与keyup()事件
+鼠标有mousedown,mouseup之类的事件，这是根据人的手势动作分解的2个触发行为。相对应的键盘也有这类事件，将用户行为分解成2个动作，键盘按下与松手，针对这样的2种动作，jQuery分别提供了对应keydown与keyup方法来监听
+
+#jQuery键盘事件之keypress()事件
+KeyPress主要用来接收字母、数字等ANSI字符，而 KeyDown 和 KeyUP 事件过程可以处理任何不被 KeyPress 识别的击键。诸如：功能键（F1-F12）、编辑键、定位键以及任何这些键和键盘换档键的组合等。
+
+#on()的多事件绑定
+#on()的高级用法
+委托机制
+.on( events ,[ selector ] ,[ data ], handler(eventObject) )
+
+#卸载事件off()方法
+event.type：获取事件的类型
+event.pageX 和 event.pageY：获取鼠标当前相对于页面的坐标
+event.preventDefault() 方法：阻止默认行为
+event.stopPropagation() 方法：阻止事件冒泡
+event.which：获取在鼠标单击时，单击的是鼠标的哪个键
+event.currentTarget : 在事件冒泡过程中的当前DOM元素
+this和event.target的区别
+js中事件是会冒泡的，所以this是可以变化的，但event.target不会变化，它永远是直接接受事件的目标DOM元素；
+.this和event.target都是dom对象
+如果要使用jquey中的方法可以将他们转换为jquery对象。比如this和$(this)的使用、event.target和$(event.target)的使用；
+
+#jQuery事件对象的作用
+事件中的Event对象容易被初学者忽略掉，可能大多时候初学者不知道怎么去用它，但有些时候它还是非常有用的
+event.target代表当前触发事件的元素，可以通过当前元素对象的一系列属性来判断是不是我们想要的元素
+
+#jQuery事件对象的属性和方法
+#jQuery自定义事件之trigger事件
+#jQuery自定义事件之triggerHandler事件
 
 jQuery基础(五)
 使用load()方法异步请求数据

@@ -5,64 +5,62 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <title></title>
     <style>
-    .left div,
-    .right div {
-        width: 500px;
-        height: 50px;
-        padding: 5px;
-        margin: 5px;
-        float: left;
-        border: 1px solid #ccc;
-    }
-    .left div {
-        background: #bbffaa;
-    }
+        .left div,
+        .right div {
+            width: 500px;
+            height: 50px;
+            padding: 5px;
+            margin: 5px;
+            float: left;
+            border: 1px solid #ccc;
+        }
 
-    .right div {
-        background: yellow;
-    }
+        .left div {
+            background: #bbffaa;
+        }
+
+        .right div {
+            background: yellow;
+        }
     </style>
     <script src="http://libs.baidu.com/jquery/1.9.1/jquery.js"></script>
 </head>
 
 <body>
-    <h2>.focusin()方法</h2>
-    <div class="left">
-        <div class="aaron">
-            点击聚焦：<input type="text" />
-        </div>
+<h2>自定义事件triggerHandler</h2>
+<div class="left">
+    <div id="accident">
+        <a>triggerHandler事件</a>
+        <input type="text">
     </div>
-    <div class="right">
-        <div class="aaron1">
-            点击聚焦并传递参数：<input type="text" />
-        </div>
-    </div>
+    <button>事件冒泡,触发浏览器默认聚焦行为</button><br><br>
+    <button>不会冒泡，不触发浏览器默认聚焦行为</button>
+</div>
+<script type="text/javascript">
+
+    //给input绑定一个聚焦事件
+    $("input").on("focus",function(event,title) {
+        $(this).val(title)
+    });
+
+    $("#accident").on("click",function() {
+        alert("trigger触发的事件会在 DOM 树中向上冒泡");
+    });
+    //trigger触发focus
+    $("button:first").click(function() {
+        $("a").trigger("click");
+        $("input").trigger("focus");
+    });
+
+    //triggerHandler触发focus
+    $("button:last").click(function() {
+        $("a").triggerHandler("click");
+        $("input").triggerHandler("focus","没有触发默认聚焦事件");
+    });
 
 
-    <script type="text/javascript">
 
-        //input聚焦
-        //给input元素增加一个边框
-        $("input:first").focusin(function() {
-             $(this).css('border','2px solid red')
-        })
-
-    </script>
-
-
-    <script type="text/javascript">
-
-        //不同函数传递数据
-        function fn(e) {
-             $(this).val(e.data)
-        }
-
-        function a() {
-            $("input:last").focusin('慕课网', fn)
-        }
-        a();
-
-    </script>
+</script>
 </body>
 
 </html>
