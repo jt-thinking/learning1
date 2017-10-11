@@ -252,7 +252,7 @@ jQuery的属性与样式之切换样式.toggleClass()
 .css( properties )：可以传一个对象，同时设置多个样式
 
 注意事项:.css 支持驼峰写法与大小写混搭的写法，比如.css("background-color" , "red")
- .css("backgroundColor" , "red") 
+ .css("backgroundColor" , "red")
 
 .css("font-size","15px") 和 .css("fontSize","15px")是一样的效果
 .css("width",function(index,value){
@@ -280,7 +280,7 @@ jQuery.removeData( element [, name ] )
 jQuery提供的存储接口
 
 jQuery.data( element, key, value )   //静态接口,存数据
-jQuery.data( element, key )  //静态接口,取数据   
+jQuery.data( element, key )  //静态接口,取数据
 .data( key, value ) //实例接口,存数据
 .data( key ) //实例接口,存数据
 =======
@@ -312,9 +312,110 @@ empty 顾名思义，清空方法，但是与删除又有点不一样，因为�
 #DOM节点删除之remove()的有参用法和无参用法
 remove与empty一样，都是移除元素的方法，但是remove会将元素自身移除，同时也会移除元素内部的一切，包括绑定的事件及与该元素相关的jQuery数据。
 
-remove比empty好用的地方就是可以传递一个选择器表达式用来过滤将被移除的匹配元素集合，可以选择性的删除指定的节点
+$remove比empty好用的地方就是可以传递一个选择器表达式用来过滤将被移除的匹配元素集合，可以选择性的删除指定的节点
 
->>>>>>> 9de525a3c4244c1328d121d3ccfcf6f948b07829
+#DOM节点删除之empty和remove区别
+
+empty方法
+严格地讲，empty()方法并不是删除节点，而是清空节点，它能清空元素中的所有后代节点
+empty不能删除自己本身这个节点
+
+remove方法
+该节点与该节点所包含的所有后代节点将同时被删除
+提供传递一个筛选的表达式，删除指定合集中的元素
+
+#DOM节点删除之保留数据的删除操作detach()
+detach()是jQuery特有的方法。他让元素暂时删除，但是可以通过append恢复，前提是这个元素是通过jQuery的方法绑定的事件或者数据
+
+#DOM拷贝clone()
+//clone处理一
+$("div").clone()   //只克隆了结构，事件丢失
+//clone处理二
+$("div").clone(true) //结构、事件与数据都克隆
+
+#DOM替换replaceWith()和replaceAll()
+#DOM包裹wrap()方法，给dom元素增加父元素
+
+#DOM包裹unwrap()方法,删除父元素，和warp()方法正好相反
+#DOM包裹wrapAll()方法，给集合增加父元素
+#DOM包裹wrapInner()方法  如果要将合集中的元素内部所有的子元素用其他元素包裹起来，并当作指定元素的子元素，针对这样的处理，JQuery提供了一个wrapInner方法
+
+#jQuery遍历之children()方法
+jQuery是一个合集对象，所以通过children是匹配合集中每一给元素的第一级子元素
+
+#jQuery遍历之find()方法
+find是遍历当前元素集合中每个元素的后代。只要符合，不管是儿子辈，孙子辈都可以。
+
+#jQuery遍历之parent()方法
+Query是一个合集对象，如果想快速查找合集里面的每一个元素的父元素（这里可以理解为就是父亲-儿子的关系），此时可以用parent()方法
+
+因为是父元素，这个方法只会向上查找一级
+
+#jQuery遍历之parents()方法
+jQuery是一个合集对象，如果想快速查找合集里面的每一个元素的所有祖辈元素，此时可以用parents()方法
+
+其实也类似find与children的区别，parent只会查找一级，parents则会往上一直查到查找到祖先节点
+
+#jQuery遍历之closest()方法
+从元素本身开始，在DOM 树上逐级向上级元素匹配，并返回最先匹配的祖先元素
+
+#jQuery遍历之next()方法
+jQuery是一个合集对象，如果想快速查找指定元素集合中每一个元素紧邻的后面同辈元素的元素集合，此时可以用next()方法
+
+#jQuery遍历之prev()方法
+jQuery是一个合集对象，如果想快速查找指定元素集合中每一个元素紧邻的前面同辈元素的元素集合，此时可以用prev()方法
+
+#jQuery遍历之siblings()
+jQuery是一个合集对象，如果想快速查找指定元素集合中每一个元素的同辈元素，此时可以用siblings()方法
+
+#jQuery遍历之add()方法
+为已经筛选出来的jquery集合增加 元素或HTML片段
+
+#jQuery遍历之each()
+each是一个for循环的包装迭代器
+each通过回调的方式处理，并且会有2个固定的实参，索引与元素
+each回调方法中的this指向当前迭代的dom元素
+
+jquery基础(三)--事件篇
+#jQuery鼠标事件之click与dbclick事件
+
+方法一：$ele.click()
+绑定$ele元素，不带任何参数一般是用来指定触发一个事件，用的比较少
+
+方法二：$ele.click( handler(eventObject) )
+绑定$ele元素，每次$ele元素触发点击操作会执行回调 handler函数，这样可以针对事件的反馈做很多操作了，方法中的this是指向了绑定事件的元素
+
+方法三：$ele.click( [eventData ], handler(eventObject) )
+使用与方法二一致，不过可以接受一个数据参数，这样的处理是为了解决不同作用域下数据传递的问题
+
+#jQuery鼠标事件之mousedown与mouseup事件
+用户交互操作中，最简单直接的操作就是点击操作，因此jQuery提供了一个mousedown的快捷方法可以监听用户鼠标按下的操作，与其对应的还有一个方法mouseup快捷方法可以监听用户鼠标弹起的操作。两种方法用法类似
+
+#jQuery鼠标事件之mousemove事件
+方法一：$ele.mousemove()
+绑定$ele元素，不带任何参数一般是用来指定触发一个事件，用的比较少
+
+方法二：$ele.mousemove( handler(eventObject) )
+绑定$ele元素，每次$ele元素触发点击操作会执行回调 handler函数
+
+方法三：$ele.mousemove( [eventData ], handler(eventObject) )
+使用与方法二一致，不过可以接受一个数据参数，这样的处理是为了解决不同作用域下数据传递的问题
+
+#jQuery鼠标事件之mouseover与mouseout事件
+在学JS的时候，大家还记得有两个方法叫移入移出事件吗？onmouseover()与onmouseout()事件~
+
+jQuery当中同样提供了这样的事件来监听用户的移入移出操作，mouseover()与mouseout()事件，两者用法类似
+
+#jQuery鼠标事件之mouseenter与mouseleave事件
+#mouseenter事件和mouseover的区别
+关键点就是：冒泡的方式处理问题
+
+#jQuery鼠标事件之hover事件
+#jQuery鼠标事件之focusin事件
+用户在点击聚焦的时候，如果开发者需要捕获这个动作的时候，jQuery提供了一个focusin事件
+#jQuery鼠标事件之focusout事件
+失去焦点的时候触发
+
 
 jQuery基础(五)
 使用load()方法异步请求数据
