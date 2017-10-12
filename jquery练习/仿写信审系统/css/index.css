@@ -31,7 +31,6 @@ body {
 
 .text {
   position: absolute;
-  right: 0;
   right: 10%;
   top: 30px;
   font-weight: bold;
@@ -40,7 +39,7 @@ body {
   letter-spacing: 2px;
 }
 
-.jobNumber, .password ,.authCode{
+.jobNumber, .password, .authCode {
   position: absolute;
   left: 10%;
   top: 10%;
@@ -54,7 +53,29 @@ body {
   top: 30%;
 }
 
-.authCode{
-  top:50%;
+.authCode {
+  top: 50%;
   width: 110px;
+}
+
+.authCode-pic {
+  position: absolute;
+  top: 50%;
+  right: 15%;
+  width: 90px;
+  border: 1px solid #bfcbd9;
+  border-radius: 5px;
+  height: 30px;
+}
+
+.login-button {
+  position: absolute;
+  top: 70%;
+  right: 15%;
+  width: 200px;
+  border: 1px solid #bfcbd9;
+  border-radius: 5px;
+  height: 30px;
+  background-color: #51689f;
+  font-style: 
 }
