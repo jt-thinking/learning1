@@ -477,6 +477,35 @@ event.target代表当前触发事件的元素，可以通过当前元素对象�
 #jQuery自定义事件之trigger事件
 #jQuery自定义事件之triggerHandler事件
 
+jQuery基础(四)--动画篇
+#jQuery中隐藏元素的hide方法
+1、不带参数直接隐藏元素 $elem.hide()
+2、提供参数 .hide( options )
+	当提供hide方法一个参数时，.hide()就会成为一个动画方法。.hide()方法将会匹配元素的宽度，高度，以及不透明度，同时进行动画操作
+3、快捷参数：
+.hide("fast / slow")
+这是一个动画设置的快捷方式，'fast' 和 'slow' 分别代表200和600毫秒的延时，就是元素会执行200/600毫秒的动画后再隐藏
+更多请参考：http://api.jquery.com/hide/
+
+#jQuery中显示元素的show方法
+$('elem').hide(3000).show(3000) 让元素执行3秒的隐藏动画，然后执行3秒的显示动画。
+
+#jQuery中显示与隐藏切换toggle方法
+基本的操作：toggle();无动画
+提供参数：.toggle( [duration ] [, complete ] )有动画
+直接定位：.toggle(display)
+
+#jQuery中下拉动画slideDown
+和show类似，不是这个是下拉显示
+
+#jQuery中上卷动画slideUp
+1、$("elem").slideUp();
+
+2、带参数：
+.slideUp( [duration ] [, easing ] [, complete ] )
+
+#jQuery中上卷下拉切换slideToggle
+
 jQuery基础(五)
 使用load()方法异步请求数据
 
