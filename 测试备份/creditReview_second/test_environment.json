@@ -1,0 +1,84 @@
+{
+  "_": {
+    "postman_variable_scope": "environment",
+    "postman_exported_at": "2017-10-18T08:13:40.348Z",
+    "postman_exported_using": "Postman/5.3.0"
+  },
+  "id": "637b95df-2911-0eaf-516f-4ae5f64f4bb2",
+  "name": "测试环境",
+  "values": [
+    {
+      "type": "any",
+      "value": "http://192.168.1.203:9180/",
+      "key": "URL"
+    },
+    {
+      "type": "any",
+      "value": "d124d4b3085a4a45b6a5c02667f1ba7c",
+      "key": "token"
+    },
+    {
+      "type": "any",
+      "value": "LP3621036774608896",
+      "key": "prdId"
+    },
+    {
+      "type": "any",
+      "value": "3621037756862464",
+      "key": "data"
+    },
+    {
+      "type": "any",
+      "value": "SX3746619902414848",
+      "key": "creditId"
+    },
+    {
+      "type": "any",
+      "value": "440019",
+      "key": "taskId"
+    },
+    {
+      "type": "any",
+      "value": "100006065",
+      "key": "custId"
+    },
+    {
+      "type": "any",
+      "value": "147",
+      "key": "certNo"
+    },
+    {
+      "type": "any",
+      "value": "34",
+      "key": "blankId"
+    },
+    {
+      "type": "any",
+      "value": "72",
+      "key": "loanId"
+    },
+    {
+      "type": "any",
+      "value": "DB3746024827473920",
+      "key": "guaranteeId"
+    },
+    {
+      "type": "any",
+      "value": "BZ01SX010620171018005001",
+      "key": "guaranteeNo"
+    },
+    {
+      "type": "any",
+      "value": "3745527004942336",
+      "key": "materialId"
+    },
+    {
+      "type": "any",
+      "value": "3739740465090560",
+      "key": "reportId"
+    }
+  ],
+  "_postman_variable_scope": "environment",
+  "_postman_exported_at": "2017-10-18T08:14:58.864Z",
+  "_postman_exported_using": "Newman/3.8.3"
+}

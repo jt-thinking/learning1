@@ -1,0 +1,912 @@
+{
+	"info": {
+		"name": "test",
+		"_postman_id": "1523f01d-b42e-be05-6c27-e673666f9904",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "N创建授信并通过（授信流程） copy",
+			"description": "",
+			"item": [
+				{
+					"name": "登录接口9200",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var data=JSON.parse(responseBody);",
+									"",
+									"if (data.data.token){",
+									"    tests[\"Body has token\"]=true;",
+									"    postman.setEnvironmentVariable(\"token\",data.data.token);",
+									"",
+									"}",
+									"else{",
+									"    tests[\"Body has token\"]=false;",
+									"}"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "device",
+								"value": "1"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}login/signIn?jobNumber=9200&password=202CB962AC59075B964B07152D234B70",
+							"host": [
+								"{{URL}}login"
+							],
+							"path": [
+								"signIn"
+							],
+							"query": [
+								{
+									"equals": true,
+									"key": "jobNumber",
+									"value": "9200"
+								},
+								{
+									"equals": true,
+									"key": "password",
+									"value": "202CB962AC59075B964B07152D234B70"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "对私客户快速新增",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Body matches string\"] = responseBody.has(\"成功\");"
+								]
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"    var certNo=postman.getEnvironmentVariable(\"certNo\");",
+									"    certNo=Number(certNo)+1;",
+									"    postman.setEnvironmentVariable(\"certNo\",certNo);"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}customer/person/quicklyAdd?custName=测试{{certNo}}&certNo={{certNo}}",
+							"host": [
+								"{{URL}}customer"
+							],
+							"path": [
+								"person",
+								"quicklyAdd"
+							],
+							"query": [
+								{
+									"key": "custName",
+									"value": "测试{{certNo}}",
+									"equals": true
+								},
+								{
+									"key": "certNo",
+									"value": "{{certNo}}",
+									"equals": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "授信申请-获取用户信息",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Body matches string\"] = responseBody.has(\"成功\");",
+									"var data=JSON.parse(responseBody);",
+									"",
+									"if (data.data.custId){",
+									"    tests[\"test\"]=true;",
+									"    postman.setEnvironmentVariable(\"custId\",data.data.custId);",
+									"",
+									"}",
+									"else{",
+									"    tests[\"test\"]=false;",
+									"}"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}business/credit/fetchUser?certNumber={{certNo}}",
+							"host": [
+								"{{URL}}business"
+							],
+							"path": [
+								"credit",
+								"fetchUser"
+							],
+							"query": [
+								{
+									"description": "身份证号码",
+									"equals": true,
+									"key": "certNumber",
+									"value": "{{certNo}}"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "授信申请-创建授信接口",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"授信申请-创建授信接口\"] = responseBody.has(\"成功\");",
+									"var data=JSON.parse(responseBody);",
+									"if(data.data){",
+									"    tests[\"Body has creditId\"]=true;",
+									"    postman.setEnvironmentVariable(\"creditId\",data.data);",
+									"",
+									"}else{",
+									"    tests[\"Body has creditId\"]=false;",
+									"}"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "device",
+								"value": "1"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}business/credit/add?id={{custId}}",
+							"host": [
+								"{{URL}}business"
+							],
+							"path": [
+								"credit",
+								"add"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{custId}}",
+									"equals": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "授信申请-申请信息-保存申请信息",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"授信申请-申请信息-保存申请信息\"] = responseBody.has(\"成功\");"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}/business/credit/update?id={{creditId}}&creditAmt=50000&applyDate=1503036840000&expirationDate=1534572840000&duration=1&guaranteeType=1&basePrdId=1&baseStartDate=1503036840000&baseEndDate=1534572840000&baseCostRate=1&subsidiaryPrdId=99&subsidiaryStartDate=1503036840000&subsidiaryEndDate=1534572840000&subsidiaryCostRate=1&marketPrdId=1&marketStartDate=1503036840000&marketEndDate=1534572840000&marketCostRate=4&isSpecialService=1&purpose=购买原材料",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"business",
+								"credit",
+								"update"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{creditId}}",
+									"equals": true,
+									"description": "授信编号"
+								},
+								{
+									"key": "creditAmt",
+									"value": "50000",
+									"equals": true,
+									"description": "授信金额"
+								},
+								{
+									"key": "applyDate",
+									"value": "1503036840000",
+									"equals": true,
+									"description": "申请日期"
+								},
+								{
+									"key": "expirationDate",
+									"value": "1534572840000",
+									"equals": true,
+									"description": "到期日期"
+								},
+								{
+									"key": "duration",
+									"value": "1",
+									"equals": true,
+									"description": "期限"
+								},
+								{
+									"key": "guaranteeType",
+									"value": "1",
+									"equals": true,
+									"description": "担保方式"
+								},
+								{
+									"key": "basePrdId",
+									"value": "1",
+									"equals": true,
+									"description": "基础产品编号"
+								},
+								{
+									"key": "baseStartDate",
+									"value": "1503036840000",
+									"equals": true,
+									"description": "基础产品有效期开始时间"
+								},
+								{
+									"key": "baseEndDate",
+									"value": "1534572840000",
+									"equals": true,
+									"description": "基础产品有效期结束时间"
+								},
+								{
+									"key": "baseCostRate",
+									"value": "1",
+									"equals": true,
+									"description": "基础产品借款综合成本利率"
+								},
+								{
+									"key": "subsidiaryPrdId",
+									"value": "99",
+									"equals": true,
+									"description": "附属产品编号"
+								},
+								{
+									"key": "subsidiaryStartDate",
+									"value": "1503036840000",
+									"equals": true,
+									"description": "附属产品有效期开始时间"
+								},
+								{
+									"key": "subsidiaryEndDate",
+									"value": "1534572840000",
+									"equals": true,
+									"description": "附属产品有效期结束时间"
+								},
+								{
+									"key": "subsidiaryCostRate",
+									"value": "1",
+									"equals": true,
+									"description": "附属产品借款综合成本利率"
+								},
+								{
+									"key": "marketPrdId",
+									"value": "1",
+									"equals": true,
+									"description": "营销产品编号"
+								},
+								{
+									"key": "marketStartDate",
+									"value": "1503036840000",
+									"equals": true,
+									"description": "营销产品有效期开始时间"
+								},
+								{
+									"key": "marketEndDate",
+									"value": "1534572840000",
+									"equals": true,
+									"description": "营销产品有效期结束时间"
+								},
+								{
+									"key": "marketCostRate",
+									"value": "4",
+									"equals": true,
+									"description": "营销产品借款综合成本利率"
+								},
+								{
+									"key": "isSpecialService",
+									"value": "1",
+									"equals": true,
+									"description": "特殊业务标志"
+								},
+								{
+									"key": "purpose",
+									"value": "购买原材料",
+									"equals": true,
+									"description": "授信用途"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "授信申请-客户经营情况-保存详情接口",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"授信申请-客户经营情况-保存详情接口\"] = responseBody.has(\"成功\");"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "device",
+								"value": "1"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}business/creditOperation/save?id={{creditId}}&industry=1&industryDuration=1&isOtherIndustry=1&otherIndustry=1&mainProduct=1&stable=1&employers=1&salesVolume=1&profit=1&profitRate=1&lastSalesVolume=1&lastProfit=1&lastProfitRate=1&salesTarget=1&isSeasonal=1&busySeason=1&lowSeason=1&estimate=fffff",
+							"host": [
+								"{{URL}}business"
+							],
+							"path": [
+								"creditOperation",
+								"save"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{creditId}}",
+									"equals": true
+								},
+								{
+									"key": "industry",
+									"value": "1",
+									"equals": true,
+									"description": "从事行业"
+								},
+								{
+									"key": "industryDuration",
+									"value": "1",
+									"equals": true,
+									"description": "从事年限"
+								},
+								{
+									"key": "isOtherIndustry",
+									"value": "1",
+									"equals": true,
+									"description": "是否从事其他行业：1是，0否\n"
+								},
+								{
+									"key": "otherIndustry",
+									"value": "1",
+									"equals": true,
+									"description": "从事的其他行业"
+								},
+								{
+									"key": "mainProduct",
+									"value": "1",
+									"equals": true,
+									"description": "主营产品"
+								},
+								{
+									"key": "stable",
+									"value": "1",
+									"equals": true,
+									"description": "稳定程度"
+								},
+								{
+									"key": "employers",
+									"value": "1",
+									"equals": true,
+									"description": "雇佣人数"
+								},
+								{
+									"key": "salesVolume",
+									"value": "1",
+									"equals": true,
+									"description": "今年销售额"
+								},
+								{
+									"key": "profit",
+									"value": "1",
+									"equals": true,
+									"description": "今年利润"
+								},
+								{
+									"key": "profitRate",
+									"value": "1",
+									"equals": true,
+									"description": "今年利润率"
+								},
+								{
+									"key": "lastSalesVolume",
+									"value": "1",
+									"equals": true,
+									"description": "去年销售额"
+								},
+								{
+									"key": "lastProfit",
+									"value": "1",
+									"equals": true,
+									"description": "去年利润"
+								},
+								{
+									"key": "lastProfitRate",
+									"value": "1",
+									"equals": true,
+									"description": "去年利润率"
+								},
+								{
+									"key": "salesTarget",
+									"value": "1",
+									"equals": true,
+									"description": "主要销往"
+								},
+								{
+									"key": "isSeasonal",
+									"value": "1",
+									"equals": true,
+									"description": "季节性是否明显：1是，0否"
+								},
+								{
+									"key": "busySeason",
+									"value": "1",
+									"equals": true,
+									"description": "旺季"
+								},
+								{
+									"key": "lowSeason",
+									"value": "1",
+									"equals": true,
+									"description": "淡季"
+								},
+								{
+									"key": "estimate",
+									"value": "fffff",
+									"equals": true,
+									"description": "总体评价"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "N征信及法院五查询报告上传",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"N征信及法院五查询报告上传\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"成功\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"description": "",
+									"key": "file",
+									"type": "file",
+									"src": "2.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/business/material/upload?id={{creditId}}&type=credit_report&date=1505092755237&remark=123",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"business",
+								"material",
+								"upload"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{creditId}}",
+									"equals": true
+								},
+								{
+									"key": "type",
+									"value": "credit_report",
+									"equals": true,
+									"description": "报告类型:征信报告:credit_report;诉讼案件信息:litigation;开庭公告:notice;裁判文书:sentence;执行案件:execute;法院执行:court_execute;"
+								},
+								{
+									"key": "date",
+									"value": "1505092755237",
+									"equals": true
+								},
+								{
+									"key": "remark",
+									"value": "123",
+									"equals": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "新增：担保合同",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"新增：担保合同\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"成功\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "device",
+								"value": "1"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}business/guarantee/add?creditId={{creditId}}&guaranteeType=1&custId={{custId}}&guaranteerId=100005912&startDateTime=1504577930000&expirationDateTime=1000258917000&guaranteeAmt=200000",
+							"host": [
+								"{{URL}}business"
+							],
+							"path": [
+								"guarantee",
+								"add"
+							],
+							"query": [
+								{
+									"key": "creditId",
+									"value": "{{creditId}}",
+									"equals": true
+								},
+								{
+									"key": "guaranteeType",
+									"value": "1",
+									"equals": true,
+									"description": "担保类型 1 最高额担保"
+								},
+								{
+									"key": "custId",
+									"value": "{{custId}}",
+									"equals": true,
+									"description": "客户编号"
+								},
+								{
+									"key": "guaranteerId",
+									"value": "100005912",
+									"equals": true,
+									"description": "担保人编号"
+								},
+								{
+									"key": "startDateTime",
+									"value": "1504577930000",
+									"equals": true,
+									"description": "开始时间"
+								},
+								{
+									"key": "expirationDateTime",
+									"value": "1000258917000",
+									"equals": true,
+									"description": "到期时间"
+								},
+								{
+									"key": "guaranteeAmt",
+									"value": "200000",
+									"equals": true,
+									"description": "担保金额"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "授信申请-提交授信申请",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"授信申请-提交授信申请\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"成功\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}business/credit/audit?id={{creditId}}",
+							"host": [
+								"{{URL}}business"
+							],
+							"path": [
+								"credit",
+								"audit"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{creditId}}",
+									"equals": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "登录接口9101",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var data=JSON.parse(responseBody);",
+									"",
+									"if (data.data.token){",
+									"    tests[\"Body has token\"]=true;",
+									"    postman.setEnvironmentVariable(\"token\",data.data.token);",
+									"",
+									"}",
+									"else{",
+									"    tests[\"Body has token\"]=false;",
+									"}"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "device",
+								"value": "1"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}login/signIn?jobNumber=9101&password=202CB962AC59075B964B07152D234B70",
+							"host": [
+								"{{URL}}login"
+							],
+							"path": [
+								"signIn"
+							],
+							"query": [
+								{
+									"equals": true,
+									"key": "jobNumber",
+									"value": "9101"
+								},
+								{
+									"equals": true,
+									"key": "password",
+									"value": "202CB962AC59075B964B07152D234B70"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "获取当前用户待处理的审批任务",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Body matches string\"] = responseBody.has(\"成功\");",
+									"var data=JSON.parse(responseBody);",
+									"var list=data.data.list;",
+									"if (list[list.length-1]){",
+									"    tests[\"test\"]=true;",
+									"    postman.setEnvironmentVariable(\"taskId\",list[list.length-1].taskId);",
+									"",
+									"}",
+									"else{",
+									"    tests[\"test\"]=false;",
+									"}"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}workflow/getTaskInHand",
+							"host": [
+								"{{URL}}workflow"
+							],
+							"path": [
+								"getTaskInHand"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "审批指定流程",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Body matches string\"] = responseBody.has(\"成功\");"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}workflow/audit?taskId={{taskId}}&message=OK&operate=1",
+							"host": [
+								"{{URL}}workflow"
+							],
+							"path": [
+								"audit"
+							],
+							"query": [
+								{
+									"description": "任务ID",
+									"equals": true,
+									"key": "taskId",
+									"value": "{{taskId}}"
+								},
+								{
+									"description": "审批意见",
+									"equals": true,
+									"key": "message",
+									"value": "OK"
+								},
+								{
+									"description": "操作类型\n",
+									"equals": true,
+									"key": "operate",
+									"value": "1"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

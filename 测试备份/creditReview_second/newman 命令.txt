@@ -1,0 +1,14 @@
+options
+
+
+newman run -h   //help
+newman -v   //version
+-e  [file|URL] //set environment
+$ newman run https://www.getpostman.com/collections/cb208e7e64056f5294e5 -e dev_environment.json
+
+ofen use
+$ newman run test.json   -e test_environment.json  --export-environment test_environment.json
+//每次执行完之后又把环境变量输出来。否则每次调用旧的环境变量无法成功
+
+
+-r html 输出html格式的reporter
