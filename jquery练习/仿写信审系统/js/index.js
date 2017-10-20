@@ -9,7 +9,9 @@ $(".login-button").click(function() {
     dataType: "json",
     method: "POST",
     // contentType:"application/json",
-
+    beforeSend: function(request) {
+                            request.setRequestHeader("Origin", "*");
+                        },
     success: function(data) {
       alert();
     }
