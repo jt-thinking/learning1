@@ -1,0 +1,451 @@
+{
+	"info": {
+		"name": "资产负债接口",
+		"_postman_id": "1f54b3e1-3ce3-437d-6220-3f23449c4b8b",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "S个人授信资产负债接口相关",
+			"description": "",
+			"item": [
+				{
+					"name": "S保存授信经营情况",
+					"description": "",
+					"item": [
+						{
+							"name": "登录接口9200",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"var data=JSON.parse(responseBody);",
+											"",
+											"if (data.data.token){",
+											"    tests[\"Body has token\"]=true;",
+											"    postman.setEnvironmentVariable(\"token\",data.data.token);",
+											"",
+											"}",
+											"else{",
+											"    tests[\"Body has token\"]=false;",
+											"}"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "device",
+										"value": "1"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{URL}}login/signIn?jobNumber=9200&password=202CB962AC59075B964B07152D234B70",
+									"host": [
+										"{{URL}}login"
+									],
+									"path": [
+										"signIn"
+									],
+									"query": [
+										{
+											"equals": true,
+											"key": "jobNumber",
+											"value": "9200"
+										},
+										{
+											"equals": true,
+											"key": "password",
+											"value": "202CB962AC59075B964B07152D234B70"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "对私客户快速新增",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Body matches string\"] = responseBody.has(\"成功\");"
+										]
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"    var certNo=postman.getEnvironmentVariable(\"certNo\");",
+											"    certNo=Number(certNo)+1;",
+											"    postman.setEnvironmentVariable(\"certNo\",certNo);"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "{{token}}"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{URL}}customer/person/quicklyAdd?custName=测试{{certNo}}&certNo={{certNo}}",
+									"host": [
+										"{{URL}}customer"
+									],
+									"path": [
+										"person",
+										"quicklyAdd"
+									],
+									"query": [
+										{
+											"key": "custName",
+											"value": "测试{{certNo}}",
+											"equals": true
+										},
+										{
+											"key": "certNo",
+											"value": "{{certNo}}",
+											"equals": true
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "授信申请-获取用户信息",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Body matches string\"] = responseBody.has(\"成功\");",
+											"var data=JSON.parse(responseBody);",
+											"",
+											"if (data.data.custId){",
+											"    tests[\"test\"]=true;",
+											"    postman.setEnvironmentVariable(\"custId\",data.data.custId);",
+											"",
+											"}",
+											"else{",
+											"    tests[\"test\"]=false;",
+											"}"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "{{token}}"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{URL}}business/credit/fetchUser?certNumber={{certNo}}",
+									"host": [
+										"{{URL}}business"
+									],
+									"path": [
+										"credit",
+										"fetchUser"
+									],
+									"query": [
+										{
+											"description": "身份证号码",
+											"equals": true,
+											"key": "certNumber",
+											"value": "{{certNo}}"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "授信申请-创建授信接口",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Body matches string\"] = responseBody.has(\"成功\");",
+											"var data=JSON.parse(responseBody);",
+											"if(data.data){",
+											"    tests[\"Body has creditId\"]=true;",
+											"    postman.setEnvironmentVariable(\"creditId\",data.data);",
+											"",
+											"}else{",
+											"    tests[\"Body has creditId\"]=false;",
+											"}"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "{{token}}"
+									},
+									{
+										"key": "device",
+										"value": "1"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{URL}}business/credit/add?id={{custId}}",
+									"host": [
+										"{{URL}}business"
+									],
+									"path": [
+										"credit",
+										"add"
+									],
+									"query": [
+										{
+											"equals": true,
+											"key": "id",
+											"value": "{{custId}}"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "保存资产负债情况",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"保存授信经营情况\", function () {",
+											"    pm.expect(pm.response.text()).to.include(\"成功\");",
+											"});"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "{{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"custId\": \"{{custId}}\",\n        \"creditId\": \"{{creditId}}\",\n        \"asset\":[{\"id\":0,\"typeId\":39,\"typeName\":\"现金及银行存款\",\"remark\":\"\",\"balance\":1.0},{\"id\":0,\"typeId\":40,\"typeName\":\"应收账款\",\"remark\":\"\",\"balance\":1.0},{\"id\":0,\"typeId\":41,\"typeName\":\"预付账款\",\"remark\":\"\",\"balance\":1.0},{\"id\":0,\"typeId\":42,\"typeName\":\"存货价值\",\"remark\":\"\",\"balance\":1.0},{\"id\":0,\"typeId\":43,\"typeName\":\"房产\",\"remark\":\"\",\"balance\":1.0},{\"id\":0,\"typeId\":44,\"typeName\":\"车辆\",\"remark\":\"\",\"balance\":1.0},{\"id\":0,\"typeId\":45,\"typeName\":\"厂房（办公楼）价值\",\"remark\":\"\",\"balance\":1.0},{\"id\":0,\"typeId\":46,\"typeName\":\"设备价值\",\"remark\":\"\",\"balance\":1.0},{\"id\":0,\"typeId\":47,\"typeName\":\"其他投资及资产\",\"remark\":\"\",\"balance\":1.0}],\"assetsTotal\":9.0,\"loan\":[{\"id\":0,\"name\":\"1\",\"bankName\":\"1\",\"principal\":1.0,\"startDate\":1508169600000,\"expirationDate\":1509465600000,\"loanTimes\":1}],\"liabilities\":[{\"id\":0,\"typeId\":49,\"typeName\":\"非传统银行贷款\",\"remark\":\"\",\"balance\":1.0},{\"id\":0,\"typeId\":50,\"typeName\":\"信用卡透支\",\"remark\":\"\",\"balance\":1.0},{\"id\":0,\"typeId\":51,\"typeName\":\"预收账款\",\"remark\":\"\",\"balance\":1.0},{\"id\":0,\"typeId\":52,\"typeName\":\"应付账款\",\"remark\":\"\",\"balance\":1.0},{\"id\":0,\"typeId\":53,\"typeName\":\"其他负债\",\"remark\":\"\",\"balance\":2.0}],\"liabilitiesTotal\":7.0,\"netAssets\":3.0,\"assetLiabilityRatio\":77.78,\"externalSecurity\":[{\"id\":0,\"typeId\":48,\"typeName\":\"对外担保\",\"remark\":\"\",\"balance\":0.0}]\n    }"
+								},
+								"url": {
+									"raw": "{{URL}}business/balanceSheet/save",
+									"host": [
+										"{{URL}}business"
+									],
+									"path": [
+										"balanceSheet",
+										"save"
+									]
+								},
+								"description": "保存授信经营情况"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "获取资产负债情况",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"获取资产负债情况\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"成功\");",
+									"});",
+									"var data=JSON.parse(responseBody);",
+									"",
+									"if (data.data.loan[0].id){",
+									"    tests[\"获取银行借款编号\"]=true;",
+									"     postman.setEnvironmentVariable(\"loanId\",data.data.loan[0].id);",
+									" ",
+									"",
+									"}",
+									"else{",
+									"    tests[\"获取银行借款编号\"]=false;",
+									"  ",
+									"}",
+									"",
+									"",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}business/balanceSheet/fetch?id={{creditId}}",
+							"host": [
+								"{{URL}}business"
+							],
+							"path": [
+								"balanceSheet",
+								"fetch"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{creditId}}",
+									"equals": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "获取授信经营情况列表",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"获取资产负债列表\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"成功\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}/business/balanceSheet/list?id={{custId}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"business",
+								"balanceSheet",
+								"list"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{custId}}",
+									"equals": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "删除指定银行贷款",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"删除指定银行贷款\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"成功\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}business/balanceSheet/deleteLoan?creditId={{creditId}}&id={{loanId}}",
+							"host": [
+								"{{URL}}business"
+							],
+							"path": [
+								"balanceSheet",
+								"deleteLoan"
+							],
+							"query": [
+								{
+									"key": "creditId",
+									"value": "{{creditId}}",
+									"equals": true,
+									"description": "授信编号"
+								},
+								{
+									"key": "id",
+									"value": "{{loanId}}",
+									"equals": true,
+									"description": "银行贷款ID"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

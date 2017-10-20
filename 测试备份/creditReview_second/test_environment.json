@@ -1,11 +1,11 @@
 {
   "_": {
     "postman_variable_scope": "environment",
-    "postman_exported_at": "2017-10-18T08:13:40.348Z",
-    "postman_exported_using": "Postman/5.3.0"
+    "postman_exported_at": "2017-10-19T23:50:59.005Z",
+    "postman_exported_using": "Newman/3.8.3"
   },
-  "id": "637b95df-2911-0eaf-516f-4ae5f64f4bb2",
-  "name": "测试环境",
+  "id": "8532332f-ab81-ddee-d44a-41d4f8970d90",
+  "name": "测试环境 (Copy)",
   "values": [
     {
       "type": "any",
@@ -14,7 +14,7 @@
     },
     {
       "type": "any",
-      "value": "d124d4b3085a4a45b6a5c02667f1ba7c",
+      "value": "56020d7305064cab9dc429b68aa3c3e8",
       "key": "token"
     },
     {
@@ -29,47 +29,47 @@
     },
     {
       "type": "any",
-      "value": "SX3746619902414848",
+      "value": "SX3755964209057792",
       "key": "creditId"
     },
     {
       "type": "any",
-      "value": "440019",
+      "value": "465914",
       "key": "taskId"
     },
     {
       "type": "any",
-      "value": "100006065",
+      "value": "100006351",
       "key": "custId"
     },
     {
       "type": "any",
-      "value": "147",
+      "value": "432",
       "key": "certNo"
     },
     {
       "type": "any",
-      "value": "34",
+      "value": "37",
       "key": "blankId"
     },
     {
       "type": "any",
-      "value": "72",
+      "value": "88",
       "key": "loanId"
     },
     {
       "type": "any",
-      "value": "DB3746024827473920",
+      "value": "DB3755961397628928",
       "key": "guaranteeId"
     },
     {
       "type": "any",
-      "value": "BZ01SX010620171018005001",
+      "value": "BZ01SX010620171018007301",
       "key": "guaranteeNo"
     },
     {
       "type": "any",
-      "value": "3745527004942336",
+      "value": "3746855647531008",
       "key": "materialId"
     },
     {
@@ -79,6 +79,6 @@
     }
   ],
   "_postman_variable_scope": "environment",
-  "_postman_exported_at": "2017-10-18T08:14:58.864Z",
+  "_postman_exported_at": "2017-10-19T23:51:47.094Z",
   "_postman_exported_using": "Newman/3.8.3"
 }

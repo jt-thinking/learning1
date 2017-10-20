@@ -1,0 +1,1178 @@
+{
+	"info": {
+		"name": "客户引入、客户特殊业务接口",
+		"_postman_id": "bce4e940-b081-e4c7-d1de-4dc09515c4cc",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "客户引入、客户特殊业务接口",
+			"description": "",
+			"item": [
+				{
+					"name": "S客户基础信息变更",
+					"description": "",
+					"item": [
+						{
+							"name": "登录接口9200",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"var data=JSON.parse(responseBody);",
+											"",
+											"if (data.data.token){",
+											"    tests[\"Body has token\"]=true;",
+											"    postman.setEnvironmentVariable(\"token\",data.data.token);",
+											"",
+											"}",
+											"else{",
+											"    tests[\"Body has token\"]=false;",
+											"}"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "device",
+										"value": "1"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{URL}}login/signIn?jobNumber=9200&password=202CB962AC59075B964B07152D234B70",
+									"host": [
+										"{{URL}}login"
+									],
+									"path": [
+										"signIn"
+									],
+									"query": [
+										{
+											"key": "jobNumber",
+											"value": "9200",
+											"equals": true
+										},
+										{
+											"key": "password",
+											"value": "202CB962AC59075B964B07152D234B70",
+											"equals": true
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "S客户基础信息变更",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "{{token}}"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{URL}}/customer/chg/basic?custId={{custId}}&custName=测试70&certType=&certNo=70",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"customer",
+										"chg",
+										"basic"
+									],
+									"query": [
+										{
+											"key": "custId",
+											"value": "{{custId}}",
+											"equals": true,
+											"description": "必填"
+										},
+										{
+											"key": "custName",
+											"value": "测试70",
+											"equals": true
+										},
+										{
+											"key": "certType",
+											"value": "",
+											"equals": true,
+											"description": "证件类型"
+										},
+										{
+											"key": "certNo",
+											"value": "70",
+											"equals": true
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "A登录接口9151",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"var data=JSON.parse(responseBody);",
+											"",
+											"if (data.data.token){",
+											"    tests[\"Body has token\"]=true;",
+											"    postman.setEnvironmentVariable(\"token\",data.data.token);",
+											"",
+											"}",
+											"else{",
+											"    tests[\"Body has token\"]=false;",
+											"}",
+											"",
+											"",
+											"",
+											"pm.test(\"9101登录\", function () {",
+											"    pm.expect(pm.response.text()).to.include(\"成功\");",
+											"});"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "device",
+										"value": "1"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{URL}}login/signIn?jobNumber=9151&password=202CB962AC59075B964B07152D234B70",
+									"host": [
+										"{{URL}}login"
+									],
+									"path": [
+										"signIn"
+									],
+									"query": [
+										{
+											"key": "jobNumber",
+											"value": "9151",
+											"equals": true
+										},
+										{
+											"key": "password",
+											"value": "202CB962AC59075B964B07152D234B70",
+											"equals": true
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "获取当前用户待处理的审批任务",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Body matches string\"] = responseBody.has(\"成功\");",
+											"var data=JSON.parse(responseBody);",
+											"var list=data.data.list;",
+											"if (list[list.length-1]){",
+											"    tests[\"test\"]=true;",
+											"    postman.setEnvironmentVariable(\"taskId\",list[list.length-1].taskId);",
+											"",
+											"}",
+											"else{",
+											"    tests[\"test\"]=false;",
+											"}"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "{{token}}"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{URL}}workflow/getTaskInHand",
+									"host": [
+										"{{URL}}workflow"
+									],
+									"path": [
+										"getTaskInHand"
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "审批指定流程",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Body matches string\"] = responseBody.has(\"成功\");"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "{{token}}"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{URL}}workflow/audit?taskId={{taskId}}&message=OK&operate=1",
+									"host": [
+										"{{URL}}workflow"
+									],
+									"path": [
+										"audit"
+									],
+									"query": [
+										{
+											"key": "taskId",
+											"value": "{{taskId}}",
+											"equals": true,
+											"description": "任务ID"
+										},
+										{
+											"key": "message",
+											"value": "OK",
+											"equals": true,
+											"description": "审批意见"
+										},
+										{
+											"key": "operate",
+											"value": "1",
+											"equals": true,
+											"description": "操作类型\n"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "对私客户详情",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Body matches string\", function () {",
+											"    pm.expect(pm.response.text()).to.include(\"成功\");",
+											"});",
+											"var data=JSON.parse(responseBody);",
+											"",
+											"if (data.data.custName==\"测试70\"){",
+											"    tests[\"Body has token\"]=true;",
+											"    postman.setEnvironmentVariable(\"token\",data.data.token);",
+											"",
+											"}",
+											"else{",
+											"    tests[\"Body has token\"]=false;",
+											"}"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "{{token}}"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{URL}}/customer/person/details?custId={{custId}}",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"customer",
+										"person",
+										"details"
+									],
+									"query": [
+										{
+											"key": "custId",
+											"value": "{{custId}}",
+											"equals": true
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "客户引入",
+					"description": "",
+					"item": [
+						{
+							"name": "登录接口9101",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"var data=JSON.parse(responseBody);",
+											"",
+											"if (data.data.token){",
+											"    tests[\"Body has token\"]=true;",
+											"    postman.setEnvironmentVariable(\"token\",data.data.token);",
+											"",
+											"}",
+											"else{",
+											"    tests[\"Body has token\"]=false;",
+											"}"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "device",
+										"value": "1"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{URL}}login/signIn?jobNumber=9101&password=202CB962AC59075B964B07152D234B70",
+									"host": [
+										"{{URL}}login"
+									],
+									"path": [
+										"signIn"
+									],
+									"query": [
+										{
+											"key": "jobNumber",
+											"value": "9101",
+											"equals": true
+										},
+										{
+											"key": "password",
+											"value": "202CB962AC59075B964B07152D234B70",
+											"equals": true
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "客户引入",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Body matches string\", function () {",
+											"    pm.expect(pm.response.text()).to.include(\"成功\");",
+											"});"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "{{token}}"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{URL}}/customer/chg/obtain?custId={{custId}}&remark=客户引入",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"customer",
+										"chg",
+										"obtain"
+									],
+									"query": [
+										{
+											"key": "custId",
+											"value": "{{custId}}",
+											"equals": true
+										},
+										{
+											"key": "remark",
+											"value": "客户引入",
+											"equals": true,
+											"description": "引入理由"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "A登录接口9151",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"var data=JSON.parse(responseBody);",
+											"",
+											"if (data.data.token){",
+											"    tests[\"Body has token\"]=true;",
+											"    postman.setEnvironmentVariable(\"token\",data.data.token);",
+											"",
+											"}",
+											"else{",
+											"    tests[\"Body has token\"]=false;",
+											"}",
+											"",
+											"",
+											"",
+											"pm.test(\"9101登录\", function () {",
+											"    pm.expect(pm.response.text()).to.include(\"成功\");",
+											"});"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "device",
+										"value": "1"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{URL}}login/signIn?jobNumber=9151&password=202CB962AC59075B964B07152D234B70",
+									"host": [
+										"{{URL}}login"
+									],
+									"path": [
+										"signIn"
+									],
+									"query": [
+										{
+											"key": "jobNumber",
+											"value": "9151",
+											"equals": true
+										},
+										{
+											"key": "password",
+											"value": "202CB962AC59075B964B07152D234B70",
+											"equals": true
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "获取当前用户待处理的审批任务",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Body matches string\"] = responseBody.has(\"成功\");",
+											"var data=JSON.parse(responseBody);",
+											"var list=data.data.list;",
+											"if (list[list.length-1]){",
+											"    tests[\"test\"]=true;",
+											"    postman.setEnvironmentVariable(\"taskId\",list[list.length-1].taskId);",
+											"",
+											"}",
+											"else{",
+											"    tests[\"test\"]=false;",
+											"}"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "{{token}}"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{URL}}workflow/getTaskInHand",
+									"host": [
+										"{{URL}}workflow"
+									],
+									"path": [
+										"getTaskInHand"
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "审批指定流程",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Body matches string\"] = responseBody.has(\"成功\");"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "{{token}}"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{URL}}workflow/audit?taskId={{taskId}}&message=OK&operate=1",
+									"host": [
+										"{{URL}}workflow"
+									],
+									"path": [
+										"audit"
+									],
+									"query": [
+										{
+											"key": "taskId",
+											"value": "{{taskId}}",
+											"equals": true,
+											"description": "任务ID"
+										},
+										{
+											"key": "message",
+											"value": "OK",
+											"equals": true,
+											"description": "审批意见"
+										},
+										{
+											"key": "operate",
+											"value": "1",
+											"equals": true,
+											"description": "操作类型\n"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "客户移交",
+					"description": "",
+					"item": [
+						{
+							"name": "登录接口9200",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"var data=JSON.parse(responseBody);",
+											"",
+											"if (data.data.token){",
+											"    tests[\"Body has token\"]=true;",
+											"    postman.setEnvironmentVariable(\"token\",data.data.token);",
+											"",
+											"}",
+											"else{",
+											"    tests[\"Body has token\"]=false;",
+											"}"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "device",
+										"value": "1"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{URL}}login/signIn?jobNumber=9200&password=202CB962AC59075B964B07152D234B70",
+									"host": [
+										"{{URL}}login"
+									],
+									"path": [
+										"signIn"
+									],
+									"query": [
+										{
+											"key": "jobNumber",
+											"value": "9200",
+											"equals": true
+										},
+										{
+											"key": "password",
+											"value": "202CB962AC59075B964B07152D234B70",
+											"equals": true
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "客户移交",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "{{token}}"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{URL}}/customer/chg/transport?newManagerId=87&custIds={{custId}}&allFlag=true&oldManagerIds=37",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"customer",
+										"chg",
+										"transport"
+									],
+									"query": [
+										{
+											"key": "newManagerId",
+											"value": "87",
+											"equals": true,
+											"description": "目标客户经理"
+										},
+										{
+											"key": "custIds",
+											"value": "{{custId}}",
+											"equals": true,
+											"description": "移交客户编号，格式：xxx,xxx,xxx"
+										},
+										{
+											"key": "custName",
+											"value": "",
+											"equals": true,
+											"description": "客户名称",
+											"disabled": true
+										},
+										{
+											"key": "allFlag",
+											"value": "true",
+											"equals": true
+										},
+										{
+											"key": "oldManagerIds",
+											"value": "37",
+											"equals": true,
+											"description": "原客户经理编号，格式：xxx,xxx,xxx"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "A登录接口9151",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"var data=JSON.parse(responseBody);",
+											"",
+											"if (data.data.token){",
+											"    tests[\"Body has token\"]=true;",
+											"    postman.setEnvironmentVariable(\"token\",data.data.token);",
+											"",
+											"}",
+											"else{",
+											"    tests[\"Body has token\"]=false;",
+											"}",
+											"",
+											"",
+											"",
+											"pm.test(\"9101登录\", function () {",
+											"    pm.expect(pm.response.text()).to.include(\"成功\");",
+											"});"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "device",
+										"value": "1"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{URL}}login/signIn?jobNumber=9151&password=202CB962AC59075B964B07152D234B70",
+									"host": [
+										"{{URL}}login"
+									],
+									"path": [
+										"signIn"
+									],
+									"query": [
+										{
+											"key": "jobNumber",
+											"value": "9151",
+											"equals": true
+										},
+										{
+											"key": "password",
+											"value": "202CB962AC59075B964B07152D234B70",
+											"equals": true
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "获取当前用户待处理的审批任务",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Body matches string\"] = responseBody.has(\"成功\");",
+											"var data=JSON.parse(responseBody);",
+											"var list=data.data.list;",
+											"if (list[list.length-1]){",
+											"    tests[\"test\"]=true;",
+											"    postman.setEnvironmentVariable(\"taskId\",list[list.length-1].taskId);",
+											"",
+											"}",
+											"else{",
+											"    tests[\"test\"]=false;",
+											"}"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "{{token}}"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{URL}}workflow/getTaskInHand",
+									"host": [
+										"{{URL}}workflow"
+									],
+									"path": [
+										"getTaskInHand"
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "审批指定流程",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Body matches string\"] = responseBody.has(\"成功\");"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "{{token}}"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{URL}}workflow/audit?taskId={{taskId}}&message=OK&operate=1",
+									"host": [
+										"{{URL}}workflow"
+									],
+									"path": [
+										"audit"
+									],
+									"query": [
+										{
+											"key": "taskId",
+											"value": "{{taskId}}",
+											"equals": true,
+											"description": "任务ID"
+										},
+										{
+											"key": "message",
+											"value": "OK",
+											"equals": true,
+											"description": "审批意见"
+										},
+										{
+											"key": "operate",
+											"value": "1",
+											"equals": true,
+											"description": "操作类型\n"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "客户基础信息变更历史",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}/customer/chg/basic/history?pageNum=1&pageSize=20&custName=测试70&minCreateTime&maxCreateTime",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"customer",
+								"chg",
+								"basic",
+								"history"
+							],
+							"query": [
+								{
+									"key": "pageNum",
+									"value": "1",
+									"equals": true
+								},
+								{
+									"key": "pageSize",
+									"value": "20",
+									"equals": true
+								},
+								{
+									"key": "custName",
+									"value": "测试70",
+									"equals": true
+								},
+								{
+									"key": "minCreateTime",
+									"value": "",
+									"equals": false,
+									"description": "变更日期Min"
+								},
+								{
+									"key": "maxCreateTime",
+									"value": "",
+									"equals": false,
+									"description": "变更日期Max"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "客户移交历史记录",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}/customer/chg/transport/history?pageNum=1&pageSize=20&oldMgId=87",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"customer",
+								"chg",
+								"transport",
+								"history"
+							],
+							"query": [
+								{
+									"key": "pageNum",
+									"value": "1",
+									"equals": true
+								},
+								{
+									"key": "pageSize",
+									"value": "20",
+									"equals": true
+								},
+								{
+									"key": "custName",
+									"value": "",
+									"equals": true,
+									"disabled": true
+								},
+								{
+									"key": "oldMgId",
+									"value": "87",
+									"equals": true
+								},
+								{
+									"key": "newMgId",
+									"value": "",
+									"equals": false,
+									"disabled": true
+								},
+								{
+									"key": "minCreateTime",
+									"value": "",
+									"equals": false,
+									"disabled": true
+								},
+								{
+									"key": "maxCreateTime",
+									"value": "",
+									"equals": false,
+									"disabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "b14d5c08-d9c1-483b-a90c-a09265323d14",
+							"name": "客户移交历史记录",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "{{token}}",
+										"disabled": false
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{URL}}/customer/chg/transport/history?pageNum=1&pageSize=20&oldMgId=87",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"customer",
+										"chg",
+										"transport",
+										"history"
+									],
+									"query": [
+										{
+											"key": "pageNum",
+											"value": "1",
+											"equals": true
+										},
+										{
+											"key": "pageSize",
+											"value": "20",
+											"equals": true
+										},
+										{
+											"key": "custName",
+											"value": "",
+											"equals": true,
+											"disabled": true
+										},
+										{
+											"key": "oldMgId",
+											"value": "87",
+											"equals": true
+										},
+										{
+											"key": "newMgId",
+											"value": "",
+											"equals": false,
+											"disabled": true
+										},
+										{
+											"key": "minCreateTime",
+											"value": "",
+											"equals": false,
+											"disabled": true
+										},
+										{
+											"key": "maxCreateTime",
+											"value": "",
+											"equals": false,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 18 Oct 2017 05:59:19 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked",
+									"name": "Transfer-Encoding",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								}
+							],
+							"cookie": [],
+							"responseTime": 92,
+							"body": "{\"code\":200,\"message\":\"成功\",\"data\":{\"total\":20,\"pageSize\":20,\"list\":[{\"instanceId\":\"373187\",\"businessType\":\"cust_transfer\",\"businessKey\":\"100005956\",\"remark\":\"{\\\"oldMgName\\\":\\\"测试\\\",\\\"oldMgId\\\":87,\\\"custId\\\":\\\"100005956\\\",\\\"operName\\\":\\\"李松阳\\\",\\\"operId\\\":60,\\\"newMgName\\\":\\\"李松阳\\\",\\\"custName\\\":\\\"测试56\\\",\\\"newMgid\\\":60}\",\"status\":5,\"createTime\":1506751751000,\"accepterId\":58,\"oldMgId\":87,\"oldMgName\":\"测试\",\"newMgId\":60,\"newMgName\":\"李松阳\",\"accepterOrganizationId\":1,\"custId\":100005956,\"custName\":\"测试56\",\"accepterName\":\"钟晶晶\",\"accepterOrganizationName\":\"总部业务部\"},{\"instanceId\":\"438733\",\"businessType\":\"cust_transfer\",\"businessKey\":\"100006062\",\"remark\":\"{\\\"oldMgName\\\":\\\"测试\\\",\\\"oldMgId\\\":87,\\\"custId\\\":\\\"100006062\\\",\\\"operName\\\":\\\"测试\\\",\\\"operId\\\":87,\\\"newMgName\\\":\\\"江韬\\\",\\\"custName\\\":\\\"测试145\\\",\\\"newMgid\\\":37}\",\"status\":5,\"createTime\":1508305778000,\"accepterId\":58,\"oldMgId\":87,\"oldMgName\":\"测试\",\"newMgId\":37,\"newMgName\":\"江韬\",\"accepterOrganizationId\":1,\"custId\":100006062,\"custName\":\"测试145\",\"accepterName\":\"钟晶晶\",\"accepterOrganizationName\":\"总部业务部\"},{\"instanceId\":\"438733\",\"businessType\":\"cust_transfer\",\"businessKey\":\"100006061\",\"remark\":\"{\\\"oldMgName\\\":\\\"测试\\\",\\\"oldMgId\\\":87,\\\"custId\\\":\\\"100006061\\\",\\\"operName\\\":\\\"测试\\\",\\\"operId\\\":87,\\\"newMgName\\\":\\\"江韬\\\",\\\"custName\\\":\\\"测试144\\\",\\\"newMgid\\\":37}\",\"status\":5,\"createTime\":1508305778000,\"accepterId\":58,\"oldMgId\":87,\"oldMgName\":\"测试\",\"newMgId\":37,\"newMgName\":\"江韬\",\"accepterOrganizationId\":1,\"custId\":100006061,\"custName\":\"测试144\",\"accepterName\":\"钟晶晶\",\"accepterOrganizationName\":\"总部业务部\"},{\"instanceId\":\"438733\",\"businessType\":\"cust_transfer\",\"businessKey\":\"100006060\",\"remark\":\"{\\\"oldMgName\\\":\\\"测试\\\",\\\"oldMgId\\\":87,\\\"custId\\\":\\\"100006060\\\",\\\"operName\\\":\\\"测试\\\",\\\"operId\\\":87,\\\"newMgName\\\":\\\"江韬\\\",\\\"custName\\\":\\\"测试143\\\",\\\"newMgid\\\":37}\",\"status\":5,\"createTime\":1508305778000,\"accepterId\":58,\"oldMgId\":87,\"oldMgName\":\"测试\",\"newMgId\":37,\"newMgName\":\"江韬\",\"accepterOrganizationId\":1,\"custId\":100006060,\"custName\":\"测试143\",\"accepterName\":\"钟晶晶\",\"accepterOrganizationName\":\"总部业务部\"},{\"instanceId\":\"438733\",\"businessType\":\"cust_transfer\",\"businessKey\":\"100006059\",\"remark\":\"{\\\"oldMgName\\\":\\\"测试\\\",\\\"oldMgId\\\":87,\\\"custId\\\":\\\"100006059\\\",\\\"operName\\\":\\\"测试\\\",\\\"operId\\\":87,\\\"newMgName\\\":\\\"江韬\\\",\\\"custName\\\":\\\"测试142\\\",\\\"newMgid\\\":37}\",\"status\":5,\"createTime\":1508305778000,\"accepterId\":58,\"oldMgId\":87,\"oldMgName\":\"测试\",\"newMgId\":37,\"newMgName\":\"江韬\",\"accepterOrganizationId\":1,\"custId\":100006059,\"custName\":\"测试142\",\"accepterName\":\"钟晶晶\",\"accepterOrganizationName\":\"总部业务部\"},{\"instanceId\":\"438733\",\"businessType\":\"cust_transfer\",\"businessKey\":\"100006058\",\"remark\":\"{\\\"oldMgName\\\":\\\"测试\\\",\\\"oldMgId\\\":87,\\\"custId\\\":\\\"100006058\\\",\\\"operName\\\":\\\"测试\\\",\\\"operId\\\":87,\\\"newMgName\\\":\\\"江韬\\\",\\\"custName\\\":\\\"测试141\\\",\\\"newMgid\\\":37}\",\"status\":5,\"createTime\":1508305778000,\"accepterId\":58,\"oldMgId\":87,\"oldMgName\":\"测试\",\"newMgId\":37,\"newMgName\":\"江韬\",\"accepterOrganizationId\":1,\"custId\":100006058,\"custName\":\"测试141\",\"accepterName\":\"钟晶晶\",\"accepterOrganizationName\":\"总部业务部\"},{\"instanceId\":\"438733\",\"businessType\":\"cust_transfer\",\"businessKey\":\"100006057\",\"remark\":\"{\\\"oldMgName\\\":\\\"测试\\\",\\\"oldMgId\\\":87,\\\"custId\\\":\\\"100006057\\\",\\\"operName\\\":\\\"测试\\\",\\\"operId\\\":87,\\\"newMgName\\\":\\\"江韬\\\",\\\"custName\\\":\\\"测试140\\\",\\\"newMgid\\\":37}\",\"status\":5,\"createTime\":1508305778000,\"accepterId\":58,\"oldMgId\":87,\"oldMgName\":\"测试\",\"newMgId\":37,\"newMgName\":\"江韬\",\"accepterOrganizationId\":1,\"custId\":100006057,\"custName\":\"测试140\",\"accepterName\":\"钟晶晶\",\"accepterOrganizationName\":\"总部业务部\"},{\"instanceId\":\"438733\",\"businessType\":\"cust_transfer\",\"businessKey\":\"100006056\",\"remark\":\"{\\\"oldMgName\\\":\\\"测试\\\",\\\"oldMgId\\\":87,\\\"custId\\\":\\\"100006056\\\",\\\"operName\\\":\\\"测试\\\",\\\"operId\\\":87,\\\"newMgName\\\":\\\"江韬\\\",\\\"custName\\\":\\\"测试139\\\",\\\"newMgid\\\":37}\",\"status\":5,\"createTime\":1508305778000,\"accepterId\":58,\"oldMgId\":87,\"oldMgName\":\"测试\",\"newMgId\":37,\"newMgName\":\"江韬\",\"accepterOrganizationId\":1,\"custId\":100006056,\"custName\":\"测试139\",\"accepterName\":\"钟晶晶\",\"accepterOrganizationName\":\"总部业务部\"},{\"instanceId\":\"438733\",\"businessType\":\"cust_transfer\",\"businessKey\":\"100006055\",\"remark\":\"{\\\"oldMgName\\\":\\\"测试\\\",\\\"oldMgId\\\":87,\\\"custId\\\":\\\"100006055\\\",\\\"operName\\\":\\\"测试\\\",\\\"operId\\\":87,\\\"newMgName\\\":\\\"江韬\\\",\\\"custName\\\":\\\"测试138\\\",\\\"newMgid\\\":37}\",\"status\":5,\"createTime\":1508305778000,\"accepterId\":58,\"oldMgId\":87,\"oldMgName\":\"测试\",\"newMgId\":37,\"newMgName\":\"江韬\",\"accepterOrganizationId\":1,\"custId\":100006055,\"custName\":\"测试138\",\"accepterName\":\"钟晶晶\",\"accepterOrganizationName\":\"总部业务部\"},{\"instanceId\":\"438733\",\"businessType\":\"cust_transfer\",\"businessKey\":\"100006054\",\"remark\":\"{\\\"oldMgName\\\":\\\"测试\\\",\\\"oldMgId\\\":87,\\\"custId\\\":\\\"100006054\\\",\\\"operName\\\":\\\"测试\\\",\\\"operId\\\":87,\\\"newMgName\\\":\\\"江韬\\\",\\\"custName\\\":\\\"测试137\\\",\\\"newMgid\\\":37}\",\"status\":5,\"createTime\":1508305778000,\"accepterId\":58,\"oldMgId\":87,\"oldMgName\":\"测试\",\"newMgId\":37,\"newMgName\":\"江韬\",\"accepterOrganizationId\":1,\"custId\":100006054,\"custName\":\"测试137\",\"accepterName\":\"钟晶晶\",\"accepterOrganizationName\":\"总部业务部\"},{\"instanceId\":\"438733\",\"businessType\":\"cust_transfer\",\"businessKey\":\"100006053\",\"remark\":\"{\\\"oldMgName\\\":\\\"测试\\\",\\\"oldMgId\\\":87,\\\"custId\\\":\\\"100006053\\\",\\\"operName\\\":\\\"测试\\\",\\\"operId\\\":87,\\\"newMgName\\\":\\\"江韬\\\",\\\"custName\\\":\\\"测试136\\\",\\\"newMgid\\\":37}\",\"status\":5,\"createTime\":1508305778000,\"accepterId\":58,\"oldMgId\":87,\"oldMgName\":\"测试\",\"newMgId\":37,\"newMgName\":\"江韬\",\"accepterOrganizationId\":1,\"custId\":100006053,\"custName\":\"测试136\",\"accepterName\":\"钟晶晶\",\"accepterOrganizationName\":\"总部业务部\"},{\"instanceId\":\"438733\",\"businessType\":\"cust_transfer\",\"businessKey\":\"100006052\",\"remark\":\"{\\\"oldMgName\\\":\\\"测试\\\",\\\"oldMgId\\\":87,\\\"custId\\\":\\\"100006052\\\",\\\"operName\\\":\\\"测试\\\",\\\"operId\\\":87,\\\"newMgName\\\":\\\"江韬\\\",\\\"custName\\\":\\\"测试135\\\",\\\"newMgid\\\":37}\",\"status\":5,\"createTime\":1508305778000,\"accepterId\":58,\"oldMgId\":87,\"oldMgName\":\"测试\",\"newMgId\":37,\"newMgName\":\"江韬\",\"accepterOrganizationId\":1,\"custId\":100006052,\"custName\":\"测试135\",\"accepterName\":\"钟晶晶\",\"accepterOrganizationName\":\"总部业务部\"},{\"instanceId\":\"438733\",\"businessType\":\"cust_transfer\",\"businessKey\":\"100006051\",\"remark\":\"{\\\"oldMgName\\\":\\\"测试\\\",\\\"oldMgId\\\":87,\\\"custId\\\":\\\"100006051\\\",\\\"operName\\\":\\\"测试\\\",\\\"operId\\\":87,\\\"newMgName\\\":\\\"江韬\\\",\\\"custName\\\":\\\"测试134\\\",\\\"newMgid\\\":37}\",\"status\":5,\"createTime\":1508305778000,\"accepterId\":58,\"oldMgId\":87,\"oldMgName\":\"测试\",\"newMgId\":37,\"newMgName\":\"江韬\",\"accepterOrganizationId\":1,\"custId\":100006051,\"custName\":\"测试134\",\"accepterName\":\"钟晶晶\",\"accepterOrganizationName\":\"总部业务部\"},{\"instanceId\":\"438733\",\"businessType\":\"cust_transfer\",\"businessKey\":\"100006050\",\"remark\":\"{\\\"oldMgName\\\":\\\"测试\\\",\\\"oldMgId\\\":87,\\\"custId\\\":\\\"100006050\\\",\\\"operName\\\":\\\"测试\\\",\\\"operId\\\":87,\\\"newMgName\\\":\\\"江韬\\\",\\\"custName\\\":\\\"测试133\\\",\\\"newMgid\\\":37}\",\"status\":5,\"createTime\":1508305778000,\"accepterId\":58,\"oldMgId\":87,\"oldMgName\":\"测试\",\"newMgId\":37,\"newMgName\":\"江韬\",\"accepterOrganizationId\":1,\"custId\":100006050,\"custName\":\"测试133\",\"accepterName\":\"钟晶晶\",\"accepterOrganizationName\":\"总部业务部\"},{\"instanceId\":\"438733\",\"businessType\":\"cust_transfer\",\"businessKey\":\"100006049\",\"remark\":\"{\\\"oldMgName\\\":\\\"测试\\\",\\\"oldMgId\\\":87,\\\"custId\\\":\\\"100006049\\\",\\\"operName\\\":\\\"测试\\\",\\\"operId\\\":87,\\\"newMgName\\\":\\\"江韬\\\",\\\"custName\\\":\\\"测试132\\\",\\\"newMgid\\\":37}\",\"status\":5,\"createTime\":1508305778000,\"accepterId\":58,\"oldMgId\":87,\"oldMgName\":\"测试\",\"newMgId\":37,\"newMgName\":\"江韬\",\"accepterOrganizationId\":1,\"custId\":100006049,\"custName\":\"测试132\",\"accepterName\":\"钟晶晶\",\"accepterOrganizationName\":\"总部业务部\"},{\"instanceId\":\"438733\",\"businessType\":\"cust_transfer\",\"businessKey\":\"100006048\",\"remark\":\"{\\\"oldMgName\\\":\\\"测试\\\",\\\"oldMgId\\\":87,\\\"custId\\\":\\\"100006048\\\",\\\"operName\\\":\\\"测试\\\",\\\"operId\\\":87,\\\"newMgName\\\":\\\"江韬\\\",\\\"custName\\\":\\\"测试131\\\",\\\"newMgid\\\":37}\",\"status\":5,\"createTime\":1508305778000,\"accepterId\":58,\"oldMgId\":87,\"oldMgName\":\"测试\",\"newMgId\":37,\"newMgName\":\"江韬\",\"accepterOrganizationId\":1,\"custId\":100006048,\"custName\":\"测试131\",\"accepterName\":\"钟晶晶\",\"accepterOrganizationName\":\"总部业务部\"},{\"instanceId\":\"438733\",\"businessType\":\"cust_transfer\",\"businessKey\":\"100006047\",\"remark\":\"{\\\"oldMgName\\\":\\\"测试\\\",\\\"oldMgId\\\":87,\\\"custId\\\":\\\"100006047\\\",\\\"operName\\\":\\\"测试\\\",\\\"operId\\\":87,\\\"newMgName\\\":\\\"江韬\\\",\\\"custName\\\":\\\"测试130\\\",\\\"newMgid\\\":37}\",\"status\":5,\"createTime\":1508305778000,\"accepterId\":58,\"oldMgId\":87,\"oldMgName\":\"测试\",\"newMgId\":37,\"newMgName\":\"江韬\",\"accepterOrganizationId\":1,\"custId\":100006047,\"custName\":\"测试130\",\"accepterName\":\"钟晶晶\",\"accepterOrganizationName\":\"总部业务部\"},{\"instanceId\":\"438733\",\"businessType\":\"cust_transfer\",\"businessKey\":\"100006046\",\"remark\":\"{\\\"oldMgName\\\":\\\"测试\\\",\\\"oldMgId\\\":87,\\\"custId\\\":\\\"100006046\\\",\\\"operName\\\":\\\"测试\\\",\\\"operId\\\":87,\\\"newMgName\\\":\\\"江韬\\\",\\\"custName\\\":\\\"测试129\\\",\\\"newMgid\\\":37}\",\"status\":5,\"createTime\":1508305778000,\"accepterId\":58,\"oldMgId\":87,\"oldMgName\":\"测试\",\"newMgId\":37,\"newMgName\":\"江韬\",\"accepterOrganizationId\":1,\"custId\":100006046,\"custName\":\"测试129\",\"accepterName\":\"钟晶晶\",\"accepterOrganizationName\":\"总部业务部\"},{\"instanceId\":\"438733\",\"businessType\":\"cust_transfer\",\"businessKey\":\"100006045\",\"remark\":\"{\\\"oldMgName\\\":\\\"测试\\\",\\\"oldMgId\\\":87,\\\"custId\\\":\\\"100006045\\\",\\\"operName\\\":\\\"测试\\\",\\\"operId\\\":87,\\\"newMgName\\\":\\\"江韬\\\",\\\"custName\\\":\\\"测试128\\\",\\\"newMgid\\\":37}\",\"status\":5,\"createTime\":1508305778000,\"accepterId\":58,\"oldMgId\":87,\"oldMgName\":\"测试\",\"newMgId\":37,\"newMgName\":\"江韬\",\"accepterOrganizationId\":1,\"custId\":100006045,\"custName\":\"测试128\",\"accepterName\":\"钟晶晶\",\"accepterOrganizationName\":\"总部业务部\"},{\"instanceId\":\"438733\",\"businessType\":\"cust_transfer\",\"businessKey\":\"100006044\",\"remark\":\"{\\\"oldMgName\\\":\\\"测试\\\",\\\"oldMgId\\\":87,\\\"custId\\\":\\\"100006044\\\",\\\"operName\\\":\\\"测试\\\",\\\"operId\\\":87,\\\"newMgName\\\":\\\"江韬\\\",\\\"custName\\\":\\\"测试127\\\",\\\"newMgid\\\":37}\",\"status\":5,\"createTime\":1508305778000,\"accepterId\":58,\"oldMgId\":87,\"oldMgName\":\"测试\",\"newMgId\":37,\"newMgName\":\"江韬\",\"accepterOrganizationId\":1,\"custId\":100006044,\"custName\":\"测试127\",\"accepterName\":\"钟晶晶\",\"accepterOrganizationName\":\"总部业务部\"}],\"pageNum\":1}}"
+						}
+					]
+				},
+				{
+					"name": "客户移交list",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}/customer/chg/transport/list?pageNum=1&pageSize=20",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"customer",
+								"chg",
+								"transport",
+								"list"
+							],
+							"query": [
+								{
+									"key": "pageNum",
+									"value": "1",
+									"equals": true
+								},
+								{
+									"key": "pageSize",
+									"value": "20",
+									"equals": true
+								},
+								{
+									"key": "custName",
+									"value": "",
+									"equals": false,
+									"disabled": true
+								},
+								{
+									"key": "oldManagerIds",
+									"value": "",
+									"equals": false,
+									"disabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="签约放款接口" time="1.9999999999999996">
+  <testsuite name="个人授信-签约放款接口 / A创建授信并通过（授信流程） / 登录接口9200" id="87891922-323f-4c2d-8477-5a764edf4ed5" tests="1" time="0.203">
+    <testcase name="Body has token" time="0.203"/>
+  </testsuite>
+  <testsuite name="个人授信-签约放款接口 / A创建授信并通过（授信流程） / 对私客户快速新增" id="239587d0-269d-47f9-b2d7-3754b7daa0ec" tests="1" time="0.078">
+    <testcase name="Body matches string" time="0.078"/>
+  </testsuite>
+  <testsuite name="个人授信-签约放款接口 / A创建授信并通过（授信流程） / 授信申请-获取用户信息" id="0db06473-ed2a-4d8e-bd09-4c3a22bb5e2e" tests="2" time="0.016">
+    <testcase name="Body matches string" time="0.016"/>
+    <testcase name="test" time="0.016"/>
+  </testsuite>
+  <testsuite name="个人授信-签约放款接口 / A创建授信并通过（授信流程） / 授信申请-创建授信接口" id="d83ba60d-a810-4b33-bcb0-d5726cc2a1a0" tests="2" time="0.078">
+    <testcase name="授信申请-创建授信接口" time="0.078"/>
+    <testcase name="Body has creditId" time="0.078"/>
+  </testsuite>
+  <testsuite name="个人授信-签约放款接口 / A创建授信并通过（授信流程） / 授信申请-申请信息-保存申请信息" id="90a9701c-1b35-43dd-ab69-6e6fcf69a360" tests="1" time="0.063">
+    <testcase name="授信申请-申请信息-保存申请信息" time="0.063"/>
+  </testsuite>
+  <testsuite name="个人授信-签约放款接口 / A创建授信并通过（授信流程） / 授信申请-客户经营情况-保存详情接口" id="1a83c377-f60d-4dfd-9499-8106f1123e49" tests="1" time="0.063">
+    <testcase name="授信申请-客户经营情况-保存详情接口" time="0.063"/>
+  </testsuite>
+  <testsuite name="个人授信-签约放款接口 / A创建授信并通过（授信流程） / N征信及法院五查询报告上传" id="95b0e3ae-46ad-4e31-8d46-5d74066683fb" tests="1" time="0.125">
+    <testcase name="N征信及法院五查询报告上传" time="0.125"/>
+  </testsuite>
+  <testsuite name="个人授信-签约放款接口 / A创建授信并通过（授信流程） / 新增：担保合同" id="5699ff9d-40ee-4bb0-9a8a-5c17ffd798fc" tests="1" time="0.062">
+    <testcase name="新增：担保合同" time="0.062"/>
+  </testsuite>
+  <testsuite name="个人授信-签约放款接口 / A创建授信并通过（授信流程） / 授信申请-提交授信申请" id="ccc547ce-e5f9-4e63-8600-58ab010681fc" tests="1" time="0.205">
+    <testcase name="授信申请-提交授信申请" time="0.205"/>
+  </testsuite>
+  <testsuite name="个人授信-签约放款接口 / A创建授信并通过（授信流程） / 登录接口9101" id="c3b2222b-f60a-4b7f-82f8-f40ad19f9f3c" tests="1" time="0.171">
+    <testcase name="Body has token" time="0.171"/>
+  </testsuite>
+  <testsuite name="个人授信-签约放款接口 / A创建授信并通过（授信流程） / 获取当前用户待处理的审批任务" id="6a0a2fea-a0a7-418a-bbe2-82a344e93ca0" tests="2" time="0.016">
+    <testcase name="Body matches string" time="0.016"/>
+    <testcase name="test" time="0.016"/>
+  </testsuite>
+  <testsuite name="个人授信-签约放款接口 / A创建授信并通过（授信流程） / 审批指定流程" id="d50c93ec-d9a4-462f-9e25-536c3c449b96" tests="1" time="0.234">
+    <testcase name="Body matches string" time="0.234"/>
+  </testsuite>
+  <testsuite name="个人授信-签约放款接口 / 登录接口9200" id="b70ba46d-78b1-44cf-a21e-23b018742dc8" tests="1" time="0.173">
+    <testcase name="Body has token" time="0.173"/>
+  </testsuite>
+  <testsuite name="个人授信-签约放款接口 / 查询：一笔授信合同下所有的担保信息" id="890ac0af-f717-4a2f-97eb-5b2fe88298a5" tests="2" time="0.015">
+    <testcase name="Body matches string" time="0.015"/>
+    <testcase name="Body has token" time="0.015"/>
+  </testsuite>
+  <testsuite name="个人授信-签约放款接口 / 担保合同上传" id="689a13c7-d974-4c1d-bbfe-6a0d51cd2803" tests="1" time="0.14">
+    <testcase name="Body matches string" time="0.14"/>
+  </testsuite>
+  <testsuite name="个人授信-签约放款接口 / 查询：所有待发放的授信申请信息" id="daaaa6ea-18f0-4628-aab8-b289855fc636" tests="1" time="0.015">
+    <testcase name="Body matches string" time="0.015"/>
+  </testsuite>
+  <testsuite name="个人授信-签约放款接口 / 发生申请" id="b2351c27-20b7-443d-aa14-966f8730ec22" tests="1" time="0.062">
+    <testcase name="发生申请" time="0.062"/>
+  </testsuite>
+  <testsuite name="个人授信-签约放款接口 / 查询：所有已发放待确认的授信申请信息" id="6e04cdf5-1c64-4f01-8992-d23bbd26e87c" tests="1" time="0.015">
+    <testcase name="Body matches string" time="0.015"/>
+  </testsuite>
+  <testsuite name="个人授信-签约放款接口 / 发放确认" id="add12a5a-5f0e-4964-a9d6-f9775315cf19" tests="1" time="0.047">
+    <testcase name="Body matches string" time="0.047"/>
+  </testsuite>
+  <testsuite name="个人授信-签约放款接口 / 发放" id="61d80e34-a4a4-4a06-8aaa-8cae6f3e5007" tests="1" time="0.047">
+    <testcase name="Body matches string" time="0.047"/>
+  </testsuite>
+  <testsuite name="个人授信-签约放款接口 / 回退" id="9adeb723-5efe-4735-b62d-645225063ff1" tests="1" time="0.062">
+    <testcase name="Body matches string" time="0.062"/>
+  </testsuite>
+  <testsuite name="个人授信-签约放款接口 / 发生申请" id="3d70917d-5c12-42e5-bc6e-e19288d81a5f" tests="1" time="0.063">
+    <testcase name="发生申请" time="0.063"/>
+  </testsuite>
+  <testsuite name="个人授信-签约放款接口 / 终结" id="60c86f73-faf4-4889-a6c3-b6d9531bf19c" tests="1" time="0.047">
+    <testcase name="Body matches string" time="0.047"/>
+  </testsuite>
+</testsuites>

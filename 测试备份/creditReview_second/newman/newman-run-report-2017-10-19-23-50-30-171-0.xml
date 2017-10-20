@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="经营情况相关接口" time="0.5209999999999999">
+  <testsuite name="S个人授信经营情况接口相关 / 授信申请 / 登录接口9200" id="3d62e7a6-4cab-46f2-9f5e-439bb5231cea" tests="1" time="0.234">
+    <testcase name="Body has token" time="0.234"/>
+  </testsuite>
+  <testsuite name="S个人授信经营情况接口相关 / 授信申请 / 对私客户快速新增" id="8a219be3-66c1-4aaa-b436-8791b76284ab" tests="1" time="0.082">
+    <testcase name="Body matches string" time="0.082"/>
+  </testsuite>
+  <testsuite name="S个人授信经营情况接口相关 / 授信申请 / 授信申请-获取用户信息" id="0728ce64-f0f6-48bc-9f8a-73ddf4af019e" tests="2" time="0.032">
+    <testcase name="Body matches string" time="0.032"/>
+    <testcase name="test" time="0.032"/>
+  </testsuite>
+  <testsuite name="S个人授信经营情况接口相关 / 授信申请 / 授信申请-创建授信接口" id="8a31d468-7047-462d-8924-03f240ae2896" tests="2" time="0.094">
+    <testcase name="Body matches string" time="0.094"/>
+    <testcase name="Body has creditId" time="0.094"/>
+  </testsuite>
+  <testsuite name="S个人授信经营情况接口相关 / 授信申请-客户经营情况-保存详情接口" id="4fed4be1-93ba-4d85-8c4c-ef16d08b41a4" tests="1" time="0.047">
+    <testcase name="授信申请-客户经营情况-保存详情接口" time="0.047"/>
+  </testsuite>
+  <testsuite name="S个人授信经营情况接口相关 / 授信申请-客户经营情况-获取详情接口" id="80f9e382-6a60-4197-a8ef-2003875cd5eb" tests="1" time="0.016">
+    <testcase name="授信申请-客户经营情况-获取详情接口" time="0.016"/>
+  </testsuite>
+  <testsuite name="S个人授信经营情况接口相关 / 授信申请-客户经营情况-获取授信经营情况列表" id="570c7543-a8a9-4dad-b680-c20e6bcf7e62" tests="1" time="0.016">
+    <testcase name="授信申请-客户经营情况-获取授信经营情况列表" time="0.016"/>
+  </testsuite>
+</testsuites>

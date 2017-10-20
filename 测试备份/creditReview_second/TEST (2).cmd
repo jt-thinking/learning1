@@ -1,0 +1,1 @@
+call  newman run 签约放款接口.postman_collection.json   -e test_environment.json  --export-environment test_environment.json -r junit

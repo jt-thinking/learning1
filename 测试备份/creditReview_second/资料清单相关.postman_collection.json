@@ -1,0 +1,880 @@
+{
+	"info": {
+		"name": "资料清单相关",
+		"_postman_id": "ef285f31-9e36-b3d6-fa51-751325db4b16",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "N资料清单相关",
+			"description": "",
+			"item": [
+				{
+					"name": "S授信申请",
+					"description": "",
+					"item": [
+						{
+							"name": "登录接口9200",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"var data=JSON.parse(responseBody);",
+											"",
+											"if (data.data.token){",
+											"    tests[\"Body has token\"]=true;",
+											"    postman.setEnvironmentVariable(\"token\",data.data.token);",
+											"",
+											"}",
+											"else{",
+											"    tests[\"Body has token\"]=false;",
+											"}"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "device",
+										"value": "1"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{URL}}login/signIn?jobNumber=9200&password=202CB962AC59075B964B07152D234B70",
+									"host": [
+										"{{URL}}login"
+									],
+									"path": [
+										"signIn"
+									],
+									"query": [
+										{
+											"key": "jobNumber",
+											"value": "9200",
+											"equals": true
+										},
+										{
+											"key": "password",
+											"value": "202CB962AC59075B964B07152D234B70",
+											"equals": true
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "对私客户快速新增",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Body matches string\"] = responseBody.has(\"成功\");"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "{{token}}"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{URL}}customer/person/quicklyAdd?custName=测试90&certNo={{certNo}}",
+									"host": [
+										"{{URL}}customer"
+									],
+									"path": [
+										"person",
+										"quicklyAdd"
+									],
+									"query": [
+										{
+											"key": "custName",
+											"value": "测试90",
+											"equals": true
+										},
+										{
+											"key": "certNo",
+											"value": "{{certNo}}",
+											"equals": true
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "授信申请-获取用户信息",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Body matches string\"] = responseBody.has(\"成功\");",
+											"var data=JSON.parse(responseBody);",
+											"",
+											"if (data.data.custId){",
+											"    tests[\"test\"]=true;",
+											"    postman.setEnvironmentVariable(\"custId\",data.data.custId);",
+											"",
+											"}",
+											"else{",
+											"    tests[\"test\"]=false;",
+											"}"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "{{token}}"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{URL}}business/credit/fetchUser?certNumber={{certNo}}",
+									"host": [
+										"{{URL}}business"
+									],
+									"path": [
+										"credit",
+										"fetchUser"
+									],
+									"query": [
+										{
+											"key": "certNumber",
+											"value": "{{certNo}}",
+											"equals": true,
+											"description": "身份证号码"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "授信申请-创建授信接口",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Body matches string\"] = responseBody.has(\"成功\");",
+											"var data=JSON.parse(responseBody);",
+											"if(data.data){",
+											"    tests[\"Body has creditId\"]=true;",
+											"    postman.setEnvironmentVariable(\"creditId\",data.data);",
+											"",
+											"}else{",
+											"    tests[\"Body has creditId\"]=false;",
+											"}"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "{{token}}"
+									},
+									{
+										"key": "device",
+										"value": "1"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{URL}}business/credit/add?id={{custId}}",
+									"host": [
+										"{{URL}}business"
+									],
+									"path": [
+										"credit",
+										"add"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "{{custId}}",
+											"equals": true
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "N征信及法院五查询报告上传",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"征信及法院五查询报告上传\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"成功\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"value": "",
+									"description": "",
+									"type": "file"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/business/material/upload?id={{creditId}}&type=credit_report&date=1505092755237&remark=123",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"business",
+								"material",
+								"upload"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{creditId}}",
+									"equals": true
+								},
+								{
+									"key": "type",
+									"value": "credit_report",
+									"equals": true,
+									"description": "报告类型:征信报告:credit_report;诉讼案件信息:litigation;开庭公告:notice;裁判文书:sentence;执行案件:execute;法院执行:court_execute;"
+								},
+								{
+									"key": "date",
+									"value": "1505092755237",
+									"equals": true
+								},
+								{
+									"key": "remark",
+									"value": "123",
+									"equals": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "征信及法院五查询报告下载",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}business/material/download?id={{creditId}}&type=credit_report",
+							"host": [
+								"{{URL}}business"
+							],
+							"path": [
+								"material",
+								"download"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{creditId}}",
+									"equals": true,
+									"description": "授信编号"
+								},
+								{
+									"key": "type",
+									"value": "credit_report",
+									"equals": true,
+									"description": "报告类型:征信报告:credit_report;诉讼案件信息:litigation;开庭公告:notice;裁判文书:sentence;执行案件:execute;法院执行:court_execute;"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "征信及法院五查询报告获取",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"征信及法院五查询报告获取\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"成功\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}/business/material/fetch?id={{creditId}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"business",
+								"material",
+								"fetch"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{creditId}}",
+									"equals": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "征信及五查询列表",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"征信及五查询列表\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"成功\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}/business/material/list?id=100000036",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"business",
+								"material",
+								"list"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "100000036",
+									"equals": true,
+									"description": "客户编号"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "其他附件上传",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"其他附件上传\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"成功\");",
+									"});",
+									"",
+									"var data=JSON.parse(responseBody);",
+									"",
+									"if (data.data){",
+									"    tests[\"Body has token\"]=true;",
+									"    postman.setEnvironmentVariable(\"materialId\",data.data);",
+									"",
+									"}",
+									"else{",
+									"    tests[\"Body has token\"]=false;",
+									"}"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "{{creditId}}",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "name",
+									"value": "善良的我",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "remark",
+									"value": "123",
+									"type": "text",
+									"description": ""
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}business/material/other/add",
+							"host": [
+								"{{URL}}business"
+							],
+							"path": [
+								"material",
+								"other",
+								"add"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "其他附件目录删除",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"其他附件目录删除\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"成功\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}/business/material/other/delete?id={{materialId}}&creditId={{creditId}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"business",
+								"material",
+								"other",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{materialId}}",
+									"equals": true,
+									"description": "目录编号"
+								},
+								{
+									"key": "creditId",
+									"value": "{{creditId}}",
+									"equals": true,
+									"description": "授信编号"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "其他附件单个文件上传",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"其他附件单个文件上传\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"成功\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"value": "",
+									"description": "",
+									"type": "file"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/business/material/other/file/upload?id={{materialId}}&creditId={{creditId}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"business",
+								"material",
+								"other",
+								"file",
+								"upload"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{materialId}}",
+									"equals": true,
+									"description": "目录编号"
+								},
+								{
+									"key": "creditId",
+									"value": "{{creditId}}",
+									"equals": true,
+									"description": "授信编号"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "其他附件文件列表获取",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"其他附件文件列表获取\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"成功\");",
+									"});",
+									"",
+									"var data=JSON.parse(responseBody);",
+									"",
+									"if (data.data[0].reportId){",
+									"    tests[\"Body has token\"]=true;",
+									"    postman.setEnvironmentVariable(\"reportId\",data.data[0].reportId);",
+									"",
+									"}",
+									"else{",
+									"    tests[\"Body has token\"]=false;",
+									"}"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}/business/material/other/file/list?id={{materialId}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"business",
+								"material",
+								"other",
+								"file",
+								"list"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{materialId}}",
+									"equals": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "其他附件单个文件下载",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "device",
+								"value": "1"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}business/material/other/file/download?id=80&reportId=3739740465090560",
+							"host": [
+								"{{URL}}business"
+							],
+							"path": [
+								"material",
+								"other",
+								"file",
+								"download"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "80",
+									"equals": true
+								},
+								{
+									"key": "reportId",
+									"value": "3739740465090560",
+									"equals": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "其他附件单个文件删除",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}/business/material/other/file/delete?id=79&reportId=3739607361212416&creditId={{creditId}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"business",
+								"material",
+								"other",
+								"file",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "79",
+									"equals": true,
+									"description": "文件编号"
+								},
+								{
+									"key": "reportId",
+									"value": "3739607361212416",
+									"equals": true,
+									"description": "目录编号"
+								},
+								{
+									"key": "creditId",
+									"value": "{{creditId}}",
+									"equals": true,
+									"description": "授信编号"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "其他附件列表获取",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"其他附件列表获取\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"成功\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}/business/material/other/list?id={{creditId}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"business",
+								"material",
+								"other",
+								"list"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{creditId}}",
+									"equals": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "根据客户编号获取其他附件列表",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"根据客户编号获取其他附件列表\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"成功\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}/business/material/other/listCustomer?id={{custId}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"business",
+								"material",
+								"other",
+								"listCustomer"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{custId}}",
+									"equals": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
