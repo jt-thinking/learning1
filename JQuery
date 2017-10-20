@@ -505,6 +505,30 @@ $('elem').hide(3000).show(3000) 让元素执行3秒的隐藏动画，然后执�
 .slideUp( [duration ] [, easing ] [, complete ] )
 
 #jQuery中上卷下拉切换slideToggle
+#jQuery中淡出动画fadeOut
+#jQuery中淡入动画fadeIn
+#jQuery中淡入淡出切换fadeToggle
+所谓"切换"，即如果元素当前是可见的，则将其隐藏(淡出)；如果元素当前是隐藏的，则使其显示(淡入)
+
+#jQuery中淡入效果fadeTo
+动画改变透明度
+#jQuery中动画animate(上)
+有些复杂的动画通过之前学到的几个动画函数是不能够实现，这时候就需要强大的animate方法了
+显而易见，animate方法更加灵活了，可以精确的控制样式属性从而执行动画
+animate()方法允许我们在任意的数值的CSS属性上创建动画
+比如常见的，border、margin、padding、width、height、font、left、top、right、bottom、wordSpacing等等这些都是能产生动画效果的。background-color很明显不可以
+
+#jQuery中动画animate(下)
+animate在执行动画中，如果需要观察动画的一些执行情况，或者在动画进行中的某一时刻进行一些其他处理，我们可以通过animate提供的第二种设置语法，传递一个对象参数，可以拿到动画执行状态一些通知
+
+#jQuery中停止动画stop
+.stop(); 停止当前动画，点击在暂停处继续开始
+.stop(true); 如果同一元素调用多个动画方法，尚未被执行的动画被放置在元素的效果队列中。这些动画不会开始，直到第一个完成。当调用.stop()的时候，队列中的下一个动画立即开始。如果clearQueue参数提供true值,那么在队列中的动画其余被删除并永远不会运行
+.stop(true,true); 当前动画将停止，但该元素上的 CSS 属性会被立刻修改成动画的目标值素合集
+
+#jQuery中each方法的应用
+jQuery中有个很重要的核心方法each，大部分jQuery方法在内部都会调用each，其主要的原因的就是jQuery的实例是一个元素合集
+each就是for循环方法的一个包装，内部就是通过for遍历数组与对象，通过回调函数返回内部迭代的一些参数，第一个参数是当前迭代成员在对象或数组中的索引值(从0开始计数)，第二个参数是当前迭代成员(与this的引用相同
 
 jQuery基础(五)
 使用load()方法异步请求数据
