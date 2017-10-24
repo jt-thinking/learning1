@@ -1,0 +1,450 @@
+{
+	"info": {
+		"name": "A客户详情接口",
+		"_postman_id": "8d79f4ee-f410-5941-5091-dea22d49f6c6",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "客户详情接口",
+			"item": [
+				{
+					"name": "A登录接口9200",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var data=JSON.parse(responseBody);",
+									"",
+									"if (data.data.token){",
+									"    tests[\"Body has token\"]=true;",
+									"    postman.setEnvironmentVariable(\"token\",data.data.token);",
+									"",
+									"}",
+									"else{",
+									"    tests[\"Body has token\"]=false;",
+									"}",
+									"",
+									"",
+									"",
+									"pm.test(\"9101登录\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"成功\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "device",
+								"value": "1"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}login/signIn?jobNumber=9200&password=202CB962AC59075B964B07152D234B70",
+							"host": [
+								"{{URL}}login"
+							],
+							"path": [
+								"signIn"
+							],
+							"query": [
+								{
+									"key": "jobNumber",
+									"value": "9200",
+									"equals": true
+								},
+								{
+									"key": "password",
+									"value": "202CB962AC59075B964B07152D234B70",
+									"equals": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "授信记录",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"成功\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}/cust/details/listCredit?custId=100006335",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"cust",
+								"details",
+								"listCredit"
+							],
+							"query": [
+								{
+									"key": "custId",
+									"value": "100006335",
+									"equals": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "投资记录（进行中）",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"成功\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}/cust/details/listFundIng?custId=100000102",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"cust",
+								"details",
+								"listFundIng"
+							],
+							"query": [
+								{
+									"key": "custId",
+									"value": "100000102",
+									"equals": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "投资记录（已完结）",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"成功\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}/cust/details/listFundEnd?custId=100000102",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"cust",
+								"details",
+								"listFundEnd"
+							],
+							"query": [
+								{
+									"key": "custId",
+									"value": "100000102",
+									"equals": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "回款计划表",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"成功\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}cust/details/listFundPlan?custId=100000102&prdId=008PN0000000306",
+							"host": [
+								"{{URL}}cust"
+							],
+							"path": [
+								"details",
+								"listFundPlan"
+							],
+							"query": [
+								{
+									"key": "custId",
+									"value": "100000102",
+									"equals": true,
+									"description": "客户编号"
+								},
+								{
+									"key": "prdId",
+									"value": "008PN0000000306",
+									"equals": true,
+									"description": "产品编号"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "授信关联的担保记录",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"成功\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}/cust/details/listGuarantee4Credit?creditId={{creditId}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"cust",
+								"details",
+								"listGuarantee4Credit"
+							],
+							"query": [
+								{
+									"key": "creditId",
+									"value": "{{creditId}}",
+									"equals": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "个人关联的所有贷款记录",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"成功\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}/cust/details/listLoan?creditId=100005651",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"cust",
+								"details",
+								"listLoan"
+							],
+							"query": [
+								{
+									"key": "creditId",
+									"value": "100005651",
+									"equals": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "授信关联的贷款记录",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"成功\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}/cust/details/listLoan4Credit?creditId={{creditId}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"cust",
+								"details",
+								"listLoan4Credit"
+							],
+							"query": [
+								{
+									"key": "creditId",
+									"value": "{{creditId}}",
+									"equals": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "还款计划表",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"成功\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}/cust/details/listLoanPlan?custId=100005651&prdId=008PN0000001810",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"cust",
+								"details",
+								"listLoanPlan"
+							],
+							"query": [
+								{
+									"key": "custId",
+									"value": "100005651",
+									"equals": true,
+									"description": "客户编号"
+								},
+								{
+									"key": "prdId",
+									"value": "008PN0000001810",
+									"equals": true,
+									"description": "产品编号"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

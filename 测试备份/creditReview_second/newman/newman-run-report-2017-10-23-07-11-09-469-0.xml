@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="A客户详情接口" time="0.494">
+  <testsuite name="客户详情接口 / A登录接口9200" id="6c244a18-1952-458d-8212-726c8f7ee533" tests="2" time="0.233">
+    <testcase name="9101登录" time="0.233"/>
+    <testcase name="Body has token" time="0.233"/>
+  </testsuite>
+  <testsuite name="客户详情接口 / 授信记录" id="6caed493-c470-4c6c-9207-b88279c3c1b1" tests="1" time="0.017">
+    <testcase name="Body matches string" time="0.017"/>
+  </testsuite>
+  <testsuite name="客户详情接口 / 投资记录（进行中）" id="972156aa-7785-42ef-a04a-cf91f2f29d5c" tests="1" time="0.101">
+    <testcase name="Body matches string" time="0.101"/>
+  </testsuite>
+  <testsuite name="客户详情接口 / 投资记录（已完结）" id="eb8be899-c499-41a5-a122-f321032e8550" tests="1" time="0.11">
+    <testcase name="Body matches string" time="0.11"/>
+  </testsuite>
+  <testsuite name="客户详情接口 / 回款计划表" id="e057d4ec-bce6-4629-8c1c-f305976bd46c" tests="1" time="0.014">
+    <testcase name="Body matches string" time="0.014"/>
+  </testsuite>
+  <testsuite name="客户详情接口 / 授信关联的担保记录" id="1fca73a7-017c-4e4e-8aa0-a75ea2791713" tests="1" time="0.006">
+    <testcase name="Body matches string" time="0.006"/>
+  </testsuite>
+  <testsuite name="客户详情接口 / 个人关联的所有贷款记录" id="7cb28026-bf3e-4e2d-9897-9f5582235717" tests="1" time="0">
+    <testcase name="Body matches string" time="0"/>
+  </testsuite>
+  <testsuite name="客户详情接口 / 授信关联的贷款记录" id="3ff43de3-bb38-491e-96a0-a8539f06b744" tests="1" time="0">
+    <testcase name="Body matches string" time="0"/>
+  </testsuite>
+  <testsuite name="客户详情接口 / 还款计划表" id="ec93df7e-963f-49b3-832b-5430753a0a61" tests="1" time="0.013">
+    <testcase name="Body matches string" time="0.013"/>
+  </testsuite>
+</testsuites>

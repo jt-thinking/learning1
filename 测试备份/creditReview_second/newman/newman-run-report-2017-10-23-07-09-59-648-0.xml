@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="A客户详情接口" time="0.14100000000000001">
+  <testsuite name="客户详情接口 / 授信记录" id="90a2f004-6029-485e-902c-1cf7e6fdbe27" tests="1" time="0.078">
+    <testcase name="Body matches string" time="0.078">
+      <failure type="AssertionFailure">
+        <![CDATA[Failed 1 times.]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="客户详情接口 / 投资记录（进行中）" id="aebd3d78-b471-4f43-8fd3-d6ea7e26913d" tests="1" time="0">
+    <testcase name="Body matches string" time="0">
+      <failure type="AssertionFailure">
+        <![CDATA[Failed 1 times.]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="客户详情接口 / 投资记录（已完结）" id="83b15de3-9efa-478e-908e-a76c1b19c715" tests="1" time="0.016">
+    <testcase name="Body matches string" time="0.016">
+      <failure type="AssertionFailure">
+        <![CDATA[Failed 1 times.]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="客户详情接口 / 回款计划表" id="97766716-6477-41eb-b22f-e18415b7761f" tests="1" time="0">
+    <testcase name="Body matches string" time="0">
+      <failure type="AssertionFailure">
+        <![CDATA[Failed 1 times.]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="客户详情接口 / 授信关联的担保记录" id="1f376767-3318-45f1-bb52-5502f62fb049" tests="1" time="0.016">
+    <testcase name="Body matches string" time="0.016">
+      <failure type="AssertionFailure">
+        <![CDATA[Failed 1 times.]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="客户详情接口 / 个人关联的所有贷款记录" id="843b4088-ff5d-46ac-84fc-85b8471df6a0" tests="1" time="0">
+    <testcase name="Body matches string" time="0">
+      <failure type="AssertionFailure">
+        <![CDATA[Failed 1 times.]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="客户详情接口 / 授信关联的贷款记录" id="4277f2fa-724f-4dbc-a255-ab83fce333c9" tests="1" time="0.016">
+    <testcase name="Body matches string" time="0.016">
+      <failure type="AssertionFailure">
+        <![CDATA[Failed 1 times.]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="客户详情接口 / 还款计划表" id="1c9d2b26-3902-48c6-a524-1de9ca80223f" tests="1" time="0.015">
+    <testcase name="Body matches string" time="0.015">
+      <failure type="AssertionFailure">
+        <![CDATA[Failed 1 times.]]>
+      </failure>
+    </testcase>
+  </testsuite>
+</testsuites>

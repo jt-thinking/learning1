@@ -1,7 +1,7 @@
 {
   "_": {
     "postman_variable_scope": "environment",
-    "postman_exported_at": "2017-10-19T23:50:59.005Z",
+    "postman_exported_at": "2017-10-23T07:11:09.467Z",
     "postman_exported_using": "Newman/3.8.3"
   },
   "id": "8532332f-ab81-ddee-d44a-41d4f8970d90",
@@ -14,7 +14,7 @@
     },
     {
       "type": "any",
-      "value": "56020d7305064cab9dc429b68aa3c3e8",
+      "value": "dbfea9f4e89d472e83ddced39e0dbcc4",
       "key": "token"
     },
     {
@@ -29,22 +29,22 @@
     },
     {
       "type": "any",
-      "value": "SX3755964209057792",
+      "value": "SX3773015026257920",
       "key": "creditId"
     },
     {
       "type": "any",
-      "value": "465914",
+      "value": "466260",
       "key": "taskId"
     },
     {
       "type": "any",
-      "value": "100006351",
+      "value": "100006366",
       "key": "custId"
     },
     {
       "type": "any",
-      "value": "432",
+      "value": "446",
       "key": "certNo"
     },
     {
@@ -54,12 +54,12 @@
     },
     {
       "type": "any",
-      "value": "88",
+      "value": "89",
       "key": "loanId"
     },
     {
       "type": "any",
-      "value": "DB3755961397628928",
+      "value": "DB3773012147785728",
       "key": "guaranteeId"
     },
     {
@@ -79,6 +79,6 @@
     }
   ],
   "_postman_variable_scope": "environment",
-  "_postman_exported_at": "2017-10-19T23:51:47.094Z",
+  "_postman_exported_at": "2017-10-23T07:12:06.397Z",
   "_postman_exported_using": "Newman/3.8.3"
 }
