@@ -171,7 +171,7 @@
     <button>
         <span class="sb">这是一个按钮</span>
     </button>
- <!--    <div class="dropdown">
+    <div class="dropdown">
         <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
             这是按钮
             <span class="caret"></span>
@@ -183,21 +183,38 @@
             <li> <a href="http://www.imooc.com">慕课网</a></li>
             <li> <a href="http://www.imooc.com">慕课网</a></li>
         </ul>
-    </div> -->
-    	<select class="input-sm" class="mooc">
-    		<option>这是一个按钮</option>
-			<option value="" class="mooc"> 慕课网</option>
-			<option value=""> <a href="http://www.imooc.com">慕课网</a></option>
-			<option value=""> <a href="http://www.imooc.com">慕课网</a></option>
+    </div>
+    	<select class="input-sm" id="mooc" >
+    		<option value="0">请选择</option>
+			<option value="1"> 慕课网</option>
+			<option value="2"> 慕课网</option>
+			<option value="3">慕课网 </option>
 
     	</select>
 		<script>
-			$(".mooc").click(function(){
-				 $(location).attr("href", "http://www.imooc.com");
-				 alert();
-			})
+			
+			$("#mooc").change(
+				function(){
+					var value=$("#mooc option:selected").val();
+					// console.log(value);
+					if (value==1){
+						 $(location).attr("href", "http://www.imooc.com");
+					}
+				}
+			)
+
+
+			
+			
 
 		</script>
+
+
+		<div class="input-group">
+			<div class="input-group-addon">bb</div>
+			<input type="text" class="form-control" name="">
+
+		</div>
 
 </body>
 
