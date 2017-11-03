@@ -1087,6 +1087,13 @@ Position属性值
 
 Position的属性值共有四个static、relative、absolute、fixed。
 
+absolute和float的类似点
+包裹性  破坏性
+
+绝对定位生效的情况下，float属性一律是无效的
+float 是占据实体位置的？而absolute 是悬空的？
+absolute位置跟随
+
 Static
 
 所有元素在默认的情况下position属性均为static，而我们在布局上经常会用到的相对定位和绝对定位常用的属性top、bottom、left、right在position为static的情况下无效。其用法为：在改变了元素的position属性后可以将元素重置为static让其回归到页面默认的普通流中。
@@ -1367,3 +1374,15 @@ opacity:0.5;
   border-radius: 50%;
   background: #fff;
 }
+
+
+#CSS flex 属性
+让元素集拥有相同的长度
+
+#flex-wrap：nowrap | wrap | wrap-reverse
+nowrap：
+flex容器为单行。该情况下flex子项可能会溢出容器
+wrap：
+flex容器为多行。该情况下flex子项溢出的部分会被放置到新行，子项内部会发生断行
+wrap-reverse：
+反转 wrap 排列。

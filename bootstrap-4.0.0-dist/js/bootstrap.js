@@ -111,6 +111,7 @@ var Util = function () {
     getSelectorFromElement: function getSelectorFromElement(element) {
       var selector = element.getAttribute('data-target');
 
+// 注意逻辑运算符的顺序，! > === > ||
       if (!selector || selector === '#') {
         selector = element.getAttribute('href') || '';
       }
@@ -123,10 +124,11 @@ var Util = function () {
       }
     },
     reflow: function reflow(element) {
-      return element.offsetHeight;
+      return element.offsetHeight;  //返回元素的可见高度
     },
     triggerTransitionEnd: function triggerTransitionEnd(element) {
       $(element).trigger(transition.end);
+      
     },
     supportsTransitionEnd: function supportsTransitionEnd() {
       return Boolean(transition);
@@ -150,7 +152,7 @@ var Util = function () {
   };
   setTransitionEndSupport();
   return Util;
-}($);
+}($);  //自动加载的匿名方法
 
 function _defineProperties(target, props) {
   for (var i = 0; i < props.length; i++) {
