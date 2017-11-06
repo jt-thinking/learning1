@@ -1,7 +1,7 @@
 {
   "_": {
     "postman_variable_scope": "environment",
-    "postman_exported_at": "2017-10-23T07:11:09.467Z",
+    "postman_exported_at": "2017-11-06T01:09:01.201Z",
     "postman_exported_using": "Newman/3.8.3"
   },
   "id": "8532332f-ab81-ddee-d44a-41d4f8970d90",
@@ -14,7 +14,7 @@
     },
     {
       "type": "any",
-      "value": "dbfea9f4e89d472e83ddced39e0dbcc4",
+      "value": "77bc6d1d47a64b7a8236466ce1737b24",
       "key": "token"
     },
     {
@@ -79,6 +79,6 @@
     }
   ],
   "_postman_variable_scope": "environment",
-  "_postman_exported_at": "2017-10-23T07:12:06.397Z",
+  "_postman_exported_at": "2017-11-06T01:10:49.307Z",
   "_postman_exported_using": "Newman/3.8.3"
 }

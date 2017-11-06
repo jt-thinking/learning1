@@ -1,0 +1,221 @@
+{
+	"info": {
+		"name": "area-controller",
+		"_postman_id": "b812d8c4-0644-9fcc-8c54-f05869658916",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "A登录接口9200",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var data=JSON.parse(responseBody);",
+							"",
+							"if (data.data.token){",
+							"    tests[\"Body has token\"]=true;",
+							"    postman.setEnvironmentVariable(\"token\",data.data.token);",
+							"",
+							"}",
+							"else{",
+							"    tests[\"Body has token\"]=false;",
+							"}",
+							"",
+							"",
+							"",
+							"pm.test(\"9101登录\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"成功\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "device",
+						"value": "1"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}login/signIn?jobNumber=9200&password=202CB962AC59075B964B07152D234B70",
+					"host": [
+						"{{URL}}login"
+					],
+					"path": [
+						"signIn"
+					],
+					"query": [
+						{
+							"key": "jobNumber",
+							"value": "9200",
+							"equals": true
+						},
+						{
+							"key": "password",
+							"value": "202CB962AC59075B964B07152D234B70",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "根据区划编号，获取区划信息",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"成功\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}area/get?areaId=331081000000",
+					"host": [
+						"{{URL}}area"
+					],
+					"path": [
+						"get"
+					],
+					"query": [
+						{
+							"key": "areaId",
+							"value": "331081000000",
+							"equals": true,
+							"description": "区划编号，12位，（省2+地市2+县市区2+乡镇街道3+村3）： 00 00 00 000 000"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "获取下级行政区划代码",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"成功\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}/area/subArea/list?areaId=331081000000&areaName=太平街道",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"area",
+						"subArea",
+						"list"
+					],
+					"query": [
+						{
+							"key": "areaId",
+							"value": "331081000000",
+							"equals": true
+						},
+						{
+							"key": "areaName",
+							"value": "太平街道",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "获取指定等级所有区划信息",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"成功\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}area/subArea/level/list?level=1&areaName=浙江",
+					"host": [
+						"{{URL}}area"
+					],
+					"path": [
+						"subArea",
+						"level",
+						"list"
+					],
+					"query": [
+						{
+							"key": "level",
+							"value": "1",
+							"equals": true,
+							"description": "等级：1-省、2-地市、3-县市区、4-乡镇、5-村"
+						},
+						{
+							"key": "areaName",
+							"value": "浙江",
+							"equals": true,
+							"description": "名称"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

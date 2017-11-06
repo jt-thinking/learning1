@@ -11,3 +11,6 @@ rem 个人授信相关
 
 call newman run A客户详情接口.postman_collection.json   -e test_environment.json  --export-environment test_environment.json -r junit
 rem A客户详情接口
+
+call newman run area-controller.postman_collection.json   -e test_environment.json  --export-environment test_environment.json -r junit
+rem 行政区划查询

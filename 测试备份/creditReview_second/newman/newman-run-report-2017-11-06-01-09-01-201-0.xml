@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="area-controller" time="0.331">
+  <testsuite name="A登录接口9200" id="d824c65c-6e3f-4462-a1b6-28ee8cd98015" tests="2" time="0.268">
+    <testcase name="9101登录" time="0.268"/>
+    <testcase name="Body has token" time="0.268"/>
+  </testsuite>
+  <testsuite name="根据区划编号，获取区划信息" id="947f4b65-d6c7-4b14-8886-d93e6d9aac3a" tests="0" time="0.016"/>
+  <testsuite name="获取下级行政区划代码" id="4a27082a-b777-4b85-9211-294162ceeec2" tests="0" time="0"/>
+  <testsuite name="获取指定等级所有区划信息" id="e22b9918-d7db-4a82-97fe-bbca8d45b0c3" tests="0" time="0.047"/>
+</testsuites>
