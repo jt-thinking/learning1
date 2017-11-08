@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="黑名单相关" time="1.4799999999999995">
+  <testsuite name="黑名单相关 / S加入黑名单 / 登录接口9201" id="65509be2-59f2-48d5-ac2b-225e1e99c2bb" tests="1" time="0.251">
+    <testcase name="Body has token" time="0.251"/>
+  </testsuite>
+  <testsuite name="黑名单相关 / S加入黑名单 / 对私客户快速新增" id="98a9096b-c14f-4e5a-b8de-4badb398b362" tests="1" time="0.081">
+    <testcase name="Body matches string" time="0.081"/>
+  </testsuite>
+  <testsuite name="黑名单相关 / S加入黑名单 / 授信申请-获取用户信息" id="46e2614d-2bb9-40ac-af64-d6bbb93b69ea" tests="1" time="0.015">
+    <error>
+      <![CDATA[Iteration: 0
+
+---
+testScriptError: undefined
+---
+]]>
+    </error>
+    <testcase name="Body matches string" time="0.015">
+      <failure type="AssertionFailure">
+        <![CDATA[Failed 1 times.]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="黑名单相关 / S加入黑名单 / 加入黑名单" id="74694a77-3bbd-49a0-b651-eb158cb4a4f0" tests="1" time="0.078">
+    <testcase name="Body matches string" time="0.078"/>
+  </testsuite>
+  <testsuite name="黑名单相关 / S加入黑名单 / 查询黑名单列表" id="17bcf564-40d7-4d63-94f8-935c559d7c27" tests="0" time="0.02">
+    <error>
+      <![CDATA[Iteration: 0
+
+---
+testScriptError: undefined
+---
+]]>
+    </error>
+  </testsuite>
+  <testsuite name="黑名单相关 / A撤销黑名单 / 登录接口9201" id="cb3ab882-ec3a-4085-901a-210a651e4dd0" tests="1" time="0.188">
+    <testcase name="Body has token" time="0.188"/>
+  </testsuite>
+  <testsuite name="黑名单相关 / A撤销黑名单 / 查询黑名单列表" id="e22e7945-1f9f-440e-a81b-339639591b3f" tests="2" time="0.015">
+    <testcase name="查询黑名单列表" time="0.015"/>
+    <testcase name="将黑名单列表第一个人的ID设置为参数" time="0.015">
+      <failure type="AssertionFailure">
+        <![CDATA[Failed 1 times.]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="黑名单相关 / A撤销黑名单 / 申请撤销黑名单" id="5429d995-908a-4c6b-b8a8-ec8237e2307e" tests="1" time="0.221">
+    <testcase name="申请撤销黑名单" time="0.221"/>
+  </testsuite>
+  <testsuite name="黑名单相关 / A撤销黑名单 / 登录接口9101" id="a9110709-3174-412e-b621-ca976c45a6a2" tests="1" time="0.174">
+    <testcase name="Body has token" time="0.174"/>
+  </testsuite>
+  <testsuite name="黑名单相关 / A撤销黑名单 / 获取当前用户待处理的审批任务" id="70a833af-34c7-442c-b582-be98f178d587" tests="2" time="0.015">
+    <testcase name="Body matches string" time="0.015"/>
+    <testcase name="test" time="0.015"/>
+  </testsuite>
+  <testsuite name="黑名单相关 / A撤销黑名单 / 审批指定流程" id="966f7737-540c-46fa-9765-05d5fdaa34f2" tests="1" time="0.376">
+    <testcase name="黑名单撤销审批通过" time="0.376"/>
+  </testsuite>
+  <testsuite name="黑名单相关 / A撤销黑名单 / 删除对私客户" id="23bb7d37-1343-47bb-8ee3-81af58897434" tests="1" time="0">
+    <testcase name="Body matches string" time="0">
+      <failure type="AssertionFailure">
+        <![CDATA[Failed 1 times.]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="黑名单相关 / A查询黑名单历史列表" id="fb99938e-35e8-4006-8d37-b11570f4cec6" tests="0" time="0.031"/>
+  <testsuite name="黑名单相关 / 查询黑名单列表" id="dd278feb-ec2d-43db-9c03-8a38e30a0cb8" tests="1" time="0.015">
+    <testcase name="Body matches string" time="0.015"/>
+  </testsuite>
+</testsuites>

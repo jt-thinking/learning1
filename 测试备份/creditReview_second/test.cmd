@@ -14,3 +14,13 @@ rem A客户详情接口
 
 call newman run area-controller.postman_collection.json   -e test_environment.json  --export-environment test_environment.json -r junit
 rem 行政区划查询
+
+call newman run notice-info-controller.postman_collection.json   -e test_environment.json  --export-environment test_environment.json -r junit
+rem 公告相关
+
+call newman run 黑名单相关.postman_collection.json   -e test_environment.json  --export-environment test_environment.json -r junit
+rem 黑名单相关
+
+
+call newman run 特殊业务.postman_collection.json   -e test_environment.json  --export-environment test_environment.json -r junit
+rem 特殊业务

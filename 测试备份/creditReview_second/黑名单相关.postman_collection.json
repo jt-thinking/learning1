@@ -1,0 +1,814 @@
+{
+	"info": {
+		"name": "黑名单相关",
+		"_postman_id": "4bfe7071-0aad-69c2-0476-a1efb67606a2",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "黑名单相关",
+			"description": "",
+			"item": [
+				{
+					"name": "S加入黑名单",
+					"description": "",
+					"item": [
+						{
+							"name": "登录接口9201",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"var data=JSON.parse(responseBody);",
+											"",
+											"if (data.data.token){",
+											"    tests[\"Body has token\"]=true;",
+											"    postman.setEnvironmentVariable(\"token\",data.data.token);",
+											"",
+											"}",
+											"else{",
+											"    tests[\"Body has token\"]=false;",
+											"}"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "device",
+										"value": "1"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{URL}}login/signIn?jobNumber=9201&password=202CB962AC59075B964B07152D234B70",
+									"host": [
+										"{{URL}}login"
+									],
+									"path": [
+										"signIn"
+									],
+									"query": [
+										{
+											"key": "jobNumber",
+											"value": "9201",
+											"equals": true
+										},
+										{
+											"key": "password",
+											"value": "202CB962AC59075B964B07152D234B70",
+											"equals": true
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "对私客户快速新增",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Body matches string\"] = responseBody.has(\"成功\");"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "{{token}}"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{URL}}customer/person/quicklyAdd?custName=测试黑名单&certNo=502",
+									"host": [
+										"{{URL}}customer"
+									],
+									"path": [
+										"person",
+										"quicklyAdd"
+									],
+									"query": [
+										{
+											"key": "custName",
+											"value": "测试黑名单",
+											"equals": true
+										},
+										{
+											"key": "certNo",
+											"value": "502",
+											"equals": true
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "授信申请-获取用户信息",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Body matches string\"] = responseBody.has(\"成功\");",
+											"var data=JSON.parse(responseBody);",
+											"",
+											"if (data.data.custId){",
+											"    tests[\"test\"]=true;",
+											"    postman.setEnvironmentVariable(\"custId\", data.data.custId);",
+											"",
+											"}",
+											"else{",
+											"    tests[\"test\"]=false;",
+											"}",
+											"",
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "{{token}}"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{URL}}business/credit/fetchUser?certNumber={{certNo}}",
+									"host": [
+										"{{URL}}business"
+									],
+									"path": [
+										"credit",
+										"fetchUser"
+									],
+									"query": [
+										{
+											"key": "certNumber",
+											"value": "{{certNo}}",
+											"equals": true,
+											"description": "身份证号码"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "加入黑名单",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"",
+											"",
+											"pm.test(\"Body matches string\", function () {",
+											"    pm.expect(pm.response.text()).to.include(\"成功\");",
+											"});"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "{{token}}"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{URL}}/blacklist/blacklist/join?custId={{custId}}&reason=111",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"blacklist",
+										"blacklist",
+										"join"
+									],
+									"query": [
+										{
+											"description": "客户编号",
+											"equals": true,
+											"key": "custId",
+											"value": "{{custId}}"
+										},
+										{
+											"description": "理由",
+											"equals": true,
+											"key": "reason",
+											"value": "111"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "查询黑名单列表",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"",
+											"var data=JSON.parse(responseBody);",
+											"var list=data.data.list;",
+											"var custId=postman.getEnvironmentVariable(\"custId\");",
+											"if (list[0].custId==custId){",
+											"    tests[\"加入黑名单\"]=true;",
+											"  ",
+											"",
+											"}",
+											"else{",
+											"    tests[\"加入黑名单\"]=false;",
+											"}",
+											"",
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "{{token}}"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{URL}}blacklist/blacklist/search?accountManager=9101&pageNum=1&pageSize=20",
+									"host": [
+										"{{URL}}blacklist"
+									],
+									"path": [
+										"blacklist",
+										"search"
+									],
+									"query": [
+										{
+											"key": "accountManager",
+											"value": "9101",
+											"equals": true,
+											"description": "社区经理ID"
+										},
+										{
+											"key": "pageNum",
+											"value": "1",
+											"equals": true
+										},
+										{
+											"key": "pageSize",
+											"value": "20",
+											"equals": true
+										},
+										{
+											"equals": true,
+											"key": "name",
+											"value": "测试47",
+											"disabled": true
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "A撤销黑名单",
+					"description": "",
+					"item": [
+						{
+							"name": "登录接口9201",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"var data=JSON.parse(responseBody);",
+											"",
+											"if (data.data.token){",
+											"    tests[\"Body has token\"]=true;",
+											"    postman.setEnvironmentVariable(\"token\",data.data.token);",
+											"",
+											"}",
+											"else{",
+											"    tests[\"Body has token\"]=false;",
+											"}"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "device",
+										"value": "1"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{URL}}login/signIn?jobNumber=9201&password=202CB962AC59075B964B07152D234B70",
+									"host": [
+										"{{URL}}login"
+									],
+									"path": [
+										"signIn"
+									],
+									"query": [
+										{
+											"key": "jobNumber",
+											"value": "9201",
+											"equals": true
+										},
+										{
+											"key": "password",
+											"value": "202CB962AC59075B964B07152D234B70",
+											"equals": true
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "查询黑名单列表",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"查询黑名单列表\", function () {",
+											"    pm.expect(pm.response.text()).to.include(\"成功\");",
+											"});",
+											"var data=JSON.parse(responseBody);",
+											"var list=data.data.list;",
+											"if (list[0]){",
+											"    tests[\"将黑名单列表第一个人的ID设置为参数\"]=true;",
+											"    postman.setEnvironmentVariable(\"blankId\",list[0].id);",
+											"",
+											"}",
+											"else{",
+											"    tests[\"将黑名单列表第一个人的ID设置为参数\"]=false;",
+											"}",
+											"",
+											""
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "{{token}}"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{URL}}blacklist/blacklist/search?accountManager=9101&pageNum=1&pageSize=20",
+									"host": [
+										"{{URL}}blacklist"
+									],
+									"path": [
+										"blacklist",
+										"search"
+									],
+									"query": [
+										{
+											"key": "accountManager",
+											"value": "9101",
+											"equals": true,
+											"description": "社区经理ID"
+										},
+										{
+											"key": "pageNum",
+											"value": "1",
+											"equals": true
+										},
+										{
+											"key": "pageSize",
+											"value": "20",
+											"equals": true
+										},
+										{
+											"key": "name",
+											"value": "测试47",
+											"equals": true,
+											"disabled": true
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "申请撤销黑名单",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"申请撤销黑名单\", function () {",
+											"    pm.expect(pm.response.text()).to.include(\"成功\");",
+											"});"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "{{token}}"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{URL}}blacklist/blacklist/revoke?id={{blankId}}&reason=111",
+									"host": [
+										"{{URL}}blacklist"
+									],
+									"path": [
+										"blacklist",
+										"revoke"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "{{blankId}}",
+											"equals": true,
+											"description": "记录ID"
+										},
+										{
+											"key": "reason",
+											"value": "111",
+											"equals": true,
+											"description": "理由"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "登录接口9101",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"var data=JSON.parse(responseBody);",
+											"",
+											"if (data.data.token){",
+											"    tests[\"Body has token\"]=true;",
+											"    postman.setEnvironmentVariable(\"token\",data.data.token);",
+											"",
+											"}",
+											"else{",
+											"    tests[\"Body has token\"]=false;",
+											"}"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "device",
+										"value": "1"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{URL}}login/signIn?jobNumber=9101&password=202CB962AC59075B964B07152D234B70",
+									"host": [
+										"{{URL}}login"
+									],
+									"path": [
+										"signIn"
+									],
+									"query": [
+										{
+											"key": "jobNumber",
+											"value": "9101",
+											"equals": true
+										},
+										{
+											"key": "password",
+											"value": "202CB962AC59075B964B07152D234B70",
+											"equals": true
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "获取当前用户待处理的审批任务",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"Body matches string\"] = responseBody.has(\"成功\");",
+											"var data=JSON.parse(responseBody);",
+											"var list=data.data.list;",
+											"if (list[list.length-1]){",
+											"    tests[\"test\"]=true;",
+											"    postman.setEnvironmentVariable(\"taskId\",list[list.length-1].taskId);",
+											"",
+											"}",
+											"else{",
+											"    tests[\"test\"]=false;",
+											"}"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "{{token}}"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{URL}}workflow/getTaskInHand",
+									"host": [
+										"{{URL}}workflow"
+									],
+									"path": [
+										"getTaskInHand"
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "审批指定流程",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"tests[\"黑名单撤销审批通过\"] = responseBody.has(\"成功\");"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "{{token}}"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{URL}}workflow/audit?taskId={{taskId}}&message=OK&operate=1",
+									"host": [
+										"{{URL}}workflow"
+									],
+									"path": [
+										"audit"
+									],
+									"query": [
+										{
+											"key": "taskId",
+											"value": "{{taskId}}",
+											"equals": true,
+											"description": "任务ID"
+										},
+										{
+											"key": "message",
+											"value": "OK",
+											"equals": true,
+											"description": "审批意见"
+										},
+										{
+											"key": "operate",
+											"value": "1",
+											"equals": true,
+											"description": "操作类型\n"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "删除对私客户",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"exec": [
+											"pm.test(\"Body matches string\", function () {",
+											"    pm.expect(pm.response.text()).to.include(\"成功\");",
+											"});"
+										]
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "{{token}}"
+									}
+								],
+								"body": {},
+								"url": {
+									"raw": "{{URL}}/customer/person/delete?custId={{custId}}",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"customer",
+										"person",
+										"delete"
+									],
+									"query": [
+										{
+											"key": "custId",
+											"value": "{{custId}}",
+											"equals": true,
+											"description": "客户编号"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "A查询黑名单历史列表",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}/blacklist/blacklistHistory/search?accountManager=9200&pageNum=1&pageSize=20&name",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"blacklist",
+								"blacklistHistory",
+								"search"
+							],
+							"query": [
+								{
+									"key": "accountManager",
+									"value": "9200",
+									"equals": true,
+									"description": "社区经理ID"
+								},
+								{
+									"key": "pageNum",
+									"value": "1",
+									"equals": true
+								},
+								{
+									"key": "pageSize",
+									"value": "20",
+									"equals": true
+								},
+								{
+									"key": "name",
+									"value": "",
+									"equals": false
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "查询黑名单列表",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"成功\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}blacklist/blacklist/search?accountManager=9101&pageNum=1&pageSize=20",
+							"host": [
+								"{{URL}}blacklist"
+							],
+							"path": [
+								"blacklist",
+								"search"
+							],
+							"query": [
+								{
+									"key": "accountManager",
+									"value": "9101",
+									"equals": true,
+									"description": "社区经理ID"
+								},
+								{
+									"key": "pageNum",
+									"value": "1",
+									"equals": true
+								},
+								{
+									"key": "pageSize",
+									"value": "20",
+									"equals": true
+								},
+								{
+									"equals": true,
+									"key": "name",
+									"value": "测试47",
+									"disabled": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

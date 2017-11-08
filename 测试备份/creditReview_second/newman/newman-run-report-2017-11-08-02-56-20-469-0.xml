@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="黑名单相关" time="1.4769999999999999">
+  <testsuite name="黑名单相关 / S加入黑名单 / 登录接口9201" id="bca8fcf2-e561-4f9a-a4a8-b7baef62aa95" tests="1" time="0.219">
+    <testcase name="Body has token" time="0.219"/>
+  </testsuite>
+  <testsuite name="黑名单相关 / S加入黑名单 / 对私客户快速新增" id="904dc93f-61b4-4bc5-9e38-5020f24a1264" tests="1" time="0.078">
+    <testcase name="Body matches string" time="0.078"/>
+  </testsuite>
+  <testsuite name="黑名单相关 / S加入黑名单 / 授信申请-获取用户信息" id="99a6e24e-8267-43fd-aed8-d11c74759d96" tests="2" time="0.032">
+    <testcase name="Body matches string" time="0.032"/>
+    <testcase name="test" time="0.032"/>
+  </testsuite>
+  <testsuite name="黑名单相关 / S加入黑名单 / 加入黑名单" id="f86a5511-768d-4014-9ebd-e258fe0311bf" tests="1" time="0.078">
+    <testcase name="Body matches string" time="0.078"/>
+  </testsuite>
+  <testsuite name="黑名单相关 / S加入黑名单 / 查询黑名单列表" id="f546ea17-8280-4285-8d47-a2f8be83e58c" tests="1" time="0.015">
+    <testcase name="加入黑名单" time="0.015"/>
+  </testsuite>
+  <testsuite name="黑名单相关 / A撤销黑名单 / 登录接口9201" id="3a42d7ba-f1a1-4657-91bc-bba16684021c" tests="1" time="0.174">
+    <testcase name="Body has token" time="0.174"/>
+  </testsuite>
+  <testsuite name="黑名单相关 / A撤销黑名单 / 查询黑名单列表" id="9b0fdbf7-31f6-49f5-9599-066670b862c9" tests="2" time="0.015">
+    <testcase name="查询黑名单列表" time="0.015"/>
+    <testcase name="将黑名单列表第一个人的ID设置为参数" time="0.015"/>
+  </testsuite>
+  <testsuite name="黑名单相关 / A撤销黑名单 / 申请撤销黑名单" id="2a7f6902-5a75-411e-af4a-b7bda24993a4" tests="1" time="0.205">
+    <testcase name="申请撤销黑名单" time="0.205"/>
+  </testsuite>
+  <testsuite name="黑名单相关 / A撤销黑名单 / 登录接口9101" id="3f7653cb-c661-473a-9ebd-7d22f76d0ec3" tests="1" time="0.174">
+    <testcase name="Body has token" time="0.174"/>
+  </testsuite>
+  <testsuite name="黑名单相关 / A撤销黑名单 / 获取当前用户待处理的审批任务" id="750ff73a-7eb5-4432-970c-41f72b47bfd9" tests="2" time="0.016">
+    <testcase name="Body matches string" time="0.016"/>
+    <testcase name="test" time="0.016"/>
+  </testsuite>
+  <testsuite name="黑名单相关 / A撤销黑名单 / 审批指定流程" id="13f74279-1024-403b-8ab9-61df2f3f57f3" tests="1" time="0.283">
+    <testcase name="黑名单撤销审批通过" time="0.283"/>
+  </testsuite>
+  <testsuite name="黑名单相关 / A撤销黑名单 / 删除对私客户" id="f2e0fffe-9852-4fde-9d9a-fe0019aba834" tests="1" time="0.141">
+    <testcase name="Body matches string" time="0.141"/>
+  </testsuite>
+  <testsuite name="黑名单相关 / A查询黑名单历史列表" id="1a50b711-62dd-4be6-ba59-7d7ab17a3c4e" tests="0" time="0.031"/>
+  <testsuite name="黑名单相关 / 查询黑名单列表" id="6969e2b6-784c-44d7-aed8-2260e891ee68" tests="1" time="0.016">
+    <testcase name="Body matches string" time="0.016"/>
+  </testsuite>
+</testsuites>

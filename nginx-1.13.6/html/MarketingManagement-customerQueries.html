@@ -6,10 +6,10 @@
     <meta charset="utf-8">
     <title>
     </title>
-    <link rel="stylesheet" type="text/css" href="e:/jt/learning1/bootstrap-4.0.0-dist/css/bootstrap.css">
-    <script src="E:/jt/learning1/nginx-1.13.6/html/js/jquery-3.2.1.min.js"></script>
-    <script src="E:/jt/learning1/bootstrap-4.0.0-dist/js/popper.js"></script>
-    <script src="E:/jt/learning1/bootstrap-4.0.0-dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.js"></script>
     <script src="js/vue.js"></script>
     <style type="text/css">
     html {
@@ -49,9 +49,11 @@
 </head>
 
 <body>
-    <div id="app" v-html=message>
-    </div>
-    <script src="js/top-nav.vue"></script>
+    <div id="topNav" v-html="topNav"></div>
+
+
+    <div id="leftNavMarket" v-html="leftNavMarket"></div>
+     <script src="js/all.js"></script>
 </body>
 
 </html>

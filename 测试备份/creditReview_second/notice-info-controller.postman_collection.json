@@ -1,0 +1,542 @@
+{
+	"info": {
+		"name": "notice-info-controller",
+		"_postman_id": "45ded8ae-c019-0926-45b1-b26e71b1d2c4",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "A登录接口9201",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var data=JSON.parse(responseBody);",
+							"",
+							"if (data.data.token){",
+							"    tests[\"Body has token\"]=true;",
+							"    postman.setEnvironmentVariable(\"token\",data.data.token);",
+							"",
+							"}",
+							"else{",
+							"    tests[\"Body has token\"]=false;",
+							"}",
+							"",
+							"",
+							"",
+							"pm.test(\"9101登录\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"成功\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "device",
+						"value": "1"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}login/signIn?jobNumber=9201&password=202CB962AC59075B964B07152D234B70",
+					"host": [
+						"{{URL}}login"
+					],
+					"path": [
+						"signIn"
+					],
+					"query": [
+						{
+							"key": "jobNumber",
+							"value": "9201",
+							"equals": true
+						},
+						{
+							"key": "password",
+							"value": "202CB962AC59075B964B07152D234B70",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增公告信息",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"成功\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}/noticeinfo/notice/save?title=11&content=11&enclosure=22&roleId=111&type=1&publishObj=0&enabledDown=0",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"noticeinfo",
+						"notice",
+						"save"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "11",
+							"equals": true,
+							"description": "标题"
+						},
+						{
+							"key": "content",
+							"value": "11",
+							"equals": true,
+							"description": "内容"
+						},
+						{
+							"key": "enclosure",
+							"value": "22",
+							"equals": true,
+							"description": "附件"
+						},
+						{
+							"key": "roleId",
+							"value": "111",
+							"equals": true,
+							"description": "发布部门"
+						},
+						{
+							"key": "type",
+							"value": "1",
+							"equals": true,
+							"description": "文件类型（详情见字典项noticeFileType）"
+						},
+						{
+							"key": "publishObj",
+							"value": "0",
+							"equals": true,
+							"description": "发布对象，0--代表全体部门，否则是部门id集合，用英文逗号隔开"
+						},
+						{
+							"key": "enabledDown",
+							"value": "0",
+							"equals": true,
+							"description": "是否可下载，0--允许下载,1--不允许下载"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "查询当前登陆用户的公告信息",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var data=JSON.parse(responseBody);",
+							"var len=data.data.list[data.data.list.length-1];",
+							"if (len.id){",
+							"    tests[\"set evironment\"]=true;",
+							"    postman.setEnvironmentVariable(\"noticeId\",len.id);",
+							"",
+							"",
+							"}",
+							"else{",
+							"    tests[\"set evironment\"]=false;",
+							"}",
+							"",
+							"",
+							"",
+							"pm.test(\"9101登录\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"成功\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}/noticeinfo/notice/indexlist?pageNum=1&pageSize=20",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"noticeinfo",
+						"notice",
+						"indexlist"
+					],
+					"query": [
+						{
+							"key": "pageNum",
+							"value": "1",
+							"equals": true
+						},
+						{
+							"key": "pageSize",
+							"value": "20",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "编辑公告信息",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"成功\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}/noticeinfo/notice/update?noticeId={{noticeId}}&title=12&content=1&enclosure&roleId=1&type=1&publishObj=0&enabledDown=0",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"noticeinfo",
+						"notice",
+						"update"
+					],
+					"query": [
+						{
+							"key": "noticeId",
+							"value": "{{noticeId}}",
+							"equals": true,
+							"description": "公告ID"
+						},
+						{
+							"key": "title",
+							"value": "12",
+							"equals": true,
+							"description": "标题"
+						},
+						{
+							"key": "content",
+							"value": "1",
+							"equals": true,
+							"description": "内容"
+						},
+						{
+							"key": "enclosure",
+							"value": "",
+							"equals": false,
+							"description": "附件"
+						},
+						{
+							"key": "roleId",
+							"value": "1",
+							"equals": true,
+							"description": "发布部门"
+						},
+						{
+							"key": "type",
+							"value": "1",
+							"equals": true,
+							"description": "文件类型（详情见字典项noticeFileType）"
+						},
+						{
+							"key": "publishObj",
+							"value": "0",
+							"equals": true,
+							"description": "发布对象，0--代表全体部门，否则是部门id集合，用英文逗号隔开"
+						},
+						{
+							"key": "enabledDown",
+							"value": "0",
+							"equals": true,
+							"description": "是否可下载，0--允许下载,1--不允许下载"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "获取公告信息",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"成功\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}/noticeinfo/notice/getInfo?noticeId={{noticeId}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"noticeinfo",
+						"notice",
+						"getInfo"
+					],
+					"query": [
+						{
+							"key": "noticeId",
+							"value": "{{noticeId}}",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "发布和撤销公告信息",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"成功\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}/noticeinfo/notice/changeNoticeStatus?noticeId={{noticeId}}&status=0",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"noticeinfo",
+						"notice",
+						"changeNoticeStatus"
+					],
+					"query": [
+						{
+							"key": "noticeId",
+							"value": "{{noticeId}}",
+							"equals": true
+						},
+						{
+							"key": "status",
+							"value": "0",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "查询公告信息列表",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"成功\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}/noticeinfo/notice/search?pageNum=1&pageSize=20",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"noticeinfo",
+						"notice",
+						"search"
+					],
+					"query": [
+						{
+							"key": "pageNum",
+							"value": "1",
+							"equals": true
+						},
+						{
+							"key": "pageSize",
+							"value": "20",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "查询部门信息",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"成功\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}/noticeinfo/notice/queryOrg",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"noticeinfo",
+						"notice",
+						"queryOrg"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "删除公告信息",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"成功\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}/noticeinfo/notice/delete?noticeId={{noticeId}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"noticeinfo",
+						"notice",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "noticeId",
+							"value": "{{noticeId}}",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

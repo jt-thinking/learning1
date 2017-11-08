@@ -22,7 +22,7 @@ $(".login-button").click(function() {
     success: function(data) {
       if(data.code==200){
         alert("登录成功");
-        $(location).attr("href", "index-dashboad.html");
+        $(location).attr("href", "MarketingManagement-customerQueries.html");
       }
       if(data.code==400){
         alert("登录失败,请检查工号和密码");

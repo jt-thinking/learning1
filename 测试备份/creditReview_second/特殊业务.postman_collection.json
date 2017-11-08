@@ -1,0 +1,800 @@
+{
+	"info": {
+		"name": "特殊业务",
+		"_postman_id": "0c24bb88-513f-7553-5b68-cc50b168f38c",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "创建一个授信",
+			"description": "",
+			"item": [
+				{
+					"name": "登录接口9201",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var data=JSON.parse(responseBody);",
+									"",
+									"if (data.data.token){",
+									"    tests[\"Body has token\"]=true;",
+									"    postman.setEnvironmentVariable(\"token\",data.data.token);",
+									"",
+									"}",
+									"else{",
+									"    tests[\"Body has token\"]=false;",
+									"}"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "device",
+								"value": "1"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}login/signIn?jobNumber=9201&password=202CB962AC59075B964B07152D234B70",
+							"host": [
+								"{{URL}}login"
+							],
+							"path": [
+								"signIn"
+							],
+							"query": [
+								{
+									"key": "jobNumber",
+									"value": "9201",
+									"equals": true
+								},
+								{
+									"key": "password",
+									"value": "202CB962AC59075B964B07152D234B70",
+									"equals": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "授信申请-获取用户信息",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Body matches string\"] = responseBody.has(\"成功\");",
+									"var data=JSON.parse(responseBody);",
+									"",
+									"if (data.data.custId){",
+									"    tests[\"test\"]=true;",
+									"    postman.setEnvironmentVariable(\"custId\",data.data.custId);",
+									"",
+									"}",
+									"else{",
+									"    tests[\"test\"]=false;",
+									"}"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}business/credit/fetchUser?certNumber=513",
+							"host": [
+								"{{URL}}business"
+							],
+							"path": [
+								"credit",
+								"fetchUser"
+							],
+							"query": [
+								{
+									"key": "certNumber",
+									"value": "513",
+									"equals": true,
+									"description": "身份证号码"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "授信申请-创建授信接口",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"授信申请-创建授信接口\"] = responseBody.has(\"成功\");",
+									"var data=JSON.parse(responseBody);",
+									"if(data.data){",
+									"    tests[\"Body has creditId\"]=true;",
+									"    postman.setEnvironmentVariable(\"creditId\",data.data);",
+									"",
+									"}else{",
+									"    tests[\"Body has creditId\"]=false;",
+									"}"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "device",
+								"value": "1"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}business/credit/add?id={{custId}}",
+							"host": [
+								"{{URL}}business"
+							],
+							"path": [
+								"credit",
+								"add"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{custId}}",
+									"equals": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "授信金额止付",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"成功\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}/business/credit/stop?id={{creditId}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"business",
+								"credit",
+								"stop"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{creditId}}",
+									"equals": true,
+									"description": "授信编号"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "授信金额恢复",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"成功\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}/business/credit/recover?id={{creditId}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"business",
+								"credit",
+								"recover"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{creditId}}",
+									"equals": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "授信基本产品变更",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"成功\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}/business/credit/basicProductChange?id={{creditId}}&productId=3620782160171008",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"business",
+								"credit",
+								"basicProductChange"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{creditId}}",
+									"equals": true,
+									"description": "授信编号"
+								},
+								{
+									"key": "productId",
+									"value": "3620782160171008",
+									"equals": true,
+									"description": "产品属性编号"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "授信金额终结",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"成功\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}/business/credit/finality?id={{creditId}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"business",
+								"credit",
+								"finality"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{creditId}}",
+									"equals": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "授信金额变更",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"成功\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}/business/credit/amountChange?id={{creditId}}&amount=200000",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"business",
+								"credit",
+								"amountChange"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{creditId}}",
+									"equals": true,
+									"description": "授信编号"
+								},
+								{
+									"key": "amount",
+									"value": "200000",
+									"equals": true,
+									"description": "授信金额"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "授信基本产品变更",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"成功\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}/business/credit/basicProductChange?id={{creditId}}&productId=3620782160171008",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"business",
+								"credit",
+								"basicProductChange"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{creditId}}",
+									"equals": true,
+									"description": "授信编号"
+								},
+								{
+									"key": "productId",
+									"value": "3620782160171008",
+									"equals": true,
+									"description": "产品属性编号"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "授信附属产品变更",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"成功\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}/business/credit/subsidiaryProductChange?id={{creditId}}&productId=33",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"business",
+								"credit",
+								"subsidiaryProductChange"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{creditId}}",
+									"equals": true,
+									"description": "授信编号"
+								},
+								{
+									"key": "productId",
+									"value": "33",
+									"equals": true,
+									"description": "产品属性编号"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "授信营销产品变更",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"成功\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}/business/credit/marketProductChange?id={{creditId}}&productId=66",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"business",
+								"credit",
+								"marketProductChange"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{creditId}}",
+									"equals": true,
+									"description": "授信编号"
+								},
+								{
+									"key": "productId",
+									"value": "66",
+									"equals": true,
+									"description": "产品属性编号"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "A【特殊业务】搜索授信变更记录",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"成功\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}/business/credit/changeHistory?pageNum=1&pageSize=20&type=credit_amt_over",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"business",
+						"credit",
+						"changeHistory"
+					],
+					"query": [
+						{
+							"key": "pageNum",
+							"value": "1",
+							"equals": true
+						},
+						{
+							"key": "pageSize",
+							"value": "20",
+							"equals": true
+						},
+						{
+							"key": "type",
+							"value": "credit_amt_over ",
+							"equals": true,
+							"description": "变更类型:授信额度终结 credit_amt_over ;授信额度恢复 credit_amt_recovery ;授信额度止付 credit_amt_stop ;授信额度变更 cust_credit_amt_chg ;授信基本产品变更 product_basic_chg ;授信营销产品批量变更 product_market_batch_chg ;授信营销产品变更 product_market_chg ;授信附属产品变更 product_subsidiary_chg ;"
+						},
+						{
+							"key": "name",
+							"value": "测试27",
+							"equals": true,
+							"description": "客户姓名",
+							"disabled": true
+						},
+						{
+							"key": "contractNumber",
+							"value": "SX0106201709260014",
+							"equals": true,
+							"description": "授信合同号",
+							"disabled": true
+						},
+						{
+							"key": "auditStartDate",
+							"value": "1503036840000",
+							"equals": true,
+							"description": "申请开始日期",
+							"disabled": true
+						},
+						{
+							"key": "auditEndDate",
+							"value": "1506736713000",
+							"equals": true,
+							"description": "申请结束日期\n",
+							"disabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "A【特殊业务】搜索授信变更记录",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"",
+							"pm.test(\"A【特殊业务】搜索授信变更记录\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"成功\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}/business/credit/changeHistory?pageNum=1&pageSize=20&type=credit_amt_over &name=测试27&contractNumber=SX0106201709260014&auditStartDate=1503036840000&auditEndDate=1506736713000",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"business",
+						"credit",
+						"changeHistory"
+					],
+					"query": [
+						{
+							"key": "pageNum",
+							"value": "1",
+							"equals": true
+						},
+						{
+							"key": "pageSize",
+							"value": "20",
+							"equals": true
+						},
+						{
+							"key": "type",
+							"value": "credit_amt_over ",
+							"equals": true,
+							"description": "变更类型:授信额度终结 credit_amt_over ;授信额度恢复 credit_amt_recovery ;授信额度止付 credit_amt_stop ;授信额度变更 cust_credit_amt_chg ;授信基本产品变更 product_basic_chg ;授信营销产品批量变更 product_market_batch_chg ;授信营销产品变更 product_market_chg ;授信附属产品变更 product_subsidiary_chg ;"
+						},
+						{
+							"key": "name",
+							"value": "测试27",
+							"equals": true,
+							"description": "客户姓名"
+						},
+						{
+							"key": "contractNumber",
+							"value": "SX0106201709260014",
+							"equals": true,
+							"description": "授信合同号"
+						},
+						{
+							"key": "auditStartDate",
+							"value": "1503036840000",
+							"equals": true,
+							"description": "申请开始日期"
+						},
+						{
+							"key": "auditEndDate",
+							"value": "1506736713000",
+							"equals": true,
+							"description": "申请结束日期\n"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "授信申请-删除授信申请",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string\"] = responseBody.has(\"成功\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{token}}"
+					},
+					{
+						"key": "device",
+						"value": "1"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}business/credit/delete?id={{creditId}}",
+					"host": [
+						"{{URL}}business"
+					],
+					"path": [
+						"credit",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "{{creditId}}",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

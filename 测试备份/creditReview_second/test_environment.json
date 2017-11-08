@@ -1,21 +1,16 @@
 {
   "_": {
     "postman_variable_scope": "environment",
-    "postman_exported_at": "2017-11-06T01:09:01.201Z",
+    "postman_exported_at": "2017-11-08T02:55:54.493Z",
     "postman_exported_using": "Newman/3.8.3"
   },
-  "id": "8532332f-ab81-ddee-d44a-41d4f8970d90",
-  "name": "测试环境 (Copy)",
+  "id": "1f0ed055-ec47-2e07-a426-6dac31780674",
+  "name": "test_environment",
   "values": [
     {
       "type": "any",
       "value": "http://192.168.1.203:9180/",
       "key": "URL"
-    },
-    {
-      "type": "any",
-      "value": "77bc6d1d47a64b7a8236466ce1737b24",
-      "key": "token"
     },
     {
       "type": "any",
@@ -34,22 +29,22 @@
     },
     {
       "type": "any",
-      "value": "466260",
+      "value": "647914",
       "key": "taskId"
     },
     {
       "type": "any",
-      "value": "100006366",
+      "value": "100006398",
       "key": "custId"
     },
     {
       "type": "any",
-      "value": "446",
+      "value": "502",
       "key": "certNo"
     },
     {
       "type": "any",
-      "value": "37",
+      "value": "62",
       "key": "blankId"
     },
     {
@@ -76,9 +71,19 @@
       "type": "any",
       "value": "3739740465090560",
       "key": "reportId"
+    },
+    {
+      "type": "any",
+      "value": "0bce20fa08e74b27848462116bc4a7ca",
+      "key": "token"
+    },
+    {
+      "type": "any",
+      "value": "70",
+      "key": "noticeId"
     }
   ],
   "_postman_variable_scope": "environment",
-  "_postman_exported_at": "2017-11-06T01:10:49.307Z",
+  "_postman_exported_at": "2017-11-08T02:56:20.469Z",
   "_postman_exported_using": "Newman/3.8.3"
 }
