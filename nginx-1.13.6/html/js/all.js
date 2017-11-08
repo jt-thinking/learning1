@@ -4,7 +4,7 @@
         el: '#topNav',
         data: {
             topNav:
-             '<img class="logo"src="img/logo2.jpg"><!--头部导航--><nav class="nav nav-pills justify-content-center top-nav"><a class="nav-link  "href="">首页</a><a class="nav-link nav-item"href="#">数据统计</a><a class="nav-link nav-item"href="#">用户系统</a><a class="nav-link nav-item "href="#">客户管理</a><a class="nav-link nav-item "href="#">营销管理</a><a class="nav-link nav-item "href="#">业务管理</a><a class="nav-link nav-item "href="#">特殊业务</a></nav><hr/>'
+             '<img class="logo"src="img/logo2.jpg"><!--头部导航--><nav class="nav nav-pills justify-content-center top-nav"><a class="nav-link  "href="">首页</a><a class="nav-link nav-item"href="#">数据统计</a><a class="nav-link nav-item"href="#">用户系统</a><a class="nav-link nav-item "href="#">客户管理</a><a class="nav-link nav-item market"href="#">营销管理</a><a class="nav-link nav-item "href="#">业务管理</a><a class="nav-link nav-item "href="#">特殊业务</a></nav><hr/>'
         }
     })
 
@@ -23,7 +23,7 @@
     //     <a class="nav-link nav-item" href="#">数据统计</a>
     //     <a class="nav-link nav-item" href="#">用户系统</a>
     //     <a class="nav-link nav-item " href="#">客户管理</a>
-    //     <a class="nav-link nav-item " href="#">营销管理</a>
+    //     <a class="nav-link nav-item market" href="#">营销管理</a>
     //     <a class="nav-link nav-item " href="#">业务管理</a>
     //     <a class="nav-link nav-item " href="#">特殊业务</a>
     // </nav>
