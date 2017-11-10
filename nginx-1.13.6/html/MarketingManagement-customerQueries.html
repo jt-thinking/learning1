@@ -58,9 +58,11 @@
         border-radius: 4px;
         margin-left: 10px !important;
         margin-top: 15px;
+
+
     }
 
-   
+
     .select3,
     .select4 {
         width: 100px;
@@ -79,7 +81,15 @@
     input {
         border: 1px solid #bfcbd9;
         border-radius: 4px;
-           height: 34px ;
+        height: 34px;
+    }
+
+    table {
+        position: absolute;
+        left: 10rem;
+        top: 14rem;
+
+
     }
     </style>
 </head>
@@ -97,11 +107,11 @@
             <option selected="selected">姓名</option>
             <option>手机号</option>
         </select>
+        <!-- input name phone  -->
         <input class="input1" type="" name="">
         <span> 社区经理</span>
         <select class="select2">
             <option selected="selected">全部</option>
-        
         </select>
         <span> 注册时间</span>
         <input type="date" value="" />
@@ -119,9 +129,36 @@
             <option>借款人</option>
         </select>
         <button type="reset" value="Reset">重置</button>
-        <button type="submit" value="Submit">查询</button>
+        <button type="button" id="buttonQuery">查询</button>
     </form>
     <script src="js/MarketingManagement-customerQueries.js"></script>
+
+    <div>
+    <table class="table table-striped">
+  <thead>
+    <tr>
+      <th>客户姓名</th>
+      <th>身份证号</th>
+      <th>客户类型</th>
+      <th>手机号</th>
+      <th>借款余额</th>
+      <th>授信余额</th>
+      <th>投资余额</th>
+      <th>剩余关联借款</th>
+      <th>账户余额</th>
+      <th>江西银行电子账户</th>   
+      <th>绑定卡开户行</th>
+      <th>绑定银行卡号</th> 
+      <th>注册时间</th>
+      <th>绑卡时间</th>
+      <th>主营销人</th>
+    </tr>
+  </thead>
+  <tbody>
+   
+  </tbody>
+</table>
+</div>
 </body>
 
 </html>
