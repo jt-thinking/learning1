@@ -1,0 +1,148 @@
+.layout{
+  border: 1px solid #d7dde4;
+  background: white;
+  position: relative;
+  border-radius: 4px;
+  //overflow: hidden;
+  height: 100%;
+  //布局wrap
+  .layout-wrp{
+    min-height: 100%;
+    //布局左侧
+    .layout-menu-left{
+      width: 200px;
+      //overflow-x: hidden;
+      height: 100%\0;
+      ul{
+        height: 100%;
+      }
+      .layout-logo-left{
+        width: 90%;
+        height: 60px;
+        margin: 15px auto;
+        text-align: center;
+        img{
+          height: 40px;
+        }
+      }
+    }
+    //布局右侧
+    .layout-right{
+      width: calc(100% - 200px);
+    }
+
+    //右侧导航
+    .layout-header{
+      .layout-toggle{
+        padding-right: 4rem;
+      }
+      //height: 40px;
+      //background: #fff;
+      //box-shadow: 0 1px 1px rgba(0,0,0,.1);
+      //用户
+      .layout-user{
+        font-size: 14px;
+        padding-right: 2rem;
+        .ivu-dropdown-item{
+          a{
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  .layout-left-hide{
+    .layout-menu-left{
+      background: red;
+    }
+  }
+
+  .ivu-menu-vertical .ivu-menu-item{
+    padding:0;
+    a.link{
+      padding: 14px 24px;
+      display: block;
+      color: inherit;
+
+      &>i {
+        margin-right: 6px;
+      }
+    }
+  }
+  .ivu-menu-vertical .ivu-menu-submenu .ivu-menu-item{
+    //padding-left: 0px;
+    //text-align: center;
+    a.link{
+      //padding-left: 43px;
+    }
+  }
+  .layout-breadcrumb{
+    padding: 1rem 15px 0;
+    .ivu-breadcrumb{
+      font-size: 12px;
+    }
+  }
+
+
+  &.layout-left-hide{
+      //布局左侧
+      .layout-menu-left{
+        overflow: hidden;
+        width: 0px !important;
+      }
+      //布局右侧
+      .layout-right{
+        width: calc(100% - 0px) !important;
+      }
+
+      .layout-logo-left{
+        display: none;
+      }
+      .layout-text{
+        display: none;
+      }
+      //.ivu-menu-vertical{
+      //  .ivu-menu-submenu{
+      //    .ivu-menu-item {
+      //      padding-left: 0px;
+      //      font-size: 12px;
+      //      text-align: center;
+      //    }
+      //  }
+      //}
+  }
+
+
+
+}
+
+
+
+
+.layout-content{
+  min-height: calc(100% - 200px);;
+  //margin: 15px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 4px;
+}
+.layout-content-main{
+  padding: 10px;
+}
+.layout-copy{
+  text-align: center;
+  padding: 10px 0 20px;
+  color: #9ea7b4;
+}
+
+
+
+.layout-ceiling-main a{
+  color: #9ba7b5;
+}
+
+.ivu-col{
+  transition: width .2s ease-in-out;
+}
+

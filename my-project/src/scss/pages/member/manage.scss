@@ -1,0 +1,123 @@
+@import "src/scss/conf/variable.scss";
+@import "src/scss/conf/mixin.scss";
+.user-manage{
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+
+  .role-layout{
+    .role-left{
+      width: 196px;
+      padding-right: 4px;
+      //overflow-x: hidden;
+      height: 100%\0;
+      min-height: 100%;
+      .el-tree{
+        height: 100%;
+      }
+    }
+    //布局右侧
+    .role-right{
+      height: 100%\0;
+      width: calc(100% - 200px);
+    }
+  }
+
+  .manage-box{
+  }
+  .item-box{
+    display: inline-block;
+    padding:0.8rem;
+  }
+  .search-box{
+    .el-input{
+      width: 160px;
+      &.money{
+        width: 100px;
+      }
+      &.date{
+        width: 140px;
+      }
+      &.manager{
+        width: 160px;
+      }
+    }
+    .lang{
+      .el-input{
+        width: 200px;
+      }
+    }
+    .short{
+      .el-input{
+        width: 80px;
+      }
+    }
+    .middle{
+      .el-input{
+        width: 110px;
+      }
+    }
+    .long{
+      &.el-date-editor{
+        width: 330px;
+      }
+    }
+    label{
+      font-size: 1rem;
+    }
+    .el-form-item{
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+  }
+  .result-box{
+    .totals{
+      padding: .6rem 0;
+      label{
+        text-align: right;
+        vertical-align: middle;
+        color: #48576a;
+        line-height: 1;
+        padding: 11px 12px 11px 0;
+        box-sizing: border-box;
+      }
+      span.span-date{
+        text-align: right;
+        vertical-align: middle;
+        color: red;
+        line-height: 1;
+        padding: 11px 12px 11px 0;
+        box-sizing: border-box;
+      }
+    }
+    padding-bottom: 1rem;
+    @include clearfix;
+    a{
+      padding: 0 .6rem;
+      color: black;
+    }
+  }
+  .footer-box{
+    padding-top: 1rem;
+    @include clearfix;
+  }
+  .table{
+    cursor: move;
+  }
+
+
+  .el-table{
+    font-size: $size-7;
+  }
+
+  .user-dialog{
+    .el-select,.el-date-editor.el-input{
+      width: 100%;
+    }
+  }
+  .station-dialog{
+    .station-table{
+      width: 100%;
+    }
+  }
+}
