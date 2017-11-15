@@ -1,19 +1,22 @@
-´´½¨ÓÃ»§ÃûºÍÓÊÏä
-git init ´´½¨°æ±¾¿â
-ÔÚCÅÌÓÃ»§Ä¿Â¼ÏÂgit bash,Í¨¹ıssh-keygenÃüÁî´´½¨.ssh¡£È»ºóÌí¼Óµ½github
+åˆ›å»ºç”¨æˆ·åå’Œé‚®ç®±
+git init åˆ›å»ºç‰ˆæœ¬åº“
+åœ¨Cç›˜ç”¨æˆ·ç›®å½•ä¸‹git bash,é€šè¿‡ssh-keygenå‘½ä»¤åˆ›å»º.sshã€‚ç„¶åæ·»åŠ åˆ°github
 
-pwd ÏÔÊ¾µ±Ç°Ä¿Â¼
+pwd æ˜¾ç¤ºå½“å‰ç›®å½•
 
-git add -A ËùÓĞĞŞ¸ÄÌí¼Óµ½Ôİ´æÇø
+git add -A æ‰€æœ‰ä¿®æ”¹æ·»åŠ åˆ°æš‚å­˜åŒº
 
-git commit -m "xxx" Ìá½»µ½¹¤×÷Çø
+git commit -m "xxx" æäº¤åˆ°å·¥ä½œåŒº
 
 git status
 git push -u origin master
 git gull #
-$ git clone git@github.com:jt-thinking/learning1.git ´ÓÔ¶³Ì¿â¿ËÂ¡
+$ git clone git@github.com:jt-thinking/learning1.git ä»è¿œç¨‹åº“å…‹éš†
 
-git branch  ²é¿´·ÖÖ§
-git checkout master/dev ÇĞ»»µ½master/dev ·ÖÖ§
-git push origin dev Ìá½»¸Ã·ÖÖ§µ½Ô¶³Ì²Ö¿â
-git pull origin dev ´ÓÔ¶³Ì·ÖÖ§»ñÈ¡dev
+git checkout -b dev åˆ›å»ºdevåˆ†æ”¯å¹¶åˆ‡æ¢(-b)
+git branch  æŸ¥çœ‹åˆ†æ”¯
+git checkout master/dev åˆ‡æ¢åˆ°master/dev åˆ†æ”¯
+git push origin dev æäº¤è¯¥åˆ†æ”¯åˆ°è¿œç¨‹ä»“åº“
+git pull origin dev ä»è¿œç¨‹åˆ†æ”¯è·å–dev
+git merge dev åˆå¹¶å½“å‰åˆ†æ”¯åˆ°dev
+ git branch -d dev  åˆ é™¤devåˆ†æ”¯
