@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="loan-change-info-controller" time="0.395">
+  <testsuite name="A登录接口9201" id="41202e2c-b9ce-46ca-8f02-b8c93341bf38" tests="2" time="0.225">
+    <testcase name="9101登录" time="0.225"/>
+    <testcase name="Body has token" time="0.225"/>
+  </testsuite>
+  <testsuite name="根据身份证号精确查询借款信息" id="9787e0ed-db7d-41df-b9f3-6b77dded57b0" tests="1" time="0.013">
+    <testcase name="Body matches string" time="0.013"/>
+  </testsuite>
+  <testsuite name="变更数据五级状态" id="67e56fec-3ce9-4adc-9652-9992b97971c9" tests="1" time="0.091">
+    <testcase name="Body matches string" time="0.091"/>
+  </testsuite>
+  <testsuite name="分页获取五级变更数据" id="807f1a1f-9ecc-4d79-ab3a-fed8811d49c3" tests="1" time="0.032">
+    <testcase name="Body matches string" time="0.032"/>
+  </testsuite>
+  <testsuite name="分页获取五级变更操作记录数据" id="e9e2db50-0ba4-48f0-9de4-40304abecd71" tests="1" time="0.025">
+    <testcase name="Body matches string" time="0.025"/>
+  </testsuite>
+  <testsuite name="引入五级变更数据" id="254ec810-b0cd-4168-8a4a-279ecb2b095a" tests="1" time="0.009">
+    <testcase name="Body matches string" time="0.009"/>
+  </testsuite>
+</testsuites>

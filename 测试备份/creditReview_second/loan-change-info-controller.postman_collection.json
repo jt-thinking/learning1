@@ -1,0 +1,361 @@
+{
+	"info": {
+		"name": "loan-change-info-controller",
+		"_postman_id": "85cc574b-52b4-bd31-c844-8d6c624bec5b",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "A登录接口9201",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var data=JSON.parse(responseBody);",
+							"",
+							"if (data.data.token){",
+							"    tests[\"Body has token\"]=true;",
+							"    postman.setEnvironmentVariable(\"token\",data.data.token);",
+							"",
+							"}",
+							"else{",
+							"    tests[\"Body has token\"]=false;",
+							"}",
+							"",
+							"",
+							"",
+							"pm.test(\"9101登录\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"成功\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "device",
+						"value": "1"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}login/signIn?jobNumber=9201&password=202CB962AC59075B964B07152D234B70",
+					"host": [
+						"{{URL}}login"
+					],
+					"path": [
+						"signIn"
+					],
+					"query": [
+						{
+							"key": "jobNumber",
+							"value": "9201",
+							"equals": true
+						},
+						{
+							"key": "password",
+							"value": "202CB962AC59075B964B07152D234B70",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "根据身份证号精确查询借款信息",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"成功\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}/loan/change/queryLoanInfoByCertNo?certNo=332623196903102060",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"loan",
+						"change",
+						"queryLoanInfoByCertNo"
+					],
+					"query": [
+						{
+							"key": "certNo",
+							"value": "332623196903102060",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "变更数据五级状态",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"",
+							"",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"成功\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}/loan/change/changeStatus?prdId=008PN0000001832&toStatus=1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"loan",
+						"change",
+						"changeStatus"
+					],
+					"query": [
+						{
+							"key": "prdId",
+							"value": "008PN0000001832",
+							"equals": true,
+							"description": "变更数据ID"
+						},
+						{
+							"key": "toStatus",
+							"value": "1",
+							"equals": true,
+							"description": "变更状态"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "分页获取五级变更数据",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"成功\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}/loan/change/changeInfoList?pageNum=1&pageSize=20&certNo=332623196903102060&isPage=true",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"loan",
+						"change",
+						"changeInfoList"
+					],
+					"query": [
+						{
+							"key": "pageNum",
+							"value": "1",
+							"equals": true
+						},
+						{
+							"key": "pageSize",
+							"value": "20",
+							"equals": true
+						},
+						{
+							"key": "certNo",
+							"value": "332623196903102060",
+							"equals": true
+						},
+						{
+							"key": "isPage",
+							"value": "true",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "分页获取五级变更操作记录数据",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"成功\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}/loan/change/changeInfoLogList?pageNum=1&pageSize=20&isPage=true&custName&status=1&startTime&endTime",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"loan",
+						"change",
+						"changeInfoLogList"
+					],
+					"query": [
+						{
+							"key": "pageNum",
+							"value": "1",
+							"equals": true
+						},
+						{
+							"key": "pageSize",
+							"value": "20",
+							"equals": true
+						},
+						{
+							"key": "isPage",
+							"value": "true",
+							"equals": true
+						},
+						{
+							"key": "custName",
+							"value": "",
+							"equals": false
+						},
+						{
+							"key": "status",
+							"value": "1",
+							"equals": true
+						},
+						{
+							"key": "startTime",
+							"value": "",
+							"equals": false
+						},
+						{
+							"key": "endTime",
+							"value": "",
+							"equals": false
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "引入五级变更数据",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"该借款数据已引入，请勿重复引\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{token}}"
+					},
+					{
+						"key": "device",
+						"value": "1"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}/loan/change/introduce?prdId=008PN0000000619",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"loan",
+						"change",
+						"introduce"
+					],
+					"query": [
+						{
+							"key": "prdId",
+							"value": "008PN0000000619",
+							"equals": true,
+							"description": "产品编号"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

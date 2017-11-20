@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="loan-change-info-controller" time="0.094">
+  <testsuite name="根据身份证号精确查询借款信息" id="d78687ae-da3e-487e-bb9f-d6878eb3c055" tests="1" time="0.094">
+    <testcase name="Body matches string" time="0.094">
+      <failure type="AssertionFailure">
+        <![CDATA[Failed 1 times.]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="变更数据五级状态" id="482f1dcc-7fbb-4505-bed0-6bd8c2a5a8e5" tests="1" time="0">
+    <testcase name="Body matches string" time="0">
+      <failure type="AssertionFailure">
+        <![CDATA[Failed 1 times.]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="分页获取五级变更数据" id="22980e58-f3ba-4621-b700-de1591d02079" tests="1" time="0">
+    <testcase name="Body matches string" time="0">
+      <failure type="AssertionFailure">
+        <![CDATA[Failed 1 times.]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="分页获取五级变更操作记录数据" id="902b9b8f-ad9a-451a-b2f4-2cb7aa2c3102" tests="1" time="0">
+    <testcase name="Body matches string" time="0">
+      <failure type="AssertionFailure">
+        <![CDATA[Failed 1 times.]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="引入五级变更数据" id="818ac564-1a61-4e04-9de3-def1672b8b10" tests="1" time="0">
+    <testcase name="Body matches string" time="0">
+      <failure type="AssertionFailure">
+        <![CDATA[Failed 1 times.]]>
+      </failure>
+    </testcase>
+  </testsuite>
+</testsuites>
