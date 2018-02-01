@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="loan-urge-info-controller" time="1.919">
+  <testsuite name="A登录接口9201" id="0a34fa48-c3a5-4ef4-a442-4f01a190fe02" tests="2" time="1.669">
+    <testcase name="9101登录" time="1.669"/>
+    <testcase name="Body has token" time="1.669"/>
+  </testsuite>
+  <testsuite name="查询逾期数据列表" id="9d387ef9-7476-4723-8486-33cdf5f16e85" tests="1" time="0.109">
+    <testcase name="Body matches string" time="0.109"/>
+  </testsuite>
+  <testsuite name="查询逾期催款记录" id="73b7606f-43bd-475d-a6f4-0c00b3f009a5" tests="1" time="0.016">
+    <testcase name="Body matches string" time="0.016"/>
+  </testsuite>
+  <testsuite name="首页余额提醒功能" id="1c13d9c6-7f12-460f-83e5-ff0a4cb4ab1d" tests="1" time="0.016">
+    <testcase name="Body matches string" time="0.016"/>
+  </testsuite>
+  <testsuite name="保存催款信息" id="0ad80395-1d6c-4af0-9ec8-63428c82bae6" tests="1" time="0.062">
+    <testcase name="Body matches string" time="0.062"/>
+  </testsuite>
+  <testsuite name="变更催款信息" id="13714860-844e-48b2-b9cc-0383232b50e4" tests="1" time="0.047">
+    <testcase name="Body matches string" time="0.047"/>
+  </testsuite>
+</testsuites>

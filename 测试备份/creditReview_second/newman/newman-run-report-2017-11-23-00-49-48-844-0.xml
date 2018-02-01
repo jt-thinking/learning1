@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="流程信息查看" time="0.4990000000000001">
+  <testsuite name="流程信息查看 / A登录接口9201" id="42271df1-7e93-43ce-8ad5-6e7d7b25aaf2" tests="2" time="0.344">
+    <testcase name="9101登录" time="0.344"/>
+    <testcase name="Body has token" time="0.344"/>
+  </testsuite>
+  <testsuite name="流程信息查看 / 获取当前用户待处理的审批任务" id="35cdece4-ffaa-41c2-87a8-106aa0e0c362" tests="1" time="0.021">
+    <testcase name="Body matches string" time="0.021"/>
+  </testsuite>
+  <testsuite name="流程信息查看 / 获取当前用户提交的申请、处于审批中的任务" id="247fd5a4-f7f4-4af2-a476-fec7a4316a30" tests="1" time="0.021">
+    <testcase name="Body matches string" time="0.021"/>
+  </testsuite>
+  <testsuite name="流程信息查看 / 审批指定流程" id="9f2f11fb-c7fc-4134-bf00-5541d2cae65c" tests="0" time="0.012"/>
+  <testsuite name="流程信息查看 / 获取审批流程业务信息" id="e574bbcb-7aa9-4773-b727-913d214bf398" tests="1" time="0.028">
+    <testcase name="Body matches string" time="0.028"/>
+  </testsuite>
+  <testsuite name="流程信息查看 / 获取同一笔业务中已处理的工作流程任务信息" id="24fc2383-7c29-4a35-a053-44a7daf2165b" tests="1" time="0.012">
+    <testcase name="Body matches string" time="0.012"/>
+  </testsuite>
+  <testsuite name="根据实例编号，查询一笔申请流程，所有已处理的任务节点审批信息" id="f0e9081a-3f83-460b-9045-8a383133be54" tests="1" time="0.018">
+    <testcase name="Body matches string" time="0.018"/>
+  </testsuite>
+  <testsuite name="根据任务编号，查询一笔申请流程，所有已处理的任务节点审批信息" id="02931417-5c71-4341-951e-432d7c5f8b11" tests="1" time="0.014">
+    <testcase name="Body matches string" time="0.014"/>
+  </testsuite>
+  <testsuite name="根据实例编号，查询一笔申请流程，所有任务节点审批信息" id="07ae3ec7-3cb6-4125-97df-19aaf67f729c" tests="1" time="0.019">
+    <testcase name="Body matches string" time="0.019"/>
+  </testsuite>
+  <testsuite name="根据任务编号，查询一笔申请流程，所有任务节点审批信息" id="ce1d7250-60ca-45c4-b4ef-f4fa4f3eea5e" tests="1" time="0.01">
+    <testcase name="Body matches string" time="0.01"/>
+  </testsuite>
+</testsuites>

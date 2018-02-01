@@ -298,7 +298,13 @@ for(语句1;语句2;语句3){
 for(var i=2;i<=100;i++){
 
 }
+语句3要特别注意，看下例
+for (var i=0;i<5;i++)
+  {
+ console.log(i)  //打印出0,1,2,3,4
 
+  }
+console.log(i)   //打印出5
 
 #循环嵌套
 1、外层为假时内层不执行
@@ -981,6 +987,16 @@ document.getElementsByTagName()
 # appendChild() 方法可向节点的子节点列表的末尾添加新的子节点。但是若节点来自文档树，会从原来的地方删除
 document.querySelector("#root").appendChild(greeter());
 
+实例:
+			let br = document.getElementsByTagName("br")   用标签获取元素数组
+            let el = document.getElementsByClassName("el-tabs__content") 用类名获取元素数组
+            el[0].removeChild(br[0])  删除一个DOM节点
+            //增加一个类名，改变样式
+            let header = document.getElementsByClassName("el-tabs__header")
+            header[0].classList.add("headerKPIset"); 增加一个类名
+            //增加一个类名，改变样式
+            let padding = document.getElementsByClassName('el-tabs__content')
+            padding[0].classList.add('paddingKPIset')
 
 DOM查找方法
 语法：document.getElementsByTagName("tag")
@@ -1353,9 +1369,15 @@ ps：appCodeName\appName 浏览器名称等此节不做介绍
 Navigator.UserAgent：用来识别浏览器名称、版本、引擎以及操作系统等信息的内容
 
 
+js 获取日期 时间戳
+new Date()
+	.getTime()  返回 1970 年 1 月 1 日至今的毫秒数。
 轮播案例
 第三章38:21
 
 #for（var i in obj）和for（var i=0；i<obj.length;i++）的区别
 第一个是增强for循环，是不使用下标的一种遍历方式，简单高效，缺点是不能使用下标
 举个例子吧，如果你想要循环一个json就用第一个，如果想循环一个数组就用第二个
+
+四舍五入并保留2位小数点
+Number.toFixed(2)

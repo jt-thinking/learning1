@@ -1,0 +1,352 @@
+{
+	"info": {
+		"name": "loan-urge-info-controller",
+		"_postman_id": "c1171404-ec36-1ec4-b538-714ef9154799",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "A登录接口9201",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var data=JSON.parse(responseBody);",
+							"",
+							"if (data.data.token){",
+							"    tests[\"Body has token\"]=true;",
+							"    postman.setEnvironmentVariable(\"token\",data.data.token);",
+							"",
+							"}",
+							"else{",
+							"    tests[\"Body has token\"]=false;",
+							"}",
+							"",
+							"",
+							"",
+							"pm.test(\"9101登录\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"成功\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "device",
+						"value": "1"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}login/signIn?jobNumber=9201&password=202CB962AC59075B964B07152D234B70",
+					"host": [
+						"{{URL}}login"
+					],
+					"path": [
+						"signIn"
+					],
+					"query": [
+						{
+							"key": "jobNumber",
+							"value": "9201",
+							"equals": true
+						},
+						{
+							"key": "password",
+							"value": "202CB962AC59075B964B07152D234B70",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "查询逾期数据列表",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"成功\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}/loan/urge/queryList?pageNum=1&pageSize=20&type=2&custName",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"loan",
+						"urge",
+						"queryList"
+					],
+					"query": [
+						{
+							"key": "pageNum",
+							"value": "1",
+							"equals": true
+						},
+						{
+							"key": "pageSize",
+							"value": "20",
+							"equals": true
+						},
+						{
+							"key": "type",
+							"value": "2",
+							"equals": true
+						},
+						{
+							"key": "custName",
+							"value": "",
+							"equals": false
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "查询逾期催款记录",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"成功\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}/loan/urge/queryHisUrgeList?pageNum=1&pageSize=20&prdId=008PN0000000029",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"loan",
+						"urge",
+						"queryHisUrgeList"
+					],
+					"query": [
+						{
+							"key": "pageNum",
+							"value": "1",
+							"equals": true
+						},
+						{
+							"key": "pageSize",
+							"value": "20",
+							"equals": true
+						},
+						{
+							"key": "prdId",
+							"value": "008PN0000000029",
+							"equals": true,
+							"description": "产品ID"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "首页余额提醒功能",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"成功\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}/loan/urge/queyrBalanceInfoForIndex",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"loan",
+						"urge",
+						"queyrBalanceInfoForIndex"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "保存催款信息",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"成功\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}/loan/urge/save?prdId=008PN0000000029&urgeTime=1484740909000&promiseTime=1547812909000&reason=4",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"loan",
+						"urge",
+						"save"
+					],
+					"query": [
+						{
+							"key": "prdId",
+							"value": "008PN0000000029",
+							"equals": true,
+							"description": "产品编号"
+						},
+						{
+							"key": "urgeTime",
+							"value": "1484740909000",
+							"equals": true,
+							"description": "催款时间"
+						},
+						{
+							"key": "promiseTime",
+							"value": "1547812909000",
+							"equals": true,
+							"description": "承诺还款时间"
+						},
+						{
+							"key": "reason",
+							"value": "4",
+							"equals": true,
+							"description": "情况说明"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "变更催款信息",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"成功\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}/loan/urge/update?id=5&promiseTime=1547812909000&reason=8",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"loan",
+						"urge",
+						"update"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5",
+							"equals": true,
+							"description": "催款ID"
+						},
+						{
+							"key": "promiseTime",
+							"value": "1547812909000",
+							"equals": true,
+							"description": "承诺还款时间"
+						},
+						{
+							"key": "reason",
+							"value": "8",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

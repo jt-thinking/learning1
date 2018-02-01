@@ -1,0 +1,474 @@
+{
+	"info": {
+		"name": "流程信息查看",
+		"_postman_id": "8d26f123-c745-f1ed-5ba0-8e856ae82874",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "流程信息查看",
+			"description": "",
+			"item": [
+				{
+					"name": "A登录接口9201",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var data=JSON.parse(responseBody);",
+									"",
+									"if (data.data.token){",
+									"    tests[\"Body has token\"]=true;",
+									"    postman.setEnvironmentVariable(\"token\",data.data.token);",
+									"",
+									"}",
+									"else{",
+									"    tests[\"Body has token\"]=false;",
+									"}",
+									"",
+									"",
+									"",
+									"pm.test(\"9101登录\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"成功\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "device",
+								"value": "1"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}login/signIn?jobNumber=9201&password=202CB962AC59075B964B07152D234B70",
+							"host": [
+								"{{URL}}login"
+							],
+							"path": [
+								"signIn"
+							],
+							"query": [
+								{
+									"key": "jobNumber",
+									"value": "9201",
+									"equals": true
+								},
+								{
+									"key": "password",
+									"value": "202CB962AC59075B964B07152D234B70",
+									"equals": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "获取当前用户待处理的审批任务",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Body matches string\"] = responseBody.has(\"成功\");"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}workflow/getTaskInHand",
+							"host": [
+								"{{URL}}workflow"
+							],
+							"path": [
+								"getTaskInHand"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "获取当前用户提交的申请、处于审批中的任务",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Body matches string\"] = responseBody.has(\"成功\");"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}workflow/getTaskInHandOfApplicant",
+							"host": [
+								"{{URL}}workflow"
+							],
+							"path": [
+								"getTaskInHandOfApplicant"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "审批指定流程",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}workflow/audit?taskId=374085&message=OK&operate=1",
+							"host": [
+								"{{URL}}workflow"
+							],
+							"path": [
+								"audit"
+							],
+							"query": [
+								{
+									"key": "taskId",
+									"value": "374085",
+									"equals": true,
+									"description": "任务ID"
+								},
+								{
+									"key": "message",
+									"value": "OK",
+									"equals": true,
+									"description": "审批意见"
+								},
+								{
+									"key": "operate",
+									"value": "1",
+									"equals": true,
+									"description": "操作类型\n"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "获取审批流程业务信息",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"成功\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}workflow/info?taskType=product&businessKey=3621037756862464",
+							"host": [
+								"{{URL}}workflow"
+							],
+							"path": [
+								"info"
+							],
+							"query": [
+								{
+									"key": "taskType",
+									"value": "product",
+									"equals": true,
+									"description": "审批类型 CREDIT(\"授信申请\", \"cust_credit\"),\nPRODUCT(\"借款产品\", \"product\"),\nCREDIT_AMOUNT_OVER(\"授信额度终结\", \"credit_amt_over\"),\nCREDIT_AMOUNT_RECOVERY(\"授信额度恢复\", \"credit_amt_recovery\"),\nCREDIT_AMOUNT_STOP(\"授信额度止付\", \"credit_amt_stop\"),\nCUSTOMER_BASIC_INFORMATION_CHANGE(\"客户信息变更\", \"cust_basic_chg\"),\nBLACK_CANCEL(\"黑名单撤销\", \"cust_black_cancel\"),\nCREDIT_AMOUNT_CHANGE(\"授信额度变更\", \"cust_credit_amt_chg\"),\nCUSTOMER_OBTAIN(\"客户引入申请\", \"cust_obtain\"),\nRELATION_CHANGE(\"关联信息变更\", \"cust_relation_chg\"),\nCUSTOMER_TRANSFER(\"客户移交\", \"cust_transfer\"),\nGUARANTEE_CHANGE(\"担保人变更\",\"guanrantee_change\"),\nGUARANTEE_ADD(\"新增担保人\", \"guarantee_add\"),\nGUARANTEE_AMOUNT_CHANGE(\"担保额度变更\", \"guarantee_amt_chg\"),\nLOAN_FIVE_CHANGE(\"五级分类变更\", \"loan_five_chag\"),\nPRODUCT_BASIC_CHANGE(\"授信基本产品变更\", \"product_basic_chg\"),\nPRODUCT_MARKET_BATCH_CHANGE(\"授信营销产品批量变更\", \"product_market_batch_chg\"),\nPRODUCT_MARKET_CHANGE(\"授信营销产品变更\", \"product_market_chg\"),\nPRODUCT_SUBSIDIARY_CHANGE(\"授信附属产品变更\", \"product_subsidiary_chg\");"
+								},
+								{
+									"key": "businessKey",
+									"value": "3621037756862464",
+									"equals": true,
+									"description": "业务主键值 "
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "获取同一笔业务中已处理的工作流程任务信息",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"成功\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{token}}"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{URL}}workflow/history?taskType=product&businessKey=3621037756862464",
+							"host": [
+								"{{URL}}workflow"
+							],
+							"path": [
+								"history"
+							],
+							"query": [
+								{
+									"key": "taskType",
+									"value": "product",
+									"equals": true,
+									"description": "审批类型"
+								},
+								{
+									"key": "businessKey",
+									"value": "3621037756862464",
+									"equals": true,
+									"description": "业务主键值"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "根据实例编号，查询一笔申请流程，所有已处理的任务节点审批信息",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"成功\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}/workflow/getCompletedTasksByInstanceId?instanceId=315255",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"workflow",
+						"getCompletedTasksByInstanceId"
+					],
+					"query": [
+						{
+							"key": "instanceId",
+							"value": "315255",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "根据任务编号，查询一笔申请流程，所有已处理的任务节点审批信息",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"成功\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}/workflow/getCompletedTasksByTaskId?taskId=315264",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"workflow",
+						"getCompletedTasksByTaskId"
+					],
+					"query": [
+						{
+							"key": "taskId",
+							"value": "315264",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "根据实例编号，查询一笔申请流程，所有任务节点审批信息",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"成功\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}/workflow/getTasksByInstanceId?instanceId=315255",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"workflow",
+						"getTasksByInstanceId"
+					],
+					"query": [
+						{
+							"key": "instanceId",
+							"value": "315255",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "根据任务编号，查询一笔申请流程，所有任务节点审批信息",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"成功\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}/workflow/getTasksByTaskId?taskId=315264",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"workflow",
+						"getTasksByTaskId"
+					],
+					"query": [
+						{
+							"key": "taskId",
+							"value": "315264",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

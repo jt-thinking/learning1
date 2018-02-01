@@ -1,0 +1,234 @@
+{
+	"info": {
+		"name": "cust-workbench-controller",
+		"_postman_id": "13040934-66a2-d19e-5976-41875fff7ead",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "A登录接口9201",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var data=JSON.parse(responseBody);",
+							"",
+							"if (data.data.token){",
+							"    tests[\"Body has token\"]=true;",
+							"    postman.setEnvironmentVariable(\"token\",data.data.token);",
+							"",
+							"}",
+							"else{",
+							"    tests[\"Body has token\"]=false;",
+							"}",
+							"",
+							"",
+							"",
+							"pm.test(\"9101登录\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"成功\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "device",
+						"value": "1"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}login/signIn?jobNumber=9201&password=202CB962AC59075B964B07152D234B70",
+					"host": [
+						"{{URL}}login"
+					],
+					"path": [
+						"signIn"
+					],
+					"query": [
+						{
+							"key": "jobNumber",
+							"value": "9201",
+							"equals": true
+						},
+						{
+							"key": "password",
+							"value": "202CB962AC59075B964B07152D234B70",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "新增工作台任务信息",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"成功\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}/cust/workbench/save?content=1&workTime=1512001708000",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"cust",
+						"workbench",
+						"save"
+					],
+					"query": [
+						{
+							"key": "content",
+							"value": "1",
+							"equals": true,
+							"description": "内容"
+						},
+						{
+							"key": "workTime",
+							"value": "1512001708000",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "查询客户经理工作台信息",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var data=JSON.parse(responseBody);",
+							"",
+							"if (data.data.list[0]){",
+							"    tests[\"workbenchSearch\"]=true;",
+							"    postman.setEnvironmentVariable(\"workbenchSearchId\",data.data.list[0].id);",
+							"",
+							"}",
+							"else{",
+							"    tests[\"workbenchSearch\"]=false;",
+							"}",
+							"",
+							"",
+							"",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"成功\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}/cust/workbench/search?pageNum=1&pageSize=20",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"cust",
+						"workbench",
+						"search"
+					],
+					"query": [
+						{
+							"key": "pageNum",
+							"value": "1",
+							"equals": true
+						},
+						{
+							"key": "pageSize",
+							"value": "20",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "删除工作台任务信息",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"成功\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}/cust/workbench/delete?workId={{workbenchSearchId}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"cust",
+						"workbench",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "workId",
+							"value": "{{workbenchSearchId}}",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

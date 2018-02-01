@@ -1,1 +1,43 @@
 
+CSS3 
+选择器
+子元素选择器(直接后代选择器) '>'
+相邻兄弟选择器 '+'
+通用兄弟选择器 '~' 前提是有同一个父元素
+群组选择器,多个选择器用',' 分开
+属性选择器Element[attribute] 选择有href属性的a元素
+		  Element[attribute='value']
+		  Element[attribute='value']
+		  Element[attribute~='value']
+		  Element[attribute^='value']
+		  Element[attribute$='value']
+		  Element[attribute*='value']
+		  Element[attribute|='value']   最为常用的
+
+
+		伪类选择器
+
+		分为动态伪类、UI元素状态伪类、CSS3结构类、否定选择器、伪元素
+	
+			动态伪类
+			这些伪类并不存在于HTML中，只有当用户和网站交互的时候才能体现出来
+
+				锚点伪类
+				:link :visited
+			
+				用户行为伪类
+				:hover :active :focus
+
+			UI元素状态伪类
+			概念:我们把"enabled"、"disabled"、"checked"伪类称为UI元素状态伪类
+			兼容性：IE9+ Firefox、Chrome、Safari、Opera
+
+			CSS3结构类
+			我们把CSS3的:nth选择器也称为CSS3结构类
+
+			选择方法:
+			:first-child :last-child :nth-child() :nth-last-child() :nth-of-type()
+			:nth-last-of-type() :first-of-type :last-of-type :only-child only-of-type :empty
+
+
+			:46分钟

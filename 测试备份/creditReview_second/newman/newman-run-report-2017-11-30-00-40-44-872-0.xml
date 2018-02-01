@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="cust-workbench-controller : 客户经理工作台业务接口" time="0.41500000000000004">
+  <testsuite name="A登录接口9201" id="6849a804-8624-4d7b-9859-14649a10361c" tests="2" time="0.269">
+    <testcase name="9101登录" time="0.269"/>
+    <testcase name="Body has token" time="0.269"/>
+  </testsuite>
+  <testsuite name="查询客户经理工作台信息" id="969ae039-a022-4813-a9ef-66de6ad767d2" tests="2" time="0.02">
+    <testcase name="Body matches string" time="0.02"/>
+    <testcase name="workbenchSearch" time="0.02">
+      <failure type="AssertionFailure">
+        <![CDATA[Failed 1 times.]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="新增工作台任务信息" id="192e9e98-f28b-4c13-a9a8-6b1d864559e2" tests="1" time="0.06">
+    <testcase name="Body matches string" time="0.06"/>
+  </testsuite>
+  <testsuite name="删除工作台任务信息" id="a5871e8c-3ee6-42c3-8364-90f603c46bb4" tests="1" time="0.066">
+    <testcase name="Body matches string" time="0.066"/>
+  </testsuite>
+</testsuites>
