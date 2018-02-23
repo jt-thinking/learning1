@@ -119,6 +119,11 @@ eslint
 特别注意：
 在用<el-table></el-table>的data进行绑定的时候，一定要一次性把数据绑定进去。而不是绑定之后再修改。可能就会导致无法渲染
 
+
+
+@符号可以代表根目录
+	import HelloWorld from '@/components/HelloWorld'
+	
 待学习：
 ref  正则
 为什么组件没注册引入之后也可以显示呢？
@@ -126,13 +131,19 @@ ref  正则
 使用Object.assign(this.tableData,data.list) 为什么复制成功之后却无法在页面显示呢,是否和vue的__ob__属性有关，而使用v-loading之后又好了
 foreach方法
 js event 对象
-vue 方法第一次没有监听器，第二次调用才有监听器set get 属性
-表单校验插件 async-validator
-pull-right 是哪里的属性？怎么可以直接class='pull-right'?/
-为什么filter会被调用两次啊啊啊 
+
+
+疑问
+	vue 中方法中对data数字+1 无效
+	vue 方法第一次没有监听器，第二次调用才有监听器set get 属性
+	表单校验插件 async-validator
+	pull-right 是哪里的属性？怎么可以直接class='pull-right'?/
+	为什么filter会被调用两次啊啊啊 
 
 
 npm install -g @vue/cli   
 和 
 npm install -g vue-cli 
 區別
+
+

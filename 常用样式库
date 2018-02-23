@@ -1,0 +1,8 @@
+hr{
+    background-color: #d7dde4;
+    border:none;
+    height:1px;
+}
+
+斜体
+	font-style: italic

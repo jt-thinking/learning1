@@ -1,6 +1,4 @@
-﻿11第三章  文本样式  25:00;
-
-#HTML标签属性
+﻿#HTML标签属性
 <标签名 属性名1="属性值" 属性名2="属性值"...> ...</标签名>
 
 #如果网页有中文需要进行编码设置，否则会出现乱码
@@ -38,7 +36,7 @@ disc 圆点
 square 正方形
 cicle 空心圆
 
-#w有序列表type属性值
+#有序列表type属性值
 <ol type:属性值>
 1   数字1、2、3
 a   小写字母
@@ -192,8 +190,8 @@ section：与 div 的无语义相对，简单地说 section 就是带有语义�
 <table border="1"> 边框为1个像素宽度
 
 #table 属性之单元格长度
-<table width="500px">
-
+  <table width="500px">
+  <table width="100%">
 #table的其他属性
 属性         值                        描述
 align        left、center、right       表格相对周围元素的对齐方式

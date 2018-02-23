@@ -958,7 +958,8 @@ JavaScript中的date对象
 
 注意:如果setMonth(13) 月份显示1，实际是2月，年份会+1
 
-
+毫秒数转date对象
+	var today = new Date(1453094034000)
 
 javascript DOM 基础
 本课程的主要内容
