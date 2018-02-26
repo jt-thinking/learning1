@@ -1,0 +1,4 @@
+npm run start 和 npm run test  可以简写成 npm start  和 npm test 这个是npm 的规定, 只有这两个可以这么写, 其他的比如npm run build 是不可以写成npm build的
+
+
+set NODE_ENV=dev 和 set NODE_ENV=production 即设置环境变量为生产或者开发环境

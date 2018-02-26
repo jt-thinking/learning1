@@ -116,3 +116,181 @@ GEGEXP 对比
 		Byron | Casper
 		Byr(on | Ca)sper
 
+
+
+前瞻
+	正则表达式从文本头部向文本尾部开始解析,文本尾部方向，称为"前"
+
+	前瞻就是在正则表达式匹配到规则的时候,向前检查是否符合断言，后顾/后瞻方向相反
+
+	javaScript不支持后顾
+
+	符合和不符合断言称为 肯定/正向 匹配和 否定/负向匹配
+
+		名称		正则  			含义
+		正向前瞻	exp(?=assert)	
+		负向前瞻	exp(?!assert)
+		正向后顾	exp(?<=assert)	javaScript不支持
+		负向后顾	exp(?<!assert)	javaScript不支持
+
+
+			举例:	\w(?=\d)
+					'a2*3'.replace(/\w(?=\d)/g,'X')
+					'a2*3'.replace(/\w(?!\d)/g,'X')
+
+
+
+
+对象属性
+	global: 是否全文搜索,默认 false         
+	ignore case: 是否大小写敏感, 默认是 false
+	multiline : 多行搜索, 默认值是 false
+	lastIndex : 是当前表达式匹配内容的最后一个字符的下一个位置
+	source : 正则表达式的文本字符串
+
+		var reg1 =  /\w/
+			reg1.global		结果是 false  	只读的不能读取不能设置
+			reg1.ignoreCase 结果是 false	只读的不能读取不能设置
+			reg1.multiline  结果是 false	只读的不能读取不能设置
+
+		var reg2 =  /\w/gim
+			reg2.global		结果是 true		只读的不能读取不能设置
+			reg2.ignoreCase 结果是 true		只读的不能读取不能设置
+			reg2.multiline  结果是 true		只读的不能读取不能设置
+
+
+正则表达式本身的方法
+	RegExp.prototype.test(str)
+		用于测试字符串参数中是否存在匹配正则表达式模式的字符串, 如果存在则返回 true , 否则返回 false 
+			举例:
+				var reg1 =  /\w/
+				var reg2 =  /\w/g
+
+				reg1.test('a')
+					true
+
+				reg1.test('$')
+					false 
+
+				第一遍 reg2.test('a')
+							true
+
+				第二遍 reg2.test('a')
+							false 
+
+				第三遍 reg2.test('a')
+							true
+
+
+					原因在于: 使用 'g'标志的时候, lastIndex 属性值会发生变化
+
+
+
+	RegExp.prototype.exec(str)
+		使用正则表达式模式对字符串执行搜索, 并将更新全局 RegExp 对象的属性以反映匹配结果
+
+		如果没有匹配的文本则返回null , 否则返回一个结果数组 :
+			- index 声明匹配文本的第一个字符的位置
+			- input 存放被检索的字符串 string
+
+
+				非全局调用
+					调用非全局的RegExp 对象的exec() 时 , 返回数组
+					第一个元素是与正则表达式相匹配的文本
+					第二个元素是与RegExp对象 的第一个子表达式(分组)相匹配的文本(如果有的话)
+					第三个元素是与RegExp对象 的第二个子表达式(分组)相匹配的文本(如果有的话),以此类推
+
+
+						举例: 
+						var reg3 = /\d(\w)\d/
+						var reg4 = /\d(\w)\d/g
+						var ts   = '1a2b3c4d5e'
+
+						var rest = reg3.exec(ts)
+						console.log(rest)
+
+						while(ret = reg4.exec(ts)){
+							console.log(ret)
+						}
+
+						ps:此处while 的用法我不太理解
+
+
+
+	String.protatype.search(reg)
+		search()方法用于检索字符串中指定的子字符串，或检索与正则表达式相匹配的子字符串
+
+		方法返回第一个匹配结果 index ,查找不到返回 -1
+
+		search()方法不执行全局匹配, 它将忽略标志g ,并且总是从字符串的开始进行检索
+
+			举例
+			'a1b2c3d1'.search('1')
+			 	1
+
+			'a1b2c3d1'.search('10')
+				-1
+
+			'a1b2c3d1'.search(1)	
+				1
+
+			'a1b2c3d1'.search(/1/)
+				1
+
+
+
+	String.prototype.match(reg)
+		ps:与 RegExp.prototype.exec(str) 方法有些类似却也不同
+		match()方法将检索字符串, 以找到一个或多个与regexp匹配的文本
+
+		regexp 是否具有标志g对结果影响很大
+
+			非全局调用
+				如果regexp 没有标志g ,那么match()方法就只能在字符串中执行一次匹配
+
+				如果没有找到任何匹配的文本, 将返回null
+
+				否则它将返回一个数组, 其中存放了与它找到的匹配文本有关的信息:
+					返回数组的第一个元素存放的是匹配文本, 而其余的元素存放的是与正则表达式的子表达式匹配的文本
+
+					除了常规的数组元素之外, 返回的数组还含有2个对象属性
+						index 声明匹配文本的起始字符在字符串的位置
+
+						input 声明对stringObject 的引用
+
+
+			全局调用
+				如果regexp 具有标志g 则match()方法将执行全局检索, 找到字符串中的所有匹配子字符串
+
+					没有找到任何匹配的子字符串, 则返回null
+
+					如果找到了一个或多个匹配子串, 则返回一个数组
+
+				数组元素中存放的是字符串中所有的匹配子串, 而且也没有Index 属性或input 属性
+
+
+	String.prototype.split(reg)
+		我们经常使用split 方法把字符串分割为字符数组'a,b,c,d'.split(',')	
+			["a","b","c","d"]		
+		在一些复杂的分割情况下我们可以使用正则表达式解决'a1b2c3d4'.split(/\d/g);
+			["a","b","c","d"]
+
+
+	String.prototype.replace
+		举例
+			'a1b'.replace('1', 2)	
+				a2b
+
+			'a1b1c1'.replace('1',2)
+				a2b1c1
+
+
+		String.prototype.replace(str,replaceStr)
+		String.prototype.replace(reg,replaceStr)
+		String.prototype.replace(reg,function)		
+			function参数含义
+				function会在每次匹配替换的时候调用, 有四个参数
+				1、匹配字符串
+				2、正则表达式分组内容, 没有分组则没有该参数(如果有多个分组就有多个参数)
+				3、匹配项在字符串中的index
+				4、原字符串

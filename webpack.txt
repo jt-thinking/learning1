@@ -10,3 +10,17 @@ var path = require('path')
 
 var webpack = require('webpack')
 	node 会寻找node_modules 中webpack目录里面的package.json 中的 main 所代表的目录/命令 
+
+
+
+--save 和 --save-dev 的区别
+
+	开发依赖和生产依赖的区别
+
+	简写 -S -D
+
+
+ new webpack.DefinePlugin({
+ // process.env.NODE_ENV 获取环境变量是dev 或者是 production 
+  __DEV__: JSON.stringify(JSON.parse((process.env.NODE_ENV == 'dev') || 'false'))
+})
