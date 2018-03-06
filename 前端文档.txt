@@ -1384,3 +1384,14 @@ wrap：
 flex容器为多行。该情况下flex子项溢出的部分会被放置到新行，子项内部会发生断行
 wrap-reverse：
 反转 wrap 排列。
+
+z-index属性
+
+  z-index: -1; 
+    数字越大,越在上面一层
+
+手型光标
+  cursor:pointer
+
+透明度
+  opacity:0.5

@@ -1,8 +1,28 @@
-hr{
-    background-color: #d7dde4;
-    border:none;
-    height:1px;
-}
-
 斜体
 	font-style: italic
+
+
+
+字体颜色(黑色):
+	#48576a
+
+常用水平线样式
+.hr1{
+	background:#d7dde4;
+	height: 1px;
+	border:none;
+}
+
+设置背景图片
+	body{
+   		background-image: url(assets/loading.jpg);
+	}
+
+边框圆角
+	border-radius:15px;（含义是"边框半径"）
+
+透明度
+	opacity:0.7
+	或者
+	background-color: rgba(0,0,0,0.5);
+		用rgba 和 opacity 设置透明度是有区别的. 用rgba 不会传递给子元素

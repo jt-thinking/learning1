@@ -2,3 +2,70 @@ npm run start 和 npm run test  可以简写成 npm start  和 npm test 这个�
 
 
 set NODE_ENV=dev 和 set NODE_ENV=production 即设置环境变量为生产或者开发环境
+
+
+npm 命令
+	
+	查看全局路径
+		npm root -g  
+
+	全局删除模块
+		npm uninstall -g xxx  
+
+	npm 查看模块全部版本
+		npm view vue versions
+
+			但是当版本特别多的时候，并会把所有的版本显示出来 比较新的内容会变成这样：
+			'1.3.9',
+			'1.3.10',
+			... 159 more items ], 显示的是more items
+				此时可以使用 npm view vue versions  --json/-J
+
+	查看模块最新版本			
+		npm view vue version
+
+	查看模块本地安装的版本
+		npm list vue-cli (-g)
+
+	查看可更新的依赖包
+		npm outdated (-g)
+
+	更新依赖包
+		npm install (packge)   
+			但是在之前要更新package.json 中的版本,否则无法更新
+
+	npm info 
+		npm info underscore  所有详细信息
+		npm info underscore description
+		npm info underscore homepage
+		npm info underscore version
+
+
+
+
+
+第三方依赖包
+	babel-core
+		如果某些代码需要调用Babel的API进行转码，就要使用babel-core模块。
+
+	babel-loader
+	css-loader
+	file-loader
+	sass-loader
+	vue-loader
+		加载器
+
+
+	babel-preset-env
+		也是转码用的
+
+	cross-env
+		cross-env能跨平台地设置及使用环境变量
+
+
+
+
+疑问:
+	是有些依赖是无法被安装到生产依赖上的吗？
+
+
