@@ -12,6 +12,7 @@
 	height: 1px;
 	border:none;
 }
+style='background:#d7dde4;height:1px;border:none;'
 
 设置背景图片
 	body{
@@ -26,3 +27,7 @@
 	或者
 	background-color: rgba(0,0,0,0.5);
 		用rgba 和 opacity 设置透明度是有区别的. 用rgba 不会传递给子元素
+
+
+CSS calc() 函数
+	calc() 函数用于动态计算长度值。

@@ -14,10 +14,13 @@ export default {
   },
   data () {
     return {
+      funcId: ''
     }
   },
   created: function () {
-
+    if (!this.$Auth.checkRole(this.funcId)) {
+      this.$router.push('/error')
+    }
   },
   mounted: function () {
 
@@ -34,6 +37,6 @@ export default {
   }
 }
 </script>
-<style scoped>
+<style lang='scss' scoped>
 
 </style>

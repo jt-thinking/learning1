@@ -23,16 +23,12 @@ element 版本为1.4.x
 
 
  3、对话框
- <el-dialog
-    title="提示"
-    :visible.sync="dialogVisible"
-    size="tiny/small/large/full "
-    >
-    <span>这是一段信息</span>
-    <span slot="footer" >
-            <el-button @click="dialogVisible = false">取 消</el-button>
-            <el-button type="primary" @click="dialogVisible = false">确 定</el-button>
-    </span>
+<el-dialog title="提示" :visible.sync="dialogVisible" width='50%' :close-on-click-modal='false'>
+  <span>这是一段信息</span>
+  <span slot="footer">
+    <el-button @click="dialogVisible = false">取 消</el-button>
+    <el-button type="primary" @click="dialogVisible = false">确 定</el-button>
+  </span>
 </el-dialog>
     可以通过 size="1" 配合 el-dialog--1 设置宽度 
 
@@ -40,10 +36,14 @@ element 版本为1.4.x
 
 
 4、分页 
-<div class='paging'>
-    <el-pagination @size-change="sizeChange" @current-change="numChange"  :page-sizes="[15,10,1,20, 30, 40]" :page-size="pageSize" layout="total, sizes, prev, pager, next, jumper" :total="total">
-    </el-pagination>
-</div>
+    <div class='paging'>
+      <el-pagination @size-change="sizeChange" @current-change="numChange"  :page-sizes="[15,10,1,20, 30, 40]" :page-size="pageSize" layout="total, sizes, prev, pager, next, jumper" :total="total">
+      </el-pagination>
+    </div>
+    <!-- 简单版 -->
+    <div class="paging">
+      <el-pagination layout="total, pager, next" :total="total" :page-size='pageSize' @current-change='currentChange'></el-pagination>
+    </div>
 
 5、Form
 
@@ -58,25 +58,23 @@ element 版本为1.4.x
         4、表单校验的时候一定要传入:model="form" 和 prop='' -->
         :rules="[{ required: true, message: '请输入邮箱地址', trigger: 'blur' },{ type: 'email', message: '请输入正确的邮箱地址', pattern: /^[a-z]+$/, trigger: 'blur,change' }
         
-        submitForm("formName")
-        submitForm(formName) {
-            this.$refs[formName].validate((valid) => {
-              if (valid) {
-                alert('submit!');
-              } else {
-                console.log('error submit!!');
-                return false;
-              }
-            });
-        },
+          this.$refs[formName].validate((valid) => {
+            if (valid) {
+
+            } else {
+              console.log('error submit!!')
+              return false
+            }
+          })
+        resetFields 方法可以移除校验结果
 
 2、button  
  <el-button type="primary" size='small'></el-button>
  <el-button type="success/warning/danger/info" :plain="true" size='small'></el-button>
 
 3、input
-<el-input size='small'  placeholder=""  ></el-input> 
-<el-input size='small'  placeholder=""  type='textarea' :autosize='{ minRows: 6, maxRows: 10 }'></el-input>
+<el-input size='mini'  placeholder=""  ></el-input> 
+<el-input size='mini'  placeholder=""  type='textarea' :autosize='{ minRows: 6, maxRows: 10 }'></el-input>
 带icon的input
     <el-input placeholder="请选择日期"  prefix-icon/suffix-icon="el-icon-date" v-model="input2"></el-input>
   
@@ -150,18 +148,18 @@ element 版本为1.4.x
 
 
 5、时间选择器
-<el-date-picker v-model="startTime" type="date" placeholder="选择日期" size='small'></el-date-picker>
+<el-date-picker v-model="startTime" type="date" placeholder="选择日期" size='mini' :editable="false"></el-date-picker>
 <span>—</span>
-<el-date-picker v-model="endTime" type="date" placeholder="选择日期" size='small'></el-date-picker>
+<el-date-picker v-model="endTime" type="date" placeholder="选择日期" size='mini' :editable="false"></el-date-picker>
     startTime: isNaN(Date.parse(this.startTime)) == true ? undefined : Date.parse(this.startTime),
     endTime: isNaN(Date.parse(this.endTime)) == true ? undefined  : Date.parse(this.endTime),
 
 
 6、表格
-<el-table :data="tableData" style="width: 100%"  stripe border v-loading="loading">
+<el-table :data="tableData" style="width: 100%"  stripe border v-loading="loading" size='mini'>
     <el-table-column prop='goodsName' label="借款合同号" width="180"></el-table-column>
     <el-table-column  label="客户姓名" width="180" >
-        <template scope="scope">
+        <template slot-scope="scope">
             <a @click='openUserInfo(scope.row.custId)'>{{ scope.row.name}}</a>
         </template>
     </el-table-column>
@@ -191,24 +189,14 @@ element 版本为1.4.x
 
 
 10.弹框
-open2() {
-    this.$confirm('此操作将永久删除该文件, 是否继续?', '提示', {
+    this.$confirm('删除该, 是否继续?', '提示', {
       confirmButtonText: '确定',
       cancelButtonText: '取消',
       type: 'warning'
     }).then(() => {
-      this.$message({
-        type: 'success',
-        message: '删除成功!'
-      });
-    }).catch(() => {
-      this.$message({
-        type: 'info',
-        message: '已取消删除'
-      });          
-    });
-  }
-}
+
+    }).catch(() => {})
+
 
 
 
@@ -251,3 +239,7 @@ this.$notify({title: '成功', message: '添加成功', type: 'success'})
     }
   }
   </script>
+
+
+15、对象resret
+Object.assign(this.$data.form, this.$options.data().form)
