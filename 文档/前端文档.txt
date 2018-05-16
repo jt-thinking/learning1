@@ -1395,3 +1395,9 @@ z-index属性
 
 透明度
   opacity:0.5
+
+DOM 部分
+node.appendChild(img) 插入一个元素
+let img = imgTemplate.cloneNode(true) 克隆一个元素
+  true为深度拷贝
+let img = document.createElement('img') 创造一个元素

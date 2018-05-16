@@ -19,9 +19,6 @@ element 版本为1.4.x
     </el-option>
 </el-select>
 
-
-
-
  3、对话框
 <el-dialog title="提示" :visible.sync="dialogVisible" width='50%' :close-on-click-modal='false'>
   <span>这是一段信息</span>
@@ -30,14 +27,13 @@ element 版本为1.4.x
     <el-button type="primary" @click="dialogVisible = false">确 定</el-button>
   </span>
 </el-dialog>
-    可以通过 size="1" 配合 el-dialog--1 设置宽度 
 
     modal=true 有遮罩层
 
 
 4、分页 
     <div class='paging'>
-      <el-pagination @size-change="sizeChange" @current-change="numChange"  :page-sizes="[15,10,1,20, 30, 40]" :page-size="pageSize" layout="total, sizes, prev, pager, next, jumper" :total="total">
+      <el-pagination @size-change="sizeChange" @current-change="numChange"  :page-sizes="[10,15,20, 30, 40]" :page-size="pageSize" layout="total, sizes, prev, pager, next, jumper" :total="total">
       </el-pagination>
     </div>
     <!-- 简单版 -->
@@ -47,8 +43,21 @@ element 版本为1.4.x
 
 5、Form
 
-<el-form :inline="true">
-    <el-form-item label='客户名称/证件编号'></el-form-item>    
+<el-form ref='formData' :model='formData' :inline='true'>
+    <el-form-item label='客户名称/证件编号' :show-message='false' ></el-form-item>
+</el-form>
+
+<el-form ref='formData' :model='formData' :inline='true'>
+    <el-form-item label='客户名称' >
+      <el-input size='mini' v-model='formData.custName'></el-input> 
+    </el-form-item>
+
+    <el-form-item label='手机号'>
+      <el-input size='mini' v-model='formData.registerPhone'></el-input> 
+    </el-form-item>
+    <el-form-item>
+      <el-button type="primary" size='mini' @click='search'>查询</el-button>
+    </el-form-item>
 </el-form>
     
     5.1 表单校验 
@@ -56,7 +65,7 @@ element 版本为1.4.x
         2、pattern 可以传入一个正则
         3、type 和 pattern 是有冲突的
         4、表单校验的时候一定要传入:model="form" 和 prop='' -->
-        :rules="[{ required: true, message: '请输入邮箱地址', trigger: 'blur' },{ type: 'email', message: '请输入正确的邮箱地址', pattern: /^[a-z]+$/, trigger: 'blur,change' }
+        :rules="[{ required: true, message: '请输入邮箱地址', trigger: 'blur/change' },{ type: 'email', message: '请输入正确的邮箱地址', pattern: /^[a-z]+$/, trigger: 'blur,change' }]"
         
           this.$refs[formName].validate((valid) => {
             if (valid) {
@@ -82,12 +91,7 @@ element 版本为1.4.x
 
 4.0  普通select
     <el-select v-model="value" placeholder="请选择" size='large/small/mini' filterable>
-        <el-option
-          v-for="item in options"
-          :key="item.value"
-          :label="item.label"
-          :value="item.value">
-        </el-option>
+      <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></el-option>
     </el-select>
 
 4.1 社区经理select组件
@@ -148,21 +152,16 @@ element 版本为1.4.x
 
 
 5、时间选择器
-<el-date-picker v-model="startTime" type="date" placeholder="选择日期" size='mini' :editable="false"></el-date-picker>
+<el-date-picker v-model="startTime" type="date" placeholder="选择日期" size='mini' :editable="false" value-format="timestamp"></el-date-picker>
 <span>—</span>
-<el-date-picker v-model="endTime" type="date" placeholder="选择日期" size='mini' :editable="false"></el-date-picker>
+<el-date-picker v-model="endTime" type="date" placeholder="选择日期" size='mini' :editable="false" value-format="timestamp"></el-date-picker>
     startTime: isNaN(Date.parse(this.startTime)) == true ? undefined : Date.parse(this.startTime),
     endTime: isNaN(Date.parse(this.endTime)) == true ? undefined  : Date.parse(this.endTime),
 
 
 6、表格
-<el-table :data="tableData" style="width: 100%"  stripe border v-loading="loading" size='mini'>
-    <el-table-column prop='goodsName' label="借款合同号" width="180"></el-table-column>
-    <el-table-column  label="客户姓名" width="180" >
-        <template slot-scope="scope">
-            <a @click='openUserInfo(scope.row.custId)'>{{ scope.row.name}}</a>
-        </template>
-    </el-table-column>
+<el-table :data="tableData" style="width: 100%"  stripe border size='mini'>
+  <el-table-column prop='goodsName' label="借款合同号" width="180"></el-table-column>
 </el-table>
 
 
@@ -241,5 +240,5 @@ this.$notify({title: '成功', message: '添加成功', type: 'success'})
   </script>
 
 
-15、对象resret
+15、对象reset
 Object.assign(this.$data.form, this.$options.data().form)
