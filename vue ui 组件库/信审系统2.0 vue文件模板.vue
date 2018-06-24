@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- 表单区 -->
-
+      111
     <!-- 表格区 -->
   </div>
 </template>
@@ -14,18 +14,11 @@ export default {
   },
   data () {
     return {
-      // 外部组件区
-      message: undefined,
-      NotificationType: undefined
 
-      // tab区
-
-      // 表单区
-
-      // 表格区
-
-      // 分页区
     }
+  },
+  props: {
+
   },
   created: function () {
 
@@ -36,43 +29,15 @@ export default {
   computed: {
   },
   methods: {
-
-    // 外部组件区
-
-    // 通知组件
-    Notification () {
-      const h = this.$createElement;
-
-      this.$notify({
-        title: '',
-        message: h('i', { style: 'color: teal' }, this.message),
-        type:this.NotificationType 
-        //  success/warning/info/error
-      });
-    },
-
     /*this.$http.get(url, { params }).then(res => {
-      if (res.body.code == "200") {
-
+      if (res.body.code === 200) {
+        this.$notify({title: '成功', message: '添加成功', type: 'success'})
       }
-
     })*/
 
-    // 表单区
-
-    // 表格区
-
-    // 分页区
-      
   }
 }
 </script>
-<style lang="scss" scoped>
- @import './';
-</style>
-<style scoped>
+<style lang='scss' scoped>
 
 </style>
-@media screen and (max-width: 1500px) {
-
-}

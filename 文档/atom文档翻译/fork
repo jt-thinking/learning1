@@ -1,0 +1,19 @@
+https://help.github.com/articles/fork-a-repo/
+保持your fork 的同步性
+  为了向上游仓库提出一些建议,你可能fork一个项目.在这种情况下,定期的从上游仓库进行同步是一个不错的提议。为了达到这个目的，你需要使用git 命令行工具。你可以用你刚刚forked的octocat/Spoon-Knife 仓库练习如何设置(和上游仓库同步)
+
+ 步骤一:设置git
+    如果你从未使用过，首先你得设置git，不要忘记为git设置到GitHub的身份验证
+
+步骤二:创建一个your fork 本地的克隆库
+    现在，你有了一个Spoon-Knife仓库的 fork,但是你没有本地库，让我们在电脑上创建一个本地库
+    1、在gitHub上，导航到你的Spoon-Knife fork 项目
+    2、在项目页面,点击 Clone or download
+    3、选择 Clone with HTTPs，点击复制URl
+    4、打开git bash
+    5、键入git clone,复制步骤二获得的url，如下所示
+    git clone https://github.com/YOUR-USERNAME/Spoon-Knife
+现在,你已经拥有了一个Spoon-Knife 的fork项目！
+
+步骤三：配置git从远程仓库同步你的fork
+  当你fork一个项目是为了提出一些改变远程仓库的问题，你可以配置git 从远程仓库拉取变更同步到你的fork仓库^^^^

@@ -31,3 +31,33 @@ style='background:#d7dde4;height:1px;border:none;'
 
 CSS calc() 函数
 	calc() 函数用于动态计算长度值。
+
+块状单位
+<span class='blockUnit'>
+  <span class='underBlockUnit'>月</span>
+</span>
+
+CSS:
+.blockUnit{
+  margin: 0 0 0 -4px;
+  background-color: #f5f7fa;
+  color: #909399;
+  display: inline-block;
+  line-height: 40px;
+  vertical-align: middle;
+  height: 32px;
+  border: 1px solid #dcdfe6;
+  border-radius: 4px;
+  border-top-left-radius: 0%;
+  border-bottom-left-radius: 0%;
+  padding: 0 10px;
+  border-left:none;
+  .underBlockUnit{
+    line-height: 32px;
+    vertical-align: top;
+    display: inline-block;
+  }
+}
+
+常用灰色
+color: rgb(144, 147, 153);
