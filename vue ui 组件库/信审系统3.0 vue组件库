@@ -45,7 +45,7 @@ element 版本为1.4.x
 
 <el-form ref='formData' :model='formData' :inline='true'>
   <el-form-item label='客户名称/证件编号' :show-message='false'>
-  <el-input size='small' v-model.trim='formData.custName'></el-input>
+  <el-input size='mini' v-model.trim='formData.custName' style="width:150px;"></el-input>
   </el-form-item>
 </el-form>
 
@@ -154,9 +154,9 @@ element 版本为1.4.x
 
 
 5、时间选择器
-<el-date-picker v-model="startTime" type="date" placeholder="选择日期" size='mini' value-format="timestamp"></el-date-picker>
+<el-date-picker v-model="startTime" type="date" placeholder="选择日期" size='mini' value-format="timestamp" style="width:150px;" :editable='true'></el-date-picker>
 <span>—</span>
-<el-date-picker v-model="endTime" type="date" placeholder="选择日期" size='mini' value-format="timestamp" @change='endTime += 86399999'></el-date-picker>
+<el-date-picker v-model="endTime" type="date" placeholder="选择日期" size='mini' value-format="timestamp" @change='endTime += 86399999' style="width:150px;" :editable='true'></el-date-picker>
   startTime: isNaN(Date.parse(this.startTime)) == true ? undefined : Date.parse(this.startTime),
   endTime: isNaN(Date.parse(this.endTime)) == true ? undefined  : Date.parse(this.endTime),
 
@@ -247,3 +247,20 @@ Object.assign(this.$data.form, this.$options.data().form)
 
 16、身份证号正则
 /^\d{15}$|^\d{17}[Xx]$|^\d{18}$/
+
+17 Tab标签页
+<el-tabs v-model="activeName" @tab-click="handleClick">
+  <el-tab-pane label="用户管理" name="first">用户管理</el-tab-pane>
+  <el-tab-pane label="配置管理" name="second">配置管理</el-tab-pane>
+  <el-tab-pane label="角色管理" name="third">角色管理</el-tab-pane>
+  <el-tab-pane label="定时任务补偿" name="fourth">定时任务补偿</el-tab-pane>
+</el-tabs>
+
+18 页面过滤器
+filters: {
+  capitalize: function (value) {
+    if (!value) return ''
+    value = value.toString()
+    return value.charAt(0).toUpperCase() + value.slice(1)
+  }
+}

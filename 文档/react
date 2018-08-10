@@ -2,6 +2,16 @@
 
 	jsx有专有语法
 
+大众点评APP
 
+智能组件和木偶组件
 
-react 基础5
+react 性能检测工具 react-addons-perf
+
+性能优化工具
+  react-addons-pure-render-mixin
+
+  Immutable.js 优化
+
+fetch 
+前后端数据交互

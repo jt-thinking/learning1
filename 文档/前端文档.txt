@@ -29,6 +29,9 @@ noshade 设置水平线无阴影
 &trade 商标
 &nbsp 不断行的空白
 
+#html转义字符
+&#13 回车符
+
 
 #w无序列表type属性值
 <ul type:属性值>

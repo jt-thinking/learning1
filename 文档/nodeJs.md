@@ -278,7 +278,33 @@ trim_trailing_whiltespace = true 删掉尾部空格
 console.log(123)
 
 ### 静态资源服务器
-6-8
+
 模板引擎  Handlebars
+
 'Content-Type' and mimeType 
+
+压缩方式: gzip 等
+
+range
+
+缓存
+
+cli
+
+### 本地构建
+gulp 
+  * 匹配任意字符
+  ? 匹配一个字符
+  [...]匹配范围内字符
+  ** 任意层级匹配
+  ……
+
+gulp2
+
+autoprefixer
+
+cleanCSS
+  压缩CSS 搞成一行
+
+babel 
 
